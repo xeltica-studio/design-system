@@ -1,0 +1,31 @@
+$colors: (
+    'black': #000000,
+    'gray-7': #202020,
+    'gray-6': #404040,
+    'gray-5': #606060,
+    'gray-4': #808080,
+    'gray-3': #a0a0a0,
+    'gray-2': #c0c0c0,
+    'gray-1': #e0e0e0,
+    'white': #ffffff,
+    'red': #e23731,
+    'vermilion': #eb6101,
+    'orange': #f08300,
+    'yellow': #ffd900,
+    'lime': #b8d200,
+    'green': #3eb370,
+    'teal': #20c0a0,
+    'cyan': #a3f3ff,
+    'skyblue': #6bc0e2,
+    'blue': #0095d9,
+    'indigo': #165e83,
+    'purple': #884898,
+    'magenta': #e95295,
+    'pink': #f09199,
+);
+
+:root {
+    @each $name, $value in $colors {
+        --x-color-#{$name}: #{$value};
+    }
+}

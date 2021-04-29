@@ -1,0 +1,20 @@
+:root {
+    --x-stack-margin: var(--x-margin);
+}
+
+.x-vstack {
+    display: flex;
+    flex-direction: column;
+    &:not(.dense) > * + * {
+        margin-top: var(--x-stack-margin);
+    }
+}
+
+.x-hstack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &:not(.dense) > * + * {
+        margin-left: var(--x-stack-margin);
+    }
+}
