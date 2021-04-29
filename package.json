@@ -9,11 +9,13 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build:normal": "sass src/xeltica-ui.scss dist/xeltica-ui.css",
-    "build:min": "sass src/xeltica-ui.scss dist/xeltica-ui.min.css --style compressed",
+    "build:normal": "sass src/xeltica-ui.scss dist/css/xeltica-ui.css",
+    "build:min": "sass src/xeltica-ui.scss dist/css/xeltica-ui.min.css --style compressed",
+    "build:docs": "pug -o dist src/docs",
     "build": "run-p build:*",
-    "watch:normal": "sass --watch src/xeltica-ui.scss dist/xeltica-ui.css",
-    "watch:min": "sass --watch src/xeltica-ui.scss dist/xeltica-ui.min.css --style compressed",
+    "watch:normal": "sass --watch src/xeltica-ui.scss dist/css/xeltica-ui.css",
+    "watch:min": "sass --watch src/xeltica-ui.scss dist/css/xeltica-ui.min.css --style compressed",
+    "watch:docs": "pug -w -o dist src/docs",
     "watch": "run-p watch:*"
   },
   "devDependencies": {
