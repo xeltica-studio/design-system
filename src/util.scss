@@ -1,14 +1,32 @@
-.x-clickable {
-    transition: transform 0.1s ease;
-    transform-origin: center center;
-    transform-style: preserve-3d;
+:root {
+  --clickable-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  --clickable-hover-transform: scale(1.1);
+  --clickable-active-transform: scale(0.9) translateY(2px);
+}
 
-    &:hover {
-        transform: scale(1.1);
-        z-index: 9999;
-    }
+._clickable {
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  cursor: pointer;
+
+  &:hover {
+    transform: var(--clickable-hover-transform);
+  }
+  &:active {
+    transform: var(--clickable-active-transform);
+  }
+  &:hover,
+  &:active {
+    z-index: 9999;
+    box-shadow: var(--clickable-shadow);
+  }
+
+  &.text {
+    &:hover,
     &:active {
-        transform: scale(1.1) translateY(2px);
-        z-index: 9999;
+      box-shadow: none;
+      text-shadow: var(--clickable-shadow);
     }
+  }
 }

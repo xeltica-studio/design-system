@@ -1,31 +1,91 @@
 $colors: (
-    'black': #000000,
-    'gray-7': #202020,
-    'gray-6': #404040,
-    'gray-5': #606060,
-    'gray-4': #808080,
-    'gray-3': #a0a0a0,
-    'gray-2': #c0c0c0,
-    'gray-1': #e0e0e0,
-    'white': #ffffff,
-    'red': #e23731,
-    'vermilion': #eb6101,
-    'orange': #f08300,
-    'yellow': #ffd900,
-    'lime': #b8d200,
-    'green': #3eb370,
-    'teal': #20c0a0,
-    'cyan': #a3f3ff,
-    'skyblue': #6bc0e2,
-    'blue': #0095d9,
-    'indigo': #165e83,
-    'purple': #884898,
-    'magenta': #e95295,
-    'pink': #f09199,
+  "black": black,
+  "gray-9": lighten(black, 11%),
+  "gray-8": lighten(black, 22%),
+  "gray-7": lighten(black, 33%),
+  "gray-6": lighten(black, 44%),
+  "gray-5": lighten(black, 55%),
+  "gray-4": lighten(black, 66%),
+  "gray-3": lighten(black, 77%),
+  "gray-2": lighten(black, 88%),
+  "gray-1": lighten(black, 99%),
+  "white": white,
+  "black-50": rgba(0, 0, 0, 0.5),
+  "white-50": rgba(0, 0, 0, 0.5),
+  "red": #e23731,
+  "vermilion": #eb6101,
+  "orange": #f08300,
+  "yellow": #ffd900,
+  "lime": #b8d200,
+  "green": #3eb370,
+  "teal": #20c0a0,
+  "cyan": #43fcf3,
+  "skyblue": #00b7ff,
+  "blue": #255fff,
+  "indigo": #165e83,
+  "purple": #884898,
+  "magenta": #ff55a1,
+  "pink": #ff5c84,
+);
+
+$classes: (
+  "dark": var(--gray-9),
+  "light": var(--gray-1),
+  "primary": var(--magenta),
+  "success": var(--blue),
+  "info": var(--cyan),
+  "danger": var(--red),
+  "warn": var(--yellow),
+  "dimmed": var(--gray-5),
+  "primary-d": var(--magenta-d),
+  "success-d": var(--blue-d),
+  "info-d": var(--cyan-d),
+  "danger-d": var(--red-d),
+  "warn-d": var(--yellow-d),
+  "primary-l": var(--magenta-l),
+  "success-l": var(--blue-l),
+  "info-l": var(--cyan-l),
+  "danger-l": var(--red-l),
+  "warn-l": var(--yellow-l),
 );
 
 :root {
-    @each $name, $value in $colors {
-        --x-color-#{$name}: #{$value};
-    }
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+    --#{$name}-d: #{mix(black, $value, 70%)};
+    --#{$name}-l: #{mix(white, $value, 70%)};
+  }
+  @each $name, $value in $classes {
+    --#{$name}: #{$value};
+  }
+}
+
+@each $name, $value in $colors {
+  .text-#{$name} {
+    color: var(--#{$name});
+  }
+  .bg-#{$name} {
+    background-color: var(--#{$name});
+  }
+  .text-#{$name}-d {
+    color: var(--#{$name}-d);
+  }
+  .bg-#{$name}-d {
+    background-color: var(--#{$name}-d);
+  }
+  .text-#{$name}-l {
+    color: var(--#{$name}-l);
+  }
+  .bg-#{$name}-l {
+    background-color: var(--#{$name}-l);
+  }
+}
+
+@each $name, $value in $classes {
+  .text-#{$name} {
+    color: var(--#{$name});
+  }
+  .bg-#{$name} {
+    background-color: var(--#{$name});
+  }
 }

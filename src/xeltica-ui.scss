@@ -4,17 +4,54 @@
  * Licensed under MIT (https://github.com/xeltica/ui/tree/master/LICENSE)
  */
 
-@import 'reboot';
+@import "reboot";
 
 // Utilities
-@import 'size';
-@import 'color';
-@import 'util';
+@import "size";
+@import "color";
+@import "util";
 
 // Styles
-@import 'typography';
-@import 'table';
+@import "typography";
+@import "table";
 
 // Components
-@import 'box';
-@import 'stack';
+@import "box";
+@import "stack";
+@import "menu";
+
+html {
+  --bg: var(--white);
+  --fg: var(--gray-8);
+  --bold: var(--black);
+  --link: var(--skyblue);
+  --divider: var(--gray-2);
+  --hover: var(--gray-2);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  &.dark {
+    --bg: var(--gray-9);
+    --fg: var(--gray-2);
+    --bold: var(--white);
+    --divider: var(--gray-7);
+    --hover: var(--gray-8);
+  }
+}
+
+a {
+  color: var(--link);
+}
+
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--bold);
+}

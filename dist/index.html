@@ -1,23 +1,37 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="./css/xeltica-ui.min.css"><title>Xeltica UI Test</title><style>body {
-  max-width: 800px;
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/xeltica-ui.min.css"><title>Xeltica UI</title><style>.xd-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 18rem 1fr;
 }
-.colorbox {
-  width: 96px;
-  height: 96px;
-  padding: 8px;
-  font-weight: bold;
-  font-size: 1.1rem;
+.xd-footer {
+  margin-top: 8rem;
+}
+#daylight {
+  background: transparent;
+  font-size: 1rem;
+  color: inherit;
+  border: none;
+  width: 100%;
+  text-align: left;
+}</style><style>.xd-colorbox {
+  width: 64px;
+  height: 64px;
+  padding: 4px;
+  font-size: 0.8rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.5);
+  color: transparent;
 }
-.colorbox.dark {
-  color: rgba(255, 255, 255, 0.5);
-}</style></head><body class="x-container"><h1>Hello, world!</h1><h2>Typography</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum, rerum error in tenetur dolorem,
-provident deleniti magnam cum cupiditate odit nam? Quae voluptas architecto voluptatibus nisi possimus 
+.xd-colorbox:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.xd-colorbox.dark:hover {
+  color: rgba(255, 255, 255, 0.8);
+}</style></head><body class="_container"><header class="xd-header"><h1><a href="/">Xeltica UI</a></h1></header><div class="xd-container"><div class="xd-sidebar"><div class="_menu"><h1>スタイル</h1><ul><li><a href="/style/typography.html">タイポグラフィ</a></li><li><a href="/style/color.html">カラー</a></li><li><a href="/style/device.html">デバイス</a></li><li><a href="/style/theme.html">デイ/ナイト</a></li></ul><h1>レイアウト</h1><ul><li><a href="/layout/box.html">ボックス</a></li></ul><h1>その他</h1><ul><li><button id="daylight">🌞/🌙</button></li></ul></div></div><div class="xd-main"><h2>Hello, world!</h2><h3>Typography</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum, rerum error in tenetur dolorem,
+provident deleniti magnam cum cupiditate odit nam? Quae voluptas architecto voluptatibus nisi possimus
 nulla tempore provident maxime qui! Nemo optio neque amet iure rem eum rerum, ipsa aliquam esse molestiae
-corrupti doloremque, minima ex iste error consectetur magni. Laudantium placeat veritatis ullam, natus 
-aut cupiditate ab in eveniet praesentium magni omnis ipsum corporis consequatur magnam voluptatibus 
-asperiores sint, at cum similique molestiae. Voluptatibus deserunt repellat dicta doloremque consequuntur, 
+corrupti doloremque, minima ex iste error consectetur magni. Laudantium placeat veritatis ullam, natus
+aut cupiditate ab in eveniet praesentium magni omnis ipsum corporis consequatur magnam voluptatibus
+asperiores sint, at cum similique molestiae. Voluptatibus deserunt repellat dicta doloremque consequuntur,
 corporis tenetur cupiditate blanditiis ea illum suscipit possimus architecto corrupti nemo voluptas
 reiciendis ratione amet rerum et error pariatur? Enim maiores veniam magnam aut odit, sed neque rem hic
 eligendi ullam excepturi voluptate id consectetur perspiciatis consequatur possimus vero qui. Voluptate nemo
@@ -27,4 +41,7 @@ obcaecati, doloribus ratione quas quia exercitationem id. Numquam molestias elig
 similique accusantium aspernatur illo quasi blanditiis laudantium asperiores nesciunt, voluptates maxime
 vero nostrum laboriosam architecto amet voluptatum eos? Accusantium quis id suscipit illo, obcaecati quam
 voluptatum sunt quas neque assumenda dolorem at? Odit molestias veritatis beatae.
-</p><h3>H3</h3><h4>H4</h4><h5>H5</h5><h6>H6</h6><ul><li>ほげ</li><li>ぴよ</li><li>ぽぺ</li><li>ほに</li></ul><ol><li>あ</li><li>あ</li><li>あ</li><li>あ</li><li>あ</li></ol><table><thead><tr><th>テスト</th><th>テスト</th><th>テスト</th></tr></thead><tbody><tr><td>テスト</td><td>テスト</td><td>テスト</td></tr></tbody></table><p>リンク: <a href="https://xeltica.work">テスト</a></p><h2>Color</h2><div class="x-vstack dense"><div class="x-hstack dense"><div class="colorbox x-clickable dark" style="background: var(--x-color-black)">Black</div><div class="colorbox x-clickable dark" style="background: var(--x-color-gray-7)">Gray-7</div><div class="colorbox x-clickable dark" style="background: var(--x-color-gray-6)">Gray-6</div><div class="colorbox x-clickable dark" style="background: var(--x-color-gray-5)">Gray-5</div><div class="colorbox x-clickable dark" style="background: var(--x-color-gray-4)">Gray-4</div><div class="colorbox x-clickable" style="background: var(--x-color-gray-3)">Gray-3</div><div class="colorbox x-clickable" style="background: var(--x-color-gray-2)">Gray-2</div><div class="colorbox x-clickable" style="background: var(--x-color-gray-1)">Gray-1</div><div class="colorbox x-clickable" style="background: var(--x-color-white)">White</div></div><div class="x-hstack dense"><div class="colorbox x-clickable dark" style="background: var(--x-color-red)">Red</div><div class="colorbox x-clickable dark" style="background: var(--x-color-vermilion)">Vermilion</div><div class="colorbox x-clickable" style="background: var(--x-color-orange)">Orange</div><div class="colorbox x-clickable" style="background: var(--x-color-yellow)">Yellow</div><div class="colorbox x-clickable" style="background: var(--x-color-lime)">Lime</div><div class="colorbox x-clickable" style="background: var(--x-color-green)">Green</div><div class="colorbox x-clickable" style="background: var(--x-color-teal)">Teal</div><div class="colorbox x-clickable" style="background: var(--x-color-cyan)">Cyan</div><div class="colorbox x-clickable" style="background: var(--x-color-skyblue)">Skyblue</div><div class="colorbox x-clickable" style="background: var(--x-color-blue)">Blue</div><div class="colorbox x-clickable dark" style="background: var(--x-color-indigo)">Indigo</div><div class="colorbox x-clickable dark" style="background: var(--x-color-purple)">Purple</div><div class="colorbox x-clickable" style="background: var(--x-color-magenta)">Magenta</div><div class="colorbox x-clickable" style="background: var(--x-color-pink)">Pink</div></div></div></body></html>
+</p><h4>H4</h4><h5>H5</h5><h6>H6</h6><ul><li>ほげ</li><li>ぴよ</li><li>ぽぺ</li><li>ほに</li></ul><ol><li>あ</li><li>あ</li><li>あ</li><li>あ</li><li>あ</li></ol><table><thead><tr><th>テスト</th><th>テスト</th><th>テスト</th></tr></thead><tbody><tr><td>テスト</td><td>テスト</td><td>テスト</td></tr></tbody></table><p>リンク:<a href="https://xeltica.work">テスト</a></p><h3>Color</h3><div class="_vstack dense"><div class="_hstack dense"><div class="xd-colorbox _clickable bg-black dark">black</div><div class="xd-colorbox _clickable bg-gray-7 dark">gray-7</div><div class="xd-colorbox _clickable bg-gray-6 dark">gray-6</div><div class="xd-colorbox _clickable bg-gray-5 dark">gray-5</div><div class="xd-colorbox _clickable bg-gray-4 dark">gray-4</div><div class="xd-colorbox _clickable bg-gray-3 ">gray-3</div><div class="xd-colorbox _clickable bg-gray-2 ">gray-2</div><div class="xd-colorbox _clickable bg-gray-1 ">gray-1</div><div class="xd-colorbox _clickable bg-white ">white</div></div><div class="_hstack dense"><div class="xd-colorbox _clickable bg-red dark">red</div><div class="xd-colorbox _clickable bg-vermilion dark">vermilion</div><div class="xd-colorbox _clickable bg-orange ">orange</div><div class="xd-colorbox _clickable bg-yellow ">yellow</div><div class="xd-colorbox _clickable bg-lime ">lime</div><div class="xd-colorbox _clickable bg-green ">green</div><div class="xd-colorbox _clickable bg-teal ">teal</div><div class="xd-colorbox _clickable bg-cyan ">cyan</div><div class="xd-colorbox _clickable bg-skyblue ">skyblue</div><div class="xd-colorbox _clickable bg-blue dark">blue</div><div class="xd-colorbox _clickable bg-indigo dark">indigo</div><div class="xd-colorbox _clickable bg-purple dark">purple</div><div class="xd-colorbox _clickable bg-magenta ">magenta</div><div class="xd-colorbox _clickable bg-pink ">pink</div></div><div class="_hstack dense"><div class="xd-colorbox _clickable bg-red-l">red-l</div><div class="xd-colorbox _clickable bg-vermilion-l">vermilion-l</div><div class="xd-colorbox _clickable bg-orange-l">orange-l</div><div class="xd-colorbox _clickable bg-yellow-l">yellow-l</div><div class="xd-colorbox _clickable bg-lime-l">lime-l</div><div class="xd-colorbox _clickable bg-green-l">green-l</div><div class="xd-colorbox _clickable bg-teal-l">teal-l</div><div class="xd-colorbox _clickable bg-cyan-l">cyan-l</div><div class="xd-colorbox _clickable bg-skyblue-l">skyblue-l</div><div class="xd-colorbox _clickable bg-blue-l">blue-l</div><div class="xd-colorbox _clickable bg-indigo-l">indigo-l</div><div class="xd-colorbox _clickable bg-purple-l">purple-l</div><div class="xd-colorbox _clickable bg-magenta-l">magenta-l</div><div class="xd-colorbox _clickable bg-pink-l">pink-l</div></div><div class="_hstack dense"><div class="xd-colorbox _clickable bg-red-d dark">red-d</div><div class="xd-colorbox _clickable bg-vermilion-d dark">vermilion-d</div><div class="xd-colorbox _clickable bg-orange-d dark">orange-d</div><div class="xd-colorbox _clickable bg-yellow-d dark">yellow-d</div><div class="xd-colorbox _clickable bg-lime-d dark">lime-d</div><div class="xd-colorbox _clickable bg-green-d dark">green-d</div><div class="xd-colorbox _clickable bg-teal-d dark">teal-d</div><div class="xd-colorbox _clickable bg-cyan-d dark">cyan-d</div><div class="xd-colorbox _clickable bg-skyblue-d dark">skyblue-d</div><div class="xd-colorbox _clickable bg-blue-d dark">blue-d</div><div class="xd-colorbox _clickable bg-indigo-d dark">indigo-d</div><div class="xd-colorbox _clickable bg-purple-d dark">purple-d</div><div class="xd-colorbox _clickable bg-magenta-d dark">magenta-d</div><div class="xd-colorbox _clickable bg-pink-d dark">pink-d</div></div></div><footer class="xd-footer"><aside>(C)2021 Xeltica</aside></footer></div></div><script>const btn = document.getElementById('daylight');
+btn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});</script></body></html>

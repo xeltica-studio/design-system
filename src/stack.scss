@@ -1,20 +1,20 @@
 :root {
-    --x-stack-margin: var(--x-margin);
+  --stack-margin: var(--margin);
 }
 
-.x-vstack {
-    display: flex;
-    flex-direction: column;
-    &:not(.dense) > * + * {
-        margin-top: var(--x-stack-margin);
-    }
+._vstack {
+  display: flex;
+  flex-direction: column;
+  &:not(.dense) > * + * {
+    margin-top: var(--stack-margin);
+  }
 }
 
-.x-hstack {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    &:not(.dense) > * + * {
-        margin-left: var(--x-stack-margin);
-    }
+._hstack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  &:not(.dense) > * + * {
+    margin-left: var(--stack-margin);
+  }
 }

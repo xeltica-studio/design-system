@@ -1,7 +1,7 @@
 :root {
-    --x-container-padding: 32px;
+  --container-padding: 32px;
 }
 
-.x-container {
-    padding: var(--x-container-padding);
+._container {
+  padding: var(--container-padding);
 }

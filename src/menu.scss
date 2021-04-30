@@ -1,0 +1,30 @@
+._menu {
+  padding: var(--margin);
+
+  > h1,
+  .header {
+    border-bottom: none;
+    font-size: 0.7rem;
+    color: var(--dimmed);
+    margin: 0;
+  }
+  > ul {
+    list-style: none;
+    padding: 0;
+    > li,
+    .item {
+      > a {
+        display: block;
+        text-decoration: none;
+        color: var(--fg);
+      }
+      padding: 0.2rem 0.5rem;
+      cursor: pointer;
+      border-radius: var(--radius);
+      &:hover,
+      .active {
+        background-color: var(--hover);
+      }
+    }
+  }
+}
