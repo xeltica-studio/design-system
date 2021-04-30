@@ -1,30 +1,45 @@
 extends ../_layout
 
-block main
-  h1 Typography
-  p.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum, rerum error in tenetur dolorem,
-    provident deleniti magnam cum cupiditate odit nam? Quae voluptas architecto voluptatibus nisi possimus
-    nulla tempore provident maxime qui! Nemo optio neque amet iure rem eum rerum, ipsa aliquam esse molestiae
-    corrupti doloremque, minima ex iste error consectetur magni. Laudantium placeat veritatis ullam, natus
-    aut cupiditate ab in eveniet praesentium magni omnis ipsum corporis consequatur magnam voluptatibus
-    asperiores sint, at cum similique molestiae. Voluptatibus deserunt repellat dicta doloremque consequuntur,
-    corporis tenetur cupiditate blanditiis ea illum suscipit possimus architecto corrupti nemo voluptas
-    reiciendis ratione amet rerum et error pariatur? Enim maiores veniam magnam aut odit, sed neque rem hic
-    eligendi ullam excepturi voluptate id consectetur perspiciatis consequatur possimus vero qui. Voluptate nemo
-    corrupti non veniam maiores animi tenetur. Ipsum, blanditiis. Autem rerum nihil necessitatibus beatae minima
-    voluptate ex reiciendis laudantium, itaque blanditiis eligendi deleniti dolorum vero ducimus reprehenderit,
-    obcaecati, doloribus ratione quas quia exercitationem id. Numquam molestias eligendi quas possimus rem
-    similique accusantium aspernatur illo quasi blanditiis laudantium asperiores nesciunt, voluptates maxime
-    vero nostrum laboriosam architecto amet voluptatum eos? Accusantium quis id suscipit illo, obcaecati quam
-    voluptatum sunt quas neque assumenda dolorem at? Odit molestias veritatis beatae.
+block head
+  style.
+    table h1,
+    table h2,
+    table h3,
+    table h4,
+    table h5,
+    table h6 {
+      margin: 0;
+    }
 
-  h1 Heading 1
-  h2 Heading 2
-  h3 Heading 3
-  h4 Heading 4
-  h5 Heading 5
-  h6 Heading 6
+block main
+  h1 タイポグラフィ
+
+  h2 見出し
+
+  table._table._fluid
+    thead
+      tr
+        th 構文
+        th 例
+    tbody
+      tr
+        td: code &lt;h1&gt;&lt;/h1&gt;
+        td: h1 見出しレベル1
+      tr
+        td: code &lt;h2&gt;&lt;/h2&gt;
+        td: h2 見出しレベル2
+      tr
+        td: code &lt;h3&gt;&lt;/h3&gt;
+        td: h3 見出しレベル3
+      tr
+        td: code &lt;h4&gt;&lt;/h4&gt;
+        td: h4 見出しレベル4
+      tr
+        td: code &lt;h5&gt;&lt;/h5&gt;
+        td: h5 見出しレベル5
+      tr
+        td: code &lt;h6&gt;&lt;/h6&gt;
+        td: h6 見出しレベル6
 
   ul
     li ほげ

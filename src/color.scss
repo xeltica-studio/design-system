@@ -52,7 +52,7 @@ $classes: (
   "warn-l": var(--yellow-l),
 );
 
-:root {
+body {
   @each $name, $value in $colors {
     --#{$name}: #{$value};
     --#{$name}-d: #{mix(black, $value, 70%)};

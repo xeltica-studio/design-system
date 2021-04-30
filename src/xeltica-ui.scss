@@ -7,9 +7,9 @@
 @import "reboot";
 
 // Utilities
+@import "util";
 @import "size";
 @import "color";
-@import "util";
 
 // Styles
 @import "typography";
@@ -21,8 +21,6 @@
 @import "menu";
 
 body {
-  --code-fg: #8b3a41;
-  --code-bg: #ffe4e6;
   --tone-0: var(--white);
   --tone-1: var(--gray-1);
   --tone-2: var(--gray-2);
@@ -43,12 +41,16 @@ body {
   --bold: var(--tone-13);
   --link: var(--skyblue);
   --divider: var(--tone-5);
-  --hover: var(--tone-1);
+  --hover: var(--tone-2);
+
+  --accent: var(--teal);
+  --accent-l: var(--teal-l);
+  --accent-d: var(--teal-d);
 
   background: var(--bg);
   color: var(--fg);
-  &.dark {
-    --bg: var(--gray-11);
+  &._dark {
+    --bg: var(--gray-12);
     --fg: var(--gray-2);
     --tone-0: var(--black);
     --tone-1: var(--gray-12);
@@ -64,8 +66,6 @@ body {
     --tone-11: var(--gray-2);
     --tone-12: var(--gray-1);
     --tone-13: var(--white);
-    --code-fg: #ff5362;
-    --code-bg: #573535;
   }
 }
 

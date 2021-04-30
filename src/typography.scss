@@ -1,3 +1,13 @@
+body {
+  --code-fg: #8b3a41;
+  --code-bg: #ffe4e6;
+
+  &._dark {
+    --code-fg: #ff5362;
+    --code-bg: #573535;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -43,6 +53,8 @@ code {
   font-size: 0.85rem;
   padding: 2px;
   border-radius: 4px;
+  background-color: var(--code-bg);
+  color: var(--code-fg);
 }
 
 pre {
@@ -51,7 +63,9 @@ pre {
     width: 100%;
     padding: var(--margin);
     background-color: var(--tone-1);
-    border: 2px solid var(--tone-2);
     color: var(--tone-12);
+    @include dark {
+      background-color: var(--tone-2);
+    }
   }
 }

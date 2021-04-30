@@ -1,10 +1,10 @@
 :root {
   --clickable-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
-  --clickable-hover-transform: scale(1.1);
-  --clickable-active-transform: scale(0.9) translateY(2px);
+  --clickable-hover-transform: scale(1.05);
+  --clickable-active-transform: scale(0.95) translateY(2px);
 }
 
-._clickable {
+@mixin clickable($isText: false) {
   transition: transform 0.2s ease;
   transform-origin: center center;
   transform-style: preserve-3d;
@@ -19,14 +19,23 @@
   &:hover,
   &:active {
     z-index: 9999;
-    box-shadow: var(--clickable-shadow);
   }
+}
+
+._clickable {
+  @include clickable();
 
   &.text {
-    &:hover,
-    &:active {
-      box-shadow: none;
-      text-shadow: var(--clickable-shadow);
-    }
+    @include clickable(true);
   }
+}
+
+@mixin dark {
+  ._dark & {
+    @content;
+  }
+}
+
+._fluid {
+  width: 100%;
 }

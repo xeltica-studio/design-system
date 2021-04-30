@@ -1,0 +1,21 @@
+._table {
+  border: 1px solid var(--tone-2);
+  border-radius: 2px;
+  border-collapse: separate;
+  overflow: hidden;
+  border-spacing: 0;
+  border-bottom: none;
+  th {
+    background: var(--tone-2);
+  }
+  th,
+  td {
+    padding: 0.5rem 2rem;
+    &:not(:last-child) {
+      border-right: 1px solid var(--tone-2);
+    }
+  }
+  td {
+    border-bottom: 1px solid var(--tone-2);
+  }
+}
