@@ -1,3 +1,41 @@
 extends ../_layout
 
+block head
+  style.
+    .xd-colorbox {
+      width: 64px;
+      height: 64px;
+      padding: 4px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      color: transparent;
+    }
+    .xd-colorbox:hover {
+      color: rgba(0, 0, 0, 0.8);
+    }
+    .xd-colorbox.dark:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
 block main
+  h1 Color
+  ._vstack.dense
+    ._hstack.dense
+      each tuple in grayscales
+        - const [name, isDark] = tuple;
+        .xd-colorbox._clickable(class=`_bg-${name} ${isDark ? 'dark' : ''}`)= name
+
+    ._hstack.dense
+      each tuple in colors
+        - const [name, isDark] = tuple;
+        .xd-colorbox._clickable(class=`_bg-${name} ${isDark ? 'dark' : ''}`)= name
+
+    ._hstack.dense
+      each tuple in colors
+        - const [name] = tuple;
+        .xd-colorbox._clickable(class=`_bg-${name}-l`)= `${name}-l`
+
+    ._hstack.dense
+      each tuple in colors
+        - const [name] = tuple;
+        .xd-colorbox._clickable(class=`_bg-${name}-d dark`)= `${name}-d`

@@ -1,17 +1,4 @@
 $colors: (
-  "black": black,
-  "gray-9": lighten(black, 11%),
-  "gray-8": lighten(black, 22%),
-  "gray-7": lighten(black, 33%),
-  "gray-6": lighten(black, 44%),
-  "gray-5": lighten(black, 55%),
-  "gray-4": lighten(black, 66%),
-  "gray-3": lighten(black, 77%),
-  "gray-2": lighten(black, 88%),
-  "gray-1": lighten(black, 99%),
-  "white": white,
-  "black-50": rgba(0, 0, 0, 0.5),
-  "white-50": rgba(0, 0, 0, 0.5),
   "red": #e23731,
   "vermilion": #eb6101,
   "orange": #f08300,
@@ -29,6 +16,22 @@ $colors: (
 );
 
 $classes: (
+  "black": black,
+  "gray-1": darken(white, 8%),
+  "gray-2": darken(white, 15%),
+  "gray-3": darken(white, 23%),
+  "gray-4": darken(white, 31%),
+  "gray-5": darken(white, 38%),
+  "gray-6": darken(white, 46%),
+  "gray-7": darken(white, 54%),
+  "gray-8": darken(white, 62%),
+  "gray-9": darken(white, 69%),
+  "gray-10": darken(white, 77%),
+  "gray-11": darken(white, 85%),
+  "gray-12": darken(white, 92%),
+  "white": white,
+  "black-50": rgba(0, 0, 0, 0.5),
+  "white-50": rgba(0, 0, 0, 0.5),
   "dark": var(--gray-9),
   "light": var(--gray-1),
   "primary": var(--magenta),
@@ -61,31 +64,31 @@ $classes: (
 }
 
 @each $name, $value in $colors {
-  .text-#{$name} {
+  ._text-#{$name} {
     color: var(--#{$name});
   }
-  .bg-#{$name} {
+  ._bg-#{$name} {
     background-color: var(--#{$name});
   }
-  .text-#{$name}-d {
+  ._text-#{$name}-d {
     color: var(--#{$name}-d);
   }
-  .bg-#{$name}-d {
+  ._bg-#{$name}-d {
     background-color: var(--#{$name}-d);
   }
-  .text-#{$name}-l {
+  ._text-#{$name}-l {
     color: var(--#{$name}-l);
   }
-  .bg-#{$name}-l {
+  ._bg-#{$name}-l {
     background-color: var(--#{$name}-l);
   }
 }
 
 @each $name, $value in $classes {
-  .text-#{$name} {
+  ._text-#{$name} {
     color: var(--#{$name});
   }
-  .bg-#{$name} {
+  ._bg-#{$name} {
     background-color: var(--#{$name});
   }
 }

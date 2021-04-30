@@ -20,29 +20,61 @@
 @import "stack";
 @import "menu";
 
-html {
-  --bg: var(--white);
-  --fg: var(--gray-8);
-  --bold: var(--black);
-  --link: var(--skyblue);
-  --divider: var(--gray-2);
-  --hover: var(--gray-2);
-}
-
 body {
+  --code-fg: #8b3a41;
+  --code-bg: #ffe4e6;
+  --tone-0: var(--white);
+  --tone-1: var(--gray-1);
+  --tone-2: var(--gray-2);
+  --tone-3: var(--gray-3);
+  --tone-4: var(--gray-4);
+  --tone-5: var(--gray-5);
+  --tone-6: var(--gray-6);
+  --tone-7: var(--gray-7);
+  --tone-8: var(--gray-8);
+  --tone-9: var(--gray-9);
+  --tone-10: var(--gray-10);
+  --tone-11: var(--gray-11);
+  --tone-12: var(--gray-12);
+  --tone-13: var(--black);
+
+  --bg: var(--white);
+  --fg: var(--gray-11);
+  --bold: var(--tone-13);
+  --link: var(--skyblue);
+  --divider: var(--tone-5);
+  --hover: var(--tone-1);
+
   background: var(--bg);
   color: var(--fg);
   &.dark {
-    --bg: var(--gray-9);
+    --bg: var(--gray-11);
     --fg: var(--gray-2);
-    --bold: var(--white);
-    --divider: var(--gray-7);
-    --hover: var(--gray-8);
+    --tone-0: var(--black);
+    --tone-1: var(--gray-12);
+    --tone-2: var(--gray-11);
+    --tone-3: var(--gray-10);
+    --tone-4: var(--gray-9);
+    --tone-5: var(--gray-8);
+    --tone-6: var(--gray-7);
+    --tone-7: var(--gray-6);
+    --tone-8: var(--gray-5);
+    --tone-9: var(--gray-4);
+    --tone-10: var(--gray-3);
+    --tone-11: var(--gray-2);
+    --tone-12: var(--gray-1);
+    --tone-13: var(--white);
+    --code-fg: #ff5362;
+    --code-bg: #573535;
   }
 }
 
 a {
   color: var(--link);
+}
+
+small {
+  font-size: 0.7em;
 }
 
 b,

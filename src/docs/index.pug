@@ -1,95 +1,21 @@
 extends _layout
 
-block head
-  style.
-    .xd-colorbox {
-      width: 64px;
-      height: 64px;
-      padding: 4px;
-      font-size: 0.8rem;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      color: transparent;
-    }
-    .xd-colorbox:hover {
-      color: rgba(0, 0, 0, 0.8);
-    }
-    .xd-colorbox.dark:hover {
-      color: rgba(255, 255, 255, 0.8);
-    }
+block title
+  title Xeltica UI
+
 block main
-  h2 Hello, world!
-  h3 Typography
-  p.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum, rerum error in tenetur dolorem,
-    provident deleniti magnam cum cupiditate odit nam? Quae voluptas architecto voluptatibus nisi possimus
-    nulla tempore provident maxime qui! Nemo optio neque amet iure rem eum rerum, ipsa aliquam esse molestiae
-    corrupti doloremque, minima ex iste error consectetur magni. Laudantium placeat veritatis ullam, natus
-    aut cupiditate ab in eveniet praesentium magni omnis ipsum corporis consequatur magnam voluptatibus
-    asperiores sint, at cum similique molestiae. Voluptatibus deserunt repellat dicta doloremque consequuntur,
-    corporis tenetur cupiditate blanditiis ea illum suscipit possimus architecto corrupti nemo voluptas
-    reiciendis ratione amet rerum et error pariatur? Enim maiores veniam magnam aut odit, sed neque rem hic
-    eligendi ullam excepturi voluptate id consectetur perspiciatis consequatur possimus vero qui. Voluptate nemo
-    corrupti non veniam maiores animi tenetur. Ipsum, blanditiis. Autem rerum nihil necessitatibus beatae minima
-    voluptate ex reiciendis laudantium, itaque blanditiis eligendi deleniti dolorum vero ducimus reprehenderit,
-    obcaecati, doloribus ratione quas quia exercitationem id. Numquam molestias eligendi quas possimus rem
-    similique accusantium aspernatur illo quasi blanditiis laudantium asperiores nesciunt, voluptates maxime
-    vero nostrum laboriosam architecto amet voluptatum eos? Accusantium quis id suscipit illo, obcaecati quam
-    voluptatum sunt quas neque assumenda dolorem at? Odit molestias veritatis beatae.
-
-  h4 H4
-  h5 H5
-  h6 H6
-
-  ul
-    li ほげ
-    li ぴよ
-    li ぽぺ
-    li ほに
-
-  ol
-    li あ
-    li あ
-    li あ
-    li あ
-    li あ
-
-  table
-    thead
-      tr
-        th テスト
-        th テスト
-        th テスト
-    tbody
-      tr
-        td テスト
-        td テスト
-        td テスト
-  p リンク:
-    a(href='https://xeltica.work') テスト
-
-  h3 Color
-  ._vstack.dense
-    ._hstack.dense
-      each tuple in grayscales
-        - const [name, isDark] = tuple;
-        .xd-colorbox._clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
-
-    ._hstack.dense
-      each tuple in colors
-        - const [name, isDark] = tuple;
-        .xd-colorbox._clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
-
-    ._hstack.dense
-      each tuple in colors
-        - const [name] = tuple;
-        .xd-colorbox._clickable(class=`bg-${name}-l`)= `${name}-l`
-
-    ._hstack.dense
-      each tuple in colors
-        - const [name] = tuple;
-        .xd-colorbox._clickable(class=`bg-${name}-d dark`)= `${name}-d`
-
-    //- ._hstack.dense
-    //-   each tuple in classes
-    //-     - const [name, isDark] = tuple;
-    //-     .xd-colorbox._clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
+  h1 さあ、始めましょう。
+  p Xeltica UI は、今あなたがこのページを見て、触れて、感じたこと全てを表現する、全部入りのCSSフレームワークです。
+  p シンプルな記法で、爽やかかつ力強いウェブサイト・ウェブアプリを開発するために、今すぐお好きな方法でXeltica UIをインストールし、使ってみましょう。
+  h2 CDN
+  p 1行のHTMLタグを追加するだけで、Xeltica UIを使い始めることができます。
+  pre: code COMING SOON
+  h2 npm
+  p NPMまたはYarnを用いれば、すぐにXeltica UIをアプリケーションに追加できます。
+  p: b Yarn
+  pre: code yarn add @xeltica/ui
+  p: b NPM
+  pre: code npm i @xeltica/ui
+  h2 直接ダウンロード
+  p COMING SOON
+  .cube

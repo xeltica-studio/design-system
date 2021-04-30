@@ -1,10 +1,15 @@
 -
   const grayscales = [
     ['black', true],
+    ['gray-12', true],
+    ['gray-11', true],
+    ['gray-10', true],
+    ['gray-9', true],
+    ['gray-8', true],
     ['gray-7', true],
-    ['gray-6', true],
-    ['gray-5', true],
-    ['gray-4', true],
+    ['gray-6', false],
+    ['gray-5', false],
+    ['gray-4', false],
     ['gray-3', false],
     ['gray-2', false],
     ['gray-1', false],
@@ -47,7 +52,6 @@ html
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width,initial-scale=1')
     link(rel='stylesheet' href='/css/xeltica-ui.min.css')
-    title Xeltica UI
     style.
       .xd-container {
         display: grid;
@@ -55,7 +59,9 @@ html
         grid-auto-columns: 18rem 1fr;
       }
       .xd-footer {
-        margin-top: 8rem;
+        border-top: 1px solid var(--tone-3);
+        padding: 1rem;
+        margin-top: 2rem;
       }
       #daylight {
         background: transparent;
@@ -66,6 +72,9 @@ html
         text-align: left;
       }
     block head
+    block title
+      title Xeltica UI
+
   body._container
     header.xd-header
       h1: a(href="/") Xeltica UI
@@ -89,7 +98,8 @@ html
         block main
         footer.xd-footer
           block footer
-          aside (C)2021 Xeltica
+          aside (C)2021 Xeltica ・
+            a(href="https://github.com/Xeltica/ui") リポジトリ
     script.
       const btn = document.getElementById('daylight');
       btn.addEventListener('click', () => {
