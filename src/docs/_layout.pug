@@ -79,10 +79,10 @@ html
     block title
       title Xeltica UI
 
-  body._container
+  body.container
     header.xd-header
       h1._big: a(href="/") Xeltica UI
-      p: b._text-danger 現在開発中のライブラリにつき、本番での使用は想定されていません。頻繁に仕様変更が行われること、機能が不十分であることをご留意ください。
+      p: b.text-danger 現在開発中のライブラリにつき、本番での使用は想定されていません。頻繁に仕様変更が行われること、機能が不十分であることをご留意ください。
       block header
     .xd-container
       +sidebar
@@ -93,6 +93,6 @@ html
     script.
       const btn = document.getElementById('daylight');
       btn.addEventListener('click', () => {
-        document.body.classList.toggle('_dark');
+        document.body.classList.toggle('dark');
       });
     block script

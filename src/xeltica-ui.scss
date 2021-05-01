@@ -49,7 +49,7 @@ body {
 
   background: var(--bg);
   color: var(--fg);
-  &._dark {
+  &.dark {
     --bg: var(--gray-12);
     --fg: var(--gray-2);
     --tone-0: var(--black);

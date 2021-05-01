@@ -22,7 +22,7 @@
   }
 }
 
-._clickable {
+.clickable {
   @include clickable();
 
   &.text {
@@ -31,12 +31,12 @@
 }
 
 @mixin dark {
-  ._dark & {
+  .dark & {
     @content;
   }
 }
 
-._fluid {
+.fluid {
   width: 100%;
 }
 

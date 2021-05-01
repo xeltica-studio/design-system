@@ -64,31 +64,31 @@ body {
 }
 
 @each $name, $value in $colors {
-  ._text-#{$name} {
+  .text-#{$name} {
     color: var(--#{$name});
   }
-  ._bg-#{$name} {
+  .bg-#{$name} {
     background-color: var(--#{$name});
   }
-  ._text-#{$name}-d {
+  .text-#{$name}-d {
     color: var(--#{$name}-d);
   }
-  ._bg-#{$name}-d {
+  .bg-#{$name}-d {
     background-color: var(--#{$name}-d);
   }
-  ._text-#{$name}-l {
+  .text-#{$name}-l {
     color: var(--#{$name}-l);
   }
-  ._bg-#{$name}-l {
+  .bg-#{$name}-l {
     background-color: var(--#{$name}-l);
   }
 }
 
 @each $name, $value in $classes {
-  ._text-#{$name} {
+  .text-#{$name} {
     color: var(--#{$name});
   }
-  ._bg-#{$name} {
+  .bg-#{$name} {
     background-color: var(--#{$name});
   }
 }

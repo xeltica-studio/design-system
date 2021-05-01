@@ -10,12 +10,12 @@ block main
   p ダークテーマに切り替える場合は、
     code body
     | タグに
-    code _dark
+    code dark
     | クラスを追加するだけです。
   p このページは、OSの設定に応じてテーマが切り替わるようになっています。同様の処理を実装したい場合は、以下のコード片を用いると良いかもしれません。
   pre: code.
     const q = window.matchMedia('(prefers-color-scheme: dark)');
-    const sync = (isDark) =&gt; document.body.classList[isDark ? 'add' : 'remove']('_dark');
+    const sync = (isDark) =&gt; document.body.classList[isDark ? 'add' : 'remove']('dark');
 
     sync(q.matches);
     q.addListener(e =&gt; sync(e.matches));
@@ -23,7 +23,7 @@ block main
 block script
   script.
     const q = window.matchMedia('(prefers-color-scheme: dark)');
-    const sync = (isDark) => document.body.classList[isDark ? 'add' : 'remove']('_dark');
+    const sync = (isDark) => document.body.classList[isDark ? 'add' : 'remove']('dark');
 
     sync(q.matches);
     q.addListener(e => sync(e.matches));

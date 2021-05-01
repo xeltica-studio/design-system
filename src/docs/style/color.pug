@@ -23,27 +23,27 @@ block main
   p Xeltica UI は定義済みの色を56色用意しており、すぐに使用できます。
   h2 カラーボックス
   p 定義済みの全ての色を確認できます。ホバーかクリックで、名前を確認できます。
-  p._text-blue#colorbox-desc
-  ._vstack.dense
-    ._hstack.dense
+  p.text-blue#colorbox-desc
+  .vstack.dense
+    .hstack.dense
       each tuple in grayscales
         - const [name, isDark] = tuple;
-        .xd-colorbox._clickable(class=`_bg-${name} ${isDark ? 'dark' : ''}`)= name
+        .xd-colorbox.clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
 
-    ._hstack.dense
+    .hstack.dense
       each tuple in colors
         - const [name, isDark] = tuple;
-        .xd-colorbox._clickable(class=`_bg-${name} ${isDark ? 'dark' : ''}`)= name
+        .xd-colorbox.clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
 
-    ._hstack.dense
+    .hstack.dense
       each tuple in colors
         - const [name] = tuple;
-        .xd-colorbox._clickable(class=`_bg-${name}-l`)= `${name}-l`
+        .xd-colorbox.clickable(class=`bg-${name}-l`)= `${name}-l`
 
-    ._hstack.dense
+    .hstack.dense
       each tuple in colors
         - const [name] = tuple;
-        .xd-colorbox._clickable(class=`_bg-${name}-d dark`)= `${name}-d`
+        .xd-colorbox.clickable(class=`bg-${name}-d dark`)= `${name}-d`
     .test
 
 block script

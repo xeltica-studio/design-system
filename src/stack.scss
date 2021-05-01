@@ -2,7 +2,7 @@ body {
   --stack-margin: var(--margin);
 }
 
-._vstack {
+.vstack {
   display: flex;
   flex-direction: column;
   &:not(.dense) > * + * {
@@ -10,7 +10,7 @@ body {
   }
 }
 
-._hstack {
+.hstack {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
