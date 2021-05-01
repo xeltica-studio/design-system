@@ -1,0 +1,28 @@
+extends ../_layout
+
+block head
+  style.
+
+block main
+  h1 メニュー
+  p メニューは、ナビゲーションや項目選択など幅広く用いられるコンポーネントです。
+  h2 例
+  ._menu
+    h1 メニューヘッダー
+    ul
+      li.item 項目
+      li.item 項目
+      li.item.disabled 無効化
+      li.item.disabled 無効化
+      li.item.active 選択中
+  pre.language-html: code.
+    &lt;div class="_menu"&gt;
+      &lt;h1&gt;メニューヘッダー&lt;/h1&gt;
+      &lt;ul&gt;
+        &lt;li class="item"&gt;項目&lt;/li&gt;
+        &lt;li class="item"&gt;項目&lt;/li&gt;
+        &lt;li class="item disabled"&gt;無効化&lt;/li&gt;
+        &lt;li class="item disabled"&gt;無効化&lt;/li&gt;
+        &lt;li class="item active"&gt;選択中&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
