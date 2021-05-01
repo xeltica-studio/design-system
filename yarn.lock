@@ -858,10 +858,9 @@ pug-attrs@^3.0.0:
     js-stringify "^1.0.2"
     pug-runtime "^3.0.0"
 
-pug-cli@^1.0.0-alpha6:
+pug-cli@pugjs/pug-cli:
   version "1.0.0-alpha6"
-  resolved "https://registry.yarnpkg.com/pug-cli/-/pug-cli-1.0.0-alpha6.tgz#1ca539ea4ac0ebb69ce4aae84aeed5d64ffe6501"
-  integrity sha1-HKU56krA67ac5KroSu7V1k/+ZQE=
+  resolved "https://codeload.github.com/pugjs/pug-cli/tar.gz/0eb8d37c5a38cb297cf09361631b93312e0dfa21"
   dependencies:
     chalk "^1.0.0"
     commander "^2.8.1"
