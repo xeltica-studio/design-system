@@ -13,59 +13,45 @@ block head
 
 block main
   h1 タイポグラフィ
-
   h2 見出し
+  table._table
+    thead
+      tr
+        th 構文
+        th 例
+    tbody
+      each i in [1,2,3,4,5,6]
+        tr
+          td: code &lt;h#{i}&gt;&lt;/h#{i}&gt;
+          td: #{'h' + i} 見出しレベル#{i}
 
-  table._table._fluid
+  h3 強調
+  p より大きなサイズの見出しが必要であれば、
+    code _big
+    | クラスを付与します。
+
+  table._table
+    thead
+      tr
+        th 構文
+        th 例
+    tbody
+      each i in [1,2,3,4,5,6]
+        tr
+          td: code &lt;h#{i} class="_big"&gt;&lt;/h#{i}&gt;
+          td: #{'h' + i}._big 見出しレベル#{i}
+
+  h2 その他
+
+  table._table
     thead
       tr
         th 構文
         th 例
     tbody
       tr
-        td: code &lt;h1&gt;&lt;/h1&gt;
-        td: h1 見出しレベル1
+        td: code &lt;a href="#"&gt;リンク&lt;/a&gt;
+        td: a(href="#") リンク
       tr
-        td: code &lt;h2&gt;&lt;/h2&gt;
-        td: h2 見出しレベル2
-      tr
-        td: code &lt;h3&gt;&lt;/h3&gt;
-        td: h3 見出しレベル3
-      tr
-        td: code &lt;h4&gt;&lt;/h4&gt;
-        td: h4 見出しレベル4
-      tr
-        td: code &lt;h5&gt;&lt;/h5&gt;
-        td: h5 見出しレベル5
-      tr
-        td: code &lt;h6&gt;&lt;/h6&gt;
-        td: h6 見出しレベル6
-
-  ul
-    li ほげ
-    li ぴよ
-    li ぽぺ
-    li ほに
-
-  ol
-    li あ
-    li あ
-    li あ
-    li あ
-    li あ
-
-  table
-    thead
-      tr
-        th テスト
-        th テスト
-        th テスト
-    tbody
-      tr
-        td テスト
-        td テスト
-        td テスト
-  p リンク:
-    a(href='https://xeltica.work') テスト
-  p コード:
-    code Code
+        td: code &lt;code&gt;Hello, Xeltica UI!&lt;/code&gt;
+        td: code Hello, Xeltica UI!

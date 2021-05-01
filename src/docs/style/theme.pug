@@ -1,0 +1,29 @@
+extends ../_layout
+
+block main
+  h1 テーマ
+  p 多くの端末は、ライトモード、ダークモードの2種類のモードを備えており、夜間の閲覧による目への影響の軽減を図っています。
+  p Xeltica UI は、クラスを追加するだけでダークモードに切り替えられます。
+    br
+    | どちらのモードでもデザインが崩れないように設計されているので、
+    | 難しいことを考える必要がありません。
+  p ダークテーマに切り替える場合は、
+    code body
+    | タグに
+    code _dark
+    | クラスを追加するだけです。
+  p このページは、OSの設定に応じてテーマが切り替わるようになっています。同様の処理を実装したい場合は、以下のコード片を用いると良いかもしれません。
+  pre: code.
+    const q = window.matchMedia('(prefers-color-scheme: dark)');
+    const sync = (isDark) =&gt; document.body.classList[isDark ? 'add' : 'remove']('_dark');
+
+    sync(q.matches);
+    q.addListener(e =&gt; sync(e.matches));
+
+block script
+  script.
+    const q = window.matchMedia('(prefers-color-scheme: dark)');
+    const sync = (isDark) => document.body.classList[isDark ? 'add' : 'remove']('_dark');
+
+    sync(q.matches);
+    q.addListener(e => sync(e.matches));

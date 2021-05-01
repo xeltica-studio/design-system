@@ -19,6 +19,11 @@ block head
 
 block main
   h1 Color
+  p 色はウェブサイトに華をもたらします。多すぎるとうるさく感じますが、少なすぎると殺風景でつまらない見た目になるでしょう。
+  p Xeltica UI は定義済みの色を56色用意しており、すぐに使用できます。
+  h2 カラーボックス
+  p 定義済みの全ての色を確認できます。ホバーかクリックで、名前を確認できます。
+  p._text-blue#colorbox-desc
   ._vstack.dense
     ._hstack.dense
       each tuple in grayscales
@@ -40,3 +45,20 @@ block main
         - const [name] = tuple;
         .xd-colorbox._clickable(class=`_bg-${name}-d dark`)= `${name}-d`
     .test
+
+block script
+  script.
+    const cb = navigator.clipboard;
+
+    if (cb) {
+      document.getElementById('colorbox-desc').innerText += '色をタップ/クリックすると、クリップボードに名前をコピーできます。';
+
+      const colorBoxes = [...document.getElementsByClassName('xd-colorbox')];
+      colorBoxes.forEach(el => {
+        el.addEventListener('click', e => {
+          const className = e.target.innerText;
+          console.log(className);
+          cb.writeText(className).then(() => alert('コピーしました！'));
+        });
+      });
+    }
