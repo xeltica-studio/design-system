@@ -20,10 +20,20 @@
       padding: 0.2rem 0.5rem;
       cursor: pointer;
       border-radius: var(--radius);
+      box-sizing: content-box;
+      border: 1px solid transparent;
 
-      &:hover,
-      .active {
+      &:not(.active):not(.disabled):hover {
+        border: 1px solid var(--tone-2);
+        background-color: var(--tone-1);
+      }
+      &.active {
         background-color: var(--hover);
+        cursor: default;
+      }
+      &.disabled {
+        color: var(--dimmed);
+        cursor: default;
       }
     }
   }

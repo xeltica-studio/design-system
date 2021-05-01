@@ -1216,6 +1216,8 @@ body {
   padding: 0.2rem 0.5rem;
   cursor: pointer;
   border-radius: var(--radius);
+  box-sizing: content-box;
+  border: 1px solid transparent;
 }
 ._menu > ul > li > a,
 ._menu > ul .item > a {
@@ -1223,11 +1225,20 @@ body {
   text-decoration: none;
   color: var(--fg);
 }
-._menu > ul > li:hover,
-._menu > ul > li .active,
-._menu > ul .item:hover,
-._menu > ul .item .active {
+._menu > ul > li:not(.active):not(.disabled):hover,
+._menu > ul .item:not(.active):not(.disabled):hover {
+  border: 1px solid var(--tone-2);
+  background-color: var(--tone-1);
+}
+._menu > ul > li.active,
+._menu > ul .item.active {
   background-color: var(--hover);
+  cursor: default;
+}
+._menu > ul > li.disabled,
+._menu > ul .item.disabled {
+  color: var(--dimmed);
+  cursor: default;
 }
 
 body {
