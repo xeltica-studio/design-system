@@ -26,7 +26,7 @@ $headingSize: 2rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
   h#{$i} {
     font-size: $s;
     font-weight: 200;
-    &._big {
+    &.display {
       font-size: #{$s * 2};
     }
   }
