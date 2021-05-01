@@ -7,11 +7,11 @@ Xeltica Design Systemに則った、CSSライブラリ。
 <b style="color: red">未完成につき、本番環境で使用しないでください。</b>
 
 ```
-yarn add @xeltica/ui
+yarn add xeltica/ui
 ```
 
 ```
-npm i @xeltica/ui
+npm i xeltica/ui
 ```
 
 ## 特徴
