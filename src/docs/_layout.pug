@@ -1,3 +1,6 @@
+include _footer
+include _sidebar
+
 -
   const grayscales = [
     ['black', true],
@@ -80,29 +83,13 @@ html
       h1: a(href="/") Xeltica UI
       block header
     .xd-container
-      .xd-sidebar
-        ._menu
-          h1 スタイル
-          ul
-            li: a(href="/style/typography.html") タイポグラフィ
-            li: a(href="/style/color.html") カラー
-            li: a(href="/style/device.html") デバイス
-            li: a(href="/style/theme.html") デイ/ナイト
-          h1 レイアウト
-          ul
-            li: a(href="/layout/box.html") ボックス
-          h1 その他
-          ul
-            li: button#daylight 🌞/🌙
+      +sidebar
       .xd-main
         block main
-        footer.xd-footer
-          block footer
-          aside (C)2021 Xeltica ・
-            a(href="https://github.com/Xeltica/ui") リポジトリ
-            | ・ Version #{process.env.npm_package_version}
+        +footer
     script.
       const btn = document.getElementById('daylight');
       btn.addEventListener('click', () => {
         document.body.classList.toggle('_dark');
       });
+    block script
