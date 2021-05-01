@@ -54,6 +54,7 @@ html
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width,initial-scale=1')
+    link(rel="stylesheet", href="/external/prism.css")
     link(rel='stylesheet' href='/css/xeltica-ui.min.css')
     style.
       .xd-container {
@@ -87,6 +88,7 @@ html
       .xd-main
         block main
         +footer
+    script(src="/external/prism.js")
     script.
       const btn = document.getElementById('daylight');
       btn.addEventListener('click', () => {
