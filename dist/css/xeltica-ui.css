@@ -1095,27 +1095,51 @@ h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 200;
+}
+h1._big {
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+h2._big {
+  font-size: 3.2rem;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+h3._big {
+  font-size: 2.8rem;
 }
 
 h4 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+h4._big {
+  font-size: 2.6rem;
 }
 
 h5 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+h5._big {
+  font-size: 2.4rem;
 }
 
 h6 {
   font-size: 1.1rem;
+  font-weight: 200;
+}
+h6._big {
+  font-size: 2.2rem;
 }
 
 p {
@@ -1152,6 +1176,7 @@ pre > code {
   overflow: hidden;
   border-spacing: 0;
   border-bottom: none;
+  margin-bottom: 1rem;
 }
 ._table th {
   background: var(--tone-2);

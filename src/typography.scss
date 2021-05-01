@@ -1,3 +1,5 @@
+@use "sass:list";
+
 body {
   --code-fg: #8b3a41;
   --code-bg: #ffe4e6;
@@ -17,28 +19,17 @@ h6 {
   font-weight: normal;
 }
 
-h1 {
-  font-size: 3rem;
-}
+$headingSize: 2rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
 
-h2 {
-  font-size: 2.2rem;
-}
-
-h3 {
-  font-size: 1.8rem;
-}
-
-h4 {
-  font-size: 1.6rem;
-}
-
-h5 {
-  font-size: 1.3rem;
-}
-
-h6 {
-  font-size: 1.1rem;
+@for $i from 1 through 6 {
+  $s: list.nth($headingSize, $i);
+  h#{$i} {
+    font-size: $s;
+    font-weight: 200;
+    &._big {
+      font-size: #{$s * 2};
+    }
+  }
 }
 
 p {
