@@ -1074,7 +1074,7 @@ template {
 
 body {
   --margin: 16px;
-  --radius: 8px;
+  --radius: 4px;
 }
 
 body {
@@ -1105,9 +1105,9 @@ body {
   --skyblue: #00b7ff;
   --skyblue-d: #00374d;
   --skyblue-l: #b3e9ff;
-  --blue: #255fff;
-  --blue-d: #0b1d4d;
-  --blue-l: #becfff;
+  --blue: #2571ff;
+  --blue-d: #0b224d;
+  --blue-l: #bed4ff;
   --indigo: #165e83;
   --indigo-d: #071c27;
   --indigo-l: #b9cfda;
@@ -1138,22 +1138,15 @@ body {
   --white-50: rgba(0, 0, 0, 0.5);
   --dark: var(--gray-9);
   --light: var(--gray-1);
-  --primary: var(--magenta);
+  --dimmed: var(--gray-5);
   --success: var(--blue);
-  --info: var(--cyan);
+  --info: var(--skyblue);
   --danger: var(--red);
   --warn: var(--yellow);
-  --dimmed: var(--gray-5);
-  --primary-d: var(--magenta-d);
-  --success-d: var(--blue-d);
-  --info-d: var(--cyan-d);
-  --danger-d: var(--red-d);
-  --warn-d: var(--yellow-d);
-  --primary-l: var(--magenta-l);
-  --success-l: var(--blue-l);
-  --info-l: var(--cyan-l);
-  --danger-l: var(--red-l);
-  --warn-l: var(--yellow-l);
+  --success-fg: var(--green-l);
+  --info-fg: var(--skyblue-d);
+  --danger-fg: var(--red-l);
+  --warn-fg: var(--yellow-d);
 }
 
 .text-red {
@@ -1636,12 +1629,12 @@ body {
   background-color: var(--light);
 }
 
-.text-primary {
-  color: var(--primary);
+.text-dimmed {
+  color: var(--dimmed);
 }
 
-.bg-primary {
-  background-color: var(--primary);
+.bg-dimmed {
+  background-color: var(--dimmed);
 }
 
 .text-success {
@@ -1676,92 +1669,36 @@ body {
   background-color: var(--warn);
 }
 
-.text-dimmed {
-  color: var(--dimmed);
+.text-success-fg {
+  color: var(--success-fg);
 }
 
-.bg-dimmed {
-  background-color: var(--dimmed);
+.bg-success-fg {
+  background-color: var(--success-fg);
 }
 
-.text-primary-d {
-  color: var(--primary-d);
+.text-info-fg {
+  color: var(--info-fg);
 }
 
-.bg-primary-d {
-  background-color: var(--primary-d);
+.bg-info-fg {
+  background-color: var(--info-fg);
 }
 
-.text-success-d {
-  color: var(--success-d);
+.text-danger-fg {
+  color: var(--danger-fg);
 }
 
-.bg-success-d {
-  background-color: var(--success-d);
+.bg-danger-fg {
+  background-color: var(--danger-fg);
 }
 
-.text-info-d {
-  color: var(--info-d);
+.text-warn-fg {
+  color: var(--warn-fg);
 }
 
-.bg-info-d {
-  background-color: var(--info-d);
-}
-
-.text-danger-d {
-  color: var(--danger-d);
-}
-
-.bg-danger-d {
-  background-color: var(--danger-d);
-}
-
-.text-warn-d {
-  color: var(--warn-d);
-}
-
-.bg-warn-d {
-  background-color: var(--warn-d);
-}
-
-.text-primary-l {
-  color: var(--primary-l);
-}
-
-.bg-primary-l {
-  background-color: var(--primary-l);
-}
-
-.text-success-l {
-  color: var(--success-l);
-}
-
-.bg-success-l {
-  background-color: var(--success-l);
-}
-
-.text-info-l {
-  color: var(--info-l);
-}
-
-.bg-info-l {
-  background-color: var(--info-l);
-}
-
-.text-danger-l {
-  color: var(--danger-l);
-}
-
-.bg-danger-l {
-  background-color: var(--danger-l);
-}
-
-.text-warn-l {
-  color: var(--warn-l);
-}
-
-.bg-warn-l {
-  background-color: var(--warn-l);
+.bg-warn-fg {
+  background-color: var(--warn-fg);
 }
 
 body {
@@ -1830,10 +1767,6 @@ h6.display {
   font-size: 2.2rem;
 }
 
-p {
-  margin-left: 1rem;
-}
-
 a {
   color: var(--skyblue);
 }
@@ -1859,7 +1792,7 @@ pre > code {
 
 .table {
   border: 1px solid var(--tone-2);
-  border-radius: 2px;
+  border-radius: var(--radius);
   border-collapse: separate;
   overflow: hidden;
   border-spacing: 0;
@@ -1954,6 +1887,84 @@ body {
   cursor: default;
 }
 
+button.btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+button.btn:not(:disabled) {
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+button.btn:not(:disabled):hover {
+  transform: var(--clickable-hover-transform);
+}
+button.btn:not(:disabled):active {
+  transform: var(--clickable-active-transform);
+}
+button.btn:not(:disabled):hover, button.btn:not(:disabled):active {
+  z-index: 9999;
+}
+button.btn:focus {
+  border-width: 2px;
+}
+button.btn.primary {
+  background: var(--primary);
+  color: var(--primary-fg);
+  border: none;
+}
+button.btn.primary:focus {
+  border: 2px solid var(--tone-12);
+}
+button.btn.success {
+  background: var(--success);
+  color: var(--success-fg);
+  border: none;
+}
+button.btn.success:focus {
+  border: 2px solid var(--tone-12);
+}
+button.btn.info {
+  background: var(--info);
+  color: var(--info-fg);
+  border: none;
+}
+button.btn.info:focus {
+  border: 2px solid var(--tone-12);
+}
+button.btn.warn {
+  background: var(--warn);
+  color: var(--warn-fg);
+  border: none;
+}
+button.btn.warn:focus {
+  border: 2px solid var(--tone-12);
+}
+button.btn.danger {
+  background: var(--danger);
+  color: var(--danger-fg);
+  border: none;
+}
+button.btn.danger:focus {
+  border: 2px solid var(--tone-12);
+}
+button.btn:disabled {
+  background: transparent;
+  border-color: var(--tone-4);
+  color: var(--tone-4);
+  font-weight: normal;
+  cursor: default;
+}
+
 body {
   --tone-0: var(--white);
   --tone-1: var(--gray-1);
@@ -1972,12 +1983,12 @@ body {
   --bg: var(--white);
   --fg: var(--gray-11);
   --bold: var(--tone-13);
-  --link: var(--skyblue);
+  --link: var(--primary);
   --divider: var(--tone-5);
   --hover: var(--tone-2);
-  --accent: var(--teal);
-  --accent-l: var(--teal-l);
-  --accent-d: var(--teal-d);
+  --primary: var(--vermilion);
+  --primary-bg: var(--vermilion-l);
+  --primary-fg: var(--white);
   background: var(--bg);
   color: var(--fg);
 }

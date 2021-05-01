@@ -1,0 +1,34 @@
+extends ../_layout
+
+block main
+  h1 ボタン
+  p ボタンは、ユーザーが押すことで何か処理を行うときに使用する要素です。用途に応じて、いくつかのパターンを用意しています。
+
+  .vstack
+    section
+      h2 バリエーション
+      .hstack
+        button.btn 通常
+        button.btn.primary プライマリー
+        button.btn.success 成功
+        button.btn.info 情報
+        button.btn.warn 警告
+        button.btn.danger 危険
+        button.btn(disabled) 無効
+    section
+      h2 使用例
+      .vstack
+        article.hstack
+          button.btn 下書き
+          button.btn.primary 保存する
+        article.hstack
+          button.btn キャンセル
+          button.btn.danger 削除
+        article.hstack
+          button.btn.info 情報取得
+          button.btn.warn 警告
+          button.btn.danger BAN
+        article
+          .hstack
+            button.btn キャンセル
+            button.btn(disabled) 追加

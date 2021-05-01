@@ -19,6 +19,7 @@
 @import "box";
 @import "stack";
 @import "menu";
+@import "button";
 
 body {
   --tone-0: var(--white);
@@ -39,13 +40,13 @@ body {
   --bg: var(--white);
   --fg: var(--gray-11);
   --bold: var(--tone-13);
-  --link: var(--skyblue);
+  --link: var(--primary);
   --divider: var(--tone-5);
   --hover: var(--tone-2);
 
-  --accent: var(--teal);
-  --accent-l: var(--teal-l);
-  --accent-d: var(--teal-d);
+  --primary: var(--vermilion);
+  --primary-bg: var(--vermilion-l);
+  --primary-fg: var(--white);
 
   background: var(--bg);
   color: var(--fg);

@@ -1,0 +1,39 @@
+button.btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+
+  &:not(:disabled) {
+    @include clickable;
+  }
+
+  &:focus {
+    border-width: 2px;
+  }
+
+  @each $var in primary, success, info, warn, danger {
+    &.#{$var} {
+      background: var(--#{$var});
+      color: var(--#{$var}-fg);
+      border: none;
+      &:focus {
+        border: 2px solid var(--tone-12);
+      }
+    }
+  }
+
+  &:disabled {
+    background: transparent;
+    border-color: var(--tone-4);
+    color: var(--tone-4);
+    font-weight: normal;
+    cursor: default;
+  }
+}

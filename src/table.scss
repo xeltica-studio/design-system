@@ -1,6 +1,6 @@
 .table {
   border: 1px solid var(--tone-2);
-  border-radius: 2px;
+  border-radius: var(--radius);
   border-collapse: separate;
   overflow: hidden;
   border-spacing: 0;
