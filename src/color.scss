@@ -35,14 +35,14 @@ $classes: (
   "dark": var(--gray-9),
   "light": var(--gray-1),
   "dimmed": var(--gray-5),
-  "success": var(--blue),
+  "success": var(--green),
   "info": var(--skyblue),
   "danger": var(--red),
   "warn": var(--yellow),
-  "success-fg": var(--green-l),
-  "info-fg": var(--skyblue-d),
-  "danger-fg": var(--red-l),
-  "warn-fg": var(--yellow-d),
+  "success-fg": var(--white),
+  "info-fg": var(--black),
+  "danger-fg": var(--white),
+  "warn-fg": var(--black),
 );
 
 body {
