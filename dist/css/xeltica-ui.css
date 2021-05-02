@@ -1843,46 +1843,41 @@ body {
   margin-left: var(--stack-margin);
 }
 
-.menu {
-  padding: var(--margin);
+.menu section + section,
+.menu .section + .section {
+  margin-top: var(--margin);
 }
-.menu > h1,
+.menu h1,
 .menu .header {
   border-bottom: none;
   font-size: 0.7rem;
   color: var(--dimmed);
   margin: 0;
 }
-.menu > ul {
-  list-style: none;
-  padding: 0;
-}
-.menu > ul > li,
-.menu > ul .item {
-  padding: 0.2rem 0.5rem;
-  cursor: pointer;
-  border-radius: var(--radius);
-  box-sizing: content-box;
-  border: 1px solid transparent;
-}
-.menu > ul > li > a,
-.menu > ul .item > a {
+.menu a {
   display: block;
   text-decoration: none;
   color: var(--fg);
 }
-.menu > ul > li:not(.active):not(.disabled):hover,
-.menu > ul .item:not(.active):not(.disabled):hover {
+.menu .item {
+  display: block;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  text-align: left;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: inherit;
+}
+.menu .item:not(.active):not(.disabled):hover {
   border: 1px solid var(--tone-2);
   background-color: var(--tone-1);
 }
-.menu > ul > li.active,
-.menu > ul .item.active {
+.menu .item.active {
   background-color: var(--hover);
   cursor: default;
 }
-.menu > ul > li.disabled,
-.menu > ul .item.disabled {
+.menu .item.disabled {
   color: var(--dimmed);
   cursor: default;
 }

@@ -6,22 +6,72 @@ block head
 block main
   h1 メニュー
   p メニューは、ナビゲーションや項目選択など幅広く用いられるコンポーネントです。
+  h2 クラスと要素
+  table.table
+    thead: tr
+      th クラス名
+      th 説明
+    tbody
+      tr: td: code .menu
+        td メニューの親クラス。この中に項目を定義します
+      tr: td: code h1
+        td メニューのタイトル
+      tr: td: code section
+        td メニューを区切る場合、<code>section</code>タグを使用します
+      tr: td: code .item
+        td メニュー項目を表します。
+      tr: td: code .disabled
+        td item と併用することで、メニュー項目を無効化状態にします
+      tr: td: code .active
+        td item と併用することで、メニュー項目を選択した状態にします
   h2 例
-  .menu
-    h1 メニューヘッダー
-    ul
-      li.item 項目
-      li.item 項目
-      li.item.disabled 無効化
-      li.item.disabled 無効化
-      li.item.active 選択中
-  pre.language-html: code
-    :escape-html:pug(pretty=true)
-      .menu
-        h1 メニューヘッダー
-        ul
-          li.item 項目
-          li.item 項目
-          li.item.disabled 無効化
-          li.item.disabled 無効化
-          li.item.active 選択中
+  p: b セクションを使用しない場合
+  .vstack
+    .menu
+      h1 果物
+      .item りんご
+      .item.disabled ぶどう
+      .item.active みかん
+    pre: code
+      :escape-html
+        <div class="menu">
+          <h1>果物</h1>
+          <div class="item">りんご</div>
+          <div class="item disabled">ぶどう</div>
+          <div class="item active">みかん</div>
+        </div>
+  p: b セクションを使用する場合
+  .vstack
+    .menu
+      section
+        h1 入門編
+        .item 値
+        .item 変数
+        .item 制御構造
+        .item 関数
+        .item クラス
+      section
+        h1 実践編
+        .item データベース
+        .item ウィンドウ作成
+        .item Webサーバー
+        .item 暗号化
+    pre: code
+      :escape-html
+        <div class="menu">
+          <section>
+            <h1>入門編</h1>
+            <div class="item">値</div>
+            <div class="item">変数</div>
+            <div class="item">制御構造</div>
+            <div class="item">関数</div>
+            <div class="item">クラス</div>
+          </section>
+          <section>
+            <h1>実践編</h1>
+            <div class="item">データベース</div>
+            <div class="item">ウィンドウ作成</div>
+            <div class="item">Webサーバー</div>
+            <div class="item">暗号化</div>
+          </section>
+        </div>

@@ -1,20 +1,29 @@
 mixin sidebar
   .xd-sidebar
     .menu
-      h1 スタイル
-      ul
-        li: a(href="/style/typography.html") タイポグラフィ
-        li: a(href="/style/color.html") カラー
-        li: a(href="/style/breakpoints.html") ブレークポイント
-        li: a(href="/style/theme.html") テーマ
-      h1 レイアウト
-      ul
-        li: a(href="/layout/box.html") ボックス
-      h1 コンポーネント
-      ul
-        li: a(href="/component/button.html") ボタン
-        li: a(href="/component/menu.html") メニュー
-      h1 その他
-      ul
-        li: a(href="/utility.html") ユーティリティ
-        li: button#daylight テーマを切り替える
+      section
+        h1 スタイル
+        a.item(href="/style/typography.html") タイポグラフィ
+        a.item(href="/style/color.html") カラー
+        a.item(href="/style/breakpoints.html") ブレークポイント
+        a.item(href="/style/theme.html") テーマ
+      section
+        h1 レイアウト
+        a.item(href="/layout/box.html") ボックス
+        .item.disabled スタック
+      section
+        a.item(href="/component/button.html") ボタン
+        .item.disabled インプット
+        a.item(href="/component/menu.html") メニュー
+        .item.disabled リストビュー
+        .item.disabled リストフォーム
+        .item.disabled アラート
+        .item.disabled カード
+        .item.disabled ノート
+        .item.disabled バッジ
+        .item.disabled ナビゲーションバー
+        .item.disabled プログレスバー
+      section
+        h1 その他
+        a.item(href="/utility.html") ユーティリティ
+        button.item#daylight テーマを切り替える
