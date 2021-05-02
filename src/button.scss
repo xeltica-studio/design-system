@@ -8,14 +8,24 @@ button.btn {
   cursor: pointer;
   outline: none;
   font-size: 1rem;
-  transition: all 0.2s ease;
+  position: relative;
+
+  // 光彩エフェクトのアニメーションが、clickableと衝突するので
+  // beforeをオーバーレイとして使う
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    transition: box-shadow 0.2s ease;
+  }
 
   &:not(:disabled) {
     @include clickable;
   }
 
-  &:focus {
-    border-width: 2px;
+  &:focus::before {
+    box-shadow: 0 0 1rem 0px var(--primary);
   }
 
   @each $var in primary, success, info, warn, danger {
@@ -23,8 +33,9 @@ button.btn {
       background: var(--#{$var});
       color: var(--#{$var}-fg);
       border: none;
-      &:focus {
-        border: 2px solid var(--tone-12);
+      &:focus::before {
+        // border: 2px solid var(--tone-12);
+        box-shadow: 0 0 1rem 0px var(--#{$var});
       }
     }
   }

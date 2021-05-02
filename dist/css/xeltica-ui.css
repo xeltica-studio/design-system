@@ -1074,7 +1074,7 @@ template {
 
 body {
   --margin: 16px;
-  --radius: 4px;
+  --radius: 3px;
 }
 
 body {
@@ -1139,14 +1139,14 @@ body {
   --dark: var(--gray-9);
   --light: var(--gray-1);
   --dimmed: var(--gray-5);
-  --success: var(--blue);
+  --success: var(--green);
   --info: var(--skyblue);
   --danger: var(--red);
   --warn: var(--yellow);
-  --success-fg: var(--green-l);
-  --info-fg: var(--skyblue-d);
-  --danger-fg: var(--red-l);
-  --warn-fg: var(--yellow-d);
+  --success-fg: var(--white);
+  --info-fg: var(--black);
+  --danger-fg: var(--white);
+  --warn-fg: var(--black);
 }
 
 .text-red {
@@ -1897,7 +1897,14 @@ button.btn {
   cursor: pointer;
   outline: none;
   font-size: 1rem;
-  transition: all 0.2s ease;
+  position: relative;
+}
+button.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  transition: box-shadow 0.2s ease;
 }
 button.btn:not(:disabled) {
   transition: transform 0.2s ease;
@@ -1914,48 +1921,48 @@ button.btn:not(:disabled):active {
 button.btn:not(:disabled):hover, button.btn:not(:disabled):active {
   z-index: 9999;
 }
-button.btn:focus {
-  border-width: 2px;
+button.btn:focus::before {
+  box-shadow: 0 0 1rem 0px var(--primary);
 }
 button.btn.primary {
   background: var(--primary);
   color: var(--primary-fg);
   border: none;
 }
-button.btn.primary:focus {
-  border: 2px solid var(--tone-12);
+button.btn.primary:focus::before {
+  box-shadow: 0 0 1rem 0px var(--primary);
 }
 button.btn.success {
   background: var(--success);
   color: var(--success-fg);
   border: none;
 }
-button.btn.success:focus {
-  border: 2px solid var(--tone-12);
+button.btn.success:focus::before {
+  box-shadow: 0 0 1rem 0px var(--success);
 }
 button.btn.info {
   background: var(--info);
   color: var(--info-fg);
   border: none;
 }
-button.btn.info:focus {
-  border: 2px solid var(--tone-12);
+button.btn.info:focus::before {
+  box-shadow: 0 0 1rem 0px var(--info);
 }
 button.btn.warn {
   background: var(--warn);
   color: var(--warn-fg);
   border: none;
 }
-button.btn.warn:focus {
-  border: 2px solid var(--tone-12);
+button.btn.warn:focus::before {
+  box-shadow: 0 0 1rem 0px var(--warn);
 }
 button.btn.danger {
   background: var(--danger);
   color: var(--danger-fg);
   border: none;
 }
-button.btn.danger:focus {
-  border: 2px solid var(--tone-12);
+button.btn.danger:focus::before {
+  box-shadow: 0 0 1rem 0px var(--danger);
 }
 button.btn:disabled {
   background: transparent;
@@ -1986,8 +1993,8 @@ body {
   --link: var(--primary);
   --divider: var(--tone-5);
   --hover: var(--tone-2);
-  --primary: var(--vermilion);
-  --primary-bg: var(--vermilion-l);
+  --primary: var(--blue);
+  --primary-bg: var(--blue-l);
   --primary-fg: var(--white);
   background: var(--bg);
   color: var(--fg);
