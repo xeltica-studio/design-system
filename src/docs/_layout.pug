@@ -98,7 +98,12 @@ html
     script(src="/external/prism.js")
     script.
       const btn = document.getElementById('daylight');
+      const cl = document.body.classList;
+      if (localStorage.getItem('xelticaui:theme') === 'dark') {
+        cl.add('dark');
+      }
       btn.addEventListener('click', () => {
-        document.body.classList.toggle('dark');
+        cl.toggle('dark');
+        localStorage.setItem('xelticaui:theme', cl.contains('dark') ? 'dark' : 'light');
       });
     block script

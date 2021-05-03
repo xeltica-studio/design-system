@@ -58,10 +58,11 @@ block main
     section
       h2 画像
       p bodyの外に<code>img</code>タグを配置することで、画像付きカードを作成できます。
-        | カード内に収めるため、imgタグに<code>fluid</code>クラスを付けます。
+        | カード内に収めるため、figureタグに<code>fluid</code>クラスを付けます。
         | <code>bottom-shadow</code>クラスをimgタグに付けると、画像に影が付きます。
       .card.mb-2(style="width: 320px")
-        img.fluid.bottom-shadow(src="http://placekitten.com/800/520" alt="cat")
+        figure.fluid.bottom-shadow
+          img(src="http://placekitten.com/800/520" alt="cat")
         .body
           h1= cardTitle
           h2.mb-1= cardSubtitle
