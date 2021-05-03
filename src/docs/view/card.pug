@@ -1,0 +1,136 @@
+extends ../_layout
+
+block main
+  - const cardTitle = 'ポラーノの広場';
+  - const cardSubtitle = '宮沢賢治';
+  - const cardBody = 'あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。';
+
+  h1 カード
+  p カードは、情報の関係性を明確にする役割を持ち、様々な用途で利用できる柔軟性、拡張性を持ち合わせています。
+  article.vstack
+    section
+      h2 最もシンプルなカード
+      p カードは、<code>card</code>クラスのタグで囲うことで作成できます。カード内の要素は、<code>body</code>クラスのタグで囲います。
+      .card.my-2
+        .body
+          p=cardBody
+      pre: code
+        :escape-html
+          <div class="card my-2">
+            <div class="body">
+              あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+            </div>
+          </div>
+    section
+      h2 タイトル付き
+      p bodyの中で<code>h1</code>タグを用いるとタイトル、<code>h2</code>タグを用いるとサブタイトルを作成できます。
+      .card.mb-2
+        .body
+          h1= cardTitle
+          h2.mb-1= cardSubtitle
+          p= cardBody
+      pre: code
+        :escape-html
+          <div class="card my-2">
+            <div class="body">
+              <h1>ポラーノの広場</h1>
+              <h2 class="mb-1">宮沢賢治</h2>
+              あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+            </div>
+          </div>
+    section
+      h2 固定サイズ
+      p カードは幅や高さが設定されていないので、必要に応じてCSSを当てます。
+      .card.my-2(style="width: 500px")
+        .body
+          h1= cardTitle
+          h2.mb-1= cardSubtitle
+          p= cardBody
+      pre: code
+        :escape-html
+          <div class="card my-2" style="width: 500px">
+            <div class="body">
+              <h1>ポラーノの広場</h1>
+              <h2 class="mb-1">宮沢賢治</h2>
+              あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+            </div>
+          </div>
+    section
+      h2 画像
+      p bodyの外に<code>img</code>タグを配置することで、画像付きカードを作成できます。
+        | カード内に収めるため、imgタグに<code>fluid</code>クラスを付けます。
+        | <code>bottom-shadow</code>クラスをimgタグに付けると、画像に影が付きます。
+      .card.mb-2(style="width: 320px")
+        img.fluid.bottom-shadow(src="http://placekitten.com/800/520" alt="cat")
+        .body
+          h1= cardTitle
+          h2.mb-1= cardSubtitle
+          p= cardBody
+      pre: code
+        :escape-html
+          <div class="card my-2">
+            <div class="body">
+              <h1>ポラーノの広場</h1>
+              <h2 class="mb-1">宮沢賢治</h2>
+              あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+            </div>
+          </div>
+    section
+      h2 ヘッダー・フッター
+      p <code>header</code> <code>footer</code> タグを使用することで、カードにヘッダーおよびフッターを追加できます。
+      .card.mb-2(style="width: 320px")
+        header ✨おすすめのブック
+        .body
+          h1= cardTitle
+          h2.mb-1= cardSubtitle
+          p= cardBody
+        footer
+          a.btn(href="https://www.aozora.gr.jp/cards/000081/files/1935_19925.html", target="_blank", rel="noopener norefferer")
+            | 無料で読む
+      pre: code
+        :escape-html
+          <div class="card my-2">
+            <header>✨おすすめのブック</header>
+            <div class="body">
+              <h1>ポラーノの広場</h1>
+              <h2 class="mb-1">宮沢賢治</h2>
+              あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+            </div>
+            <footer>
+              <a class="btn" href="https://www.aozora.gr.jp/cards/000081/files/1935_19925.html" target="_blank" rel="noopener norefferer">
+                無料で読む
+              </a>
+            </footer>
+          </div>
+    section
+      h2 その他
+      p ghost クラスをカードに適用すると、縁取りがなくなります。
+      .card.ghost.my-2(style="width: 500px")
+        .body
+          h1= cardTitle
+          h2.mb-1= cardSubtitle
+          p= cardBody
+      pre: code
+        :escape-html
+          <div class="card ghost my-2" style="width: 500px">
+            <div class="body">
+              <h1>ポラーノの広場</h1>
+              <h2 class="mb-1">宮沢賢治</h2>
+              あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+            </div>
+          </div>
+      p sink クラスをカードに適用すると、影がなくなります。
+      .card.sink.my-2(style="width: 320px")
+        .body
+          h1= cardTitle
+          h2.mb-1= cardSubtitle
+          p= cardBody
+      pre: code
+        :escape-html
+          <div class="card sink my-2" style="width: 500px">
+            <div class="body">
+              <h1>ポラーノの広場</h1>
+              <h2 class="mb-1">宮沢賢治</h2>
+              あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+            </div>
+          </div>

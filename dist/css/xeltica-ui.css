@@ -381,695 +381,695 @@ template {
 }
 
 .fluid {
-  width: 100%;
+  width: 100% !important;
 }
 
 .ma-auto {
-  margin: auto;
+  margin: auto !important;
 }
 
 .mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
 }
 
 .pa-auto {
-  padding: auto;
+  padding: auto !important;
 }
 
 .px-auto {
-  padding-left: auto;
-  padding-right: auto;
+  padding-left: auto !important;
+  padding-right: auto !important;
 }
 
 .py-auto {
-  padding-top: auto;
-  padding-bottom: auto;
+  padding-top: auto !important;
+  padding-bottom: auto !important;
 }
 
 .ma--5 {
-  margin: -40px;
+  margin: -40px !important;
 }
 
 .ml--5 {
-  margin-left: -40px;
+  margin-left: -40px !important;
 }
 
 .mr--5 {
-  margin-right: -40px;
+  margin-right: -40px !important;
 }
 
 .mt--5 {
-  margin-top: -40px;
+  margin-top: -40px !important;
 }
 
 .mb--5 {
-  margin-bottom: -40px;
+  margin-bottom: -40px !important;
 }
 
 .mx--5 {
-  margin-left: -40px;
-  margin-right: -40px;
+  margin-left: -40px !important;
+  margin-right: -40px !important;
 }
 
 .my--5 {
   margin-top: -40px;
-  margin-bottom: -40px;
+  margin-bottom: -40px !important;
 }
 
 .pa--5 {
-  padding: -40px;
+  padding: -40px !important;
 }
 
 .pl--5 {
-  padding-left: -40px;
+  padding-left: -40px !important;
 }
 
 .pr--5 {
-  padding-right: -40px;
+  padding-right: -40px !important;
 }
 
 .pt--5 {
-  padding-top: -40px;
+  padding-top: -40px !important;
 }
 
 .pb--5 {
-  padding-bottom: -40px;
+  padding-bottom: -40px !important;
 }
 
 .px--5 {
-  padding-left: -40px;
-  padding-right: -40px;
+  padding-left: -40px !important;
+  padding-right: -40px !important;
 }
 
 .py--5 {
-  padding-top: -40px;
-  padding-bottom: -40px;
+  padding-top: -40px !important;
+  padding-bottom: -40px !important;
 }
 
 .ma--4 {
-  margin: -32px;
+  margin: -32px !important;
 }
 
 .ml--4 {
-  margin-left: -32px;
+  margin-left: -32px !important;
 }
 
 .mr--4 {
-  margin-right: -32px;
+  margin-right: -32px !important;
 }
 
 .mt--4 {
-  margin-top: -32px;
+  margin-top: -32px !important;
 }
 
 .mb--4 {
-  margin-bottom: -32px;
+  margin-bottom: -32px !important;
 }
 
 .mx--4 {
-  margin-left: -32px;
-  margin-right: -32px;
+  margin-left: -32px !important;
+  margin-right: -32px !important;
 }
 
 .my--4 {
   margin-top: -32px;
-  margin-bottom: -32px;
+  margin-bottom: -32px !important;
 }
 
 .pa--4 {
-  padding: -32px;
+  padding: -32px !important;
 }
 
 .pl--4 {
-  padding-left: -32px;
+  padding-left: -32px !important;
 }
 
 .pr--4 {
-  padding-right: -32px;
+  padding-right: -32px !important;
 }
 
 .pt--4 {
-  padding-top: -32px;
+  padding-top: -32px !important;
 }
 
 .pb--4 {
-  padding-bottom: -32px;
+  padding-bottom: -32px !important;
 }
 
 .px--4 {
-  padding-left: -32px;
-  padding-right: -32px;
+  padding-left: -32px !important;
+  padding-right: -32px !important;
 }
 
 .py--4 {
-  padding-top: -32px;
-  padding-bottom: -32px;
+  padding-top: -32px !important;
+  padding-bottom: -32px !important;
 }
 
 .ma--3 {
-  margin: -24px;
+  margin: -24px !important;
 }
 
 .ml--3 {
-  margin-left: -24px;
+  margin-left: -24px !important;
 }
 
 .mr--3 {
-  margin-right: -24px;
+  margin-right: -24px !important;
 }
 
 .mt--3 {
-  margin-top: -24px;
+  margin-top: -24px !important;
 }
 
 .mb--3 {
-  margin-bottom: -24px;
+  margin-bottom: -24px !important;
 }
 
 .mx--3 {
-  margin-left: -24px;
-  margin-right: -24px;
+  margin-left: -24px !important;
+  margin-right: -24px !important;
 }
 
 .my--3 {
   margin-top: -24px;
-  margin-bottom: -24px;
+  margin-bottom: -24px !important;
 }
 
 .pa--3 {
-  padding: -24px;
+  padding: -24px !important;
 }
 
 .pl--3 {
-  padding-left: -24px;
+  padding-left: -24px !important;
 }
 
 .pr--3 {
-  padding-right: -24px;
+  padding-right: -24px !important;
 }
 
 .pt--3 {
-  padding-top: -24px;
+  padding-top: -24px !important;
 }
 
 .pb--3 {
-  padding-bottom: -24px;
+  padding-bottom: -24px !important;
 }
 
 .px--3 {
-  padding-left: -24px;
-  padding-right: -24px;
+  padding-left: -24px !important;
+  padding-right: -24px !important;
 }
 
 .py--3 {
-  padding-top: -24px;
-  padding-bottom: -24px;
+  padding-top: -24px !important;
+  padding-bottom: -24px !important;
 }
 
 .ma--2 {
-  margin: -16px;
+  margin: -16px !important;
 }
 
 .ml--2 {
-  margin-left: -16px;
+  margin-left: -16px !important;
 }
 
 .mr--2 {
-  margin-right: -16px;
+  margin-right: -16px !important;
 }
 
 .mt--2 {
-  margin-top: -16px;
+  margin-top: -16px !important;
 }
 
 .mb--2 {
-  margin-bottom: -16px;
+  margin-bottom: -16px !important;
 }
 
 .mx--2 {
-  margin-left: -16px;
-  margin-right: -16px;
+  margin-left: -16px !important;
+  margin-right: -16px !important;
 }
 
 .my--2 {
   margin-top: -16px;
-  margin-bottom: -16px;
+  margin-bottom: -16px !important;
 }
 
 .pa--2 {
-  padding: -16px;
+  padding: -16px !important;
 }
 
 .pl--2 {
-  padding-left: -16px;
+  padding-left: -16px !important;
 }
 
 .pr--2 {
-  padding-right: -16px;
+  padding-right: -16px !important;
 }
 
 .pt--2 {
-  padding-top: -16px;
+  padding-top: -16px !important;
 }
 
 .pb--2 {
-  padding-bottom: -16px;
+  padding-bottom: -16px !important;
 }
 
 .px--2 {
-  padding-left: -16px;
-  padding-right: -16px;
+  padding-left: -16px !important;
+  padding-right: -16px !important;
 }
 
 .py--2 {
-  padding-top: -16px;
-  padding-bottom: -16px;
+  padding-top: -16px !important;
+  padding-bottom: -16px !important;
 }
 
 .ma--1 {
-  margin: -8px;
+  margin: -8px !important;
 }
 
 .ml--1 {
-  margin-left: -8px;
+  margin-left: -8px !important;
 }
 
 .mr--1 {
-  margin-right: -8px;
+  margin-right: -8px !important;
 }
 
 .mt--1 {
-  margin-top: -8px;
+  margin-top: -8px !important;
 }
 
 .mb--1 {
-  margin-bottom: -8px;
+  margin-bottom: -8px !important;
 }
 
 .mx--1 {
-  margin-left: -8px;
-  margin-right: -8px;
+  margin-left: -8px !important;
+  margin-right: -8px !important;
 }
 
 .my--1 {
   margin-top: -8px;
-  margin-bottom: -8px;
+  margin-bottom: -8px !important;
 }
 
 .pa--1 {
-  padding: -8px;
+  padding: -8px !important;
 }
 
 .pl--1 {
-  padding-left: -8px;
+  padding-left: -8px !important;
 }
 
 .pr--1 {
-  padding-right: -8px;
+  padding-right: -8px !important;
 }
 
 .pt--1 {
-  padding-top: -8px;
+  padding-top: -8px !important;
 }
 
 .pb--1 {
-  padding-bottom: -8px;
+  padding-bottom: -8px !important;
 }
 
 .px--1 {
-  padding-left: -8px;
-  padding-right: -8px;
+  padding-left: -8px !important;
+  padding-right: -8px !important;
 }
 
 .py--1 {
-  padding-top: -8px;
-  padding-bottom: -8px;
+  padding-top: -8px !important;
+  padding-bottom: -8px !important;
 }
 
 .ma-0 {
-  margin: 0px;
+  margin: 0px !important;
 }
 
 .ml-0 {
-  margin-left: 0px;
+  margin-left: 0px !important;
 }
 
 .mr-0 {
-  margin-right: 0px;
+  margin-right: 0px !important;
 }
 
 .mt-0 {
-  margin-top: 0px;
+  margin-top: 0px !important;
 }
 
 .mb-0 {
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 .mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 .my-0 {
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 .pa-0 {
-  padding: 0px;
+  padding: 0px !important;
 }
 
 .pl-0 {
-  padding-left: 0px;
+  padding-left: 0px !important;
 }
 
 .pr-0 {
-  padding-right: 0px;
+  padding-right: 0px !important;
 }
 
 .pt-0 {
-  padding-top: 0px;
+  padding-top: 0px !important;
 }
 
 .pb-0 {
-  padding-bottom: 0px;
+  padding-bottom: 0px !important;
 }
 
 .px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 .py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 .ma-1 {
-  margin: 8px;
+  margin: 8px !important;
 }
 
 .ml-1 {
-  margin-left: 8px;
+  margin-left: 8px !important;
 }
 
 .mr-1 {
-  margin-right: 8px;
+  margin-right: 8px !important;
 }
 
 .mt-1 {
-  margin-top: 8px;
+  margin-top: 8px !important;
 }
 
 .mb-1 {
-  margin-bottom: 8px;
+  margin-bottom: 8px !important;
 }
 
 .mx-1 {
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 8px !important;
+  margin-right: 8px !important;
 }
 
 .my-1 {
   margin-top: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 8px !important;
 }
 
 .pa-1 {
-  padding: 8px;
+  padding: 8px !important;
 }
 
 .pl-1 {
-  padding-left: 8px;
+  padding-left: 8px !important;
 }
 
 .pr-1 {
-  padding-right: 8px;
+  padding-right: 8px !important;
 }
 
 .pt-1 {
-  padding-top: 8px;
+  padding-top: 8px !important;
 }
 
 .pb-1 {
-  padding-bottom: 8px;
+  padding-bottom: 8px !important;
 }
 
 .px-1 {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
 }
 
 .py-1 {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
 }
 
 .ma-2 {
-  margin: 16px;
+  margin: 16px !important;
 }
 
 .ml-2 {
-  margin-left: 16px;
+  margin-left: 16px !important;
 }
 
 .mr-2 {
-  margin-right: 16px;
+  margin-right: 16px !important;
 }
 
 .mt-2 {
-  margin-top: 16px;
+  margin-top: 16px !important;
 }
 
 .mb-2 {
-  margin-bottom: 16px;
+  margin-bottom: 16px !important;
 }
 
 .mx-2 {
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 16px !important;
+  margin-right: 16px !important;
 }
 
 .my-2 {
   margin-top: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 16px !important;
 }
 
 .pa-2 {
-  padding: 16px;
+  padding: 16px !important;
 }
 
 .pl-2 {
-  padding-left: 16px;
+  padding-left: 16px !important;
 }
 
 .pr-2 {
-  padding-right: 16px;
+  padding-right: 16px !important;
 }
 
 .pt-2 {
-  padding-top: 16px;
+  padding-top: 16px !important;
 }
 
 .pb-2 {
-  padding-bottom: 16px;
+  padding-bottom: 16px !important;
 }
 
 .px-2 {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
 }
 
 .py-2 {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
 }
 
 .ma-3 {
-  margin: 24px;
+  margin: 24px !important;
 }
 
 .ml-3 {
-  margin-left: 24px;
+  margin-left: 24px !important;
 }
 
 .mr-3 {
-  margin-right: 24px;
+  margin-right: 24px !important;
 }
 
 .mt-3 {
-  margin-top: 24px;
+  margin-top: 24px !important;
 }
 
 .mb-3 {
-  margin-bottom: 24px;
+  margin-bottom: 24px !important;
 }
 
 .mx-3 {
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 24px !important;
+  margin-right: 24px !important;
 }
 
 .my-3 {
   margin-top: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 24px !important;
 }
 
 .pa-3 {
-  padding: 24px;
+  padding: 24px !important;
 }
 
 .pl-3 {
-  padding-left: 24px;
+  padding-left: 24px !important;
 }
 
 .pr-3 {
-  padding-right: 24px;
+  padding-right: 24px !important;
 }
 
 .pt-3 {
-  padding-top: 24px;
+  padding-top: 24px !important;
 }
 
 .pb-3 {
-  padding-bottom: 24px;
+  padding-bottom: 24px !important;
 }
 
 .px-3 {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
 }
 
 .py-3 {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
 }
 
 .ma-4 {
-  margin: 32px;
+  margin: 32px !important;
 }
 
 .ml-4 {
-  margin-left: 32px;
+  margin-left: 32px !important;
 }
 
 .mr-4 {
-  margin-right: 32px;
+  margin-right: 32px !important;
 }
 
 .mt-4 {
-  margin-top: 32px;
+  margin-top: 32px !important;
 }
 
 .mb-4 {
-  margin-bottom: 32px;
+  margin-bottom: 32px !important;
 }
 
 .mx-4 {
-  margin-left: 32px;
-  margin-right: 32px;
+  margin-left: 32px !important;
+  margin-right: 32px !important;
 }
 
 .my-4 {
   margin-top: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 32px !important;
 }
 
 .pa-4 {
-  padding: 32px;
+  padding: 32px !important;
 }
 
 .pl-4 {
-  padding-left: 32px;
+  padding-left: 32px !important;
 }
 
 .pr-4 {
-  padding-right: 32px;
+  padding-right: 32px !important;
 }
 
 .pt-4 {
-  padding-top: 32px;
+  padding-top: 32px !important;
 }
 
 .pb-4 {
-  padding-bottom: 32px;
+  padding-bottom: 32px !important;
 }
 
 .px-4 {
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
 }
 
 .py-4 {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
 }
 
 .ma-5 {
-  margin: 40px;
+  margin: 40px !important;
 }
 
 .ml-5 {
-  margin-left: 40px;
+  margin-left: 40px !important;
 }
 
 .mr-5 {
-  margin-right: 40px;
+  margin-right: 40px !important;
 }
 
 .mt-5 {
-  margin-top: 40px;
+  margin-top: 40px !important;
 }
 
 .mb-5 {
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
 }
 
 .mx-5 {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 40px !important;
+  margin-right: 40px !important;
 }
 
 .my-5 {
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
 }
 
 .pa-5 {
-  padding: 40px;
+  padding: 40px !important;
 }
 
 .pl-5 {
-  padding-left: 40px;
+  padding-left: 40px !important;
 }
 
 .pr-5 {
-  padding-right: 40px;
+  padding-right: 40px !important;
 }
 
 .pt-5 {
-  padding-top: 40px;
+  padding-top: 40px !important;
 }
 
 .pb-5 {
-  padding-bottom: 40px;
+  padding-bottom: 40px !important;
 }
 
 .px-5 {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
 }
 
 .py-5 {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
 }
 
 body {
@@ -1139,566 +1139,639 @@ body {
   --dark: var(--gray-9);
   --light: var(--gray-1);
   --dimmed: var(--gray-5);
+  --success-fg: var(--white);
+  --primary-fg: var(--white);
+  --info-fg: var(--black);
+  --danger-fg: var(--white);
+  --warn-fg: var(--black);
+  --primary: var(--blue);
   --success: var(--green);
   --info: var(--skyblue);
   --danger: var(--red);
   --warn: var(--yellow);
-  --success-fg: var(--white);
-  --info-fg: var(--black);
-  --danger-fg: var(--white);
-  --warn-fg: var(--black);
 }
 
 .text-red {
-  color: var(--red);
+  color: var(--red) !important;
 }
 
 .bg-red {
-  background-color: var(--red);
+  background-color: var(--red) !important;
 }
 
 .text-red-d {
-  color: var(--red-d);
+  color: var(--red-d) !important;
 }
 
 .bg-red-d {
-  background-color: var(--red-d);
+  background-color: var(--red-d) !important;
 }
 
 .text-red-l {
-  color: var(--red-l);
+  color: var(--red-l) !important;
 }
 
 .bg-red-l {
-  background-color: var(--red-l);
+  background-color: var(--red-l) !important;
 }
 
 .text-vermilion {
-  color: var(--vermilion);
+  color: var(--vermilion) !important;
 }
 
 .bg-vermilion {
-  background-color: var(--vermilion);
+  background-color: var(--vermilion) !important;
 }
 
 .text-vermilion-d {
-  color: var(--vermilion-d);
+  color: var(--vermilion-d) !important;
 }
 
 .bg-vermilion-d {
-  background-color: var(--vermilion-d);
+  background-color: var(--vermilion-d) !important;
 }
 
 .text-vermilion-l {
-  color: var(--vermilion-l);
+  color: var(--vermilion-l) !important;
 }
 
 .bg-vermilion-l {
-  background-color: var(--vermilion-l);
+  background-color: var(--vermilion-l) !important;
 }
 
 .text-orange {
-  color: var(--orange);
+  color: var(--orange) !important;
 }
 
 .bg-orange {
-  background-color: var(--orange);
+  background-color: var(--orange) !important;
 }
 
 .text-orange-d {
-  color: var(--orange-d);
+  color: var(--orange-d) !important;
 }
 
 .bg-orange-d {
-  background-color: var(--orange-d);
+  background-color: var(--orange-d) !important;
 }
 
 .text-orange-l {
-  color: var(--orange-l);
+  color: var(--orange-l) !important;
 }
 
 .bg-orange-l {
-  background-color: var(--orange-l);
+  background-color: var(--orange-l) !important;
 }
 
 .text-yellow {
-  color: var(--yellow);
+  color: var(--yellow) !important;
 }
 
 .bg-yellow {
-  background-color: var(--yellow);
+  background-color: var(--yellow) !important;
 }
 
 .text-yellow-d {
-  color: var(--yellow-d);
+  color: var(--yellow-d) !important;
 }
 
 .bg-yellow-d {
-  background-color: var(--yellow-d);
+  background-color: var(--yellow-d) !important;
 }
 
 .text-yellow-l {
-  color: var(--yellow-l);
+  color: var(--yellow-l) !important;
 }
 
 .bg-yellow-l {
-  background-color: var(--yellow-l);
+  background-color: var(--yellow-l) !important;
 }
 
 .text-lime {
-  color: var(--lime);
+  color: var(--lime) !important;
 }
 
 .bg-lime {
-  background-color: var(--lime);
+  background-color: var(--lime) !important;
 }
 
 .text-lime-d {
-  color: var(--lime-d);
+  color: var(--lime-d) !important;
 }
 
 .bg-lime-d {
-  background-color: var(--lime-d);
+  background-color: var(--lime-d) !important;
 }
 
 .text-lime-l {
-  color: var(--lime-l);
+  color: var(--lime-l) !important;
 }
 
 .bg-lime-l {
-  background-color: var(--lime-l);
+  background-color: var(--lime-l) !important;
 }
 
 .text-green {
-  color: var(--green);
+  color: var(--green) !important;
 }
 
 .bg-green {
-  background-color: var(--green);
+  background-color: var(--green) !important;
 }
 
 .text-green-d {
-  color: var(--green-d);
+  color: var(--green-d) !important;
 }
 
 .bg-green-d {
-  background-color: var(--green-d);
+  background-color: var(--green-d) !important;
 }
 
 .text-green-l {
-  color: var(--green-l);
+  color: var(--green-l) !important;
 }
 
 .bg-green-l {
-  background-color: var(--green-l);
+  background-color: var(--green-l) !important;
 }
 
 .text-teal {
-  color: var(--teal);
+  color: var(--teal) !important;
 }
 
 .bg-teal {
-  background-color: var(--teal);
+  background-color: var(--teal) !important;
 }
 
 .text-teal-d {
-  color: var(--teal-d);
+  color: var(--teal-d) !important;
 }
 
 .bg-teal-d {
-  background-color: var(--teal-d);
+  background-color: var(--teal-d) !important;
 }
 
 .text-teal-l {
-  color: var(--teal-l);
+  color: var(--teal-l) !important;
 }
 
 .bg-teal-l {
-  background-color: var(--teal-l);
+  background-color: var(--teal-l) !important;
 }
 
 .text-cyan {
-  color: var(--cyan);
+  color: var(--cyan) !important;
 }
 
 .bg-cyan {
-  background-color: var(--cyan);
+  background-color: var(--cyan) !important;
 }
 
 .text-cyan-d {
-  color: var(--cyan-d);
+  color: var(--cyan-d) !important;
 }
 
 .bg-cyan-d {
-  background-color: var(--cyan-d);
+  background-color: var(--cyan-d) !important;
 }
 
 .text-cyan-l {
-  color: var(--cyan-l);
+  color: var(--cyan-l) !important;
 }
 
 .bg-cyan-l {
-  background-color: var(--cyan-l);
+  background-color: var(--cyan-l) !important;
 }
 
 .text-skyblue {
-  color: var(--skyblue);
+  color: var(--skyblue) !important;
 }
 
 .bg-skyblue {
-  background-color: var(--skyblue);
+  background-color: var(--skyblue) !important;
 }
 
 .text-skyblue-d {
-  color: var(--skyblue-d);
+  color: var(--skyblue-d) !important;
 }
 
 .bg-skyblue-d {
-  background-color: var(--skyblue-d);
+  background-color: var(--skyblue-d) !important;
 }
 
 .text-skyblue-l {
-  color: var(--skyblue-l);
+  color: var(--skyblue-l) !important;
 }
 
 .bg-skyblue-l {
-  background-color: var(--skyblue-l);
+  background-color: var(--skyblue-l) !important;
 }
 
 .text-blue {
-  color: var(--blue);
+  color: var(--blue) !important;
 }
 
 .bg-blue {
-  background-color: var(--blue);
+  background-color: var(--blue) !important;
 }
 
 .text-blue-d {
-  color: var(--blue-d);
+  color: var(--blue-d) !important;
 }
 
 .bg-blue-d {
-  background-color: var(--blue-d);
+  background-color: var(--blue-d) !important;
 }
 
 .text-blue-l {
-  color: var(--blue-l);
+  color: var(--blue-l) !important;
 }
 
 .bg-blue-l {
-  background-color: var(--blue-l);
+  background-color: var(--blue-l) !important;
 }
 
 .text-indigo {
-  color: var(--indigo);
+  color: var(--indigo) !important;
 }
 
 .bg-indigo {
-  background-color: var(--indigo);
+  background-color: var(--indigo) !important;
 }
 
 .text-indigo-d {
-  color: var(--indigo-d);
+  color: var(--indigo-d) !important;
 }
 
 .bg-indigo-d {
-  background-color: var(--indigo-d);
+  background-color: var(--indigo-d) !important;
 }
 
 .text-indigo-l {
-  color: var(--indigo-l);
+  color: var(--indigo-l) !important;
 }
 
 .bg-indigo-l {
-  background-color: var(--indigo-l);
+  background-color: var(--indigo-l) !important;
 }
 
 .text-purple {
-  color: var(--purple);
+  color: var(--purple) !important;
 }
 
 .bg-purple {
-  background-color: var(--purple);
+  background-color: var(--purple) !important;
 }
 
 .text-purple-d {
-  color: var(--purple-d);
+  color: var(--purple-d) !important;
 }
 
 .bg-purple-d {
-  background-color: var(--purple-d);
+  background-color: var(--purple-d) !important;
 }
 
 .text-purple-l {
-  color: var(--purple-l);
+  color: var(--purple-l) !important;
 }
 
 .bg-purple-l {
-  background-color: var(--purple-l);
+  background-color: var(--purple-l) !important;
 }
 
 .text-magenta {
-  color: var(--magenta);
+  color: var(--magenta) !important;
 }
 
 .bg-magenta {
-  background-color: var(--magenta);
+  background-color: var(--magenta) !important;
 }
 
 .text-magenta-d {
-  color: var(--magenta-d);
+  color: var(--magenta-d) !important;
 }
 
 .bg-magenta-d {
-  background-color: var(--magenta-d);
+  background-color: var(--magenta-d) !important;
 }
 
 .text-magenta-l {
-  color: var(--magenta-l);
+  color: var(--magenta-l) !important;
 }
 
 .bg-magenta-l {
-  background-color: var(--magenta-l);
+  background-color: var(--magenta-l) !important;
 }
 
 .text-pink {
-  color: var(--pink);
+  color: var(--pink) !important;
 }
 
 .bg-pink {
-  background-color: var(--pink);
+  background-color: var(--pink) !important;
 }
 
 .text-pink-d {
-  color: var(--pink-d);
+  color: var(--pink-d) !important;
 }
 
 .bg-pink-d {
-  background-color: var(--pink-d);
+  background-color: var(--pink-d) !important;
 }
 
 .text-pink-l {
-  color: var(--pink-l);
+  color: var(--pink-l) !important;
 }
 
 .bg-pink-l {
-  background-color: var(--pink-l);
+  background-color: var(--pink-l) !important;
 }
 
 .text-black {
-  color: var(--black);
+  color: var(--black) !important;
 }
 
 .bg-black {
-  background-color: var(--black);
+  background-color: var(--black) !important;
 }
 
 .text-gray-1 {
-  color: var(--gray-1);
+  color: var(--gray-1) !important;
 }
 
 .bg-gray-1 {
-  background-color: var(--gray-1);
+  background-color: var(--gray-1) !important;
 }
 
 .text-gray-2 {
-  color: var(--gray-2);
+  color: var(--gray-2) !important;
 }
 
 .bg-gray-2 {
-  background-color: var(--gray-2);
+  background-color: var(--gray-2) !important;
 }
 
 .text-gray-3 {
-  color: var(--gray-3);
+  color: var(--gray-3) !important;
 }
 
 .bg-gray-3 {
-  background-color: var(--gray-3);
+  background-color: var(--gray-3) !important;
 }
 
 .text-gray-4 {
-  color: var(--gray-4);
+  color: var(--gray-4) !important;
 }
 
 .bg-gray-4 {
-  background-color: var(--gray-4);
+  background-color: var(--gray-4) !important;
 }
 
 .text-gray-5 {
-  color: var(--gray-5);
+  color: var(--gray-5) !important;
 }
 
 .bg-gray-5 {
-  background-color: var(--gray-5);
+  background-color: var(--gray-5) !important;
 }
 
 .text-gray-6 {
-  color: var(--gray-6);
+  color: var(--gray-6) !important;
 }
 
 .bg-gray-6 {
-  background-color: var(--gray-6);
+  background-color: var(--gray-6) !important;
 }
 
 .text-gray-7 {
-  color: var(--gray-7);
+  color: var(--gray-7) !important;
 }
 
 .bg-gray-7 {
-  background-color: var(--gray-7);
+  background-color: var(--gray-7) !important;
 }
 
 .text-gray-8 {
-  color: var(--gray-8);
+  color: var(--gray-8) !important;
 }
 
 .bg-gray-8 {
-  background-color: var(--gray-8);
+  background-color: var(--gray-8) !important;
 }
 
 .text-gray-9 {
-  color: var(--gray-9);
+  color: var(--gray-9) !important;
 }
 
 .bg-gray-9 {
-  background-color: var(--gray-9);
+  background-color: var(--gray-9) !important;
 }
 
 .text-gray-10 {
-  color: var(--gray-10);
+  color: var(--gray-10) !important;
 }
 
 .bg-gray-10 {
-  background-color: var(--gray-10);
+  background-color: var(--gray-10) !important;
 }
 
 .text-gray-11 {
-  color: var(--gray-11);
+  color: var(--gray-11) !important;
 }
 
 .bg-gray-11 {
-  background-color: var(--gray-11);
+  background-color: var(--gray-11) !important;
 }
 
 .text-gray-12 {
-  color: var(--gray-12);
+  color: var(--gray-12) !important;
 }
 
 .bg-gray-12 {
-  background-color: var(--gray-12);
+  background-color: var(--gray-12) !important;
 }
 
 .text-white {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .bg-white {
-  background-color: var(--white);
+  background-color: var(--white) !important;
 }
 
 .text-black-50 {
-  color: var(--black-50);
+  color: var(--black-50) !important;
 }
 
 .bg-black-50 {
-  background-color: var(--black-50);
+  background-color: var(--black-50) !important;
 }
 
 .text-white-50 {
-  color: var(--white-50);
+  color: var(--white-50) !important;
 }
 
 .bg-white-50 {
-  background-color: var(--white-50);
+  background-color: var(--white-50) !important;
 }
 
 .text-dark {
-  color: var(--dark);
+  color: var(--dark) !important;
 }
 
 .bg-dark {
-  background-color: var(--dark);
+  background-color: var(--dark) !important;
 }
 
 .text-light {
-  color: var(--light);
+  color: var(--light) !important;
 }
 
 .bg-light {
-  background-color: var(--light);
+  background-color: var(--light) !important;
 }
 
 .text-dimmed {
-  color: var(--dimmed);
+  color: var(--dimmed) !important;
 }
 
 .bg-dimmed {
-  background-color: var(--dimmed);
-}
-
-.text-success {
-  color: var(--success);
-}
-
-.bg-success {
-  background-color: var(--success);
-}
-
-.text-info {
-  color: var(--info);
-}
-
-.bg-info {
-  background-color: var(--info);
-}
-
-.text-danger {
-  color: var(--danger);
-}
-
-.bg-danger {
-  background-color: var(--danger);
-}
-
-.text-warn {
-  color: var(--warn);
-}
-
-.bg-warn {
-  background-color: var(--warn);
+  background-color: var(--dimmed) !important;
 }
 
 .text-success-fg {
-  color: var(--success-fg);
+  color: var(--success-fg) !important;
 }
 
 .bg-success-fg {
-  background-color: var(--success-fg);
+  background-color: var(--success-fg) !important;
+}
+
+.text-primary-fg {
+  color: var(--primary-fg) !important;
+}
+
+.bg-primary-fg {
+  background-color: var(--primary-fg) !important;
 }
 
 .text-info-fg {
-  color: var(--info-fg);
+  color: var(--info-fg) !important;
 }
 
 .bg-info-fg {
-  background-color: var(--info-fg);
+  background-color: var(--info-fg) !important;
 }
 
 .text-danger-fg {
-  color: var(--danger-fg);
+  color: var(--danger-fg) !important;
 }
 
 .bg-danger-fg {
-  background-color: var(--danger-fg);
+  background-color: var(--danger-fg) !important;
 }
 
 .text-warn-fg {
-  color: var(--warn-fg);
+  color: var(--warn-fg) !important;
 }
 
 .bg-warn-fg {
-  background-color: var(--warn-fg);
+  background-color: var(--warn-fg) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+  color: var(--primary-fg) !important;
+}
+.bg-primary b,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4,
+.bg-primary h5,
+.bg-primary h6,
+.bg-primary strong {
+  color: var(--primary-fg) !important;
+}
+
+.text-success {
+  color: var(--success) !important;
+}
+
+.bg-success {
+  background-color: var(--success) !important;
+  color: var(--success-fg) !important;
+}
+.bg-success b,
+.bg-success h1,
+.bg-success h2,
+.bg-success h3,
+.bg-success h4,
+.bg-success h5,
+.bg-success h6,
+.bg-success strong {
+  color: var(--success-fg) !important;
+}
+
+.text-info {
+  color: var(--info) !important;
+}
+
+.bg-info {
+  background-color: var(--info) !important;
+  color: var(--info-fg) !important;
+}
+.bg-info b,
+.bg-info h1,
+.bg-info h2,
+.bg-info h3,
+.bg-info h4,
+.bg-info h5,
+.bg-info h6,
+.bg-info strong {
+  color: var(--info-fg) !important;
+}
+
+.text-danger {
+  color: var(--danger) !important;
+}
+
+.bg-danger {
+  background-color: var(--danger) !important;
+  color: var(--danger-fg) !important;
+}
+.bg-danger b,
+.bg-danger h1,
+.bg-danger h2,
+.bg-danger h3,
+.bg-danger h4,
+.bg-danger h5,
+.bg-danger h6,
+.bg-danger strong {
+  color: var(--danger-fg) !important;
+}
+
+.text-warn {
+  color: var(--warn) !important;
+}
+
+.bg-warn {
+  background-color: var(--warn) !important;
+  color: var(--warn-fg) !important;
+}
+.bg-warn b,
+.bg-warn h1,
+.bg-warn h2,
+.bg-warn h3,
+.bg-warn h4,
+.bg-warn h5,
+.bg-warn h6,
+.bg-warn strong {
+  color: var(--warn-fg) !important;
 }
 
 body {
@@ -1767,6 +1840,60 @@ h6.display {
   font-size: 2.2rem;
 }
 
+small.subtitle-1 {
+  font-size: 1.3333333333rem;
+  font-weight: 200;
+  color: var(--tone-8);
+}
+small.subtitle-1.display {
+  font-size: 4rem;
+}
+
+small.subtitle-2 {
+  font-size: 1.0666666667rem;
+  font-weight: 200;
+  color: var(--tone-8);
+}
+small.subtitle-2.display {
+  font-size: 3.2rem;
+}
+
+small.subtitle-3 {
+  font-size: 0.9333333333rem;
+  font-weight: 200;
+  color: var(--tone-8);
+}
+small.subtitle-3.display {
+  font-size: 2.8rem;
+}
+
+small.subtitle-4 {
+  font-size: 0.8666666667rem;
+  font-weight: 200;
+  color: var(--tone-8);
+}
+small.subtitle-4.display {
+  font-size: 2.6rem;
+}
+
+small.subtitle-5 {
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: var(--tone-8);
+}
+small.subtitle-5.display {
+  font-size: 2.4rem;
+}
+
+small.subtitle-6 {
+  font-size: 0.7333333333rem;
+  font-weight: 200;
+  color: var(--tone-8);
+}
+small.subtitle-6.display {
+  font-size: 2.2rem;
+}
+
 a {
   color: var(--skyblue);
 }
@@ -1779,19 +1906,41 @@ code {
   color: var(--code-fg);
 }
 
+pre {
+  display: block;
+  background-color: var(--tone-1);
+}
+.dark pre {
+  background-color: var(--tone-2);
+}
 pre > code {
   display: block;
-  width: 100%;
+  color: inherit;
+  background-color: transparent;
   padding: var(--margin);
-  background-color: var(--tone-1);
-  color: var(--tone-12);
 }
-.dark pre > code {
-  background-color: var(--tone-2);
+
+a {
+  color: var(--link);
+}
+
+small {
+  font-size: 0.7em;
+}
+
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--bold);
 }
 
 .table {
-  border: 1px solid var(--tone-2);
+  border: 1px solid var(--tone-3);
   border-radius: var(--radius);
   border-collapse: separate;
   overflow: hidden;
@@ -1800,7 +1949,7 @@ pre > code {
   margin-bottom: 1rem;
 }
 .table th {
-  background: var(--tone-2);
+  background: var(--tone-1);
 }
 .table th,
 .table td {
@@ -1882,84 +2031,162 @@ body {
   cursor: default;
 }
 
-button.btn {
+.card {
+  border: 1px solid var(--tone-2);
+  border-radius: var(--radius);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  background: var(--tone-0);
+}
+.card > img.bottom-shadow {
+  position: relative;
+}
+.card > img.bottom-shadow::before {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+.card > header,
+.card > footer {
+  padding: calc(var(--margin) / 2) var(--margin);
+  background: var(--tone-1);
+}
+.card > header {
+  border-bottom: 1px solid var(--divider);
+}
+.card > footer {
+  border-top: 1px solid var(--divider);
+}
+.card > .body {
+  padding: var(--margin);
+}
+.card > .body > h1 {
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+.card > .body > h2 {
+  font-weight: normal;
+  font-size: 1rem;
+  color: var(--tone-8);
+  margin-bottom: 0;
+}
+.card > .body > *:last-child {
+  margin-bottom: 0;
+}
+.dark .card {
+  background: var(--tone-3);
+}
+.dark .card > header,
+.dark .card > footer {
+  background: var(--tone-2);
+}
+.card.sink {
+  box-shadow: none;
+}
+.card.ghost {
+  border: none;
+}
+
+button.btn,
+a.btn {
+  display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
   border: 1px solid var(--primary);
   background: transparent;
+  text-decoration: none;
   color: var(--primary);
-  font-weight: bold;
   cursor: pointer;
   outline: none;
   font-size: 1rem;
   position: relative;
 }
-button.btn::before {
+button.btn::before,
+a.btn::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: var(--radius);
   transition: box-shadow 0.2s ease;
 }
-button.btn:not(:disabled) {
+button.btn:not(:disabled),
+a.btn:not(:disabled) {
   transition: transform 0.2s ease;
   transform-origin: center center;
   transform-style: preserve-3d;
   cursor: pointer;
 }
-button.btn:not(:disabled):hover {
+button.btn:not(:disabled):hover,
+a.btn:not(:disabled):hover {
   transform: var(--clickable-hover-transform);
 }
-button.btn:not(:disabled):active {
+button.btn:not(:disabled):active,
+a.btn:not(:disabled):active {
   transform: var(--clickable-active-transform);
 }
-button.btn:not(:disabled):hover, button.btn:not(:disabled):active {
+button.btn:not(:disabled):hover, button.btn:not(:disabled):active,
+a.btn:not(:disabled):hover,
+a.btn:not(:disabled):active {
   z-index: 9999;
 }
-button.btn:focus::before {
+button.btn:focus::before,
+a.btn:focus::before {
   box-shadow: 0 0 1rem 0px var(--primary);
 }
-button.btn.primary {
+button.btn.primary,
+a.btn.primary {
   background: var(--primary);
   color: var(--primary-fg);
   border: none;
 }
-button.btn.primary:focus::before {
+button.btn.primary:focus::before,
+a.btn.primary:focus::before {
   box-shadow: 0 0 1rem 0px var(--primary);
 }
-button.btn.success {
+button.btn.success,
+a.btn.success {
   background: var(--success);
   color: var(--success-fg);
   border: none;
 }
-button.btn.success:focus::before {
+button.btn.success:focus::before,
+a.btn.success:focus::before {
   box-shadow: 0 0 1rem 0px var(--success);
 }
-button.btn.info {
+button.btn.info,
+a.btn.info {
   background: var(--info);
   color: var(--info-fg);
   border: none;
 }
-button.btn.info:focus::before {
+button.btn.info:focus::before,
+a.btn.info:focus::before {
   box-shadow: 0 0 1rem 0px var(--info);
 }
-button.btn.warn {
+button.btn.warn,
+a.btn.warn {
   background: var(--warn);
   color: var(--warn-fg);
   border: none;
 }
-button.btn.warn:focus::before {
+button.btn.warn:focus::before,
+a.btn.warn:focus::before {
   box-shadow: 0 0 1rem 0px var(--warn);
 }
-button.btn.danger {
+button.btn.danger,
+a.btn.danger {
   background: var(--danger);
   color: var(--danger-fg);
   border: none;
 }
-button.btn.danger:focus::before {
+button.btn.danger:focus::before,
+a.btn.danger:focus::before {
   box-shadow: 0 0 1rem 0px var(--danger);
 }
-button.btn:disabled {
+button.btn:disabled,
+a.btn:disabled {
   background: transparent;
   border-color: var(--tone-4);
   color: var(--tone-4);
@@ -1986,11 +2213,7 @@ body {
   --fg: var(--gray-11);
   --bold: var(--tone-13);
   --link: var(--primary);
-  --divider: var(--tone-5);
   --hover: var(--tone-2);
-  --primary: var(--blue);
-  --primary-bg: var(--blue-l);
-  --primary-fg: var(--white);
   background: var(--bg);
   color: var(--fg);
 }
@@ -2011,25 +2234,6 @@ body.dark {
   --tone-11: var(--gray-2);
   --tone-12: var(--gray-1);
   --tone-13: var(--white);
-}
-
-a {
-  color: var(--link);
-}
-
-small {
-  font-size: 0.7em;
-}
-
-b,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-  color: var(--bold);
 }
 
 /*# sourceMappingURL=xeltica-ui.css.map */

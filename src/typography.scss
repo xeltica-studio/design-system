@@ -32,6 +32,18 @@ $headingSize: 2rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
   }
 }
 
+@for $i from 1 through 6 {
+  $s: list.nth($headingSize, $i);
+  small.subtitle-#{$i} {
+    font-size: #{$s / 3 * 2};
+    font-weight: 200;
+    color: var(--tone-8);
+    &.display {
+      font-size: #{$s * 2};
+    }
+  }
+}
+
 a {
   color: var(--skyblue);
 }
@@ -45,14 +57,34 @@ code {
 }
 
 pre {
+  display: block;
+  background-color: var(--tone-1);
+  @include dark {
+    background-color: var(--tone-2);
+  }
   > code {
     display: block;
-    width: 100%;
+    color: inherit;
+    background-color: transparent;
     padding: var(--margin);
-    background-color: var(--tone-1);
-    color: var(--tone-12);
-    @include dark {
-      background-color: var(--tone-2);
-    }
   }
+}
+
+a {
+  color: var(--link);
+}
+
+small {
+  font-size: 0.7em;
+}
+
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--bold);
 }

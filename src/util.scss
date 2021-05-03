@@ -37,82 +37,82 @@
 }
 
 .fluid {
-  width: 100%;
+  width: 100% !important;
 }
 
 .ma-auto {
-  margin: auto;
+  margin: auto !important;
 }
 
 .mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
 }
 
 .pa-auto {
-  padding: auto;
+  padding: auto !important;
 }
 
 .px-auto {
-  padding-left: auto;
-  padding-right: auto;
+  padding-left: auto !important;
+  padding-right: auto !important;
 }
 .py-auto {
-  padding-top: auto;
-  padding-bottom: auto;
+  padding-top: auto !important;
+  padding-bottom: auto !important;
 }
 
 @for $v from -5 through 5 {
   $size: $v * 8px;
   .ma-#{$v} {
-    margin: $size;
+    margin: $size !important;
   }
   .ml-#{$v} {
-    margin-left: $size;
+    margin-left: $size !important;
   }
   .mr-#{$v} {
-    margin-right: $size;
+    margin-right: $size !important;
   }
   .mt-#{$v} {
-    margin-top: $size;
+    margin-top: $size !important;
   }
   .mb-#{$v} {
-    margin-bottom: $size;
+    margin-bottom: $size !important;
   }
   .mx-#{$v} {
-    margin-left: $size;
-    margin-right: $size;
+    margin-left: $size !important;
+    margin-right: $size !important;
   }
   .my-#{$v} {
     margin-top: $size;
-    margin-bottom: $size;
+    margin-bottom: $size !important;
   }
 
   .pa-#{$v} {
-    padding: $size;
+    padding: $size !important;
   }
   .pl-#{$v} {
-    padding-left: $size;
+    padding-left: $size !important;
   }
   .pr-#{$v} {
-    padding-right: $size;
+    padding-right: $size !important;
   }
   .pt-#{$v} {
-    padding-top: $size;
+    padding-top: $size !important;
   }
   .pb-#{$v} {
-    padding-bottom: $size;
+    padding-bottom: $size !important;
   }
   .px-#{$v} {
-    padding-left: $size;
-    padding-right: $size;
+    padding-left: $size !important;
+    padding-right: $size !important;
   }
   .py-#{$v} {
-    padding-top: $size;
-    padding-bottom: $size;
+    padding-top: $size !important;
+    padding-bottom: $size !important;
   }
 }

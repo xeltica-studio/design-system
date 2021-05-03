@@ -15,7 +15,7 @@ $colors: (
   "pink": #ff5c84,
 );
 
-$classes: (
+$tones: (
   "black": black,
   "gray-1": darken(white, 8%),
   "gray-2": darken(white, 15%),
@@ -35,14 +35,19 @@ $classes: (
   "dark": var(--gray-9),
   "light": var(--gray-1),
   "dimmed": var(--gray-5),
+  "success-fg": var(--white),
+  "primary-fg": var(--white),
+  "info-fg": var(--black),
+  "danger-fg": var(--white),
+  "warn-fg": var(--black),
+);
+
+$classes: (
+  "primary": var(--blue),
   "success": var(--green),
   "info": var(--skyblue),
   "danger": var(--red),
   "warn": var(--yellow),
-  "success-fg": var(--white),
-  "info-fg": var(--black),
-  "danger-fg": var(--white),
-  "warn-fg": var(--black),
 );
 
 body {
@@ -51,6 +56,9 @@ body {
     --#{$name}-d: #{mix(black, $value, 70%)};
     --#{$name}-l: #{mix(white, $value, 70%)};
   }
+  @each $name, $value in $tones {
+    --#{$name}: #{$value};
+  }
   @each $name, $value in $classes {
     --#{$name}: #{$value};
   }
@@ -58,30 +66,50 @@ body {
 
 @each $name, $value in $colors {
   .text-#{$name} {
-    color: var(--#{$name});
+    color: var(--#{$name}) !important;
   }
   .bg-#{$name} {
-    background-color: var(--#{$name});
+    background-color: var(--#{$name}) !important;
   }
   .text-#{$name}-d {
-    color: var(--#{$name}-d);
+    color: var(--#{$name}-d) !important;
   }
   .bg-#{$name}-d {
-    background-color: var(--#{$name}-d);
+    background-color: var(--#{$name}-d) !important;
   }
   .text-#{$name}-l {
-    color: var(--#{$name}-l);
+    color: var(--#{$name}-l) !important;
   }
   .bg-#{$name}-l {
-    background-color: var(--#{$name}-l);
+    background-color: var(--#{$name}-l) !important;
+  }
+}
+
+@each $name, $value in $tones {
+  .text-#{$name} {
+    color: var(--#{$name}) !important;
+  }
+  .bg-#{$name} {
+    background-color: var(--#{$name}) !important;
   }
 }
 
 @each $name, $value in $classes {
   .text-#{$name} {
-    color: var(--#{$name});
+    color: var(--#{$name}) !important;
   }
   .bg-#{$name} {
-    background-color: var(--#{$name});
+    background-color: var(--#{$name}) !important;
+    color: var(--#{$name}-fg) !important;
+    b,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+      color: var(--#{$name}-fg) !important;
+    }
   }
 }

@@ -53,7 +53,7 @@ html
   head
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='viewport' content='width=device-width,initial-scale=1')
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     link(rel="stylesheet", href="/external/prism.css")
     link(rel='stylesheet' href='/css/xeltica-ui.min.css')
     style.
@@ -62,12 +62,24 @@ html
         grid-auto-flow: column;
         grid-gap: 1rem;
         gap: 1rem;
-        grid-auto-columns: 18rem 1fr;
+        grid-template-areas: "sidebar main";
+        grid-template-columns: 18rem calc(100% - 18rem);
+      }
+      .xd-sidebar {
+        position: relative;
+        grid-area: sidebar;
       }
       .xd-footer {
         border-top: 1px solid var(--tone-3);
         padding: 1rem;
         margin-top: 2rem;
+      }
+      .xd-main {
+        grid-area: main;
+      }
+      .xd-sidebar > .menu {
+        position: sticky;
+        top: var(--margin);
       }
     block head
     block title
@@ -82,7 +94,7 @@ html
       +sidebar
       .xd-main
         block main
-        +footer
+    +footer
     script(src="/external/prism.js")
     script.
       const btn = document.getElementById('daylight');

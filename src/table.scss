@@ -1,5 +1,5 @@
 .table {
-  border: 1px solid var(--tone-2);
+  border: 1px solid var(--tone-3);
   border-radius: var(--radius);
   border-collapse: separate;
   overflow: hidden;
@@ -7,7 +7,7 @@
   border-bottom: none;
   margin-bottom: 1rem;
   th {
-    background: var(--tone-2);
+    background: var(--tone-1);
   }
   th,
   td {

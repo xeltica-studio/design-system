@@ -19,6 +19,7 @@
 @import "box";
 @import "stack";
 @import "menu";
+@import "card";
 @import "button";
 
 body {
@@ -41,12 +42,7 @@ body {
   --fg: var(--gray-11);
   --bold: var(--tone-13);
   --link: var(--primary);
-  --divider: var(--tone-5);
   --hover: var(--tone-2);
-
-  --primary: var(--blue);
-  --primary-bg: var(--blue-l);
-  --primary-fg: var(--white);
 
   background: var(--bg);
   color: var(--fg);
@@ -68,23 +64,4 @@ body {
     --tone-12: var(--gray-1);
     --tone-13: var(--white);
   }
-}
-
-a {
-  color: var(--link);
-}
-
-small {
-  font-size: 0.7em;
-}
-
-b,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-  color: var(--bold);
 }
