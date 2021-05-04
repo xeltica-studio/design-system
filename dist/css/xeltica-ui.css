@@ -380,10 +380,6 @@ template {
   z-index: 9999;
 }
 
-.fluid {
-  width: 100% !important;
-}
-
 .ma-auto {
   margin: auto !important;
 }
@@ -1963,6 +1959,13 @@ strong {
   border-bottom: 1px solid var(--tone-2);
 }
 
+.fluid {
+  max-width: 100%;
+}
+.fluid > img {
+  max-width: 100%;
+}
+
 body {
   --container-padding: 32px;
 }
@@ -2037,15 +2040,15 @@ body {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   background: var(--tone-0);
 }
-.card > img.bottom-shadow {
+.card > figure.bottom-shadow {
   position: relative;
 }
-.card > img.bottom-shadow::before {
+.card > figure.bottom-shadow::before {
   display: block;
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
 }
 .card > header,
 .card > footer {
