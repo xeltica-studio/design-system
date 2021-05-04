@@ -13,7 +13,12 @@ body {
 .hstack {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.fill > * {
+    width: 100%;
+  }
   &:not(.dense) > * + * {
     margin-left: var(--stack-margin);
   }

@@ -1,0 +1,66 @@
+extends ../_layout
+
+block main
+  h1 スタックレイアウト
+  p 要素を縦方向、横方向にスタックさせるときは、スタックレイアウトを使用します。
+
+  section
+    h2 縦スタック <code>.vstack</code>
+    p <code>vstack</code>クラスを使用して、要素を縦に並べます。
+    h3 クラスと要素
+    p 以下のクラスを<code>vstack</code>クラスと併用することで、見た目を調整できます。
+    table.table
+      thead: tr
+        th クラス名
+        th 説明
+      tbody
+        tr: td: code .dense
+          td 余白を取り除きます
+    h3 例
+    .card.mb-5: .body
+      .vstack
+        button.btn テスト
+        button.btn テスト
+        button.btn テスト
+    .card.mb-5: .body
+      .vstack.dense
+        button.btn テスト
+        button.btn テスト
+        button.btn テスト
+
+  section
+    h2 横スタック <code>.hstack</code>
+    p <code>hstack</code>クラスを使用して、要素を横に並べます。
+    h3 クラスと要素
+    p 以下のクラスを<code>vstack</code>クラスと併用することで、見た目を調整できます。
+    table.table
+      thead: tr
+        th クラス名
+        th 説明
+      tbody
+        tr: td: code .dense
+          td 余白を取り除きます
+        tr: td: code .wrap
+          td 要素が収まりきらないとき、折り返します
+        tr: td: code .fill
+          td 要素を横いっぱいに広げます
+    h3 例
+    .card.mb-5: .body
+      .hstack
+        button.btn テスト
+        button.btn テスト
+        button.btn テスト
+    .card.mb-5: .body
+      .hstack.dense
+        button.btn テスト
+        button.btn テスト
+        button.btn テスト
+    .card.mb-5: .body
+      .hstack.wrap
+        - for (let _ = 0; _ < 40; _++)
+          button.btn テスト
+    .card.mb-5: .body
+      .hstack.fill
+        button.btn テスト
+        button.btn テスト
+        button.btn テスト

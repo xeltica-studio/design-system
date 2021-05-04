@@ -380,6 +380,10 @@ template {
   z-index: 9999;
 }
 
+.fluid {
+  width: 100%;
+}
+
 .ma-auto {
   margin: auto !important;
 }
@@ -1771,6 +1775,40 @@ body {
 }
 
 body {
+  --container-padding: 32px;
+}
+
+.container {
+  padding: var(--container-padding);
+}
+
+body {
+  --stack-margin: var(--margin);
+}
+
+.vstack {
+  display: flex;
+  flex-direction: column;
+}
+.vstack:not(.dense) > * + * {
+  margin-top: var(--stack-margin);
+}
+
+.hstack {
+  display: flex;
+  flex-direction: row;
+}
+.hstack.wrap {
+  flex-wrap: wrap;
+}
+.hstack.fill > * {
+  width: 100%;
+}
+.hstack:not(.dense) > * + * {
+  margin-left: var(--stack-margin);
+}
+
+body {
   --code-fg: #8b3a41;
   --code-bg: #ffe4e6;
 }
@@ -1966,35 +2004,6 @@ strong {
   max-width: 100%;
 }
 
-body {
-  --container-padding: 32px;
-}
-
-.container {
-  padding: var(--container-padding);
-}
-
-body {
-  --stack-margin: var(--margin);
-}
-
-.vstack {
-  display: flex;
-  flex-direction: column;
-}
-.vstack:not(.dense) > * + * {
-  margin-top: var(--stack-margin);
-}
-
-.hstack {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.hstack:not(.dense) > * + * {
-  margin-left: var(--stack-margin);
-}
-
 .menu section + section,
 .menu .section + .section {
   margin-top: var(--margin);
@@ -2039,6 +2048,10 @@ body {
   border-radius: var(--radius);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   background: var(--tone-0);
+  overflow: hidden;
+}
+.card > figure {
+  margin: 0;
 }
 .card > figure.bottom-shadow {
   position: relative;
