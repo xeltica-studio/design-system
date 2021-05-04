@@ -4,7 +4,7 @@ block head
   style.
 
 block main
-  h1 メニュー
+  h1 メニュー <code>.menu</code>
   p メニューは、ナビゲーションや項目選択など幅広く用いられるコンポーネントです。
   h2 クラスと要素
   table.table
@@ -27,7 +27,7 @@ block main
   h2 例
   p: b セクションを使用しない場合
   .vstack
-    .menu
+    .card: .body: .menu
       h1 果物
       .item りんご
       .item.disabled ぶどう
@@ -42,7 +42,7 @@ block main
         </div>
   p: b セクションを使用する場合
   .vstack
-    .menu
+    .card: .body: .menu
       section
         h1 入門編
         .item 値

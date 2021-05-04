@@ -5,7 +5,7 @@ block main
   - const cardSubtitle = '宮沢賢治';
   - const cardBody = 'あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。';
 
-  h1 カード
+  h1 カード <code>.card</code>
   p カードは、情報の関係性を明確にする役割を持ち、様々な用途で利用できる柔軟性、拡張性を持ち合わせています。
   article.vstack
     section
@@ -59,7 +59,7 @@ block main
       h2 画像
       p bodyの外に<code>img</code>タグを配置することで、画像付きカードを作成できます。
         | カード内に収めるため、figureタグに<code>fluid</code>クラスを付けます。
-        | <code>bottom-shadow</code>クラスをimgタグに付けると、画像に影が付きます。
+        | <code>bottom-shadow</code>クラスをfigureタグに付けると、画像に影が付きます。
       .card.mb-2(style="width: 320px")
         figure.fluid.bottom-shadow
           img(src="http://placekitten.com/800/520" alt="cat")
@@ -70,6 +70,9 @@ block main
       pre: code
         :escape-html
           <div class="card my-2">
+            <figure class="fluid bottom-shadow">
+              <img src="http://placekitten.com/800/520" alt="cat" />
+            </figure>
             <div class="body">
               <h1>ポラーノの広場</h1>
               <h2 class="mb-1">宮沢賢治</h2>
