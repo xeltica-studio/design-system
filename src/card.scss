@@ -3,14 +3,18 @@
   border-radius: var(--radius);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   background: var(--tone-0);
-  > figure.bottom-shadow {
-    position: relative;
-    &::before {
-      display: block;
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+  overflow: hidden;
+  > figure {
+    margin: 0;
+    &.bottom-shadow {
+      position: relative;
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+      }
     }
   }
   > header,
