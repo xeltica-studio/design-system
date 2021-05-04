@@ -11,16 +11,21 @@
 @import "size";
 @import "color";
 
+// Layouts
+@import "container";
+@import "stack";
+@import "fixed";
+
 // Styles
 @import "typography";
 @import "table";
 @import "image";
 
-// Components
-@import "box";
-@import "stack";
+// Views
 @import "menu";
 @import "card";
+
+// Components
 @import "button";
 
 body {
