@@ -41,14 +41,14 @@ block main
     section
       h2 固定サイズ
       p カードは幅や高さが設定されていないので、必要に応じてCSSを当てます。
-      .card.my-2(style="width: 500px")
+      .card.my-2(style="max-width: 500px")
         .body
           h1= cardTitle
           h2.mb-1= cardSubtitle
           p= cardBody
       pre: code
         :escape-html
-          <div class="card my-2" style="width: 500px">
+          <div class="card my-2" style="max-width: 500px">
             <div class="body">
               <h1>ポラーノの広場</h1>
               <h2 class="mb-1">宮沢賢治</h2>
@@ -60,7 +60,7 @@ block main
       p bodyの外に<code>img</code>タグを配置することで、画像付きカードを作成できます。
         | カード内に収めるため、figureタグに<code>fluid</code>クラスを付けます。
         | <code>bottom-shadow</code>クラスをfigureタグに付けると、画像に影が付きます。
-      .card.mb-2(style="width: 320px")
+      .card.mb-2(style="max-width: 320px")
         figure.fluid.bottom-shadow
           img(src="http://placekitten.com/800/520" alt="cat")
         .body
@@ -82,7 +82,7 @@ block main
     section
       h2 ヘッダー・フッター
       p <code>header</code> <code>footer</code> タグを使用することで、カードにヘッダーおよびフッターを追加できます。
-      .card.mb-2(style="width: 320px")
+      .card.mb-2(style="max-width: 320px")
         header ✨おすすめのブック
         .body
           h1= cardTitle
@@ -109,14 +109,14 @@ block main
     section
       h2 その他
       p ghost クラスをカードに適用すると、縁取りがなくなります。
-      .card.ghost.my-2(style="width: 500px")
+      .card.ghost.my-2(style="max-width: 500px")
         .body
           h1= cardTitle
           h2.mb-1= cardSubtitle
           p= cardBody
       pre: code
         :escape-html
-          <div class="card ghost my-2" style="width: 500px">
+          <div class="card ghost my-2" style="max-width: 500px">
             <div class="body">
               <h1>ポラーノの広場</h1>
               <h2 class="mb-1">宮沢賢治</h2>
@@ -124,14 +124,14 @@ block main
             </div>
           </div>
       p sink クラスをカードに適用すると、影がなくなります。
-      .card.sink.my-2(style="width: 320px")
+      .card.sink.my-2(style="max-width: 320px")
         .body
           h1= cardTitle
           h2.mb-1= cardSubtitle
           p= cardBody
       pre: code
         :escape-html
-          <div class="card sink my-2" style="width: 500px">
+          <div class="card sink my-2" style="max-width: 500px">
             <div class="body">
               <h1>ポラーノの広場</h1>
               <h2 class="mb-1">宮沢賢治</h2>
