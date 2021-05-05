@@ -58,16 +58,11 @@ html
     link(rel='stylesheet' href='/css/xeltica-ui.min.css')
     style.
       .xd-container {
-        display: grid;
-        grid-auto-flow: column;
-        grid-gap: 1rem;
-        gap: 1rem;
-        grid-template-areas: "sidebar main";
-        grid-template-columns: 18rem calc(100% - 18rem);
+        display: flex;
       }
       .xd-sidebar {
         position: relative;
-        grid-area: sidebar;
+        width: 18rem;
       }
       .xd-footer {
         border-top: 1px solid var(--tone-3);
@@ -75,7 +70,8 @@ html
         margin-top: 2rem;
       }
       .xd-main {
-        grid-area: main;
+        flex: 1;
+        min-width: 0;
       }
       .xd-sidebar > .menu {
         position: sticky;

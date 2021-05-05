@@ -1,7 +1,12 @@
 body {
   --container-padding: 32px;
+  --container-padding-phone: 16px;
 }
 
 .container {
   padding: var(--container-padding);
+
+  @include le(hphone) {
+    padding: var(--container-padding-phone);
+  }
 }

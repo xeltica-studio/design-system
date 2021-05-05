@@ -3,26 +3,30 @@ html
   head
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    meta(name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1')
     link(rel="stylesheet", href="/external/prism.css")
     link(rel='stylesheet' href='/css/xeltica-ui.min.css')
     title Xeltica UI
     style.
       .a {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 256px calc(100% - 256px);
+        display: flex;
         height: 100vh;
+        width: 100vw;
       }
 
-      .a > * {
+      #a {
+        width: 300px;
       }
 
+      #b {
+        flex: 1;
+        min-width: 0;
+      }
   body
     .a
-      .container(style="background: var(--tone-1)")
+      .container#a(style="background: var(--tone-1)")
         h1 HELLO
-      .container(style="background: var(--tone-2)")
+      .container#b(style="background: var(--tone-2)")
         h1 HELLO
         pre: code
           :escape-html

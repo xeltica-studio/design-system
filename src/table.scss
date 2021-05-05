@@ -11,7 +11,8 @@
   }
   th,
   td {
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
+
     &:not(:last-child) {
       border-right: 1px solid var(--tone-2);
     }

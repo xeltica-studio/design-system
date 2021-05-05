@@ -28,6 +28,9 @@ $headingSize: 2rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
     font-weight: 200;
     &.display {
       font-size: #{$s * 2};
+      @include le(hphone) {
+        font-size: #{$s * 1.2};
+      }
     }
   }
 }

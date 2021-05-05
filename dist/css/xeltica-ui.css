@@ -345,7 +345,7 @@ template {
 
 :root {
   --clickable-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
-  --clickable-hover-transform: scale(1.05);
+  --clickable-hover-transform: translateY(2px);
   --clickable-active-transform: scale(0.95) translateY(2px);
 }
 
@@ -1774,12 +1774,78 @@ body {
   color: var(--warn-fg) !important;
 }
 
+@media (max-width: 600px) {
+  .ge-hphone {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .le-hphone {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .ge-tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .le-tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .ge-laptop {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .le-laptop {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  .ge-pc {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  .le-pc {
+    display: none;
+  }
+}
+
+@media (max-width: 1600px) {
+  .ge-hub {
+    display: none;
+  }
+}
+
+@media (max-width: 1600px) {
+  .le-hub {
+    display: none;
+  }
+}
+
 body {
   --container-padding: 32px;
+  --container-padding-phone: 16px;
 }
 
 .container {
   padding: var(--container-padding);
+}
+@media (max-width: 600px) {
+  .container {
+    padding: var(--container-padding-phone);
+  }
 }
 
 body {
@@ -1833,6 +1899,11 @@ h1 {
 h1.display {
   font-size: 4rem;
 }
+@media (max-width: 600px) {
+  h1.display {
+    font-size: 2.4rem;
+  }
+}
 
 h2 {
   font-size: 1.6rem;
@@ -1840,6 +1911,11 @@ h2 {
 }
 h2.display {
   font-size: 3.2rem;
+}
+@media (max-width: 600px) {
+  h2.display {
+    font-size: 1.92rem;
+  }
 }
 
 h3 {
@@ -1849,6 +1925,11 @@ h3 {
 h3.display {
   font-size: 2.8rem;
 }
+@media (max-width: 600px) {
+  h3.display {
+    font-size: 1.68rem;
+  }
+}
 
 h4 {
   font-size: 1.3rem;
@@ -1856,6 +1937,11 @@ h4 {
 }
 h4.display {
   font-size: 2.6rem;
+}
+@media (max-width: 600px) {
+  h4.display {
+    font-size: 1.56rem;
+  }
 }
 
 h5 {
@@ -1865,6 +1951,11 @@ h5 {
 h5.display {
   font-size: 2.4rem;
 }
+@media (max-width: 600px) {
+  h5.display {
+    font-size: 1.44rem;
+  }
+}
 
 h6 {
   font-size: 1.1rem;
@@ -1872,6 +1963,11 @@ h6 {
 }
 h6.display {
   font-size: 2.2rem;
+}
+@media (max-width: 600px) {
+  h6.display {
+    font-size: 1.32rem;
+  }
 }
 
 small.subtitle-1 {
@@ -1987,7 +2083,7 @@ strong {
 }
 .table th,
 .table td {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
 }
 .table th:not(:last-child),
 .table td:not(:last-child) {

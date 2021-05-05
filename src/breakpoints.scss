@@ -1,0 +1,33 @@
+@use 'sass:map';
+
+$breakpoints: (
+  hphone: 600px,
+  tablet: 800px,
+  laptop: 1000px,
+  pc: 1300px,
+  hub: 1600px,
+);
+
+@mixin ge($breakpoint) {
+  @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+@mixin le($breakpoint) {
+  @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+@each $key, $val in $breakpoints {
+  .ge-#{$key} {
+    @include ge($key) {
+      display: none;
+    }
+  }
+  .le-#{$key} {
+    @include le($key) {
+      display: none;
+    }
+  }
+}
