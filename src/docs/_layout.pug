@@ -57,9 +57,6 @@ html
     link(rel="stylesheet", href="/external/prism.css")
     link(rel='stylesheet' href='/css/xeltica-ui.min.css')
     style.
-      .xd-container {
-        display: flex;
-      }
       .xd-sidebar {
         position: relative;
         width: 18rem;
@@ -68,10 +65,6 @@ html
         border-top: 1px solid var(--tone-3);
         padding: 1rem;
         margin-top: 2rem;
-      }
-      .xd-main {
-        flex: 1;
-        min-width: 0;
       }
       .xd-sidebar > .menu {
         position: sticky;
@@ -86,7 +79,7 @@ html
       h1.display: a(href="/") Xeltica UI
       p: b.text-danger 現在開発中のライブラリにつき、本番での使用は想定されていません。頻繁に仕様変更が行われること、機能が不十分であることをご留意ください。
       block header
-    .xd-container
+    .hstack.fill
       +sidebar
       .xd-main
         block main

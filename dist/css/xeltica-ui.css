@@ -1867,8 +1867,9 @@ body {
 .hstack.wrap {
   flex-wrap: wrap;
 }
-.hstack.fill > * {
-  width: 100%;
+.hstack.fill > *:not(.fw) {
+  min-width: 0;
+  flex: 1;
 }
 .hstack:not(.dense) > * + * {
   margin-left: var(--stack-margin);

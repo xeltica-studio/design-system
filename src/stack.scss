@@ -16,8 +16,9 @@ body {
   &.wrap {
     flex-wrap: wrap;
   }
-  &.fill > * {
-    width: 100%;
+  &.fill > *:not(.fw) {
+    min-width: 0;
+    flex: 1;
   }
   &:not(.dense) > * + * {
     margin-left: var(--stack-margin);
