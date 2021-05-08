@@ -3,8 +3,11 @@ extends ../_layout
 block head
   style.
     .xd-shadow-box {
-      width: 32px;
-      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem;
+      height: 4rem;
     }
     .xd-shadow-text-container {
       margin: 1rem 0;
@@ -17,15 +20,9 @@ block main
 
   h2 レベル
   p ドロップシャドウは8段階のレベルで設定できます。
-  table.table
-    thead: tr
-      th クラス
-      th 見た目
-    tbody
-      - for (let i = 1; i <= 8; i++)
-        tr
-          td: code .shadow-#{i}
-          td: .card.ma-4.ghost.xd-shadow-box(class=`shadow-${i}`)
+  .row
+    - for (let i = 1; i <= 8; i++)
+      .col-6.pc-3: .card.ghost.xd-shadow-box(class=`shadow-${i}`) .shadow-#{i}
 
   h2 テキストシャドウ
   p テキストに影を付ける場合は、<code>-t</code>をクラス名の末尾に付けます。
