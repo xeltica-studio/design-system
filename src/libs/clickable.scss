@@ -3,9 +3,6 @@
   transform-origin: center;
   cursor: pointer;
 
-  &:hover {
-    transform: var(--clickable-hover-transform);
-  }
   &:active {
     transform: var(--clickable-active-transform);
   }
