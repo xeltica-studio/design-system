@@ -1,7 +1,6 @@
 @mixin clickable($isText: false) {
   transition: transform 0.2s ease;
-  transform-origin: center center;
-  transform-style: preserve-3d;
+  transform-origin: center;
   cursor: pointer;
 
   &:hover {
