@@ -349,7 +349,6 @@ body {
   --container-padding: 32px;
   --container-padding-phone: 16px;
   --clickable-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
-  --clickable-hover-transform: translateY(2px);
   --clickable-active-transform: scale(0.95) translateY(2px);
   --shadow-color: rgba(0, 0, 0, 0.5);
   --red: #e23731;
@@ -473,37 +472,37 @@ body.dark {
 
 @media (max-width: 600px) {
   .ge-phone {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 600px) {
   .le-phone {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (max-width: 800px) {
   .ge-tablet {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 800px) {
   .le-tablet {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (max-width: 1000px) {
   .ge-pc {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 1000px) {
   .le-pc {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -511,9 +510,6 @@ body.dark {
   transition: transform 0.2s ease;
   transform-origin: center;
   cursor: pointer;
-}
-.clickable:hover {
-  transform: var(--clickable-hover-transform);
 }
 .clickable:active {
   transform: var(--clickable-active-transform);
@@ -525,9 +521,6 @@ body.dark {
   transition: transform 0.2s ease;
   transform-origin: center;
   cursor: pointer;
-}
-.clickable.text:hover {
-  transform: var(--clickable-hover-transform);
 }
 .clickable.text:active {
   transform: var(--clickable-active-transform);
@@ -3180,6 +3173,11 @@ body {
   background-color: transparent;
   color: inherit;
 }
+.menu .item > .icon {
+  margin-right: 0.5rem;
+  color: var(--primary);
+  font-size: 1rem;
+}
 .menu .item:not(.active):not(.disabled):hover {
   border: 1px solid var(--tone-2);
   background-color: var(--hover);
@@ -3191,6 +3189,9 @@ body {
 .menu .item.disabled {
   color: var(--dimmed);
   cursor: default;
+}
+.menu .item.disabled > .icon {
+  color: var(--dimmed);
 }
 
 button.btn,
@@ -3221,10 +3222,6 @@ a.btn:not(:disabled):not(.link) {
   transform-origin: center;
   cursor: pointer;
 }
-button.btn:not(:disabled):not(.link):hover,
-a.btn:not(:disabled):not(.link):hover {
-  transform: var(--clickable-hover-transform);
-}
 button.btn:not(:disabled):not(.link):active,
 a.btn:not(:disabled):not(.link):active {
   transform: var(--clickable-active-transform);
@@ -3237,6 +3234,10 @@ a.btn:not(:disabled):not(.link):active {
 button.btn:focus::before,
 a.btn:focus::before {
   box-shadow: 0 0 1rem 0px var(--primary);
+}
+button.btn:active,
+a.btn:active {
+  filter: brightness(0.8);
 }
 button.btn.primary,
 a.btn.primary {
