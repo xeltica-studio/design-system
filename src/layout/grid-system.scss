@@ -1,0 +1,29 @@
+// https://www.tribeck.jp/column/opinion/production/20200622/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  @for $i from 1 through 12 {
+    > .col-#{$i} {
+      width: 100% / 12 * $i;
+      @include ge(tablet) {
+        @for $i from 1 through 12 {
+          &.tab-#{$i} {
+            width: 100% / 12 * $i;
+          }
+        }
+      }
+      @include ge(pc) {
+        @for $i from 1 through 12 {
+          &.pc-#{$i} {
+            width: 100% / 12 * $i;
+          }
+        }
+      }
+    }
+  }
+}

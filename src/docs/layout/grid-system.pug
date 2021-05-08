@@ -1,0 +1,63 @@
+extends ../_layout
+
+block head
+  style.
+    .xd-grid-child {
+      padding: 16px;
+    }
+
+block main
+  h1 グリッドシステム
+  p <a href="https://getbootstrap.jp/docs/5.0/layout/grid/">Bootstrapのグリッドシステム</a>に近いものを提供します。
+  h2 例
+  .card: .body
+    .row
+      - for (let i = 1; i <= 3 ; i++)
+        .col-4: .card.ma-1.pa-2 #{i}/3
+    .row
+      - for (let i = 1; i <= 4 ; i++)
+        .col-6: .card.ma-1.pa-2 #{i}/4
+  pre: code
+    :escape-html
+      <div class="row">
+        <div class="col-4">
+          <div class="card ma-1 pa-2">1/3</div>
+        </div>
+        <div class="col-4">
+          <div class="card ma-1 pa-2">2/3</div>
+        </div>
+        <div class="col-4">
+          <div class="card ma-1 pa-2">3/3</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="card ma-1 pa-2">1/2</div>
+        </div>
+        <div class="col-6">
+          <div class="card ma-1 pa-2">2/2</div>
+        </div>
+      </div>
+  p <code>col-*</code>クラスに1から12の数値指定をしたカラムを、<code>row</code>クラスの子要素とすることで、グリッドレイアウトを実現します。横列が合計12になるようにすることできっちり1列に並びますが、余剰分は次の行に移動します。
+
+  h2 レスポンシブ
+  p タブレット、PCの場合に設定をオーバーライドできます。タブレット向けに指定する場合は<code>tab-*</code>クラス、PC向けの場合は<code>pc-*</code>クラスを追加します。
+  p 以下の例は、40個の要素をスマホでは2つ、タブレットでは4つ、PCでは6つ横並びにします。
+  .card: .body
+    .row
+      - for (let i = 1; i <= 40; i++)
+        .col-6.tab-3.pc-2: .card.ma-1.pa-2= i
+  pre: code
+    :escape-html
+      <div class="row">
+        <div class="col-6 tab-3 pc-2">
+          <div class="ma-1 pa-2">1</div>
+        </div>
+        <div class="col-6 tab-3 pc-2">
+          <div class="ma-1 pa-2">2</div>
+        </div>
+        <div class="col-6 tab-3 pc-2">
+          <div class="ma-1 pa-2">3</div>
+        </div>
+        ︙
+      </div>
