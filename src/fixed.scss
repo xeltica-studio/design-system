@@ -1,0 +1,47 @@
+@mixin level($pos, $p1, $p2) {
+  @for $i from 0 through 5 {
+    &-#{$i} {
+      position: $pos !important;
+      #{$p1}: #{$i * 8px} !important;
+      #{$p2}: #{$i * 8px} !important;
+    }
+  }
+}
+
+.fix {
+  &-top {
+    &-left {
+      @include level(fixed, top, left);
+    }
+    &-right {
+      @include level(fixed, top, right);
+    }
+  }
+  &-bottom {
+    &-left {
+      @include level(fixed, bottom, left);
+    }
+    &-right {
+      @include level(fixed, bottom, right);
+    }
+  }
+}
+
+.abs {
+  &-top {
+    &-left {
+      @include level(absolute, top, left);
+    }
+    &-right {
+      @include level(absolute, top, right);
+    }
+  }
+  &-bottom {
+    &-left {
+      @include level(absolute, bottom, left);
+    }
+    &-right {
+      @include level(absolute, bottom, right);
+    }
+  }
+}

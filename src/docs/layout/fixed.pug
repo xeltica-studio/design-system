@@ -1,0 +1,39 @@
+extends ../_layout
+
+block main
+  h1 固定レイアウト
+  p 固定レイアウトを使うと、コンテンツを画面の上に固定して表示できます。
+
+  h2 fix
+  p fix は、CSS <code>position: fixed</code>を適用するクラスです。
+  p <code>.fix-{vertical}-{horizontal}-{amount}</code> という記法になっており、<br/>
+    | <code>{vertical}</code>は<code>top</code>または<code>bottom</code>、
+    | <code>{horizontal}</code>は<code>left</code>または<code>right</code>、
+    | <code>{amount}</code>は0から5までの数値を指定できます。
+
+  h2 abs
+  p abs は、CSS <code>position: absolute</code>を適用するクラスです。
+  p <code>.fix-{vertical}-{horizontal}-{amount}</code> という記法になっており、<br/>
+    | <code>{vertical}</code>は<code>top</code>または<code>bottom</code>、
+    | <code>{horizontal}</code>は<code>left</code>または<code>right</code>、
+    | <code>{amount}</code>は0から5までの数値を指定できます。
+
+  h2 例 (abs)
+  .card(style="position: relative; max-width: 320px; height: 240px")
+    button.btn.primary.abs-bottom-right-3 確定
+  pre: code
+    :escape-html
+      <div class="card" style="position: relative; max-width: 320px; height: 240px">
+        <button class="btn primary abs-bottom-right-3">
+          確定
+        </button>
+      </div>
+
+  h2 例 (fix)
+  p 右下に表示されているボタンが例です。
+  button.btn.primary.fix-bottom-right-3 fixの例
+  pre: code
+    :escape-html
+      <button class="btn primary fix-bottom-right-3">
+        fixの例
+      </button>
