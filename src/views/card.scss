@@ -1,7 +1,6 @@
 .card {
   border: 1px solid var(--tone-2);
   border-radius: var(--radius);
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   background: var(--tone-0);
   overflow: hidden;
   > figure {
@@ -47,14 +46,10 @@
   }
   @include dark {
     background: var(--tone-3);
-    // box-shadow: none;
     > header,
     > footer {
       background: var(--tone-2);
     }
-  }
-  &.sink {
-    box-shadow: none;
   }
   &.ghost {
     border: none;

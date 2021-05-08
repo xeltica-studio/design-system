@@ -9,6 +9,8 @@ body {
   --clickable-hover-transform: translateY(2px);
   --clickable-active-transform: scale(0.95) translateY(2px);
 
+  --shadow-color: rgba(0, 0, 0, 0.5);
+
   @each $name, $value in $colors {
     --#{$name}: #{$value};
     --#{$name}-d: #{mix(black, $value, 70%)};

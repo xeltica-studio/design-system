@@ -1,0 +1,8 @@
+@for $i from 1 through 8 {
+  .shadow-#{$i} {
+    box-shadow: 0 0 #{$i * $shadow-level-unit} var(--shadow-color);
+    &-t {
+      text-shadow: 0 0 #{$i * $shadow-level-unit} var(--shadow-color);
+    }
+  }
+}

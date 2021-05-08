@@ -1,0 +1,40 @@
+extends ../_layout
+
+block head
+  style.
+    .xd-shadow-box {
+      width: 32px;
+      height: 32px;
+    }
+    .xd-shadow-text-container {
+      margin: 1rem 0;
+    }
+
+block main
+  h1 ドロップシャドウ
+  p 要素にドロップシャドウを付与することで、前後関係を明確にする効果が期待できます。使いすぎは禁物です。
+  p <code>.shadow-{level}</code>クラス(<code>level</code>は1から5の整数値)を付与することでドロップシャドウを適用できます。
+
+  h2 レベル
+  p ドロップシャドウは8段階のレベルで設定できます。
+  table.table
+    thead: tr
+      th クラス
+      th 見た目
+    tbody
+      - for (let i = 1; i <= 8; i++)
+        tr
+          td: code .shadow-#{i}
+          td: .card.ma-4.ghost.xd-shadow-box(class=`shadow-${i}`)
+
+  h2 テキストシャドウ
+  p テキストに影を付ける場合は、<code>-t</code>をクラス名の末尾に付けます。
+  table.table
+    thead: tr
+      th クラス
+      th 見た目
+    tbody
+      - for (let i = 1; i <= 8; i++)
+        tr
+          td: code .shadow-#{i}-t
+          td: .xd-shadow-text-container(class=`shadow-${i}-t`) あのイーハトーヴォ
