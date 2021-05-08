@@ -1,11 +1,9 @@
 @use 'sass:map';
 
 $breakpoints: (
-  hphone: 600px,
+  phone: 600px,
   tablet: 800px,
-  laptop: 1000px,
-  pc: 1300px,
-  hub: 1600px,
+  pc: 1000px,
 );
 
 @mixin ge($breakpoint) {

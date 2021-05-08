@@ -351,6 +351,7 @@ body {
   --clickable-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
   --clickable-hover-transform: translateY(2px);
   --clickable-active-transform: scale(0.95) translateY(2px);
+  --shadow-color: rgba(0, 0, 0, 0.5);
   --red: #e23731;
   --red-d: #44110f;
   --red-l: #f6c3c1;
@@ -470,13 +471,13 @@ body.dark {
 }
 
 @media (max-width: 600px) {
-  .ge-hphone {
+  .ge-phone {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
-  .le-hphone {
+  .le-phone {
     display: none;
   }
 }
@@ -494,37 +495,13 @@ body.dark {
 }
 
 @media (max-width: 1000px) {
-  .ge-laptop {
-    display: none;
-  }
-}
-
-@media (max-width: 1000px) {
-  .le-laptop {
-    display: none;
-  }
-}
-
-@media (max-width: 1300px) {
   .ge-pc {
     display: none;
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   .le-pc {
-    display: none;
-  }
-}
-
-@media (max-width: 1600px) {
-  .ge-hub {
-    display: none;
-  }
-}
-
-@media (max-width: 1600px) {
-  .le-hub {
     display: none;
   }
 }
@@ -1578,6 +1555,62 @@ body.dark {
   padding-bottom: 40px !important;
 }
 
+.shadow-1 {
+  box-shadow: 0 0 4px var(--shadow-color);
+}
+.shadow-1-t {
+  text-shadow: 0 0 4px var(--shadow-color);
+}
+
+.shadow-2 {
+  box-shadow: 0 0 8px var(--shadow-color);
+}
+.shadow-2-t {
+  text-shadow: 0 0 8px var(--shadow-color);
+}
+
+.shadow-3 {
+  box-shadow: 0 0 12px var(--shadow-color);
+}
+.shadow-3-t {
+  text-shadow: 0 0 12px var(--shadow-color);
+}
+
+.shadow-4 {
+  box-shadow: 0 0 16px var(--shadow-color);
+}
+.shadow-4-t {
+  text-shadow: 0 0 16px var(--shadow-color);
+}
+
+.shadow-5 {
+  box-shadow: 0 0 20px var(--shadow-color);
+}
+.shadow-5-t {
+  text-shadow: 0 0 20px var(--shadow-color);
+}
+
+.shadow-6 {
+  box-shadow: 0 0 24px var(--shadow-color);
+}
+.shadow-6-t {
+  text-shadow: 0 0 24px var(--shadow-color);
+}
+
+.shadow-7 {
+  box-shadow: 0 0 28px var(--shadow-color);
+}
+.shadow-7-t {
+  text-shadow: 0 0 28px var(--shadow-color);
+}
+
+.shadow-8 {
+  box-shadow: 0 0 32px var(--shadow-color);
+}
+.shadow-8-t {
+  text-shadow: 0 0 32px var(--shadow-color);
+}
+
 .table {
   border: 1px solid var(--tone-3);
   border-radius: var(--radius);
@@ -2074,7 +2107,6 @@ body {
 .card {
   border: 1px solid var(--tone-2);
   border-radius: var(--radius);
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   background: var(--tone-0);
   overflow: hidden;
 }
@@ -2125,9 +2157,6 @@ body {
 .dark .card > header,
 .dark .card > footer {
   background: var(--tone-2);
-}
-.card.sink {
-  box-shadow: none;
 }
 .card.ghost {
   border: none;

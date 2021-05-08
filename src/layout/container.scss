@@ -1,7 +1,7 @@
 .container {
   padding: var(--container-padding);
 
-  @include le(hphone) {
+  @include le(phone) {
     padding: var(--container-padding-phone);
   }
 }
