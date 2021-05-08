@@ -27,13 +27,14 @@ block main
 
   .vstack
     section
-    section
       h2 例
-      .hstack.wrap
-        button.btn 通常
-        button.btn.primary プライマリー
-        button.btn.success 成功
-        button.btn.info 情報
-        button.btn.warn 警告
-        button.btn.danger 危険
-        button.btn(disabled) 無効
+      .row(style="max-width: 800px")
+        .col-6.tab-3.pc-2.pa-1: button.fluid.btn Normal
+        .col-6.tab-3.pc-2.pa-1: button.fluid.btn.primary Primary
+        .col-6.tab-3.pc-2.pa-1: button.fluid.btn.success Success
+        .col-6.tab-3.pc-2.pa-1: button.fluid.btn.info Info
+        .col-6.tab-3.pc-2.pa-1: button.fluid.btn.warn Warning
+        .col-6.tab-3.pc-2.pa-1: button.fluid.btn.danger Danger
+        .col-6.tab-3.pc-2.pa-1: button.fluid.btn.flat Flat
+        .col-6.tab-3.pc-2.pa-1: button.fluid.btn.link Link
+        .col-6.tab-3.pc-2.pa-1: button.fluid.btn(disabled) Disabled

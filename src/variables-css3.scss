@@ -27,7 +27,7 @@ body {
   --fg: var(--gray-11);
   --bold: var(--tone-13);
   --link: var(--primary);
-  --hover: var(--tone-2);
+  --hover: rgba(0, 0, 0, 0.03);
 
   --tone-0: var(--white);
   --tone-1: var(--gray-1);
@@ -50,6 +50,7 @@ body {
   &.dark {
     --bg: var(--gray-12);
     --fg: var(--gray-2);
+    --hover: rgba(255, 255, 255, 0.03);
 
     --tone-0: var(--black);
     --tone-1: var(--gray-12);

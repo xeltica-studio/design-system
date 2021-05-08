@@ -30,10 +30,10 @@
 
     &:not(.active):not(.disabled):hover {
       border: 1px solid var(--tone-2);
-      background-color: var(--tone-1);
+      background-color: var(--hover);
     }
     &.active {
-      background-color: var(--hover);
+      background-color: var(--tone-2);
       cursor: default;
     }
     &.disabled {

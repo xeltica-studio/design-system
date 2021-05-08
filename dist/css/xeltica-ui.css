@@ -427,7 +427,7 @@ body {
   --fg: var(--gray-11);
   --bold: var(--tone-13);
   --link: var(--primary);
-  --hover: var(--tone-2);
+  --hover: rgba(0, 0, 0, 0.03);
   --tone-0: var(--white);
   --tone-1: var(--gray-1);
   --tone-2: var(--gray-2);
@@ -448,6 +448,7 @@ body {
 body.dark {
   --bg: var(--gray-12);
   --fg: var(--gray-2);
+  --hover: rgba(255, 255, 255, 0.03);
   --tone-0: var(--black);
   --tone-1: var(--gray-12);
   --tone-2: var(--gray-11);
@@ -3181,10 +3182,10 @@ body {
 }
 .menu .item:not(.active):not(.disabled):hover {
   border: 1px solid var(--tone-2);
-  background-color: var(--tone-1);
+  background-color: var(--hover);
 }
 .menu .item.active {
-  background-color: var(--hover);
+  background-color: var(--tone-2);
   cursor: default;
 }
 .menu .item.disabled {
@@ -3214,23 +3215,23 @@ a.btn::before {
   border-radius: var(--radius);
   transition: box-shadow 0.2s ease;
 }
-button.btn:not(:disabled),
-a.btn:not(:disabled) {
+button.btn:not(:disabled):not(.link),
+a.btn:not(:disabled):not(.link) {
   transition: transform 0.2s ease;
   transform-origin: center;
   cursor: pointer;
 }
-button.btn:not(:disabled):hover,
-a.btn:not(:disabled):hover {
+button.btn:not(:disabled):not(.link):hover,
+a.btn:not(:disabled):not(.link):hover {
   transform: var(--clickable-hover-transform);
 }
-button.btn:not(:disabled):active,
-a.btn:not(:disabled):active {
+button.btn:not(:disabled):not(.link):active,
+a.btn:not(:disabled):not(.link):active {
   transform: var(--clickable-active-transform);
 }
-button.btn:not(:disabled):hover, button.btn:not(:disabled):active,
-a.btn:not(:disabled):hover,
-a.btn:not(:disabled):active {
+button.btn:not(:disabled):not(.link):hover, button.btn:not(:disabled):not(.link):active,
+a.btn:not(:disabled):not(.link):hover,
+a.btn:not(:disabled):not(.link):active {
   z-index: 9999;
 }
 button.btn:focus::before,
@@ -3286,6 +3287,40 @@ a.btn.danger {
 button.btn.danger:focus::before,
 a.btn.danger:focus::before {
   box-shadow: 0 0 1rem 0px var(--danger);
+}
+button.btn.flat,
+a.btn.flat {
+  border: none;
+  background: none;
+  color: var(--fg);
+}
+button.btn.flat:focus::before,
+a.btn.flat:focus::before {
+  box-shadow: none;
+}
+button.btn.flat:focus, button.btn.flat:hover,
+a.btn.flat:focus,
+a.btn.flat:hover {
+  background: var(--hover);
+}
+button.btn.link,
+a.btn.link {
+  border: none;
+  background: none;
+  color: var(--link);
+}
+button.btn.link:focus::before,
+a.btn.link:focus::before {
+  box-shadow: none;
+}
+button.btn.link:focus, button.btn.link:hover,
+a.btn.link:focus,
+a.btn.link:hover {
+  text-decoration: underline;
+}
+button.btn.link:active,
+a.btn.link:active {
+  filter: brightness(0.8);
 }
 button.btn:disabled,
 a.btn:disabled {

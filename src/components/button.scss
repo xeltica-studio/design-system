@@ -23,7 +23,7 @@ a.btn {
     transition: box-shadow 0.2s ease;
   }
 
-  &:not(:disabled) {
+  &:not(:disabled):not(.link) {
     @include clickable;
   }
 
@@ -40,6 +40,35 @@ a.btn {
         // border: 2px solid var(--tone-12);
         box-shadow: 0 0 1rem 0px var(--#{$var});
       }
+    }
+  }
+
+  &.flat {
+    border: none;
+    background: none;
+    color: var(--fg);
+    &:focus::before {
+      box-shadow: none;
+    }
+    &:focus,
+    &:hover {
+      background: var(--hover);
+    }
+  }
+
+  &.link {
+    border: none;
+    background: none;
+    color: var(--link);
+    &:focus::before {
+      box-shadow: none;
+    }
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+    &:active {
+      filter: brightness(0.8);
     }
   }
 
