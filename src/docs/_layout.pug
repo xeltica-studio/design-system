@@ -56,6 +56,12 @@ html
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     link(rel="stylesheet", href="/external/prism.css")
     link(rel='stylesheet' href='/css/xeltica-ui.min.css')
+    link(
+      rel='stylesheet'
+      href='https://use.fontawesome.com/releases/v5.15.3/css/all.css'
+      integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=='
+      crossorigin='anonymous'
+    )
     style.
       .xd-sidebar {
         position: relative;
@@ -84,15 +90,23 @@ html
       .xd-main
         block main
     +footer
+    .card.fix-bottom-right-3: .hstack.dense
+      button.btn.flat.le-tablet(tabindex="-1"): i.fas.fa-bars
+      button.btn.flat(tabindex="-1").xd-weather-btn: i.fas
+      button.btn.flat(tabindex="-1"): i.fas.fa-share-alt
     script(src="/external/prism.js")
     script.
-      const btn = document.getElementById('daylight');
+      const weatherButton = document.querySelector('.xd-weather-btn');
       const cl = document.body.classList;
       if (localStorage.getItem('xelticaui:theme') === 'dark') {
         cl.add('dark');
       }
-      btn.addEventListener('click', () => {
+      weatherButton.children[0].className = cl.contains('dark') ? 'fas fa-moon' : 'fas fa-sun';
+      weatherButton.addEventListener('click', () => {
         cl.toggle('dark');
-        localStorage.setItem('xelticaui:theme', cl.contains('dark') ? 'dark' : 'light');
+        const currentTheme = cl.contains('dark') ? 'dark' : 'light';
+        localStorage.setItem('xelticaui:theme', currentTheme);
+        weatherButton.children[0].className = currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
       });
+
     block script

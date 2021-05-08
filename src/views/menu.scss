@@ -28,6 +28,12 @@
     background-color: transparent;
     color: inherit;
 
+    > .icon {
+      margin-right: 0.5rem;
+      color: var(--primary);
+      font-size: 1rem;
+    }
+
     &:not(.active):not(.disabled):hover {
       border: 1px solid var(--tone-2);
       background-color: var(--hover);
@@ -39,6 +45,9 @@
     &.disabled {
       color: var(--dimmed);
       cursor: default;
+      > .icon {
+        color: var(--dimmed);
+      }
     }
   }
 }

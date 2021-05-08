@@ -2,37 +2,108 @@ mixin sidebar
   .xd-sidebar.ge-tablet.fw
     .menu
       section
+        h1 はじめよう
+        //- a.item(href="/getting-started/index.html") 導入
+        .item.disabled
+          i.icon.fas.fa-fw.fa-download
+          | 導入
+        //- a.item(href="/getting-started/browser.html") 対応ブラウザとOS
+        .item.disabled
+          i.icon.fas.fa-fw.fa-mobile
+          | 対応ブラウザとOS
+        //- a.item(href="/getting-started/scripting.html") スクリプティング
+        .item.disabled
+          i.icon.fas.fa-fw.fa-plug
+          | スクリプティング
+        //- a.item(href="/getting-started/a11y.html") アクセシビリティ
+        .item.disabled
+          i.icon.fas.fa-fw.fa-universal-access
+          | アクセシビリティ
+      section
         h1 スタイリング
-        a.item(href="/styling/typography.html") タイポグラフィ
-        a.item(href="/styling/shadow.html") ドロップシャドウ
-        a.item(href="/styling/color.html") カラー
-        a.item(href="/styling/table.html") 表組み
-        a.item(href="/styling/image.html") 画像
-        a.item(href="/styling/breakpoints.html") ブレークポイント
-        a.item(href="/styling/theme.html") テーマ
+        a.item(href="/styling/typography.html")
+          i.icon.fas.fa-fw.fa-magic
+          | タイポグラフィ
+        a.item(href="/styling/shadow.html")
+          i.icon.fas.fa-fw.fa-circle
+          | ドロップシャドウ
+        a.item(href="/styling/color.html")
+          i.icon.fas.fa-fw.fa-paint-roller
+          | カラー
+        a.item(href="/styling/table.html")
+          i.icon.fas.fa-fw.fa-table
+          | 表組み
+        a.item(href="/styling/image.html")
+          i.icon.fas.fa-fw.fa-images
+          | 画像
+        a.item(href="/styling/breakpoints.html")
+          i.icon.fas.fa-fw.fa-arrows-alt-h
+          | ブレークポイント
+        a.item(href="/styling/theme.html")
+          i.icon.fas.fa-fw.fa-palette
+          | テーマ
       section
         h1 レイアウト
-        a.item(href="/layout/container.html") コンテナー
-        a.item(href="/layout/stack.html") スタックレイアウト
-        a.item(href="/layout/fixed.html") 固定レイアウト
-        a.item(href="/layout/grid-system.html") グリッドシステム
+        a.item(href="/layout/container.html")
+          i.icon.fas.fa-fw.fa-vector-square
+          | コンテナー
+        a.item(href="/layout/stack.html")
+          i.icon.fas.fa-fw.fa-layer-group
+          | スタックレイアウト
+        a.item(href="/layout/group.html")
+          i.icon.fas.fa-fw.fa-object-group
+          | グループレイアウト
+        a.item(href="/layout/fixed.html")
+          i.icon.fas.fa-fw.fa-thumbtack
+          | 固定レイアウト
+        a.item(href="/layout/grid-system.html")
+          i.icon.fas.fa-fw.fa-th
+          | グリッドシステム
       section
         h1 ビュー
-        a.item(href="/view/menu.html") メニュー
-        .item.disabled リストビュー
-        .item.disabled リストフォーム
-        a.item(href="/view/card.html") カード
-        .item.disabled ヒーロービュー
+        a.item(href="/view/menu.html")
+          i.icon.fas.fa-fw.fa-list-ul
+          | メニュー
+        .item.disabled
+          i.icon.fas.fa-fw.fa-bars
+          | リストビュー
+        .item.disabled
+          i.icon.fas.fa-fw.fa-tasks
+          | リストフォーム
+        a.item(href="/view/card.html")
+          i.icon.far.fa-fw.fa-square
+          | カード
+        .item.disabled
+          i.icon.fas.fa-fw.fa-address-card
+          | ヒーロービュー
       section
         h1 コンポーネント
-        a.item(href="/component/button.html") ボタン
-        .item.disabled インプット
-        .item.disabled アラート
-        .item.disabled ノート
-        .item.disabled バッジ
-        .item.disabled ナビゲーションバー
-        .item.disabled プログレスバー
+        a.item(href="/component/button.html")
+          i.icon.fas.fa-fw.fa-caret-square-right
+          | ボタン
+        .item.disabled
+          i.icon.far.fa-fw.fa-keyboard
+          | インプット
+        .item.disabled
+          i.icon.fas.fa-fw.fa-info-circle
+          | アラート
+        .item.disabled
+          i.icon.far.fa-fw.fa-sticky-note
+          | ノート
+        .item.disabled
+          i.icon.fas.fa-fw.fa-cookie
+          | バッジ
+        .item.disabled
+          i.icon.fas.fa-fw.fa-directions
+          | ナビゲーションバー
+        .item.disabled
+          i.icon.far.fa-fw.fa-hourglass
+          | プログレスバー
+        .item.disabled
+          i.icon.fas.fa-fw.fa-spinner
+          | ローディング
       section
         h1 その他
-        a.item(href="/utility.html") ユーティリティ
-        button.item#daylight テーマを切り替える
+        a.item(href="/utility.html")
+          i.icon.fas.fa-fw.fa-toolbox
+          | ユーティリティ

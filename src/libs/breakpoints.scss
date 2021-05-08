@@ -20,12 +20,12 @@ $breakpoints: (
 @each $key, $val in $breakpoints {
   .ge-#{$key} {
     @include le($key) {
-      display: none;
+      display: none !important;
     }
   }
   .le-#{$key} {
     @include ge($key) {
-      display: none;
+      display: none !important;
     }
   }
 }
