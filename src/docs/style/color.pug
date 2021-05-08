@@ -25,22 +25,22 @@ block main
   p 定義済みの全ての色を確認できます。ホバーかクリックで、名前を確認できます。
   p.text-blue#colorbox-desc
   .vstack.dense
-    .hstack.dense
+    .hstack.dense.wrap
       each tuple in grayscales
         - const [name, isDark] = tuple;
         .xd-colorbox.clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
 
-    .hstack.dense
+    .hstack.dense.wrap
       each tuple in colors
         - const [name, isDark] = tuple;
         .xd-colorbox.clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
 
-    .hstack.dense
+    .hstack.dense.wrap
       each tuple in colors
         - const [name] = tuple;
         .xd-colorbox.clickable(class=`bg-${name}-l`)= `${name}-l`
 
-    .hstack.dense
+    .hstack.dense.wrap
       each tuple in colors
         - const [name] = tuple;
         .xd-colorbox.clickable(class=`bg-${name}-d dark`)= `${name}-d`
