@@ -1,0 +1,49 @@
+@each $name, $value in $colors {
+  .text-#{$name} {
+    color: var(--#{$name}) !important;
+  }
+  .bg-#{$name} {
+    background-color: var(--#{$name}) !important;
+  }
+  .text-#{$name}-d {
+    color: var(--#{$name}-d) !important;
+  }
+  .bg-#{$name}-d {
+    background-color: var(--#{$name}-d) !important;
+  }
+  .text-#{$name}-l {
+    color: var(--#{$name}-l) !important;
+  }
+  .bg-#{$name}-l {
+    background-color: var(--#{$name}-l) !important;
+  }
+}
+
+@each $name, $value in $tones {
+  .text-#{$name} {
+    color: var(--#{$name}) !important;
+  }
+  .bg-#{$name} {
+    background-color: var(--#{$name}) !important;
+  }
+}
+
+@each $name, $value in $classes {
+  .text-#{$name} {
+    color: var(--#{$name}) !important;
+  }
+  .bg-#{$name} {
+    background-color: var(--#{$name}) !important;
+    color: var(--#{$name}-fg) !important;
+    b,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+      color: var(--#{$name}-fg) !important;
+    }
+  }
+}

@@ -1,74 +1,29 @@
 /*!
- * Xeltica UI 0.1.0
+ * Xeltica UI 1.0.0-alpha.2
  * (C)2021 Xeltica
  * Licensed under MIT (https://github.com/xeltica/ui/tree/master/LICENSE)
  */
 
 @import "reboot";
+@import "variables-sass";
+@import "variables-css3";
+@import "misc";
 
-// Utilities
-@import "util";
-@import "size";
-@import "color";
-@import "breakpoints";
+@import "libs/breakpoints";
+@import "libs/clickable";
+@import "libs/dark";
 
-// Layouts
-@import "container";
-@import "stack";
-@import "fixed";
+@import "styling/color";
+@import "styling/image";
+@import "styling/margin-padding";
+@import "styling/table";
+@import "styling/typography";
 
-// Styles
-@import "typography";
-@import "table";
-@import "image";
+@import "layout/container";
+@import "layout/stack";
+@import "layout/fixed";
 
-// Views
-@import "menu";
-@import "card";
+@import "views/card";
+@import "views/menu";
 
-// Components
-@import "button";
-
-body {
-  --tone-0: var(--white);
-  --tone-1: var(--gray-1);
-  --tone-2: var(--gray-2);
-  --tone-3: var(--gray-3);
-  --tone-4: var(--gray-4);
-  --tone-5: var(--gray-5);
-  --tone-6: var(--gray-6);
-  --tone-7: var(--gray-7);
-  --tone-8: var(--gray-8);
-  --tone-9: var(--gray-9);
-  --tone-10: var(--gray-10);
-  --tone-11: var(--gray-11);
-  --tone-12: var(--gray-12);
-  --tone-13: var(--black);
-
-  --bg: var(--white);
-  --fg: var(--gray-11);
-  --bold: var(--tone-13);
-  --link: var(--primary);
-  --hover: var(--tone-2);
-
-  background: var(--bg);
-  color: var(--fg);
-  &.dark {
-    --bg: var(--gray-12);
-    --fg: var(--gray-2);
-    --tone-0: var(--black);
-    --tone-1: var(--gray-12);
-    --tone-2: var(--gray-11);
-    --tone-3: var(--gray-10);
-    --tone-4: var(--gray-9);
-    --tone-5: var(--gray-8);
-    --tone-6: var(--gray-7);
-    --tone-7: var(--gray-6);
-    --tone-8: var(--gray-5);
-    --tone-9: var(--gray-4);
-    --tone-10: var(--gray-3);
-    --tone-11: var(--gray-2);
-    --tone-12: var(--gray-1);
-    --tone-13: var(--white);
-  }
-}
+@import "components/button";

@@ -1,13 +1,8 @@
 @use "sass:list";
 
 body {
-  --code-fg: #8b3a41;
-  --code-bg: #ffe4e6;
-
-  &.dark {
-    --code-fg: #ff5362;
-    --code-bg: #573535;
-  }
+  background: var(--bg);
+  color: var(--fg);
 }
 
 h1,

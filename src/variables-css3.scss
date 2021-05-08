@@ -1,0 +1,70 @@
+body {
+  --margin: 16px;
+  --radius: 3px;
+
+  --container-padding: 32px;
+  --container-padding-phone: 16px;
+
+  --clickable-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  --clickable-hover-transform: translateY(2px);
+  --clickable-active-transform: scale(0.95) translateY(2px);
+
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+    --#{$name}-d: #{mix(black, $value, 70%)};
+    --#{$name}-l: #{mix(white, $value, 70%)};
+  }
+  @each $name, $value in $tones {
+    --#{$name}: #{$value};
+  }
+  @each $name, $value in $classes {
+    --#{$name}: #{$value};
+  }
+
+  --bg: var(--white);
+  --fg: var(--gray-11);
+  --bold: var(--tone-13);
+  --link: var(--primary);
+  --hover: var(--tone-2);
+
+  --tone-0: var(--white);
+  --tone-1: var(--gray-1);
+  --tone-2: var(--gray-2);
+  --tone-3: var(--gray-3);
+  --tone-4: var(--gray-4);
+  --tone-5: var(--gray-5);
+  --tone-6: var(--gray-6);
+  --tone-7: var(--gray-7);
+  --tone-8: var(--gray-8);
+  --tone-9: var(--gray-9);
+  --tone-10: var(--gray-10);
+  --tone-11: var(--gray-11);
+  --tone-12: var(--gray-12);
+  --tone-13: var(--black);
+
+  --code-fg: #8b3a41;
+  --code-bg: #ffe4e6;
+
+  &.dark {
+    --bg: var(--gray-12);
+    --fg: var(--gray-2);
+
+    --tone-0: var(--black);
+    --tone-1: var(--gray-12);
+    --tone-2: var(--gray-11);
+    --tone-3: var(--gray-10);
+    --tone-4: var(--gray-9);
+    --tone-5: var(--gray-8);
+    --tone-6: var(--gray-7);
+    --tone-7: var(--gray-6);
+    --tone-8: var(--gray-5);
+    --tone-9: var(--gray-4);
+    --tone-10: var(--gray-3);
+    --tone-11: var(--gray-2);
+    --tone-12: var(--gray-1);
+    --tone-13: var(--white);
+
+    --code-fg: #ff5362;
+    --code-bg: #573535;
+  }
+}

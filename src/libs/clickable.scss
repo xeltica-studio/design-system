@@ -1,0 +1,25 @@
+@mixin clickable($isText: false) {
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  cursor: pointer;
+
+  &:hover {
+    transform: var(--clickable-hover-transform);
+  }
+  &:active {
+    transform: var(--clickable-active-transform);
+  }
+  &:hover,
+  &:active {
+    z-index: 9999;
+  }
+}
+
+.clickable {
+  @include clickable();
+
+  &.text {
+    @include clickable(true);
+  }
+}

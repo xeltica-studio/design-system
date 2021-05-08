@@ -2,8 +2,8 @@
   @for $i from 0 through 5 {
     &-#{$i} {
       position: $pos !important;
-      #{$p1}: #{$i * 8px} !important;
-      #{$p2}: #{$i * 8px} !important;
+      #{$p1}: #{$i * $fixed-level-unit} !important;
+      #{$p2}: #{$i * $fixed-level-unit} !important;
     }
   }
 }
