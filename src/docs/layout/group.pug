@@ -1,0 +1,52 @@
+extends ../_layout
+
+block main
+  h1 グループ
+  p グループは要素を連結して表示するレイアウトです。<a href="./stack.html">スタック</a>と似ていますが、スタックと異なりガターが無く、要素のボーダーや角丸が調整されます。
+  p 縦方向のグループは、親要素に<code>vgroup</code>クラス、横方向の場合は<code>hgroup</code>クラスを付与するだけで使用できます。
+
+  h2 例
+  .vgroup
+    .card: .body
+      .vstack
+        .hgroup
+          button.btn 下書き
+          button.btn.primary 保存
+        .hgroup
+          button.btn ◀
+          button.btn 1
+          button.btn.primary 2
+          button.btn 3
+          button.btn 4
+          button.btn ▶
+        .vgroup
+          .card(style="max-width: 200px"): .body Hello
+          .card(style="max-width: 200px"): .body Hello
+          .card(style="max-width: 200px"): .body Hello
+    pre: code
+      :escape-html
+        <div class="vstack">
+          <div class="hgroup">
+            <button class="btn">下書き</btn>
+            <button class="btn primary">保存</btn>
+          </div>
+          <div class="hgroup">
+            <button class="btn">◀</btn>
+            <button class="btn primary">1</btn>
+            <button class="btn">2</btn>
+            <button class="btn">3</btn>
+            <button class="btn">4</btn>
+            <button class="btn">▶</btn>
+          </div>
+          <div class="vgroup">
+            <div class="card" style="max-width: 200px">
+              <div class="body">Hello</div>
+            </div>
+            <div class="card" style="max-width: 200px">
+              <div class="body">Hello</div>
+            </div>
+            <div class="card" style="max-width: 200px">
+              <div class="body">Hello</div>
+            </div>
+          </div>
+        </div>

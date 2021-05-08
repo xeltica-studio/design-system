@@ -17,16 +17,17 @@ block main
         tr: td: code .dense
           td 余白を取り除きます
     h3 例
-    .card.mb-5: .body
-      .vstack
-        button.btn テスト
-        button.btn テスト
-        button.btn テスト
-    .card.mb-5: .body
-      .vstack.dense
-        button.btn テスト
-        button.btn テスト
-        button.btn テスト
+    .vgroup
+      .card: .body
+        .vstack
+          button.btn テスト
+          button.btn テスト
+          button.btn テスト
+      .card: .body
+        .vstack.dense
+          button.btn テスト
+          button.btn テスト
+          button.btn テスト
 
   section
     h2 横スタック <code>.hstack</code>
@@ -45,22 +46,23 @@ block main
         tr: td: code .fill
           td 要素を横いっぱいに広げます
     h3 例
-    .card.mb-5: .body
-      .hstack
-        button.btn テスト
-        button.btn テスト
-        button.btn テスト
-    .card.mb-5: .body
-      .hstack.dense
-        button.btn テスト
-        button.btn テスト
-        button.btn テスト
-    .card.mb-5: .body
-      .hstack.wrap
-        - for (let _ = 0; _ < 40; _++)
+    .vgroup
+      .card: .body
+        .hstack
           button.btn テスト
-    .card.mb-5: .body
-      .hstack.fill
-        button.btn テスト
-        button.btn テスト
-        button.btn テスト
+          button.btn テスト
+          button.btn テスト
+      .card: .body
+        .hstack.dense
+          button.btn テスト
+          button.btn テスト
+          button.btn テスト
+      .card: .body
+        .hstack.wrap
+          - for (let _ = 0; _ < 40; _++)
+            button.btn テスト
+      .card: .body
+        .hstack.fill
+          button.btn テスト
+          button.btn テスト
+          button.btn テスト

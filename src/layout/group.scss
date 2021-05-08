@@ -1,0 +1,40 @@
+.hgroup {
+  display: flex;
+  flex-direction: row;
+  // 最左要素は右側の角丸・ボーダーを削ぐ
+  > *:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+  }
+  // 途中要素は角丸・右ボーダーを削ぐ
+  > *:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    border-right: none;
+  }
+  // 最右要素は左側の角丸を削ぐ
+  > *:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+.vgroup {
+  display: flex;
+  flex-direction: column;
+  // 最上要素は下側の角丸・ボーダーを削ぐ
+  > *:first-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+  }
+  // 途中要素は角丸・下ボーダーを削ぐ
+  > *:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    border-bottom: none;
+  }
+  // 最下要素は上側の角丸を削ぐ
+  > *:last-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
