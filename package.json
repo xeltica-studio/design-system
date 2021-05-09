@@ -1,6 +1,6 @@
 {
   "name": "xeltica-ui",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "UI SCSS Library of Xeltica Design System",
   "main": "dist/xeltica-ui.min.css",
   "style": "dist/xeltica-ui.min.css",
