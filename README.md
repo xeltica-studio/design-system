@@ -1,4 +1,4 @@
-# Xeltica UI
+# XelticaUI
 
 Xeltica Design Systemに則った、CSSライブラリ。
 
