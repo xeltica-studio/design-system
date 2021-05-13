@@ -24,3 +24,10 @@ body {
     margin-left: var(--stack-margin);
   }
 }
+
+ul.hstack,
+ol.hstack {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
