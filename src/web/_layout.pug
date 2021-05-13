@@ -1,3 +1,4 @@
+include _header
 include _footer
 
 -
@@ -79,12 +80,14 @@ html
     block title
       title XelticaUI
 
-  body.container
+  body
     header.xd-header
-      h1.display: a(href="/") XelticaUI
-      p: b.text-danger 現在開発中のライブラリにつき、本番での使用は想定されていません。頻繁に仕様変更が行われること、機能が不十分であることをご留意ください。
+      //- h1.display: a(href="/") XelticaUI
+      //- p: b.text-danger 現在開発中のライブラリにつき、本番での使用は想定されていません。頻繁に仕様変更が行われること、機能が不十分であることをご留意ください。
       block header
-    block body
+        +header
+    .container(style="padding-top: 96px")
+      block body
     +footer
     .card.fix-bottom-right-3: .hstack.dense
       button.btn.flat.le-tablet(tabindex="-1"): i.fas.fa-bars

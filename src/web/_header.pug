@@ -1,0 +1,8 @@
+mixin header(transparent)
+  .navbar.fixed.hstack(class=(transparent ? '' : 'bg-primary text-primary-fg'))
+    h1.mr-1.navbar-title: a(href="/") XelticaUI
+    p
+    ul.hstack
+      li: a(href="/docs")
+        i.fas.fa-book.mr-1
+        span.ge-tablet ドキュメント
