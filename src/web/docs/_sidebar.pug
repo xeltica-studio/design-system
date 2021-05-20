@@ -1,22 +1,18 @@
 mixin sidebar
-  .xd-sidebar.ge-tablet.fw
+  .xd-sidebar.ge-tablet.fw.mr-2
     .menu
       section
         h1 はじめよう
-        //- a.item(href="/docs/getting-started/index.html") 導入
-        .item.disabled
+        a.item(href="/docs")
           i.icon.fas.fa-fw.fa-download
           | 導入
-        //- a.item(href="/docs/getting-started/browser.html") 対応ブラウザとOS
-        .item.disabled
+        a.item(href="/docs/browser.html")
           i.icon.fas.fa-fw.fa-mobile
           | 対応ブラウザとOS
-        //- a.item(href="/docs/getting-started/scripting.html") スクリプティング
-        .item.disabled
+        a.item(href="/docs/scripting.html")
           i.icon.fas.fa-fw.fa-plug
           | スクリプティング
-        //- a.item(href="/docs/getting-started/a11y.html") アクセシビリティ
-        .item.disabled
+        a.item(href="/docs/a11y.html")
           i.icon.fas.fa-fw.fa-universal-access
           | アクセシビリティ
       section

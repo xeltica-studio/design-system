@@ -470,6 +470,10 @@ body.dark {
   width: 100%;
 }
 
+.sharp {
+  border-radius: 0;
+}
+
 @media (max-width: 600px) {
   .ge-phone {
     display: none !important;
