@@ -1,0 +1,12 @@
+.hero {
+  font-size: 18px;
+  > h1 {
+    font-size: 4em;
+  }
+  > h2 {
+    font-size: 2em;
+  }
+  @include le(phone) {
+    font-size: 14px;
+  }
+}

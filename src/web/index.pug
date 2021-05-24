@@ -1,11 +1,47 @@
 extends _layout
 
 block header
-  +header(true)
+block footer
+
+block head
+  style.
+    body {
+      background: url("/assets/yokohama.jpg");
+      background-position: center;
+      background-size: contain;
+      background-attachment: fixed;
+    }
+    .xd-hero-container {
+      width: 100vw;
+      padding: 0 16px;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+    }
+    .xd-hero-card {
+      max-width: 960px;
+      flex: 1;
+      margin: 96px auto;
+      overflow: auto;
+    }
+    @media (max-width: 600px) {
+      .xd-hero-card {
+        margin: 32px auto;
+      }
+    }
 
 block body
-  h1.display.text-primary(style="margin: 0") XelticaUI
-  h2 ブランドを体現する為に生まれてきました。
-  p XelticaUI は、Xelticaのプロダクトデザインを統一し、生産性を向上させる目的で開発を開始しました。
-    | Xeltica製品のほとんどはオープンソースであることから、
-    | 本ライブラリもオープンソースのCSSフレームワークとして開発しています。
+  .xd-hero-container
+    .card.acrylic.shadow-5.xd-hero-card
+      .body
+        .container.hero
+          h1.display.text-primary(style="margin: 0") XelticaUI
+          p XelticaUI は、Xelticaのプロダクトデザインを統一し、生産性を向上させる目的で開発を開始しました。
+            | Xeltica製品のほとんどはオープンソースであることから、
+            | 本ライブラリもオープンソースのCSSフレームワークとして開発しています。
+          p npmやCDN経由で入手して、今すぐ利用しましょう。
+          .hstack.wrap
+            a.btn.primary(href="/docs")
+              i.fas.fa-book.mr-1
+              | ドキュメント
+          +footer

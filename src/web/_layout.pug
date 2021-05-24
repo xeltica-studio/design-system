@@ -54,7 +54,6 @@ html
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1')
-    link(rel="stylesheet", href="/external/prism.css")
     link(rel='stylesheet' href='/css/xeltica-ui.min.css')
     link(
       rel='stylesheet'
@@ -68,8 +67,6 @@ html
         width: 18rem;
       }
       .xd-footer {
-        border-top: 1px solid var(--tone-3);
-        padding: 1rem;
         margin-top: 2rem;
       }
       .xd-sidebar > .menu {
@@ -86,14 +83,14 @@ html
       //- p: b.text-danger 現在開発中のライブラリにつき、本番での使用は想定されていません。頻繁に仕様変更が行われること、機能が不十分であることをご留意ください。
       block header
         +header
-    .container
-      block body
-    +footer
+    block body
+    block footer
+      .container
+        +footer
     .card.fix-bottom-right-3: .hstack.dense
       button.btn.flat.le-tablet(tabindex="-1"): i.fas.fa-bars
       button.btn.flat(tabindex="-1").xd-weather-btn: i.fas
       button.btn.flat(tabindex="-1"): i.fas.fa-share-alt
-    script(src="/external/prism.js")
     script.
       const weatherButton = document.querySelector('.xd-weather-btn');
       const cl = document.body.classList;

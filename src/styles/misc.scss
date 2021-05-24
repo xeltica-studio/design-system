@@ -5,3 +5,15 @@
 .sharp {
   border-radius: 0;
 }
+
+.select-none {
+  user-select: none;
+}
+
+.select-all {
+  user-select: all;
+}
+
+.no-pointer-events {
+  pointer-events: none;
+}

@@ -1,5 +1,5 @@
 /*!
- * XelticaUI 1.0.0-alpha.3
+ * XelticaUI 1.0.0-alpha.4
  * (C)2021 Xeltica
  * Licensed under MIT (https://github.com/xeltica/ui/tree/master/LICENSE)
  */
@@ -408,7 +408,7 @@ body {
   --gray-12: #141414;
   --white: white;
   --black-50: rgba(0, 0, 0, 0.5);
-  --white-50: rgba(0, 0, 0, 0.5);
+  --white-50: rgba(255, 255, 255, 0.5);
   --dark: var(--gray-9);
   --light: var(--gray-1);
   --dimmed: var(--gray-5);
@@ -441,6 +441,7 @@ body {
   --tone-11: var(--gray-11);
   --tone-12: var(--gray-12);
   --tone-13: var(--black);
+  --tone-50: var(--white-50);
   --code-fg: #8b3a41;
   --code-bg: #ffe4e6;
 }
@@ -462,6 +463,7 @@ body.dark {
   --tone-11: var(--gray-2);
   --tone-12: var(--gray-1);
   --tone-13: var(--white);
+  --tone-50: var(--black-50);
   --code-fg: #ff5362;
   --code-bg: #573535;
 }
@@ -472,6 +474,22 @@ body.dark {
 
 .sharp {
   border-radius: 0;
+}
+
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.select-all {
+  -webkit-user-select: all;
+     -moz-user-select: all;
+          user-select: all;
+}
+
+.no-pointer-events {
+  pointer-events: none;
 }
 
 @media (max-width: 600px) {
@@ -3147,12 +3165,21 @@ ol.hstack {
 .card > .body > *:last-child {
   margin-bottom: 0;
 }
+.card.acrylic {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  -webkit-backdrop-filter: blur(8px) brightness(120%);
+          backdrop-filter: blur(8px) brightness(120%);
+}
 .dark .card {
-  background: var(--tone-3);
+  background: rgba(0, 0, 0, 0.7);
 }
 .dark .card > header,
 .dark .card > footer {
   background: var(--tone-2);
+}
+.dark .card.acrylic {
+  background: var(--black-50);
 }
 .card.ghost {
   border: none;
@@ -3230,6 +3257,21 @@ ol.hstack {
 }
 .navbar a {
   color: inherit;
+}
+
+.hero {
+  font-size: 18px;
+}
+.hero > h1 {
+  font-size: 4em;
+}
+.hero > h2 {
+  font-size: 2em;
+}
+@media (max-width: 600px) {
+  .hero {
+    font-size: 14px;
+  }
 }
 
 button.btn,
@@ -3369,5 +3411,3 @@ a.btn:disabled {
   font-weight: normal;
   cursor: default;
 }
-
-/*# sourceMappingURL=xeltica-ui.css.map */

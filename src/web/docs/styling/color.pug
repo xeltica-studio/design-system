@@ -23,42 +23,52 @@ block main
   p XelticaUI は定義済みの色を56色用意しており、すぐに使用できます。
   h2 カラーボックス
   p 定義済みの全ての色を確認できます。ホバーかクリックで、名前を確認できます。
-  p.text-blue#colorbox-desc
+  p.text-dimmed#colorbox-desc
   .vstack.dense
     .hstack.dense.wrap
       each tuple in grayscales
         - const [name, isDark] = tuple;
-        .xd-colorbox.clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
+        .xd-colorbox.select-none.clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
 
     .hstack.dense.wrap
       each tuple in colors
         - const [name, isDark] = tuple;
-        .xd-colorbox.clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
+        .xd-colorbox.select-none.clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
 
     .hstack.dense.wrap
       each tuple in colors
         - const [name] = tuple;
-        .xd-colorbox.clickable(class=`bg-${name}-l`)= `${name}-l`
+        .xd-colorbox.select-none.clickable(class=`bg-${name}-l`)= `${name}-l`
 
     .hstack.dense.wrap
       each tuple in colors
         - const [name] = tuple;
-        .xd-colorbox.clickable(class=`bg-${name}-d dark`)= `${name}-d`
+        .xd-colorbox.select-none.clickable(class=`bg-${name}-d dark`)= `${name}-d`
     .test
 
 block script
   script.
     const cb = navigator.clipboard;
+    let shift = false;
 
     if (cb) {
-      document.getElementById('colorbox-desc').innerText += '色をタップ/クリックすると、クリップボードに名前をコピーできます。';
+      document.getElementById('colorbox-desc').innerHTML += '色をタップ/クリックすると、クリップボードに名前をコピーできます。<br />PCでは、シフトキーを押しながらクリックすると16進コードをコピーできます。';
+
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Shift') shift = true;
+      });
+      document.addEventListener('keyup', e => {
+        if (e.key === 'Shift') shift = false;
+      });
 
       const colorBoxes = [...document.getElementsByClassName('xd-colorbox')];
       colorBoxes.forEach(el => {
         el.addEventListener('click', e => {
           const className = e.target.innerText;
-          console.log(className);
-          cb.writeText(className).then(() => alert('コピーしました！'));
+          const value = getComputedStyle(document.body)
+            .getPropertyValue('--' + className);
+          console.log(shift ? value : className);
+          cb.writeText(shift ? value : className);
         });
       });
     }
