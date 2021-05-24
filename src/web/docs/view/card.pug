@@ -107,7 +107,7 @@ block main
             </footer>
           </div>
     section
-      h2 その他
+      h2 縁取りの削除
       p ghost クラスをカードに適用すると、縁取りがなくなります。
       .card.ghost.my-2(style="max-width: 500px")
         .body
@@ -123,15 +123,19 @@ block main
               あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
             </div>
           </div>
-      p sink クラスをカードに適用すると、影がなくなります。
-      .card.sink.my-2(style="max-width: 320px")
+      h2 アクリル
+      p acrylic クラスをカードに適用すると、縁取りがなくなります。
+        a(href="/docs/styling/shadow.html") ドロップシャドウ
+        | との併用をおすすめします。
+      p 例ではあまりわかりづらいですが、背景にぼやけたような効果が適用されます。
+      .card.acrylic.shadow-2.my-2(style="max-width: 500px")
         .body
           h1= cardTitle
           h2.mb-1= cardSubtitle
           p= cardBody
       pre: code
         :escape-html
-          <div class="card sink my-2" style="max-width: 500px">
+          <div class="card acrylic shadow-2 my-2" style="max-width: 500px">
             <div class="body">
               <h1>ポラーノの広場</h1>
               <h2 class="mb-1">宮沢賢治</h2>
