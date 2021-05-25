@@ -9,7 +9,7 @@ export default (src: string, silent = false) => {
         .replace('.pug', '.html');
     const dir = path.dirname(p);
     if (!fs.existsSync('dist' + dir)) {
-        fs.mkdirSync('dist' + dir);
+        fs.mkdirSync('dist' + dir, { recursive: true });
     }
     const html = pug.renderFile(src, {
         pretty: true,

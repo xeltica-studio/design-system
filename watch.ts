@@ -3,6 +3,8 @@ import chokidar from 'chokidar';
 import buildCss from './lib/build/css';
 import buildHtmlAll from './lib/build/html-all';
 import buildHtml from './lib/build/html';
+import buildStatic from './lib/build/static';
+import buildStaticAll from './lib/build/static-all';
 
 
 const $ = chokidar.watch('src', {
@@ -12,6 +14,7 @@ const $ = chokidar.watch('src', {
 $.on('ready', () => {
     buildCss(true);
     buildHtmlAll(true);
+    buildStaticAll(true);
 
     console.log('Ready for changes...');
 
@@ -33,7 +36,7 @@ function update(path: string) {
             buildHtml(path);
         }
     } else if (path.startsWith('src/assets')) {
-        console.log(`Copying ${path} (NOTIMPL)`);
+        buildStatic(path);
     } else if (path.endsWith('.scss')) {
         buildCss();
     }

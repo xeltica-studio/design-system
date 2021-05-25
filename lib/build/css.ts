@@ -25,7 +25,7 @@ export default async (silent = false) => {
     });
 
     if (!fs.existsSync('dist/css')) {
-        fs.mkdirSync('dist/css');
+        fs.mkdirSync('dist/css', { recursive: true });
     }
     fs.writeFile(dest, css, () => true);
     logIf(!silent, 'PostCSS transpiled');
