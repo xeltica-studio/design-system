@@ -11,4 +11,3 @@ export default async (silent = false) => {
         buildHtml(src, silent);
     }
 }
-

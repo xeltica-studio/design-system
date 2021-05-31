@@ -343,6 +343,65 @@ template {
   display: none !important;
 }
 
+@media (max-width: 600px) {
+  .ge-phone {
+    display: none !important;
+  }
+}
+
+@media (min-width: 600px) {
+  .le-phone {
+    display: none !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .ge-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 800px) {
+  .le-tablet {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .ge-pc {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  .le-pc {
+    display: none !important;
+  }
+}
+
+.clickable {
+  transition: transform 0.2s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+.clickable:active {
+  transform: var(--clickable-active-transform);
+}
+.clickable:hover, .clickable:active {
+  z-index: 9999;
+}
+.clickable.text {
+  transition: transform 0.2s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+.clickable.text:active {
+  transform: var(--clickable-active-transform);
+}
+.clickable.text:hover, .clickable.text:active {
+  z-index: 9999;
+}
+
 body {
   --margin: 16px;
   --radius: 3px;
@@ -351,6 +410,7 @@ body {
   --clickable-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
   --clickable-active-transform: scale(0.95) translateY(2px);
   --shadow-color: rgba(0, 0, 0, 0.5);
+  --input-padding: 4px 8px;
   --red: #e23731;
   --red-d: #44110f;
   --red-l: #f6c3c1;
@@ -445,6 +505,11 @@ body {
   --code-fg: #8b3a41;
   --code-bg: #ffe4e6;
 }
+@media (max-width: 800px) {
+  body {
+    --input-padding: 16px;
+  }
+}
 body.dark {
   --bg: var(--gray-12);
   --fg: var(--gray-2);
@@ -490,65 +555,6 @@ body.dark {
 
 .no-pointer-events {
   pointer-events: none;
-}
-
-@media (max-width: 600px) {
-  .ge-phone {
-    display: none !important;
-  }
-}
-
-@media (min-width: 600px) {
-  .le-phone {
-    display: none !important;
-  }
-}
-
-@media (max-width: 800px) {
-  .ge-tablet {
-    display: none !important;
-  }
-}
-
-@media (min-width: 800px) {
-  .le-tablet {
-    display: none !important;
-  }
-}
-
-@media (max-width: 1000px) {
-  .ge-pc {
-    display: none !important;
-  }
-}
-
-@media (min-width: 1000px) {
-  .le-pc {
-    display: none !important;
-  }
-}
-
-.clickable {
-  transition: transform 0.2s ease;
-  transform-origin: center;
-  cursor: pointer;
-}
-.clickable:active {
-  transform: var(--clickable-active-transform);
-}
-.clickable:hover, .clickable:active {
-  z-index: 9999;
-}
-.clickable.text {
-  transition: transform 0.2s ease;
-  transform-origin: center;
-  cursor: pointer;
-}
-.clickable.text:active {
-  transform: var(--clickable-active-transform);
-}
-.clickable.text:hover, .clickable.text:active {
-  z-index: 9999;
 }
 
 .text-red {
@@ -1838,6 +1844,18 @@ h5,
 h6,
 strong {
   color: var(--bold);
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .container {
@@ -3270,7 +3288,13 @@ ol.hstack {
 }
 @media (max-width: 600px) {
   .hero {
-    font-size: 14px;
+    font-size: 16px;
+  }
+  .hero > h1 {
+    font-size: 3em;
+  }
+  .hero > h2 {
+    font-size: 2em;
   }
 }
 
@@ -3410,4 +3434,157 @@ a.btn:disabled {
   color: var(--tone-4);
   font-weight: normal;
   cursor: default;
+}
+
+input.input-field,
+textarea.input-field,
+label.input-field > input {
+  display: block;
+  width: 100%;
+  padding: var(--input-padding);
+  border: 1px solid var(--tone-4);
+  border-radius: var(--radius);
+  background: none;
+  position: relative;
+  color: inherit;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+input.input-field.ghost,
+textarea.input-field.ghost,
+label.input-field > input.ghost {
+  border: none;
+}
+input.input-field:disabled,
+textarea.input-field:disabled,
+label.input-field > input:disabled {
+  color: var(--tone-6);
+  background: var(--tone-2);
+}
+input.input-field:focus,
+textarea.input-field:focus,
+label.input-field > input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+input.input-field::-webkit-input-placeholder, textarea.input-field::-webkit-input-placeholder, label.input-field > input::-webkit-input-placeholder {
+  color: var(--dimmed);
+  font-style: oblique;
+}
+input.input-field::-moz-placeholder, textarea.input-field::-moz-placeholder, label.input-field > input::-moz-placeholder {
+  color: var(--dimmed);
+  font-style: oblique;
+}
+input.input-field::placeholder,
+textarea.input-field::placeholder,
+label.input-field > input::placeholder {
+  color: var(--dimmed);
+  font-style: oblique;
+}
+input.input-field[type=file],
+textarea.input-field[type=file],
+label.input-field > input[type=file] {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+input.input-field[type=file]:not(:disabled),
+textarea.input-field[type=file]:not(:disabled),
+label.input-field > input[type=file]:not(:disabled) {
+  cursor: pointer;
+}
+input.input-field[type=file]:not(:disabled)::file-selector-button, input.input-field[type=file]:not(:disabled)::-webkit-file-upload-button,
+textarea.input-field[type=file]:not(:disabled)::file-selector-button,
+textarea.input-field[type=file]:not(:disabled)::-webkit-file-upload-button,
+label.input-field > input[type=file]:not(:disabled)::file-selector-button,
+label.input-field > input[type=file]:not(:disabled)::-webkit-file-upload-button {
+  cursor: pointer;
+}
+input.input-field[type=file]:not(:disabled):active,
+textarea.input-field[type=file]:not(:disabled):active,
+label.input-field > input[type=file]:not(:disabled):active {
+  filter: brightness(0.8);
+}
+input.input-field[type=file]:disabled,
+textarea.input-field[type=file]:disabled,
+label.input-field > input[type=file]:disabled {
+  background: transparent;
+}
+input.input-field[type=file]:disabled::file-selector-button, input.input-field[type=file]:disabled::-webkit-file-upload-button,
+textarea.input-field[type=file]:disabled::file-selector-button,
+textarea.input-field[type=file]:disabled::-webkit-file-upload-button,
+label.input-field > input[type=file]:disabled::file-selector-button,
+label.input-field > input[type=file]:disabled::-webkit-file-upload-button {
+  background: transparent;
+  border: 1px solid var(--tone-4);
+  color: var(--tone-4);
+}
+input.input-field[type=file]::file-selector-button, input.input-field[type=file]::-webkit-file-upload-button,
+textarea.input-field[type=file]::file-selector-button,
+textarea.input-field[type=file]::-webkit-file-upload-button,
+label.input-field > input[type=file]::file-selector-button,
+label.input-field > input[type=file]::-webkit-file-upload-button {
+  padding: var(--input-padding);
+  border: none;
+  border-radius: var(--radius);
+  color: var(--primary-fg);
+  background: var(--primary);
+}
+input.input-field[type=color],
+textarea.input-field[type=color],
+label.input-field > input[type=color] {
+  padding: 4px;
+  width: 48px;
+  height: auto;
+}
+input.input-field[type=color]:not(:disabled),
+textarea.input-field[type=color]:not(:disabled),
+label.input-field > input[type=color]:not(:disabled) {
+  cursor: pointer;
+}
+input.input-field[type=color]:not(:disabled):active,
+textarea.input-field[type=color]:not(:disabled):active,
+label.input-field > input[type=color]:not(:disabled):active {
+  filter: brightness(0.8);
+}
+input.input-field[type=color]::-moz-color-swatch,
+textarea.input-field[type=color]::-moz-color-swatch,
+label.input-field > input[type=color]::-moz-color-swatch {
+  height: 1rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: var(--radius);
+  border: 1px solid var(--tone-4);
+}
+input.input-field[type=color]::-webkit-color-swatch,
+textarea.input-field[type=color]::-webkit-color-swatch,
+label.input-field > input[type=color]::-webkit-color-swatch {
+  height: 1rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: var(--radius);
+  border: 1px solid var(--tone-4);
+}
+
+label.input-field {
+  display: block;
+  font-weight: bold;
+}
+label.input-field:not(:first-child) {
+  margin-top: var(--margin);
+}
+
+label.input-label {
+  background: var(--tone-2);
+  border: 1px solid var(--tone-4);
+  padding: var(--input-padding);
+  margin: 0;
+  border-radius: var(--radius);
+}
+
+textarea.input-field {
+  min-height: 4rem;
 }

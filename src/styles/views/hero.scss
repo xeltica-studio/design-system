@@ -7,6 +7,12 @@
     font-size: 2em;
   }
   @include le(phone) {
-    font-size: 14px;
+    font-size: 16px;
+    > h1 {
+      font-size: 3em;
+    }
+    > h2 {
+      font-size: 2em;
+    }
   }
 }

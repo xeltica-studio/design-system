@@ -10,6 +10,12 @@ body {
 
   --shadow-color: rgba(0, 0, 0, 0.5);
 
+  --input-padding: 4px 8px;
+
+  @include le(tablet) {
+    --input-padding: 16px;
+  }
+
   @each $name, $value in $colors {
     --#{$name}: #{$value};
     --#{$name}-d: #{mix(black, $value, 70%)};

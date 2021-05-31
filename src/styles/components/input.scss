@@ -1,0 +1,121 @@
+input.input-field,
+textarea.input-field,
+label.input-field > input {
+  display: block;
+  width: 100%;
+  padding: var(--input-padding);
+  border: 1px solid var(--tone-4);
+  border-radius: var(--radius);
+  background: none;
+  position: relative;
+  color: inherit;
+  appearance: none;
+
+  &.ghost {
+    border: none;
+  }
+
+  &:disabled {
+    color: var(--tone-6);
+    background: var(--tone-2);
+  }
+
+  &:focus {
+    border-color: var(--primary);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--dimmed);
+    font-style: oblique;
+  }
+
+  &[type="file"] {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+
+    &:not(:disabled) {
+      cursor: pointer;
+
+      &::file-selector-button,
+      &::-webkit-file-upload-button {
+        cursor: pointer;
+      }
+
+      &:active {
+        filter: brightness(0.8);
+      }
+    }
+
+    &:disabled {
+      background: transparent;
+      &::file-selector-button,
+      &::-webkit-file-upload-button {
+        background: transparent;
+        border: 1px solid var(--tone-4);
+        color: var(--tone-4);
+      }
+    }
+
+    &::file-selector-button,
+    &::-webkit-file-upload-button {
+      padding: var(--input-padding);
+      border: none;
+      border-radius: var(--radius);
+      color: var(--primary-fg);
+      background: var(--primary);
+    }
+  }
+
+  &[type="color"] {
+    padding: 4px;
+    width: 48px;
+    height: auto;
+
+    &:not(:disabled) {
+      cursor: pointer;
+
+      &:active {
+        filter: brightness(0.8);
+      }
+    }
+
+    @mixin swatch {
+      height: 1rem;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border-radius: var(--radius);
+      border: 1px solid var(--tone-4);
+    }
+
+    &::-moz-color-swatch {
+      @include swatch();
+    }
+
+    &::-webkit-color-swatch {
+      @include swatch();
+    }
+  }
+}
+
+label.input-field {
+  display: block;
+  font-weight: bold;
+  &:not(:first-child) {
+    margin-top: var(--margin);
+  }
+}
+
+label.input-label {
+  background: var(--tone-2);
+  border: 1px solid var(--tone-4);
+  padding: var(--input-padding);
+  margin: 0;
+  border-radius: var(--radius);
+}
+
+textarea.input-field {
+  min-height: 4rem;
+}

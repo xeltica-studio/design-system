@@ -86,3 +86,9 @@ h6,
 strong {
   color: var(--bold);
 }
+
+@each $var in left, center, right {
+  .text-#{$var} {
+    text-align: $var;
+  }
+}
