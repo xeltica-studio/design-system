@@ -3618,56 +3618,95 @@ label.input-check {
 }
 label.input-check > input[type=checkbox],
 label.input-check > input[type=radio] {
-  width: 20px;
-  height: 20px;
   outline: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  display: none;
+}
+label.input-check > input[type=checkbox] + span,
+label.input-check > input[type=radio] + span {
+  display: block;
+  padding-left: 28px;
+  position: relative;
+}
+label.input-check > input[type=checkbox] + span::before,
+label.input-check > input[type=radio] + span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
   background: var(--tone-0);
+  border: 1px solid var(--tone-4);
+  transition: box-shadow 0.2s ease, background 0.1s ease;
+}
+label.input-check > input[type=checkbox] + span::after,
+label.input-check > input[type=radio] + span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
   background-position: center;
   background-repeat: no-repeat;
-  border: 1px solid var(--tone-4);
-  transition: box-shadow 0.2s ease;
 }
-label.input-check > input[type=checkbox]:not(:disabled), label.input-check > input[type=checkbox]:not(:disabled) + span,
-label.input-check > input[type=radio]:not(:disabled),
+label.input-check > input[type=checkbox]:not(:disabled) + span,
 label.input-check > input[type=radio]:not(:disabled) + span {
   cursor: pointer;
 }
-label.input-check > input[type=checkbox]:focus-within, label.input-check > input[type=checkbox]:hover,
-label.input-check > input[type=radio]:focus-within,
-label.input-check > input[type=radio]:hover {
+label.input-check > input[type=checkbox]:not(:disabled) + span:focus-within::before, label.input-check > input[type=checkbox]:not(:disabled) + span:hover::before,
+label.input-check > input[type=radio]:not(:disabled) + span:focus-within::before,
+label.input-check > input[type=radio]:not(:disabled) + span:hover::before {
   border: 1px solid var(--primary);
   box-shadow: 0 0 8px var(--primary);
-}
-label.input-check > input[type=checkbox]:disabled,
-label.input-check > input[type=radio]:disabled {
-  background-color: var(--dimmed);
 }
 label.input-check > input[type=checkbox]:disabled + span,
 label.input-check > input[type=radio]:disabled + span {
   color: var(--dimmed);
 }
-label.input-check > input[type=checkbox] {
+label.input-check > input[type=checkbox]:disabled + span::before,
+label.input-check > input[type=radio]:disabled + span::before {
+  background-color: var(--dimmed);
+}
+label.input-check > input[type=checkbox] + span::before {
   border-radius: var(--radius);
-  background-size: 14px;
 }
-label.input-check > input[type=checkbox]:checked {
-  border: none;
+label.input-check > input[type=checkbox] + span::after {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0 0h20v20h-20z' fill='none'/%3E%3Cpath d='m16.293 4.586.707.707c-1.094 1.094-2.188 2.188-3.282 3.281-2.023 2.024-4.048 4.048-6.072 6.072l-.353.354-3.354-3.354-.353-.353.707-.707 3 3c.858-.858 1.716-1.717 2.574-2.575 2.024-2.024 4.048-4.048 6.072-6.072z' fill='%23fff'/%3E%3C/svg%3E");
+          mask: url("data:image/svg+xml,%3Csvg height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0 0h20v20h-20z' fill='none'/%3E%3Cpath d='m16.293 4.586.707.707c-1.094 1.094-2.188 2.188-3.282 3.281-2.023 2.024-4.048 4.048-6.072 6.072l-.353.354-3.354-3.354-.353-.353.707-.707 3 3c.858-.858 1.716-1.717 2.574-2.575 2.024-2.024 4.048-4.048 6.072-6.072z' fill='%23fff'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 20px;
+          mask-size: 20px;
+  background: var(--primary-fg);
+  transition: width 0.2s ease 0.1s;
+  width: 0;
+}
+label.input-check > input[type=checkbox]:checked + span::before {
   background-color: var(--primary);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.4 10.4'%3E%3Cdefs/%3E%3Cpath fill='%23FFF' d='M12.7 0l.7.7L10.1 4l-6 6-.4.4L.4 7.1 0 6.7.7 6l3 3 2.6-2.6 6-6 .4-.4z'/%3E%3C/svg%3E");
+  border: none;
 }
-label.input-check > input[type=radio] {
+label.input-check > input[type=checkbox]:checked + span::after {
+  width: 20px;
+}
+label.input-check > input[type=radio] + span::before, label.input-check > input[type=radio] + span::after {
   border-radius: 100%;
 }
-label.input-check > input[type=radio]:checked {
-  border: 1px solid var(--primary);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cdefs/%3E%3Cg fill='%232671FF'%3E%3Cpath d='M5 10A5 5 0 115 0a5 5 0 010 10z'/%3E%3Cpath d='M5 0a5 5 0 110 10A5 5 0 015 0zm0 1a4 4 0 100 8 4 4 0 000-8z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 10px;
+label.input-check > input[type=radio] + span::after {
+  transform-origin: center center;
+  background: var(--primary);
+  transform: translateY(-50%) scale(0);
+  transition: transform 0.2s ease;
 }
-label.input-check > span {
-  padding-left: 8px;
+label.input-check > input[type=radio]:checked + span::after {
+  transform: translateY(-50%) scale(0.5);
 }
 
 label.input-switch {
