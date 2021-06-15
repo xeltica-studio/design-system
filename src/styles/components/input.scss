@@ -1,5 +1,6 @@
 input.input-field,
 textarea.input-field,
+select.input-field,
 label.input-field > input {
   display: block;
   width: 100%;
@@ -109,11 +110,14 @@ label.input-field {
 }
 
 label.input-label {
-  background: var(--tone-2);
+  background: var(--tone-1);
   border: 1px solid var(--tone-4);
   padding: var(--input-padding);
   margin: 0;
   border-radius: var(--radius);
+  @include dark {
+    background: var(--tone-2);
+  }
 }
 
 textarea.input-field {
