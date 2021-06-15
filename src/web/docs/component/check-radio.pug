@@ -18,12 +18,12 @@ block main
         <input type="checkbox" />
         <span>未チェック</span>
       </label>
-      <label class="input-check"checked>
-        <input type="checkbox" />
+      <label class="input-check">
+        <input type="checkbox" checked />
         <span>チェック</span>
       </label>
-      <label class="input-check"checked disabled>
-        <input type="checkbox" />
+      <label class="input-check">
+        <input type="checkbox" checked disabled />
         <span>無効</span>
       </label>
   h1 ラジオボタン
@@ -65,3 +65,20 @@ block main
       input(type="checkbox" checked disabled)
       .switch
       span 無効
+  pre: code
+    :escape-html
+      <label class="input-switch">
+        <input type="checkbox" />
+        <div class="switch"></div>
+        <span>未チェック</span>
+      </label>
+      <label class="input-switch">
+        <input type="checkbox" checked />
+        <div class="switch"></div>
+        <span>チェック</span>
+      </label>
+      <label class="input-switch">
+        <input type="checkbox" checked disabled />
+        <div class="switch"></div>
+        <span>無効</span>
+      </label>
