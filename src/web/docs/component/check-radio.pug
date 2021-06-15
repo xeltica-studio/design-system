@@ -52,3 +52,16 @@ block main
         <span>項目3</span>
       </label>
   h1 スイッチ
+  .card: .body
+    label.input-switch
+      input(type="checkbox")
+      .switch
+      span 未チェック
+    label.input-switch
+      input(type="checkbox" checked)
+      .switch
+      span チェック
+    label.input-switch
+      input(type="checkbox" checked disabled)
+      .switch
+      span 無効
