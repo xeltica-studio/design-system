@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // https://www.tribeck.jp/column/opinion/production/20200622/
 
 .row {
@@ -9,18 +11,18 @@
   }
   @for $i from 1 through 12 {
     > .col-#{$i} {
-      width: 100% / 12 * $i;
+      width: math.div(100%, 12) * $i;
       @include ge(tablet) {
         @for $i from 1 through 12 {
           &.tab-#{$i} {
-            width: 100% / 12 * $i;
+            width: math.div(100%, 12) * $i;
           }
         }
       }
       @include ge(pc) {
         @for $i from 1 through 12 {
           &.pc-#{$i} {
-            width: 100% / 12 * $i;
+            width: math.div(100%, 12) * $i;
           }
         }
       }
