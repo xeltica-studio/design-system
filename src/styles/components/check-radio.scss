@@ -22,7 +22,7 @@ label.input-check {
         height: 20px;
         background: var(--tone-0);
         border: 1px solid var(--tone-4);
-        transition: box-shadow 0.2s ease, background 0.1s ease;
+        transition: box-shadow 0.2s ease, background 0.1s linear;
       }
       &::after {
         content: "";
@@ -64,7 +64,7 @@ label.input-check {
         mask-repeat: no-repeat;
         mask-size: 20px;
         background: var(--primary-fg);
-        transition: width 0.2s ease 0.1s;
+        transition: width 0.2s ease 0.15s;
         width: 0;
       }
     }
@@ -142,7 +142,6 @@ label.input-switch {
         height: 20px;
         background: var(--tone-4);
         border-radius: 100%;
-        box-shadow: 0 0 8px var(--black-50);
       }
       + * {
         padding-left: 8px;

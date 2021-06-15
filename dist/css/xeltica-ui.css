@@ -3642,7 +3642,7 @@ label.input-check > input[type=radio] + span::before {
   height: 20px;
   background: var(--tone-0);
   border: 1px solid var(--tone-4);
-  transition: box-shadow 0.2s ease, background 0.1s ease;
+  transition: box-shadow 0.2s ease, background 0.1s linear;
 }
 label.input-check > input[type=checkbox] + span::after,
 label.input-check > input[type=radio] + span::after {
@@ -3686,7 +3686,7 @@ label.input-check > input[type=checkbox] + span::after {
   -webkit-mask-size: 20px;
           mask-size: 20px;
   background: var(--primary-fg);
-  transition: width 0.2s ease 0.1s;
+  transition: width 0.2s ease 0.15s;
   width: 0;
 }
 label.input-check > input[type=checkbox]:checked + span::before {
@@ -3746,7 +3746,6 @@ label.input-switch input + .switch::after {
   height: 20px;
   background: var(--tone-4);
   border-radius: 100%;
-  box-shadow: 0 0 8px var(--black-50);
 }
 label.input-switch input + .switch + * {
   padding-left: 8px;
