@@ -1,0 +1,54 @@
+extends ../_layout
+
+block main
+  h1 チェックボックス
+  .card: .body
+    label.input-check
+      input(type="checkbox")
+      span 未チェック
+    label.input-check
+      input(type="checkbox" checked)
+      span チェック
+    label.input-check
+      input(type="checkbox" checked disabled)
+      span 無効
+  pre: code
+    :escape-html
+      <label class="input-check">
+        <input type="checkbox" />
+        <span>未チェック</span>
+      </label>
+      <label class="input-check"checked>
+        <input type="checkbox" />
+        <span>チェック</span>
+      </label>
+      <label class="input-check"checked disabled>
+        <input type="checkbox" />
+        <span>無効</span>
+      </label>
+  h1 ラジオボタン
+  .card: .body
+    label.input-check
+      input(type="radio" name="radio")
+      span 項目1
+    label.input-check
+      input(type="radio" name="radio")
+      span 項目2
+    label.input-check
+      input(type="radio" name="radio")
+      span 項目3
+  pre: code
+    :escape-html
+      <label class="input-check">
+        <input type="checkbox" />
+        <span>未チェック</span>
+      </label>
+      <label class="input-check"checked>
+        <input type="checkbox" />
+        <span>チェック</span>
+      </label>
+      <label class="input-check"checked disabled>
+        <input type="checkbox" />
+        <span>無効</span>
+      </label>
+  h1 スイッチ

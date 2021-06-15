@@ -3438,6 +3438,7 @@ a.btn:disabled {
 
 input.input-field,
 textarea.input-field,
+select.input-field,
 label.input-field > input {
   display: block;
   width: 100%;
@@ -3453,37 +3454,42 @@ label.input-field > input {
 }
 input.input-field.ghost,
 textarea.input-field.ghost,
+select.input-field.ghost,
 label.input-field > input.ghost {
   border: none;
 }
 input.input-field:disabled,
 textarea.input-field:disabled,
+select.input-field:disabled,
 label.input-field > input:disabled {
   color: var(--tone-6);
   background: var(--tone-2);
 }
 input.input-field:focus,
 textarea.input-field:focus,
+select.input-field:focus,
 label.input-field > input:focus {
   border-color: var(--primary);
   outline: none;
 }
-input.input-field::-webkit-input-placeholder, textarea.input-field::-webkit-input-placeholder, label.input-field > input::-webkit-input-placeholder {
+input.input-field::-webkit-input-placeholder, textarea.input-field::-webkit-input-placeholder, select.input-field::-webkit-input-placeholder, label.input-field > input::-webkit-input-placeholder {
   color: var(--dimmed);
   font-style: oblique;
 }
-input.input-field::-moz-placeholder, textarea.input-field::-moz-placeholder, label.input-field > input::-moz-placeholder {
+input.input-field::-moz-placeholder, textarea.input-field::-moz-placeholder, select.input-field::-moz-placeholder, label.input-field > input::-moz-placeholder {
   color: var(--dimmed);
   font-style: oblique;
 }
 input.input-field::placeholder,
 textarea.input-field::placeholder,
+select.input-field::placeholder,
 label.input-field > input::placeholder {
   color: var(--dimmed);
   font-style: oblique;
 }
 input.input-field[type=file],
 textarea.input-field[type=file],
+select.input-field[type=file],
 label.input-field > input[type=file] {
   padding: 0;
   border: none;
@@ -3491,29 +3497,36 @@ label.input-field > input[type=file] {
 }
 input.input-field[type=file]:not(:disabled),
 textarea.input-field[type=file]:not(:disabled),
+select.input-field[type=file]:not(:disabled),
 label.input-field > input[type=file]:not(:disabled) {
   cursor: pointer;
 }
 input.input-field[type=file]:not(:disabled)::file-selector-button, input.input-field[type=file]:not(:disabled)::-webkit-file-upload-button,
 textarea.input-field[type=file]:not(:disabled)::file-selector-button,
 textarea.input-field[type=file]:not(:disabled)::-webkit-file-upload-button,
+select.input-field[type=file]:not(:disabled)::file-selector-button,
+select.input-field[type=file]:not(:disabled)::-webkit-file-upload-button,
 label.input-field > input[type=file]:not(:disabled)::file-selector-button,
 label.input-field > input[type=file]:not(:disabled)::-webkit-file-upload-button {
   cursor: pointer;
 }
 input.input-field[type=file]:not(:disabled):active,
 textarea.input-field[type=file]:not(:disabled):active,
+select.input-field[type=file]:not(:disabled):active,
 label.input-field > input[type=file]:not(:disabled):active {
   filter: brightness(0.8);
 }
 input.input-field[type=file]:disabled,
 textarea.input-field[type=file]:disabled,
+select.input-field[type=file]:disabled,
 label.input-field > input[type=file]:disabled {
   background: transparent;
 }
 input.input-field[type=file]:disabled::file-selector-button, input.input-field[type=file]:disabled::-webkit-file-upload-button,
 textarea.input-field[type=file]:disabled::file-selector-button,
 textarea.input-field[type=file]:disabled::-webkit-file-upload-button,
+select.input-field[type=file]:disabled::file-selector-button,
+select.input-field[type=file]:disabled::-webkit-file-upload-button,
 label.input-field > input[type=file]:disabled::file-selector-button,
 label.input-field > input[type=file]:disabled::-webkit-file-upload-button {
   background: transparent;
@@ -3523,6 +3536,8 @@ label.input-field > input[type=file]:disabled::-webkit-file-upload-button {
 input.input-field[type=file]::file-selector-button, input.input-field[type=file]::-webkit-file-upload-button,
 textarea.input-field[type=file]::file-selector-button,
 textarea.input-field[type=file]::-webkit-file-upload-button,
+select.input-field[type=file]::file-selector-button,
+select.input-field[type=file]::-webkit-file-upload-button,
 label.input-field > input[type=file]::file-selector-button,
 label.input-field > input[type=file]::-webkit-file-upload-button {
   padding: var(--input-padding);
@@ -3533,6 +3548,7 @@ label.input-field > input[type=file]::-webkit-file-upload-button {
 }
 input.input-field[type=color],
 textarea.input-field[type=color],
+select.input-field[type=color],
 label.input-field > input[type=color] {
   padding: 4px;
   width: 48px;
@@ -3540,16 +3556,19 @@ label.input-field > input[type=color] {
 }
 input.input-field[type=color]:not(:disabled),
 textarea.input-field[type=color]:not(:disabled),
+select.input-field[type=color]:not(:disabled),
 label.input-field > input[type=color]:not(:disabled) {
   cursor: pointer;
 }
 input.input-field[type=color]:not(:disabled):active,
 textarea.input-field[type=color]:not(:disabled):active,
+select.input-field[type=color]:not(:disabled):active,
 label.input-field > input[type=color]:not(:disabled):active {
   filter: brightness(0.8);
 }
 input.input-field[type=color]::-moz-color-swatch,
 textarea.input-field[type=color]::-moz-color-swatch,
+select.input-field[type=color]::-moz-color-swatch,
 label.input-field > input[type=color]::-moz-color-swatch {
   height: 1rem;
   margin: 0;
@@ -3560,6 +3579,7 @@ label.input-field > input[type=color]::-moz-color-swatch {
 }
 input.input-field[type=color]::-webkit-color-swatch,
 textarea.input-field[type=color]::-webkit-color-swatch,
+select.input-field[type=color]::-webkit-color-swatch,
 label.input-field > input[type=color]::-webkit-color-swatch {
   height: 1rem;
   margin: 0;
@@ -3578,13 +3598,78 @@ label.input-field:not(:first-child) {
 }
 
 label.input-label {
-  background: var(--tone-2);
+  background: var(--tone-1);
   border: 1px solid var(--tone-4);
   padding: var(--input-padding);
   margin: 0;
   border-radius: var(--radius);
 }
+.dark label.input-label {
+  background: var(--tone-2);
+}
 
 textarea.input-field {
   min-height: 4rem;
+}
+
+label.input-check {
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius);
+}
+label.input-check > input[type=checkbox],
+label.input-check > input[type=radio] {
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: var(--tone-0);
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: box-shadow 0.2s ease;
+}
+label.input-check > input[type=checkbox]:not(:disabled), label.input-check > input[type=checkbox]:not(:disabled) + span,
+label.input-check > input[type=radio]:not(:disabled),
+label.input-check > input[type=radio]:not(:disabled) + span {
+  cursor: pointer;
+}
+label.input-check > input[type=checkbox]:focus-within, label.input-check > input[type=checkbox]:hover,
+label.input-check > input[type=radio]:focus-within,
+label.input-check > input[type=radio]:hover {
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+}
+label.input-check > input[type=checkbox]:disabled,
+label.input-check > input[type=radio]:disabled {
+  background-color: var(--dimmed);
+}
+label.input-check > input[type=checkbox]:disabled + span,
+label.input-check > input[type=radio]:disabled + span {
+  color: var(--dimmed);
+}
+label.input-check > input[type=checkbox] {
+  border: 1px solid var(--tone-4);
+  border-radius: var(--radius);
+  background-size: 14px;
+  outline: none;
+}
+label.input-check > input[type=checkbox]:checked {
+  border: none;
+  background-color: var(--primary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.4 10.4'%3E%3Cdefs/%3E%3Cpath fill='%23FFF' d='M12.7 0l.7.7L10.1 4l-6 6-.4.4L.4 7.1 0 6.7.7 6l3 3 2.6-2.6 6-6 .4-.4z'/%3E%3C/svg%3E");
+}
+label.input-check > input[type=radio] {
+  border: 1px solid var(--tone-4);
+  border-radius: 100%;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+label.input-check > input[type=radio]:checked {
+  border: 1px solid var(--primary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cdefs/%3E%3Cg fill='%232671FF'%3E%3Cpath d='M5 10A5 5 0 115 0a5 5 0 010 10z'/%3E%3Cpath d='M5 0a5 5 0 110 10A5 5 0 015 0zm0 1a4 4 0 100 8 4 4 0 000-8z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 10px;
+}
+label.input-check > span {
+  padding-left: 8px;
 }
