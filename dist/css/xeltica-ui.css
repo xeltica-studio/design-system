@@ -513,7 +513,7 @@ body {
 body.dark {
   --bg: var(--gray-12);
   --fg: var(--gray-2);
-  --hover: rgba(255, 255, 255, 0.03);
+  --hover: rgba(255, 255, 255, 0.06);
   --tone-0: var(--black);
   --tone-1: var(--gray-12);
   --tone-2: var(--gray-11);
@@ -3208,16 +3208,38 @@ ol.hstack {
   margin-top: var(--margin);
 }
 .menu h1,
-.menu .header {
-  border-bottom: none;
+.menu .header,
+.menu .footer {
   font-size: 0.7rem;
-  color: var(--dimmed);
+  color: var(--tone-7);
   margin: 0;
 }
 .menu a {
   display: block;
   text-decoration: none;
   color: var(--fg);
+}
+.menu.large .item {
+  border-color: var(--tone-2);
+  border-left: none;
+  border-right: none;
+  padding: 8px 16px;
+  border-radius: none;
+  border-bottom-color: transparent;
+}
+.menu.large .item.active {
+  background-color: var(--hover);
+}
+.menu.large .item:not(.active):not(.disabled):hover {
+  background-color: var(--hover);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.menu.large .item:not(.active):not(.disabled):hover:not(:last-child) {
+  border-bottom-color: transparent;
+}
+.menu.large .item:last-child {
+  border-bottom-color: var(--tone-2);
 }
 .menu .item {
   display: block;
@@ -3235,7 +3257,7 @@ ol.hstack {
   font-size: 1rem;
 }
 .menu .item:not(.active):not(.disabled):hover {
-  border: 1px solid var(--tone-2);
+  border-color: var(--tone-2);
   background-color: var(--hover);
 }
 .menu .item.active {
@@ -3248,6 +3270,30 @@ ol.hstack {
 }
 .menu .item.disabled > .icon {
   color: var(--dimmed);
+}
+@media (max-width: 800px) {
+  .menu .item {
+    border-color: var(--tone-2);
+    border-left: none;
+    border-right: none;
+    padding: 8px 16px;
+    border-radius: none;
+    border-bottom-color: transparent;
+  }
+  .menu .item.active {
+    background-color: var(--hover);
+  }
+  .menu .item:not(.active):not(.disabled):hover {
+    background-color: var(--hover);
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+  .menu .item:not(.active):not(.disabled):hover:not(:last-child) {
+    border-bottom-color: transparent;
+  }
+  .menu .item:last-child {
+    border-bottom-color: var(--tone-2);
+  }
 }
 
 .navbar {

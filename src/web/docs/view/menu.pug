@@ -18,6 +18,8 @@ block main
         td メニューのタイトル
       tr: td: code section
         td メニューを区切る場合、<code>section</code>タグを使用します
+      tr: td: code .large
+        td メニューを大きく表示します。タブレット、スマートフォンでは常にこの表示が適用されます。
       tr: td: code .item
         td メニュー項目を表します。
       tr: td: code .disabled
@@ -59,6 +61,42 @@ block main
     pre: code
       :escape-html
         <div class="menu">
+          <section>
+            <h1>入門編</h1>
+            <div class="item">値</div>
+            <div class="item">変数</div>
+            <div class="item">制御構造</div>
+            <div class="item">関数</div>
+            <div class="item">クラス</div>
+          </section>
+          <section>
+            <h1>実践編</h1>
+            <div class="item">データベース</div>
+            <div class="item">ウィンドウ作成</div>
+            <div class="item">Webサーバー</div>
+            <div class="item">暗号化</div>
+          </section>
+        </div>
+
+  p: b 大きいサイズ
+  .vstack
+    .card: .body: .menu.large
+      section
+        h1 入門編
+        .item 値
+        .item 変数
+        .item 制御構造
+        .item 関数
+        .item クラス
+      section
+        h1 実践編
+        .item データベース
+        .item ウィンドウ作成
+        .item Webサーバー
+        .item 暗号化
+    pre: code
+      :escape-html
+        <div class="menu large">
           <section>
             <h1>入門編</h1>
             <div class="item">値</div>
