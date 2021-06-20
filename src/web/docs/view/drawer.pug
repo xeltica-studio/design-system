@@ -1,0 +1,93 @@
+extends ../_layout
+
+
+
+block main
+  h1 ドロワー <code>.drawer</code>
+  p ドロワーは、コンテンツを上下左右から表示するフローティング型のビューです。
+
+  h2 JavaScript API
+  p 本ビューは、ReactやVue等のUIフレームワークでクラスをデータバインディングすることを想定しておりますが、
+    | それらのフレームワークを使用していない環境向けにオプションのJavaScriptを利用することで簡単に扱えます。
+  p ドロワーのJavaScript APIを利用する場合は、読み込み時にまずドロワーのセットアップ関数
+    code setupDrawer();
+    | を実行します。かわりにグローバル・セットアップ関数
+    code setupAll();
+    | を実行することで、他のコンポーネントを含むXelticaUIの全てのAPIを有効化できます。
+  p セットアップ関数を実行すると、
+    code .drawer-container
+    | クラスを持つ要素に
+    code open
+    | 、
+    code close
+    | メソッドが追加されます。それぞれドロワーを開く、閉じる動作が行われます。
+  p
+  h2 例
+  .drawer-container.right#drawer1
+    .backdrop
+    .drawer
+      header
+        button.close
+          i.fas.fa-times
+        h1 選んでください
+      .body
+        .menu
+          section
+            .item Home
+            .item About
+            .item Products
+            .item Store
+            .item Contact
+          section
+            .item My Page
+            .item Settings
+            .item Help
+  button.btn.primary.mb-5#display1 表示
+  h2 コード(HTML)
+  pre: code
+    :escape-html
+      <div id="drawer1" class="drawer-container">
+        <div class="backdrop"></div>
+        <div class="drawer">
+          <header>
+            <button class="close">
+              <i class="fas fa-times"></i>
+            </button>
+            <h1>選んでください</h1>
+          </header>
+          <div class="body">
+            <div class="menu">
+            <section>
+              <div class="item">Home</div>
+              <div class="item">About</div>
+              <div class="item">Products</div>
+              <div class="item">Store</div>
+              <div class="item">Contact</div>
+            </section>
+            <section>
+              <div class="item">My Page</div>
+              <div class="item">Settings</div>
+              <div class="item">Help</div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <button id="display1" class="btn primary">表示</button>
+  h2 コード(JavaScript)
+  pre: code
+    :escape-html
+      // あるいはsetupAll();
+      setupDrawer();
+
+      const btn = document.getElementById('display1');
+      // ボタンを押したらドロワーを開く
+      btn.addEventListener('click', () => {
+        document.getElementById('drawer1').open();
+      });
+
+block script
+  script.
+    document.getElementById('display1')
+      .addEventListener('click', () => {
+        document.getElementById('drawer1').open();
+      });

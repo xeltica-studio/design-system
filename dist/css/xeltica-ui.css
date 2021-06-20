@@ -3344,8 +3344,66 @@ ol.hstack {
   }
 }
 
-button.btn,
-a.btn {
+.drawer-container {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  pointer-events: none;
+}
+.drawer-container > .backdrop {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: black;
+  transition: opacity 0.2s ease;
+  z-index: 500;
+}
+.drawer-container > .drawer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0;
+  transform: translateX(-100%);
+  background: var(--bg);
+  box-shadow: 0 0 4px var(--black-50);
+  min-width: 320px;
+  max-width: 80%;
+  z-index: 500;
+}
+.drawer-container > .drawer > header {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--margin);
+}
+.drawer-container > .drawer > header > .close {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-left: calc(-1 * var(--margin));
+}
+.drawer-container > .drawer > header h1 {
+  font-size: 1rem;
+  margin: 0;
+}
+.drawer-container > .drawer > .body {
+  padding: var(--margin);
+}
+.drawer-container.active {
+  pointer-events: auto;
+}
+.drawer-container.active > .backdrop {
+  opacity: 0.5;
+}
+.drawer-container.active > .drawer {
+  opacity: 1;
+  transform: none;
+}
+
+button.btn, .drawer-container > .drawer > header > button.close,
+a.btn,
+.drawer-container > .drawer > header > a.close {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
@@ -3358,123 +3416,150 @@ a.btn {
   font-size: 1rem;
   position: relative;
 }
-button.btn::before,
-a.btn::before {
+button.btn::before, .drawer-container > .drawer > header > button.close::before,
+a.btn::before,
+.drawer-container > .drawer > header > a.close::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: var(--radius);
   transition: box-shadow 0.2s ease;
 }
-button.btn:not(:disabled):not(.link),
-a.btn:not(:disabled):not(.link) {
+button.btn:not(:disabled):not(.link), .drawer-container > .drawer > header > button.close:not(:disabled):not(.link),
+a.btn:not(:disabled):not(.link),
+.drawer-container > .drawer > header > a.close:not(:disabled):not(.link) {
   transition: transform 0.2s ease;
   transform-origin: center;
   cursor: pointer;
 }
-button.btn:not(:disabled):not(.link):active,
-a.btn:not(:disabled):not(.link):active {
+button.btn:not(:disabled):not(.link):active, .drawer-container > .drawer > header > button.close:not(:disabled):not(.link):active,
+a.btn:not(:disabled):not(.link):active,
+.drawer-container > .drawer > header > a.close:not(:disabled):not(.link):active {
   transform: var(--clickable-active-transform);
 }
-button.btn:not(:disabled):not(.link):hover, button.btn:not(:disabled):not(.link):active,
+button.btn:not(:disabled):not(.link):hover, .drawer-container > .drawer > header > button.close:not(:disabled):not(.link):hover, button.btn:not(:disabled):not(.link):active, .drawer-container > .drawer > header > button.close:not(:disabled):not(.link):active,
 a.btn:not(:disabled):not(.link):hover,
-a.btn:not(:disabled):not(.link):active {
+.drawer-container > .drawer > header > a.close:not(:disabled):not(.link):hover,
+a.btn:not(:disabled):not(.link):active,
+.drawer-container > .drawer > header > a.close:not(:disabled):not(.link):active {
   z-index: 9999;
 }
-button.btn:focus::before,
-a.btn:focus::before {
+button.btn:focus::before, .drawer-container > .drawer > header > button.close:focus::before,
+a.btn:focus::before,
+.drawer-container > .drawer > header > a.close:focus::before {
   box-shadow: 0 0 1rem 0px var(--primary);
 }
-button.btn:active,
-a.btn:active {
+button.btn:active, .drawer-container > .drawer > header > button.close:active,
+a.btn:active,
+.drawer-container > .drawer > header > a.close:active {
   filter: brightness(0.8);
 }
-button.btn.primary,
-a.btn.primary {
+button.btn.primary, .drawer-container > .drawer > header > button.primary.close,
+a.btn.primary,
+.drawer-container > .drawer > header > a.primary.close {
   background: var(--primary);
   color: var(--primary-fg);
   border: none;
 }
-button.btn.primary:focus::before,
-a.btn.primary:focus::before {
+button.btn.primary:focus::before, .drawer-container > .drawer > header > button.primary.close:focus::before,
+a.btn.primary:focus::before,
+.drawer-container > .drawer > header > a.primary.close:focus::before {
   box-shadow: 0 0 1rem 0px var(--primary);
 }
-button.btn.success,
-a.btn.success {
+button.btn.success, .drawer-container > .drawer > header > button.success.close,
+a.btn.success,
+.drawer-container > .drawer > header > a.success.close {
   background: var(--success);
   color: var(--success-fg);
   border: none;
 }
-button.btn.success:focus::before,
-a.btn.success:focus::before {
+button.btn.success:focus::before, .drawer-container > .drawer > header > button.success.close:focus::before,
+a.btn.success:focus::before,
+.drawer-container > .drawer > header > a.success.close:focus::before {
   box-shadow: 0 0 1rem 0px var(--success);
 }
-button.btn.info,
-a.btn.info {
+button.btn.info, .drawer-container > .drawer > header > button.info.close,
+a.btn.info,
+.drawer-container > .drawer > header > a.info.close {
   background: var(--info);
   color: var(--info-fg);
   border: none;
 }
-button.btn.info:focus::before,
-a.btn.info:focus::before {
+button.btn.info:focus::before, .drawer-container > .drawer > header > button.info.close:focus::before,
+a.btn.info:focus::before,
+.drawer-container > .drawer > header > a.info.close:focus::before {
   box-shadow: 0 0 1rem 0px var(--info);
 }
-button.btn.warn,
-a.btn.warn {
+button.btn.warn, .drawer-container > .drawer > header > button.warn.close,
+a.btn.warn,
+.drawer-container > .drawer > header > a.warn.close {
   background: var(--warn);
   color: var(--warn-fg);
   border: none;
 }
-button.btn.warn:focus::before,
-a.btn.warn:focus::before {
+button.btn.warn:focus::before, .drawer-container > .drawer > header > button.warn.close:focus::before,
+a.btn.warn:focus::before,
+.drawer-container > .drawer > header > a.warn.close:focus::before {
   box-shadow: 0 0 1rem 0px var(--warn);
 }
-button.btn.danger,
-a.btn.danger {
+button.btn.danger, .drawer-container > .drawer > header > button.danger.close,
+a.btn.danger,
+.drawer-container > .drawer > header > a.danger.close {
   background: var(--danger);
   color: var(--danger-fg);
   border: none;
 }
-button.btn.danger:focus::before,
-a.btn.danger:focus::before {
+button.btn.danger:focus::before, .drawer-container > .drawer > header > button.danger.close:focus::before,
+a.btn.danger:focus::before,
+.drawer-container > .drawer > header > a.danger.close:focus::before {
   box-shadow: 0 0 1rem 0px var(--danger);
 }
-button.btn.flat,
-a.btn.flat {
+button.btn.flat, .drawer-container > .drawer > header > button.close,
+a.btn.flat,
+.drawer-container > .drawer > header > a.close {
   border: none;
   background: none;
   color: var(--fg);
 }
-button.btn.flat:focus::before,
-a.btn.flat:focus::before {
+button.btn.flat:focus::before, .drawer-container > .drawer > header > button.close:focus::before,
+a.btn.flat:focus::before,
+.drawer-container > .drawer > header > a.close:focus::before {
   box-shadow: none;
 }
-button.btn.flat:focus, button.btn.flat:hover,
+button.btn.flat:focus, .drawer-container > .drawer > header > button.close:focus, button.btn.flat:hover, .drawer-container > .drawer > header > button.close:hover,
 a.btn.flat:focus,
-a.btn.flat:hover {
+.drawer-container > .drawer > header > a.close:focus,
+a.btn.flat:hover,
+.drawer-container > .drawer > header > a.close:hover {
   background: var(--hover);
 }
-button.btn.link,
-a.btn.link {
+button.btn.link, .drawer-container > .drawer > header > button.link.close,
+a.btn.link,
+.drawer-container > .drawer > header > a.link.close {
   border: none;
   background: none;
   color: var(--link);
 }
-button.btn.link:focus::before,
-a.btn.link:focus::before {
+button.btn.link:focus::before, .drawer-container > .drawer > header > button.link.close:focus::before,
+a.btn.link:focus::before,
+.drawer-container > .drawer > header > a.link.close:focus::before {
   box-shadow: none;
 }
-button.btn.link:focus, button.btn.link:hover,
+button.btn.link:focus, .drawer-container > .drawer > header > button.link.close:focus, button.btn.link:hover, .drawer-container > .drawer > header > button.link.close:hover,
 a.btn.link:focus,
-a.btn.link:hover {
+.drawer-container > .drawer > header > a.link.close:focus,
+a.btn.link:hover,
+.drawer-container > .drawer > header > a.link.close:hover {
   text-decoration: underline;
 }
-button.btn.link:active,
-a.btn.link:active {
+button.btn.link:active, .drawer-container > .drawer > header > button.link.close:active,
+a.btn.link:active,
+.drawer-container > .drawer > header > a.link.close:active {
   filter: brightness(0.8);
 }
-button.btn:disabled,
-a.btn:disabled {
+button.btn:disabled, .drawer-container > .drawer > header > button.close:disabled,
+a.btn:disabled,
+.drawer-container > .drawer > header > a.close:disabled {
   background: transparent;
   border-color: var(--tone-4);
   color: var(--tone-4);

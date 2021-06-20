@@ -1,0 +1,59 @@
+$zIndex: 500;
+
+.drawer-container {
+  position: fixed;
+  inset: 0;
+  z-index: $zIndex;
+  pointer-events: none;
+  > .backdrop {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: black;
+    transition: opacity 0.2s ease;
+    z-index: $zIndex;
+  }
+  > .drawer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0;
+    transform: translateX(-100%);
+    background: var(--bg);
+    box-shadow: 0 0 4px var(--black-50);
+    min-width: 320px;
+    max-width: 80%;
+    z-index: $zIndex;
+    > header {
+      display: flex;
+      align-items: center;
+      padding: 0 var(--margin);
+      > .close {
+        @extend .btn, .flat;
+        position: relative;
+        width: 48px;
+        height: 48px;
+        margin-left: calc(-1 * var(--margin));
+      }
+      h1 {
+        font-size: 1rem;
+        margin: 0;
+      }
+    }
+    > .body {
+      padding: var(--margin);
+    }
+  }
+  &.active {
+    pointer-events: auto;
+    > .backdrop {
+      opacity: 0.5;
+    }
+    > .drawer {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
