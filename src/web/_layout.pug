@@ -90,6 +90,9 @@ html
     .card.fix-bottom-right-3: .hstack.dense
       button.btn.flat(tabindex="-1").xd-weather-btn: i.fas
       button.btn.flat(tabindex="-1").xd-share-btn: i.fas.fa-share-alt
+    script(src="/xeltica-ui.js")
+    script.
+      setupAll();
     script.
       const shareButton = document.querySelector('.xd-share-btn');
       const shareText = `${document.title}\n${location.href}`;
@@ -111,8 +114,5 @@ html
         localStorage.setItem('xelticaui:theme', currentTheme);
         weatherButton.children[0].className = currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
       });
-    script(src="/xeltica-ui.js")
-    script.
-      setupAll();
 
     block script

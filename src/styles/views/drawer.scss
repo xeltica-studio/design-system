@@ -20,6 +20,7 @@ $zIndex: 500;
     bottom: 0;
     transition: transform 0.2s ease, opacity 0.2s ease;
     opacity: 0;
+    overflow: auto;
     transform: translateX(-100%);
     background: var(--bg);
     box-shadow: 0 0 4px var(--black-50);

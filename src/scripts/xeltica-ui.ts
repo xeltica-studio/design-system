@@ -9,8 +9,6 @@ function setupDrawer() {
             };
             const backdrop = container.querySelector('.backdrop');
             const drawer = container.querySelector('.drawer');
-            console.log(backdrop);
-            console.log(drawer);
             backdrop?.addEventListener('click', container.close);
             drawer?.querySelector('.close')?.addEventListener('click', container.close);
         });
