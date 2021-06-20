@@ -88,10 +88,17 @@ html
       .container
         +footer
     .card.fix-bottom-right-3: .hstack.dense
-      button.btn.flat.le-tablet(tabindex="-1"): i.fas.fa-bars
       button.btn.flat(tabindex="-1").xd-weather-btn: i.fas
-      button.btn.flat(tabindex="-1"): i.fas.fa-share-alt
+      button.btn.flat(tabindex="-1").xd-share-btn: i.fas.fa-share-alt
     script.
+      const shareButton = document.querySelector('.xd-share-btn');
+      const shareText = `${document.title}\n${location.href}`;
+      shareButton.addEventListener('click', () => {
+        navigator.share({
+          url: location.href,
+          title: document.title,
+        });
+      });
       const weatherButton = document.querySelector('.xd-weather-btn');
       const cl = document.body.classList;
       if (localStorage.getItem('xelticaui:theme') === 'dark') {
@@ -104,5 +111,8 @@ html
         localStorage.setItem('xelticaui:theme', currentTheme);
         weatherButton.children[0].className = currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
       });
+    script(src="/xeltica-ui.js")
+    script.
+      setupAll();
 
     block script
