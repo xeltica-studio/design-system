@@ -420,9 +420,9 @@ body {
   --orange: #f08300;
   --orange-d: #482700;
   --orange-l: #fbdab3;
-  --yellow: #ffd900;
-  --yellow-d: #4d4100;
-  --yellow-l: #fff4b3;
+  --yellow: #e9be00;
+  --yellow-d: #463900;
+  --yellow-l: #f8ecb3;
   --lime: #b8d200;
   --lime-d: #373f00;
   --lime-l: #eaf2b3;
@@ -478,10 +478,20 @@ body {
   --danger-fg: var(--white);
   --warn-fg: var(--black);
   --primary: var(--blue);
+  --primary-l: var(--blue-l);
+  --primary-d: var(--blue-d);
   --success: var(--green);
+  --success-l: var(--green-l);
+  --success-d: var(--green-d);
   --info: var(--skyblue);
+  --info-l: var(--skyblue-l);
+  --info-d: var(--skyblue-d);
   --danger: var(--red);
+  --danger-l: var(--red-l);
+  --danger-d: var(--red-d);
   --warn: var(--yellow);
+  --warn-l: var(--yellow-l);
+  --warn-d: var(--yellow-d);
   --bg: var(--white);
   --fg: var(--gray-11);
   --bold: var(--tone-13);
@@ -3400,6 +3410,61 @@ ol.hstack {
 .drawer-container.active > .drawer {
   opacity: 1;
   transform: none;
+}
+
+.alert {
+  padding: var(--margin);
+  border-radius: var(--radius);
+  background: var(--tone-1);
+  color: var(--tone-8);
+}
+.alert > .icon {
+  margin-right: var(--margin);
+}
+.alert.bg-primary {
+  border-color: var(--primary);
+  background: var(--primary-l) !important;
+  color: var(--primary) !important;
+}
+.dark .alert.bg-primary {
+  background: var(--primary-d) !important;
+  color: var(--primary) !important;
+}
+.alert.bg-success {
+  border-color: var(--success);
+  background: var(--success-l) !important;
+  color: var(--success) !important;
+}
+.dark .alert.bg-success {
+  background: var(--success-d) !important;
+  color: var(--success) !important;
+}
+.alert.bg-info {
+  border-color: var(--info);
+  background: var(--info-l) !important;
+  color: var(--info) !important;
+}
+.dark .alert.bg-info {
+  background: var(--info-d) !important;
+  color: var(--info) !important;
+}
+.alert.bg-danger {
+  border-color: var(--danger);
+  background: var(--danger-l) !important;
+  color: var(--danger) !important;
+}
+.dark .alert.bg-danger {
+  background: var(--danger-d) !important;
+  color: var(--danger) !important;
+}
+.alert.bg-warn {
+  border-color: var(--warn);
+  background: var(--warn-l) !important;
+  color: var(--warn) !important;
+}
+.dark .alert.bg-warn {
+  background: var(--warn-d) !important;
+  color: var(--warn) !important;
 }
 
 button.btn, .drawer-container > .drawer > header > button.close,

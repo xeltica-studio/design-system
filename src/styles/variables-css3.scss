@@ -25,7 +25,9 @@ body {
     --#{$name}: #{$value};
   }
   @each $name, $value in $classes {
-    --#{$name}: #{$value};
+    --#{$name}: var(--#{$value});
+    --#{$name}-l: var(--#{$value}-l);
+    --#{$name}-d: var(--#{$value}-d);
   }
 
   --bg: var(--white);

@@ -20,7 +20,7 @@ block main
     sync(q.matches);
     q.addListener(e =&gt; sync(e.matches));
 
-block script
+block append script
   script.
     const q = window.matchMedia('(prefers-color-scheme: dark)');
     const sync = (isDark) => document.body.classList[isDark ? 'add' : 'remove']('dark');

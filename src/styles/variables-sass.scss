@@ -6,7 +6,7 @@ $colors: (
   "red": #e23731,
   "vermilion": #eb6101,
   "orange": #f08300,
-  "yellow": #ffd900,
+  "yellow": #e9be00,
   "lime": #b8d200,
   "green": #3eb370,
   "teal": #20c0a0,
@@ -47,9 +47,9 @@ $tones: (
 );
 
 $classes: (
-  "primary": var(--blue),
-  "success": var(--green),
-  "info": var(--skyblue),
-  "danger": var(--red),
-  "warn": var(--yellow),
+  "primary": "blue",
+  "success": "green",
+  "info": "skyblue",
+  "danger": "red",
+  "warn": "yellow",
 );

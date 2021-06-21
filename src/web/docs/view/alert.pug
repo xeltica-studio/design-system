@@ -1,0 +1,59 @@
+extends ../_layout
+
+block main
+  h1 アラート <code>.alert</code>
+  p 目立たせる必要がある要素を表示します。
+    code .alert
+    | クラスに、必要に応じてユーティリティクラスを用いることで、色とりどりのアラートを表現しましょう。
+  p また、
+    code .icon
+    | クラスの要素を内包することで、Font Awesome等の任意のアイコンを表示するのに役立ちます。
+
+  h2 例
+  .vstack.mb-2
+    .alert
+      i.icon.fas.fa-info-circle
+      | タイトルを設定しましょう。
+    .alert.bg-primary
+      i.icon.fas.fa-info-circle
+      | タイトルを設定しましょう。
+    .alert.bg-success
+      i.icon.fas.fa-check
+      | 更新が完了しました。
+    .alert.bg-info
+      i.icon.fas.fa-star
+      | 本日より追加された新機能があります。
+    .alert.bg-danger
+      i.icon.fas.fa-times-circle
+      | エラーが発生しました。
+    .alert.bg-warn
+      i.icon.fas.fa-exclamation-triangle
+      | 本機能は削除予定のため、使用を推奨しません。
+  pre: code
+    :escape-html
+      <div class="vstack">
+        <div class="alert">
+          <i class="icon fas fa-info-circle"></i>
+          タイトルを設定しましょう。
+        </div>
+        <div class="alert bg-primary">
+          <i class="icon fas fa-info-circle"></i>
+          タイトルを設定しましょう。
+        </div>
+        <div class="alert bg-success">
+          <i class="icon fas fa-check"></i>
+          更新が完了しました。
+        </div>
+        <div class="alert bg-info">
+          <i class="icon fas fa-star"></i>
+          本日より追加された新機能があります。
+        </div>
+        <div class="alert bg-danger">
+          <i class="icon fas fa-times-circle"></i>
+          エラーが発生しました。
+        </div>
+        <div class="alert bg-warn">
+          <i class="icon fas fa-exclamation-triangle"></i>
+          本機能は削除予定のため、使用を推奨しません。
+        </div>
+      </div>

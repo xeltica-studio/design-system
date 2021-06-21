@@ -1,0 +1,21 @@
+.alert {
+  padding: var(--margin);
+  border-radius: var(--radius);
+  background: var(--tone-1);
+  color: var(--tone-8);
+  > .icon {
+    margin-right: var(--margin);
+  }
+
+  @each $key, $_ in $classes {
+    &.bg-#{$key} {
+      border-color: var(--#{$key});
+      background: var(--#{$key}-l) !important;
+      color: var(--#{$key}) !important;
+      @include dark {
+        background: var(--#{$key}-d) !important;
+        color: var(--#{$key}) !important;
+      }
+    }
+  }
+}
