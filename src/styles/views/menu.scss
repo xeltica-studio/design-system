@@ -3,7 +3,7 @@
   border-left: none;
   border-right: none;
   padding: 8px 16px;
-  border-radius: none;
+  border-radius: 0;
   border-bottom-color: transparent;
   &.active {
     background-color: var(--hover);
@@ -64,7 +64,7 @@
     }
 
     &:not(.active):not(.disabled):hover {
-      border-color: var(--tone-2);
+      border-color: var(--hover);
       background-color: var(--hover);
     }
 

@@ -3234,7 +3234,7 @@ ol.hstack {
   border-left: none;
   border-right: none;
   padding: 8px 16px;
-  border-radius: none;
+  border-radius: 0;
   border-bottom-color: transparent;
 }
 .menu.large .item.active {
@@ -3267,7 +3267,7 @@ ol.hstack {
   font-size: 1rem;
 }
 .menu .item:not(.active):not(.disabled):hover {
-  border-color: var(--tone-2);
+  border-color: var(--hover);
   background-color: var(--hover);
 }
 .menu .item.active {
@@ -3287,7 +3287,7 @@ ol.hstack {
     border-left: none;
     border-right: none;
     padding: 8px 16px;
-    border-radius: none;
+    border-radius: 0;
     border-bottom-color: transparent;
   }
   .menu .item.active {
