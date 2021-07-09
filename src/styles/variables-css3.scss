@@ -1,6 +1,6 @@
 body {
   --margin: 16px;
-  --radius: 3px;
+  --radius: 6px;
 
   --container-padding: 32px;
   --container-padding-phone: 16px;
@@ -30,11 +30,12 @@ body {
     --#{$name}-d: var(--#{$value}-d);
   }
 
-  --bg: var(--white);
+  --bg: var(--gray-1);
   --fg: var(--gray-11);
   --bold: var(--tone-13);
   --link: var(--primary);
   --hover: rgba(0, 0, 0, 0.03);
+  --panel: var(--white);
 
   --tone-0: var(--white);
   --tone-1: var(--gray-1);
@@ -59,6 +60,7 @@ body {
     --bg: var(--gray-12);
     --fg: var(--gray-2);
     --hover: rgba(255, 255, 255, 0.06);
+    --panel: var(--black);
 
     --tone-0: var(--black);
     --tone-1: var(--gray-12);

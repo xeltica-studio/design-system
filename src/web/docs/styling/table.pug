@@ -5,29 +5,28 @@ block main
   p HTMLのtableタグを装飾するスタイルを提供します。
   p tableタグは様々なサードパーティのライブラリで使用されており、衝突を防ぐためにクラスを明示的に付与するようになっています。
   h2 普通のテーブル
-  .card: .body
-    table.table
-      thead: tr
-        th 名前
-        th 色
-        th 主な用途
-      tbody
-        tr
-          td りんご
-          td 赤, 緑 など
-          td 生食、パイ、ジュース、酢豚
-        tr
-          td いちご
-          td 赤, 白 など
-          td 生食、ジュース、ケーキ、パフェなど
-        tr
-          td レモン
-          td 黄（熟れるまでは緑）
-          td ジュース、レモン汁、香料
-        tr
-          td ぶどう
-          td 紫, 赤, 緑 など
-          td 生食, ケーキ, ジュース, 酒造, ゼリー
+  table.table
+    thead: tr
+      th 名前
+      th 色
+      th 主な用途
+    tbody
+      tr
+        td りんご
+        td 赤, 緑 など
+        td 生食、パイ、ジュース、酢豚
+      tr
+        td いちご
+        td 赤, 白 など
+        td 生食、ジュース、ケーキ、パフェなど
+      tr
+        td レモン
+        td 黄（熟れるまでは緑）
+        td ジュース、レモン汁、香料
+      tr
+        td ぶどう
+        td 紫, 赤, 緑 など
+        td 生食, ケーキ, ジュース, 酒造, ゼリー
   pre: code
     :escape-html
       <table class="table">

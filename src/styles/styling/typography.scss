@@ -57,10 +57,8 @@ code {
 
 pre {
   display: block;
-  background-color: var(--tone-1);
-  @include dark {
-    background-color: var(--tone-2);
-  }
+  border-radius: var(--radius);
+  background-color: var(--panel);
   > code {
     display: block;
     color: inherit;

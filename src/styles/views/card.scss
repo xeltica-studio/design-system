@@ -1,7 +1,6 @@
 .card {
-  border: 1px solid var(--tone-2);
   border-radius: var(--radius);
-  background: var(--tone-0);
+  background: var(--panel);
   overflow: hidden;
   > figure {
     margin: 0;
@@ -19,13 +18,13 @@
   > header,
   > footer {
     padding: calc(var(--margin) / 2) var(--margin);
-    background: var(--tone-1);
+    // background: var(--tone-1);
   }
   > header {
-    border-bottom: 1px solid var(--divider);
+    border-bottom: 1px solid var(--tone-1);
   }
   > footer {
-    border-top: 1px solid var(--divider);
+    border-top: 1px solid var(--tone-1);
   }
   > .body {
     padding: var(--margin);
@@ -60,6 +59,6 @@
     }
   }
   &.ghost {
-    border: none;
+    background: transparent;
   }
 }
