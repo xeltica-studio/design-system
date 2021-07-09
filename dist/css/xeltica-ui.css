@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * XelticaUI 1.0.0-alpha.5
+ * XelticaUI 1.0.0-alpha.6
  * (C)2021 Xeltica
  * Licensed under MIT (https://github.com/xeltica/ui/tree/master/LICENSE)
  */
@@ -405,7 +405,7 @@ template {
 
 body {
   --margin: 16px;
-  --radius: 3px;
+  --radius: 6px;
   --container-padding: 32px;
   --container-padding-phone: 16px;
   --clickable-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
@@ -455,10 +455,10 @@ body {
   --pink-d: #4d1c28;
   --pink-l: #ffceda;
   --black: black;
-  --gray-1: #ebebeb;
-  --gray-2: #d9d9d9;
-  --gray-3: #c4c4c4;
-  --gray-4: #b0b0b0;
+  --gray-1: #f0f0f0;
+  --gray-2: #dedede;
+  --gray-3: #c7c7c7;
+  --gray-4: #b3b3b3;
   --gray-5: #9e9e9e;
   --gray-6: #8a8a8a;
   --gray-7: #757575;
@@ -493,11 +493,12 @@ body {
   --warn: var(--yellow);
   --warn-l: var(--yellow-l);
   --warn-d: var(--yellow-d);
-  --bg: var(--white);
+  --bg: var(--gray-1);
   --fg: var(--gray-11);
   --bold: var(--tone-13);
   --link: var(--primary);
   --hover: rgba(0, 0, 0, 0.03);
+  --panel: var(--white);
   --tone-0: var(--white);
   --tone-1: var(--gray-1);
   --tone-2: var(--gray-2);
@@ -525,6 +526,7 @@ body.dark {
   --bg: var(--gray-12);
   --fg: var(--gray-2);
   --hover: rgba(255, 255, 255, 0.06);
+  --panel: var(--black);
   --tone-0: var(--black);
   --tone-1: var(--gray-12);
   --tone-2: var(--gray-11);
@@ -1587,59 +1589,59 @@ body.dark {
 }
 
 .shadow-1 {
-  box-shadow: 0 0 4px var(--shadow-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 .shadow-1-t {
-  text-shadow: 0 0 4px var(--shadow-color);
+  text-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .shadow-2 {
-  box-shadow: 0 0 8px var(--shadow-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
 }
 .shadow-2-t {
-  text-shadow: 0 0 8px var(--shadow-color);
+  text-shadow: 0 2px 8px var(--shadow-color);
 }
 
 .shadow-3 {
-  box-shadow: 0 0 12px var(--shadow-color);
+  box-shadow: 0 2px 12px var(--shadow-color);
 }
 .shadow-3-t {
-  text-shadow: 0 0 12px var(--shadow-color);
+  text-shadow: 0 2px 12px var(--shadow-color);
 }
 
 .shadow-4 {
-  box-shadow: 0 0 16px var(--shadow-color);
+  box-shadow: 0 2px 16px var(--shadow-color);
 }
 .shadow-4-t {
-  text-shadow: 0 0 16px var(--shadow-color);
+  text-shadow: 0 2px 16px var(--shadow-color);
 }
 
 .shadow-5 {
-  box-shadow: 0 0 20px var(--shadow-color);
+  box-shadow: 0 2px 20px var(--shadow-color);
 }
 .shadow-5-t {
-  text-shadow: 0 0 20px var(--shadow-color);
+  text-shadow: 0 2px 20px var(--shadow-color);
 }
 
 .shadow-6 {
-  box-shadow: 0 0 24px var(--shadow-color);
+  box-shadow: 0 2px 24px var(--shadow-color);
 }
 .shadow-6-t {
-  text-shadow: 0 0 24px var(--shadow-color);
+  text-shadow: 0 2px 24px var(--shadow-color);
 }
 
 .shadow-7 {
-  box-shadow: 0 0 28px var(--shadow-color);
+  box-shadow: 0 2px 28px var(--shadow-color);
 }
 .shadow-7-t {
-  text-shadow: 0 0 28px var(--shadow-color);
+  text-shadow: 0 2px 28px var(--shadow-color);
 }
 
 .shadow-8 {
-  box-shadow: 0 0 32px var(--shadow-color);
+  box-shadow: 0 2px 32px var(--shadow-color);
 }
 .shadow-8-t {
-  text-shadow: 0 0 32px var(--shadow-color);
+  text-shadow: 0 2px 32px var(--shadow-color);
 }
 
 .table {
@@ -1653,6 +1655,9 @@ body.dark {
 }
 .table th {
   background: var(--tone-1);
+}
+.table tr {
+  background: var(--panel);
 }
 .table th,
 .table td {
@@ -1826,10 +1831,8 @@ code {
 
 pre {
   display: block;
-  background-color: var(--tone-1);
-}
-.dark pre {
-  background-color: var(--tone-2);
+  border-radius: var(--radius);
+  background-color: var(--panel);
 }
 pre > code {
   display: block;
@@ -3148,9 +3151,8 @@ ol.hstack {
 }
 
 .card {
-  border: 1px solid var(--tone-2);
   border-radius: var(--radius);
-  background: var(--tone-0);
+  background: var(--panel);
   overflow: hidden;
 }
 .card > figure {
@@ -3169,13 +3171,12 @@ ol.hstack {
 .card > header,
 .card > footer {
   padding: calc(var(--margin) / 2) var(--margin);
-  background: var(--tone-1);
 }
 .card > header {
-  border-bottom: 1px solid var(--divider);
+  border-bottom: 1px solid var(--tone-1);
 }
 .card > footer {
-  border-top: 1px solid var(--divider);
+  border-top: 1px solid var(--tone-1);
 }
 .card > .body {
   padding: var(--margin);
@@ -3211,7 +3212,7 @@ ol.hstack {
   background: var(--black-50);
 }
 .card.ghost {
-  border: none;
+  background: transparent;
 }
 
 .menu section + section,
@@ -3378,7 +3379,7 @@ ol.hstack {
   opacity: 0;
   overflow: auto;
   transform: translateX(-100%);
-  background: var(--bg);
+  background: var(--panel);
   box-shadow: 0 0 4px var(--black-50);
   min-width: 320px;
   max-width: 80%;
@@ -3416,7 +3417,7 @@ ol.hstack {
 .alert {
   padding: var(--margin);
   border-radius: var(--radius);
-  background: var(--tone-1);
+  background: var(--panel);
   color: var(--tone-8);
 }
 .alert > .icon {
