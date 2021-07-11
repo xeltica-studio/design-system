@@ -1645,16 +1645,15 @@ body.dark {
 }
 
 .table {
-  border: 1px solid var(--tone-3);
+  border: 1px solid var(--tone-2);
   border-radius: var(--radius);
   border-collapse: separate;
   overflow: hidden;
   border-spacing: 0;
-  border-bottom: none;
   margin-bottom: 1rem;
 }
 .table th {
-  background: var(--tone-1);
+  background: var(--tone-2);
 }
 .table tr {
   background: var(--panel);
@@ -1663,12 +1662,15 @@ body.dark {
 .table td {
   padding: 0.5rem 1rem;
 }
-.table th:not(:last-child),
-.table td:not(:last-child) {
-  border-right: 1px solid var(--tone-2);
+.table th + th,
+.table th + td,
+.table td + th,
+.table td + td {
+  border-left: 1px solid var(--tone-2);
 }
-.table td {
+.table tr:not(:last-child) > td {
   border-bottom: 1px solid var(--tone-2);
+  overflow: hidden;
 }
 
 body {

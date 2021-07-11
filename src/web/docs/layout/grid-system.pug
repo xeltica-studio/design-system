@@ -10,7 +10,7 @@ block main
   h1 グリッドシステム
   p <a href="https://getbootstrap.jp/docs/5.0/layout/grid/">Bootstrapのグリッドシステム</a>に近いものを提供します。
   h2 例
-  .card: .body
+  .card.ghost: .body
     .row
       - for (let i = 1; i <= 3 ; i++)
         .col-4: .card.ma-1.pa-2 #{i}/3
@@ -43,7 +43,7 @@ block main
   h2 レスポンシブ
   p タブレット、PCの場合に設定をオーバーライドできます。タブレット向けに指定する場合は<code>tab-*</code>クラス、PC向けの場合は<code>pc-*</code>クラスを追加します。
   p 以下の例は、40個の要素をスマホでは2つ、タブレットでは4つ、PCでは6つ横並びにします。
-  .card: .body
+  .card.ghost: .body
     .row
       - for (let i = 1; i <= 40; i++)
         .col-6.tab-3.pc-2: .card.ma-1.pa-2= i

@@ -1,13 +1,12 @@
 .table {
-  border: 1px solid var(--tone-3);
+  border: 1px solid var(--tone-2);
   border-radius: var(--radius);
   border-collapse: separate;
   overflow: hidden;
   border-spacing: 0;
-  border-bottom: none;
   margin-bottom: 1rem;
   th {
-    background: var(--tone-1);
+    background: var(--tone-2);
   }
   tr {
     background: var(--panel);
@@ -16,11 +15,15 @@
   td {
     padding: 0.5rem 1rem;
 
-    &:not(:last-child) {
-      border-right: 1px solid var(--tone-2);
+    + th,
+    + td {
+      border-left: 1px solid var(--tone-2);
     }
   }
-  td {
-    border-bottom: 1px solid var(--tone-2);
+  tr:not(:last-child) {
+    > td {
+      border-bottom: 1px solid var(--tone-2);
+      overflow: hidden;
+    }
   }
 }
