@@ -22,7 +22,7 @@ label.input-check {
         height: 20px;
         background: var(--tone-0);
         border: 1px solid var(--tone-4);
-        transition: box-shadow 0.2s ease, background 0.1s linear;
+        transition: box-shadow 0.2s ease, background 0.1s ease-out;
       }
       &::after {
         content: "";
@@ -64,7 +64,7 @@ label.input-check {
         mask-repeat: no-repeat;
         mask-size: 20px;
         background: var(--primary-fg);
-        transition: width 0.2s ease 0.15s;
+        transition: width 0.2s ease-out 0.15s;
         width: 0;
       }
     }
@@ -108,11 +108,6 @@ label.input-switch {
   align-items: center;
   input {
     display: none;
-
-    &:focus-within + .switch::after,
-    &:hover + .switch::after {
-      box-shadow: 0 0 16px var(--primary);
-    }
     &:not(:disabled) + .switch,
     &:not(:disabled) + .switch + span {
       cursor: pointer;
@@ -135,7 +130,7 @@ label.input-switch {
       // knob
       &::after {
         content: "";
-        transition: left 0.2s ease, background 0.2s ease;
+        transition: left 0.2s cubic-bezier(0.44, 0.01, 0.39, 1.59), background 0.2s ease, box-shadow 0.2s ease;
         position: absolute;
         left: 2px;
         width: 20px;
@@ -146,6 +141,10 @@ label.input-switch {
       + * {
         padding-left: 8px;
       }
+    }
+    &:focus-within + .switch::after,
+    &:hover + .switch::after {
+      box-shadow: 0 0 16px var(--primary);
     }
     &:checked + .switch {
       // bar

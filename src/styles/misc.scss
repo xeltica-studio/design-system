@@ -17,3 +17,7 @@
 .no-pointer-events {
   pointer-events: none;
 }
+
+.rounded {
+  border-radius: var(--radius);
+}
