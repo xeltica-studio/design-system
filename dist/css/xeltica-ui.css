@@ -3540,6 +3540,13 @@ a.btn.primary:focus::before,
 .drawer-container > .drawer > header > a.primary.close:focus::before {
   box-shadow: 0 0 1rem 0px var(--primary);
 }
+button.btn.primary:disabled, .drawer-container > .drawer > header > button.primary.close:disabled,
+a.btn.primary:disabled,
+.drawer-container > .drawer > header > a.primary.close:disabled {
+  background: var(--tone-4);
+  border-color: var(--tone-4);
+  color: var(--tone-0);
+}
 button.btn.success, .drawer-container > .drawer > header > button.success.close,
 a.btn.success,
 .drawer-container > .drawer > header > a.success.close {
@@ -3551,6 +3558,13 @@ button.btn.success:focus::before, .drawer-container > .drawer > header > button.
 a.btn.success:focus::before,
 .drawer-container > .drawer > header > a.success.close:focus::before {
   box-shadow: 0 0 1rem 0px var(--success);
+}
+button.btn.success:disabled, .drawer-container > .drawer > header > button.success.close:disabled,
+a.btn.success:disabled,
+.drawer-container > .drawer > header > a.success.close:disabled {
+  background: var(--tone-4);
+  border-color: var(--tone-4);
+  color: var(--tone-0);
 }
 button.btn.info, .drawer-container > .drawer > header > button.info.close,
 a.btn.info,
@@ -3564,6 +3578,13 @@ a.btn.info:focus::before,
 .drawer-container > .drawer > header > a.info.close:focus::before {
   box-shadow: 0 0 1rem 0px var(--info);
 }
+button.btn.info:disabled, .drawer-container > .drawer > header > button.info.close:disabled,
+a.btn.info:disabled,
+.drawer-container > .drawer > header > a.info.close:disabled {
+  background: var(--tone-4);
+  border-color: var(--tone-4);
+  color: var(--tone-0);
+}
 button.btn.warn, .drawer-container > .drawer > header > button.warn.close,
 a.btn.warn,
 .drawer-container > .drawer > header > a.warn.close {
@@ -3575,6 +3596,13 @@ button.btn.warn:focus::before, .drawer-container > .drawer > header > button.war
 a.btn.warn:focus::before,
 .drawer-container > .drawer > header > a.warn.close:focus::before {
   box-shadow: 0 0 1rem 0px var(--warn);
+}
+button.btn.warn:disabled, .drawer-container > .drawer > header > button.warn.close:disabled,
+a.btn.warn:disabled,
+.drawer-container > .drawer > header > a.warn.close:disabled {
+  background: var(--tone-4);
+  border-color: var(--tone-4);
+  color: var(--tone-0);
 }
 button.btn.danger, .drawer-container > .drawer > header > button.danger.close,
 a.btn.danger,
@@ -3588,6 +3616,26 @@ a.btn.danger:focus::before,
 .drawer-container > .drawer > header > a.danger.close:focus::before {
   box-shadow: 0 0 1rem 0px var(--danger);
 }
+button.btn.danger:disabled, .drawer-container > .drawer > header > button.danger.close:disabled,
+a.btn.danger:disabled,
+.drawer-container > .drawer > header > a.danger.close:disabled {
+  background: var(--tone-4);
+  border-color: var(--tone-4);
+  color: var(--tone-0);
+}
+button.btn.flat:disabled, .drawer-container > .drawer > header > button.close:disabled, button.btn.link:disabled,
+a.btn.flat:disabled,
+.drawer-container > .drawer > header > a.close:disabled,
+a.btn.link:disabled {
+  background: transparent;
+  color: var(--tone-4);
+  border: none;
+}
+button.btn.link:disabled, .drawer-container > .drawer > header > button.link.close:disabled,
+a.btn.link:disabled,
+.drawer-container > .drawer > header > a.link.close:disabled {
+  text-decoration: underline;
+}
 button.btn.flat, .drawer-container > .drawer > header > button.close,
 a.btn.flat,
 .drawer-container > .drawer > header > a.close {
@@ -3595,16 +3643,16 @@ a.btn.flat,
   background: none;
   color: var(--fg);
 }
-button.btn.flat:focus::before, .drawer-container > .drawer > header > button.close:focus::before,
-a.btn.flat:focus::before,
-.drawer-container > .drawer > header > a.close:focus::before {
+button.btn.flat:not(:disabled):focus::before, .drawer-container > .drawer > header > button.close:not(:disabled):focus::before,
+a.btn.flat:not(:disabled):focus::before,
+.drawer-container > .drawer > header > a.close:not(:disabled):focus::before {
   box-shadow: none;
 }
-button.btn.flat:focus, .drawer-container > .drawer > header > button.close:focus, button.btn.flat:hover, .drawer-container > .drawer > header > button.close:hover,
-a.btn.flat:focus,
-.drawer-container > .drawer > header > a.close:focus,
-a.btn.flat:hover,
-.drawer-container > .drawer > header > a.close:hover {
+button.btn.flat:not(:disabled):focus, .drawer-container > .drawer > header > button.close:not(:disabled):focus, button.btn.flat:not(:disabled):hover, .drawer-container > .drawer > header > button.close:not(:disabled):hover,
+a.btn.flat:not(:disabled):focus,
+.drawer-container > .drawer > header > a.close:not(:disabled):focus,
+a.btn.flat:not(:disabled):hover,
+.drawer-container > .drawer > header > a.close:not(:disabled):hover {
   background: var(--hover);
 }
 button.btn.link, .drawer-container > .drawer > header > button.link.close,
@@ -3614,21 +3662,21 @@ a.btn.link,
   background: none;
   color: var(--link);
 }
-button.btn.link:focus::before, .drawer-container > .drawer > header > button.link.close:focus::before,
-a.btn.link:focus::before,
-.drawer-container > .drawer > header > a.link.close:focus::before {
+button.btn.link:not(:disabled):focus::before, .drawer-container > .drawer > header > button.link.close:not(:disabled):focus::before,
+a.btn.link:not(:disabled):focus::before,
+.drawer-container > .drawer > header > a.link.close:not(:disabled):focus::before {
   box-shadow: none;
 }
-button.btn.link:focus, .drawer-container > .drawer > header > button.link.close:focus, button.btn.link:hover, .drawer-container > .drawer > header > button.link.close:hover,
-a.btn.link:focus,
-.drawer-container > .drawer > header > a.link.close:focus,
-a.btn.link:hover,
-.drawer-container > .drawer > header > a.link.close:hover {
+button.btn.link:not(:disabled):focus, .drawer-container > .drawer > header > button.link.close:not(:disabled):focus, button.btn.link:not(:disabled):hover, .drawer-container > .drawer > header > button.link.close:not(:disabled):hover,
+a.btn.link:not(:disabled):focus,
+.drawer-container > .drawer > header > a.link.close:not(:disabled):focus,
+a.btn.link:not(:disabled):hover,
+.drawer-container > .drawer > header > a.link.close:not(:disabled):hover {
   text-decoration: underline;
 }
-button.btn.link:active, .drawer-container > .drawer > header > button.link.close:active,
-a.btn.link:active,
-.drawer-container > .drawer > header > a.link.close:active {
+button.btn.link:not(:disabled):active, .drawer-container > .drawer > header > button.link.close:not(:disabled):active,
+a.btn.link:not(:disabled):active,
+.drawer-container > .drawer > header > a.link.close:not(:disabled):active {
   filter: brightness(0.8);
 }
 button.btn:disabled, .drawer-container > .drawer > header > button.close:disabled,

@@ -7,7 +7,6 @@ a.btn {
   background: transparent;
   text-decoration: none;
   color: var(--primary);
-  // font-weight: bold;
   cursor: pointer;
   outline: none;
   font-size: 1rem;
@@ -41,21 +40,35 @@ a.btn {
       color: var(--#{$var}-fg);
       border: none;
       &:focus::before {
-        // border: 2px solid var(--tone-12);
         box-shadow: 0 0 1rem 0px var(--#{$var});
       }
+      &:disabled {
+        background: var(--tone-4);
+        border-color: var(--tone-4);
+        color: var(--tone-0);
+      }
     }
+  }
+
+  &.flat:disabled,
+  &.link:disabled {
+    background: transparent;
+    color: var(--tone-4);
+    border: none;
+  }
+  &.link:disabled {
+    text-decoration: underline;
   }
 
   &.flat {
     border: none;
     background: none;
     color: var(--fg);
-    &:focus::before {
+    &:not(:disabled):focus::before {
       box-shadow: none;
     }
-    &:focus,
-    &:hover {
+    &:not(:disabled):focus,
+    &:not(:disabled):hover {
       background: var(--hover);
     }
   }
@@ -64,14 +77,14 @@ a.btn {
     border: none;
     background: none;
     color: var(--link);
-    &:focus::before {
+    &:not(:disabled):focus::before {
       box-shadow: none;
     }
-    &:focus,
-    &:hover {
+    &:not(:disabled):focus,
+    &:not(:disabled):hover {
       text-decoration: underline;
     }
-    &:active {
+    &:not(:disabled):active {
       filter: brightness(0.8);
     }
   }
