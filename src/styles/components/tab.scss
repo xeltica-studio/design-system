@@ -1,0 +1,36 @@
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--panel);
+  .item {
+    position: relative;
+    background: transparent;
+    border: none;
+    color: var(--fg);
+    padding: calc(var(--margin) / 2) var(--margin);
+    transition: background 0.2s ease;
+    &.active {
+      color: var(--primary);
+      &::after {
+        content: "";
+        width: 100%;
+      }
+    }
+    &:hover {
+      background: var(--hover);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      transition: width 0.2s ease;
+      transform-origin: center center;
+      display: block;
+      bottom: 0;
+      height: 2px;
+      left: 0;
+      right: 0;
+      width: 0;
+      background-color: var(--primary);
+    }
+  }
+}

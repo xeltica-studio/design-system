@@ -1,0 +1,19 @@
+extends ../_layout
+
+block main
+  h1 タブ
+  p ページやブロック要素を切り替えるUIを提供します。
+  .card: .body
+      h1.mb-1 例
+      .tab
+        button.item.active ホーム
+        button.item 通知
+        button.item 見つける
+        button.item メッセージ
+  pre: code
+    :escape-html
+      <div class="vstack">
+        <input class="input-field" type="text" placeholder="名前を入力..." />
+        <input class="input-field ghost" type="text" placeholder="名前を入力..." />
+        <input class="input-field" type="text" placeholder="名前を入力..." disabled />
+      </div>

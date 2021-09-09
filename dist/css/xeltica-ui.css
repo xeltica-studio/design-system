@@ -4058,3 +4058,39 @@ label.input-switch input:disabled + .switch + span {
     transform: translateX(300%);
   }
 }
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--panel);
+}
+.tab .item {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: var(--fg);
+  padding: calc(var(--margin) / 2) var(--margin);
+  transition: background 0.2s ease;
+}
+.tab .item.active {
+  color: var(--primary);
+}
+.tab .item.active::after {
+  content: "";
+  width: 100%;
+}
+.tab .item:hover {
+  background: var(--hover);
+}
+.tab .item::after {
+  content: "";
+  position: absolute;
+  transition: width 0.2s ease;
+  transform-origin: center center;
+  display: block;
+  bottom: 0;
+  height: 2px;
+  left: 0;
+  right: 0;
+  width: 0;
+  background-color: var(--primary);
+}
