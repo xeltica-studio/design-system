@@ -21,3 +21,58 @@
 .rounded {
   border-radius: var(--radius);
 }
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.iflex {
+  display: inline-flex;
+}
+
+.f-left {
+  justify-content: flex-start;
+}
+
+.f-center {
+  justify-content: center;
+}
+
+.f-right {
+  justify-content: center;
+}
+
+.f-hstretch {
+  justify-content: stretch;
+}
+
+.f-top {
+  align-items: flex-start;
+}
+
+.f-middle {
+  align-items: center;
+}
+.f-bottom {
+  align-items: flex-end;
+}
+
+.f-vstretch {
+  align-items: stretch;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.f-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}

@@ -344,6 +344,17 @@ template {
   display: none !important;
 }
 
+/*
+ * XelticaUI Initializer
+ */
+button {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+}
+
 @media (max-width: 600px) {
   .ge-phone {
     display: none !important;
@@ -572,6 +583,62 @@ body.dark {
 
 .rounded {
   border-radius: var(--radius);
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.iflex {
+  display: inline-flex;
+}
+
+.f-left {
+  justify-content: flex-start;
+}
+
+.f-center {
+  justify-content: center;
+}
+
+.f-right {
+  justify-content: center;
+}
+
+.f-hstretch {
+  justify-content: stretch;
+}
+
+.f-top {
+  align-items: flex-start;
+}
+
+.f-middle {
+  align-items: center;
+}
+
+.f-bottom {
+  align-items: flex-end;
+}
+
+.f-vstretch {
+  align-items: stretch;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.f-wrap-reverse {
+  flex-wrap: wrap-reverse;
 }
 
 .text-red {

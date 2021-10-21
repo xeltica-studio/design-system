@@ -12,8 +12,37 @@ block main
         button.item メッセージ
   pre: code
     :escape-html
-      <div class="vstack">
-        <input class="input-field" type="text" placeholder="名前を入力..." />
-        <input class="input-field ghost" type="text" placeholder="名前を入力..." />
-        <input class="input-field" type="text" placeholder="名前を入力..." disabled />
+      <div class="tab">
+        <button class="item active">ホーム</button>
+        <button class="item">通知</button>
+        <button class="item">見つける</button>
+        <button class="item">メッセージ</button>
       </div>
+  h2 スクリプト例
+  pre: code
+    :escape-html
+      const items = document.querySelectorAll('.tab>.item');
+      let activeIndex = 0;
+      items.forEach((it, i) => {
+        if (it.classList.contains('active')) activeIndex = i;
+        it.addEventListener('click', () => {
+          if (i === activeIndex) return;
+          items[activeIndex].classList.remove('active');
+          items[i].classList.add('active');
+          activeIndex = i;
+        });
+      });
+
+block script
+  script.
+    const items = document.querySelectorAll('.tab>.item');
+    let activeIndex = 0;
+    items.forEach((it, i) => {
+      if (it.classList.contains('active')) activeIndex = i;
+      it.addEventListener('click', () => {
+        if (i === activeIndex) return;
+        items[activeIndex].classList.remove('active');
+        items[i].classList.add('active');
+        activeIndex = i;
+      });
+    });
