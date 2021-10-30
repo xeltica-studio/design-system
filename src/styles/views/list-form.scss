@@ -1,0 +1,71 @@
+.list-form {
+  display: flex;
+  flex-direction: column;
+  > .item {
+    @extend .card, .shadow-1;
+    min-height: 80px;
+    display: flex;
+    padding: var(--margin);
+    transition: all 0.05s ease;
+    align-items: center;
+    text-align: left;
+
+    + .item {
+      @extend .mt-1;
+    }
+
+    > .body {
+      @extend .mr-auto;
+      padding: 0;
+      > h1, .header {
+        font-size: 1rem;
+        color: inherit;
+      }
+      > .desc {
+        font-size: 1rem;
+        color: inherit;
+        opacity: 0.6;
+      }
+    }
+    > .icon {
+      font-size: 20px;
+      @extend .mr-2;
+    }
+
+    &:disabled {
+      color: var(--dimmed);
+    }
+  }
+
+  > a.item, button.item {
+    color: inherit;
+    text-decoration: none;
+    @include clickable;
+    &:not(:disabled) {
+      &:hover, &:focus {
+        background: var(--panel-hover);
+        @extend .shadow-3;
+      }
+      &:active {
+        background: var(--panel-active);
+        filter: brightness(0.96);
+      }
+    }
+  }
+
+  > a.item, .item.next {
+    &:not(.collapse) {
+      &::after {
+        content: '';
+        width: 0.7rem;
+        height: 0.7rem;
+        border: 1px solid var(--tone-6);
+        border-left: 0;
+        border-bottom: 0;
+        margin-left: var(--margin);
+        box-sizing: border-box;
+        transform: translateX(-25%) rotate(45deg);
+      }
+    }
+  }
+}

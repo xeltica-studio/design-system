@@ -6,7 +6,8 @@ body {
   --container-padding-phone: 16px;
 
   --clickable-shadow: 0 0 1rem rgba(0, 4px, 0, 0.4);
-  --clickable-active-transform: scale(0.95) translateY(2px);
+  --clickable-active-transform: translateY(4px);
+  --clickable-hover-transform: translateY(-2px);
 
   --shadow-color: rgba(0, 0, 0, 0.1);
 
@@ -36,6 +37,8 @@ body {
   --link: var(--primary);
   --hover: rgba(0, 0, 0, 0.03);
   --panel: var(--white);
+  --panel-hover: var(--gray-1);
+  --panel-active: var(--gray-2);
 
   --tone-0: var(--white);
   --tone-1: var(--gray-1);
@@ -60,7 +63,9 @@ body {
     --bg: var(--gray-12);
     --fg: var(--gray-2);
     --hover: rgba(255, 255, 255, 0.06);
-    --panel: var(--black);
+    --panel: var(--gray-11);
+    --panel-hover: var(--gray-10);
+    --panel-active: var(--black);
 
     --tone-0: var(--black);
     --tone-1: var(--gray-12);

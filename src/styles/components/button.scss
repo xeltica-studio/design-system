@@ -22,7 +22,7 @@ a.btn {
     transition: box-shadow 0.2s ease;
   }
 
-  &:not(:disabled):not(.link) {
+  &:not(.link) {
     @include clickable;
   }
 

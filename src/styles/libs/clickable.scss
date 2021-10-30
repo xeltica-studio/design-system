@@ -1,14 +1,16 @@
 @mixin clickable($isText: false) {
-  transition: transform 0.2s ease;
-  transform-origin: center;
-  cursor: pointer;
-
-  &:active {
-    transform: var(--clickable-active-transform);
-  }
-  &:hover,
-  &:active {
-    z-index: 9999;
+  &:not(:disabled) {
+    transition: transform 0.2s ease;
+    transform-origin: center;
+    cursor: pointer;
+    &:hover {
+      transform: var(--clickable-hover-transform);
+      z-index: 9999;
+    }
+    &:active {
+      transform: var(--clickable-active-transform);
+      z-index: 9999;
+    }
   }
 }
 

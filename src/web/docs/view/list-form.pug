@@ -1,0 +1,48 @@
+extends ../_layout
+
+block head
+  style.
+
+block main
+  h1 リストフォーム <code>.list-form</code>
+  p リストフォームは、設定項目などに用いることのできるリスト型のフォーム要素です。
+  h2 例
+  .vstack
+    .list-form
+      a.item(href="#")
+        i.icon.fas.fa-user-circle
+        .body
+          h1 プロフィール
+          p.desc @Xeltica@groundpolis.app
+      a.item(href="#")
+        i.icon.fas.fa-shield-alt
+        .body
+          h1 プライバシー
+          p.desc フォローや公開範囲
+      a.item(href="#")
+        i.icon.far.fa-smile
+        .body
+          h1 リアクション
+          p.desc ピッカーのカスタマイズ
+    .list-form
+      button.item.text-danger
+        i.icon.fas.fa-heart-broken
+        .body
+          h1 アカウントを削除する
+      button.item(disabled)
+        i.icon.fas.fa-heart-broken
+        .body
+          h1 無効化
+      .item
+        .body
+          h1 ユーザーID
+          p.desc 半角英数字16ケタまで
+        .command
+          input.input-field(type='text' placeholder='名前を入力...' style="width: 10rem")
+      .item
+        .body
+          h1 CATモード
+        .command
+          label.input-switch
+            input(type='checkbox')
+            .switch

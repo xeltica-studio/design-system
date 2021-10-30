@@ -9,6 +9,7 @@
     color: var(--fg);
     padding: calc(var(--margin) / 2) var(--margin);
     transition: background 0.2s ease;
+    @include clickable;
     &.active {
       color: var(--primary);
       &::after {

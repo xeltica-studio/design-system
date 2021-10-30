@@ -35,6 +35,7 @@ label.input-field > input {
     padding: 0;
     border: none;
     border-radius: 0;
+    @include clickable;
 
     &:not(:disabled) {
       cursor: pointer;
@@ -73,6 +74,7 @@ label.input-field > input {
     padding: 4px;
     width: 48px;
     height: auto;
+    @include clickable;
 
     &:not(:disabled) {
       cursor: pointer;

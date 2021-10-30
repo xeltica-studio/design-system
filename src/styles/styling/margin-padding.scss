@@ -1,6 +1,8 @@
-.ma-auto {
-  margin: auto !important;
-}
+.ma-auto { margin: auto !important; }
+.ml-auto { margin-left: auto !important; }
+.mr-auto { margin-right: auto !important; }
+.mt-auto { margin-top: auto !important; }
+.mb-auto { margin-bottom: auto !important; }
 
 .mx-auto {
   margin-left: auto !important;
@@ -11,9 +13,11 @@
   margin-bottom: auto !important;
 }
 
-.pa-auto {
-  padding: auto !important;
-}
+.pa-auto { padding: auto !important; }
+.pl-auto { padding-left: auto !important; }
+.pr-auto { padding-right: auto !important; }
+.pt-auto { padding-top: auto !important; }
+.pb-auto { padding-bottom: auto !important; }
 
 .px-auto {
   padding-left: auto !important;

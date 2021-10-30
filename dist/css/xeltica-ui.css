@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * XelticaUI 1.0.0-alpha.7
+ * XelticaUI 1.0.0-alpha.8
  * (C)2021 Xeltica
  * Licensed under MIT (https://github.com/xeltica/ui/tree/master/LICENSE)
  */
@@ -212,7 +212,6 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: 0.5rem;
 }
 
 button {
@@ -391,26 +390,30 @@ button {
   }
 }
 
-.clickable {
+.clickable:not(:disabled) {
   transition: transform 0.2s ease;
   transform-origin: center;
   cursor: pointer;
 }
-.clickable:active {
-  transform: var(--clickable-active-transform);
-}
-.clickable:hover, .clickable:active {
+.clickable:not(:disabled):hover {
+  transform: var(--clickable-hover-transform);
   z-index: 9999;
 }
-.clickable.text {
+.clickable:not(:disabled):active {
+  transform: var(--clickable-active-transform);
+  z-index: 9999;
+}
+.clickable.text:not(:disabled) {
   transition: transform 0.2s ease;
   transform-origin: center;
   cursor: pointer;
 }
-.clickable.text:active {
-  transform: var(--clickable-active-transform);
+.clickable.text:not(:disabled):hover {
+  transform: var(--clickable-hover-transform);
+  z-index: 9999;
 }
-.clickable.text:hover, .clickable.text:active {
+.clickable.text:not(:disabled):active {
+  transform: var(--clickable-active-transform);
   z-index: 9999;
 }
 
@@ -420,7 +423,8 @@ body {
   --container-padding: 32px;
   --container-padding-phone: 16px;
   --clickable-shadow: 0 0 1rem rgba(0, 4px, 0, 0.4);
-  --clickable-active-transform: scale(0.95) translateY(2px);
+  --clickable-active-transform: translateY(4px);
+  --clickable-hover-transform: translateY(-2px);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --input-padding: 4px 8px;
   --red: #e23731;
@@ -510,6 +514,8 @@ body {
   --link: var(--primary);
   --hover: rgba(0, 0, 0, 0.03);
   --panel: var(--white);
+  --panel-hover: var(--gray-1);
+  --panel-active: var(--gray-2);
   --tone-0: var(--white);
   --tone-1: var(--gray-1);
   --tone-2: var(--gray-2);
@@ -537,7 +543,9 @@ body.dark {
   --bg: var(--gray-12);
   --fg: var(--gray-2);
   --hover: rgba(255, 255, 255, 0.06);
-  --panel: var(--black);
+  --panel: var(--gray-11);
+  --panel-hover: var(--gray-10);
+  --panel-active: var(--black);
   --tone-0: var(--black);
   --tone-1: var(--gray-12);
   --tone-2: var(--gray-11);
@@ -1264,6 +1272,10 @@ body.dark {
   color: var(--warn-fg) !important;
 }
 
+.bg-panel {
+  background-color: var(--panel);
+}
+
 .fluid {
   max-width: 100%;
 }
@@ -1273,6 +1285,22 @@ body.dark {
 
 .ma-auto {
   margin: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto, .list-form > .item > .body {
+  margin-right: auto !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
 }
 
 .mx-auto {
@@ -1287,6 +1315,22 @@ body.dark {
 
 .pa-auto {
   padding: auto !important;
+}
+
+.pl-auto {
+  padding-left: auto !important;
+}
+
+.pr-auto {
+  padding-right: auto !important;
+}
+
+.pt-auto {
+  padding-top: auto !important;
+}
+
+.pb-auto {
+  padding-bottom: auto !important;
 }
 
 .px-auto {
@@ -1371,7 +1415,7 @@ body.dark {
   margin-right: 8px !important;
 }
 
-.mt-1 {
+.mt-1, .list-form > .item + .item {
   margin-top: 8px !important;
 }
 
@@ -1427,7 +1471,7 @@ body.dark {
   margin-left: 16px !important;
 }
 
-.mr-2 {
+.mr-2, .list-form > .item > .icon {
   margin-right: 16px !important;
 }
 
@@ -1659,7 +1703,7 @@ body.dark {
   padding-bottom: 40px !important;
 }
 
-.shadow-1 {
+.shadow-1, .list-form > .item {
   box-shadow: 0 2px 4px var(--shadow-color);
 }
 .shadow-1-t {
@@ -1673,7 +1717,7 @@ body.dark {
   text-shadow: 0 2px 8px var(--shadow-color);
 }
 
-.shadow-3 {
+.shadow-3, .list-form > a.item:not(:disabled):hover, .list-form > a.item:not(:disabled):focus, .list-form button.item:not(:disabled):hover, .list-form button.item:not(:disabled):focus {
   box-shadow: 0 2px 12px var(--shadow-color);
 }
 .shadow-3-t {
@@ -3223,68 +3267,67 @@ ol.hstack {
   }
 }
 
-.card {
+.card, .list-form > .item {
   border-radius: var(--radius);
   background: var(--panel);
   overflow: hidden;
 }
-.card > figure {
+.card > figure, .list-form > .item > figure {
   margin: 0;
 }
-.card > figure.bottom-shadow {
+.card > figure.bottom-shadow, .list-form > .item > figure.bottom-shadow {
   position: relative;
 }
-.card > figure.bottom-shadow::before {
+.card > figure.bottom-shadow::before, .list-form > .item > figure.bottom-shadow::before {
   display: block;
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
 }
-.card > header,
-.card > footer {
+.card > header, .list-form > .item > header,
+.card > footer,
+.list-form > .item > footer {
   padding: calc(var(--margin) / 2) var(--margin);
 }
-.card > header {
+.card > header, .list-form > .item > header {
   border-bottom: 1px solid var(--tone-1);
 }
-.card > footer {
+.card > footer, .list-form > .item > footer {
   border-top: 1px solid var(--tone-1);
 }
-.card > .body {
+.card > .body, .list-form > .item > .body {
   padding: var(--margin);
 }
-.card > .body > h1 {
+.card > .body > h1, .list-form > .item > .body > h1 {
   font-weight: normal;
   font-size: 1.5rem;
   margin-bottom: 0;
 }
-.card > .body > h2 {
+.card > .body > h2, .list-form > .item > .body > h2 {
   font-weight: normal;
   font-size: 1rem;
   color: var(--tone-8);
   margin-bottom: 0;
 }
-.card > .body > *:last-child {
+.card > .body > *:last-child, .list-form > .item > .body > *:last-child {
   margin-bottom: 0;
 }
-.card.acrylic {
+.card.acrylic, .list-form > .acrylic.item {
   background: rgba(255, 255, 255, 0.7);
   border: none;
   -webkit-backdrop-filter: blur(8px) brightness(120%);
           backdrop-filter: blur(8px) brightness(120%);
 }
-.dark .card {
-  background: rgba(0, 0, 0, 0.7);
-}
-.dark .card > header,
-.dark .card > footer {
+.dark .card > header, .dark .list-form > .item > header,
+.dark .card > footer,
+.dark .list-form > .item > footer {
   background: var(--tone-2);
 }
-.dark .card.acrylic {
+.dark .card.acrylic, .dark .list-form > .acrylic.item {
   background: var(--black-50);
 }
-.card.ghost {
+.card.ghost, .list-form > .ghost.item {
   background: transparent;
 }
 
@@ -3542,6 +3585,72 @@ ol.hstack {
   color: var(--warn) !important;
 }
 
+.list-form {
+  display: flex;
+  flex-direction: column;
+}
+.list-form > .item {
+  min-height: 80px;
+  display: flex;
+  padding: var(--margin);
+  transition: all 0.05s ease;
+  align-items: center;
+  text-align: left;
+}
+.list-form > .item > .body {
+  padding: 0;
+}
+.list-form > .item > .body > h1, .list-form > .item > .body .header {
+  font-size: 1rem;
+  color: inherit;
+}
+.list-form > .item > .body > .desc {
+  font-size: 1rem;
+  color: inherit;
+  opacity: 0.6;
+}
+.list-form > .item > .icon {
+  font-size: 20px;
+}
+.list-form > .item:disabled {
+  color: var(--dimmed);
+}
+.list-form > a.item, .list-form button.item {
+  color: inherit;
+  text-decoration: none;
+}
+.list-form > a.item:not(:disabled), .list-form button.item:not(:disabled) {
+  transition: transform 0.2s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+.list-form > a.item:not(:disabled):hover, .list-form button.item:not(:disabled):hover {
+  transform: var(--clickable-hover-transform);
+  z-index: 9999;
+}
+.list-form > a.item:not(:disabled):active, .list-form button.item:not(:disabled):active {
+  transform: var(--clickable-active-transform);
+  z-index: 9999;
+}
+.list-form > a.item:not(:disabled):hover, .list-form > a.item:not(:disabled):focus, .list-form button.item:not(:disabled):hover, .list-form button.item:not(:disabled):focus {
+  background: var(--panel-hover);
+}
+.list-form > a.item:not(:disabled):active, .list-form button.item:not(:disabled):active {
+  background: var(--panel-active);
+  filter: brightness(0.96);
+}
+.list-form > a.item:not(.collapse)::after, .list-form .item.next:not(.collapse)::after {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1px solid var(--tone-6);
+  border-left: 0;
+  border-bottom: 0;
+  margin-left: var(--margin);
+  box-sizing: border-box;
+  transform: translateX(-25%) rotate(45deg);
+}
+
 button.btn, .drawer-container > .drawer > header > button.close,
 a.btn,
 .drawer-container > .drawer > header > a.close {
@@ -3566,23 +3675,23 @@ a.btn::before,
   border-radius: var(--radius);
   transition: box-shadow 0.2s ease;
 }
-button.btn:not(:disabled):not(.link), .drawer-container > .drawer > header > button.close:not(:disabled):not(.link),
-a.btn:not(:disabled):not(.link),
-.drawer-container > .drawer > header > a.close:not(:disabled):not(.link) {
+button.btn:not(.link):not(:disabled), .drawer-container > .drawer > header > button.close:not(.link):not(:disabled),
+a.btn:not(.link):not(:disabled),
+.drawer-container > .drawer > header > a.close:not(.link):not(:disabled) {
   transition: transform 0.2s ease;
   transform-origin: center;
   cursor: pointer;
 }
-button.btn:not(:disabled):not(.link):active, .drawer-container > .drawer > header > button.close:not(:disabled):not(.link):active,
-a.btn:not(:disabled):not(.link):active,
-.drawer-container > .drawer > header > a.close:not(:disabled):not(.link):active {
-  transform: var(--clickable-active-transform);
+button.btn:not(.link):not(:disabled):hover, .drawer-container > .drawer > header > button.close:not(.link):not(:disabled):hover,
+a.btn:not(.link):not(:disabled):hover,
+.drawer-container > .drawer > header > a.close:not(.link):not(:disabled):hover {
+  transform: var(--clickable-hover-transform);
+  z-index: 9999;
 }
-button.btn:not(:disabled):not(.link):hover, .drawer-container > .drawer > header > button.close:not(:disabled):not(.link):hover, button.btn:not(:disabled):not(.link):active, .drawer-container > .drawer > header > button.close:not(:disabled):not(.link):active,
-a.btn:not(:disabled):not(.link):hover,
-.drawer-container > .drawer > header > a.close:not(:disabled):not(.link):hover,
-a.btn:not(:disabled):not(.link):active,
-.drawer-container > .drawer > header > a.close:not(:disabled):not(.link):active {
+button.btn:not(.link):not(:disabled):active, .drawer-container > .drawer > header > button.close:not(.link):not(:disabled):active,
+a.btn:not(.link):not(:disabled):active,
+.drawer-container > .drawer > header > a.close:not(.link):not(:disabled):active {
+  transform: var(--clickable-active-transform);
   z-index: 9999;
 }
 button.btn:focus::before, .drawer-container > .drawer > header > button.close:focus::before,
@@ -3819,6 +3928,28 @@ input.input-field[type=file]:not(:disabled),
 textarea.input-field[type=file]:not(:disabled),
 select.input-field[type=file]:not(:disabled),
 label.input-field > input[type=file]:not(:disabled) {
+  transition: transform 0.2s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+input.input-field[type=file]:not(:disabled):hover,
+textarea.input-field[type=file]:not(:disabled):hover,
+select.input-field[type=file]:not(:disabled):hover,
+label.input-field > input[type=file]:not(:disabled):hover {
+  transform: var(--clickable-hover-transform);
+  z-index: 9999;
+}
+input.input-field[type=file]:not(:disabled):active,
+textarea.input-field[type=file]:not(:disabled):active,
+select.input-field[type=file]:not(:disabled):active,
+label.input-field > input[type=file]:not(:disabled):active {
+  transform: var(--clickable-active-transform);
+  z-index: 9999;
+}
+input.input-field[type=file]:not(:disabled),
+textarea.input-field[type=file]:not(:disabled),
+select.input-field[type=file]:not(:disabled),
+label.input-field > input[type=file]:not(:disabled) {
   cursor: pointer;
 }
 input.input-field[type=file]:not(:disabled)::file-selector-button, input.input-field[type=file]:not(:disabled)::-webkit-file-upload-button,
@@ -3873,6 +4004,28 @@ label.input-field > input[type=color] {
   padding: 4px;
   width: 48px;
   height: auto;
+}
+input.input-field[type=color]:not(:disabled),
+textarea.input-field[type=color]:not(:disabled),
+select.input-field[type=color]:not(:disabled),
+label.input-field > input[type=color]:not(:disabled) {
+  transition: transform 0.2s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+input.input-field[type=color]:not(:disabled):hover,
+textarea.input-field[type=color]:not(:disabled):hover,
+select.input-field[type=color]:not(:disabled):hover,
+label.input-field > input[type=color]:not(:disabled):hover {
+  transform: var(--clickable-hover-transform);
+  z-index: 9999;
+}
+input.input-field[type=color]:not(:disabled):active,
+textarea.input-field[type=color]:not(:disabled):active,
+select.input-field[type=color]:not(:disabled):active,
+label.input-field > input[type=color]:not(:disabled):active {
+  transform: var(--clickable-active-transform);
+  z-index: 9999;
 }
 input.input-field[type=color]:not(:disabled),
 textarea.input-field[type=color]:not(:disabled),
@@ -4137,6 +4290,19 @@ label.input-switch input:disabled + .switch + span {
   color: var(--fg);
   padding: calc(var(--margin) / 2) var(--margin);
   transition: background 0.2s ease;
+}
+.tab .item:not(:disabled) {
+  transition: transform 0.2s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+.tab .item:not(:disabled):hover {
+  transform: var(--clickable-hover-transform);
+  z-index: 9999;
+}
+.tab .item:not(:disabled):active {
+  transform: var(--clickable-active-transform);
+  z-index: 9999;
 }
 .tab .item.active {
   color: var(--primary);
