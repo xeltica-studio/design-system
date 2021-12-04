@@ -1,6 +1,6 @@
 {
   "name": "xeltica-ui",
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0-alpha.9",
   "description": "CSS Framework for Xeltica Design System",
   "main": "dist/xeltica-ui.js",
   "style": "dist/css/xeltica-ui.min.css",
