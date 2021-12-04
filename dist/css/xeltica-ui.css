@@ -1857,6 +1857,10 @@ body {
 h1, h2 {
   border-bottom: 1px solid var(--tone-3);
 }
+h1.flat, .drawer-container > .drawer > header > h1.close, h2.flat, .drawer-container > .drawer > header > h2.close {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
+}
 
 h1 {
   border-bottom-width: 2px;
@@ -1867,6 +1871,8 @@ h1 {
   font-weight: var(--default-font-weight);
 }
 h1.display {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 4.2rem;
 }
 @media (max-width: 600px) {
@@ -1880,6 +1886,8 @@ h2 {
   font-weight: var(--default-font-weight);
 }
 h2.display {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 3.2rem;
 }
 @media (max-width: 600px) {
@@ -1893,6 +1901,8 @@ h3 {
   font-weight: var(--default-font-weight);
 }
 h3.display {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 2.8rem;
 }
 @media (max-width: 600px) {
@@ -1906,6 +1916,8 @@ h4 {
   font-weight: var(--default-font-weight);
 }
 h4.display {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 2.6rem;
 }
 @media (max-width: 600px) {
@@ -1919,6 +1931,8 @@ h5 {
   font-weight: var(--default-font-weight);
 }
 h5.display {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 2.4rem;
 }
 @media (max-width: 600px) {
@@ -1932,6 +1946,8 @@ h6 {
   font-weight: var(--default-font-weight);
 }
 h6.display {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 2.2rem;
 }
 @media (max-width: 600px) {
@@ -1941,6 +1957,8 @@ h6.display {
 }
 
 small.subtitle-1 {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 1.4rem;
   font-weight: 200;
   color: var(--tone-8);
@@ -1950,6 +1968,8 @@ small.subtitle-1.display {
 }
 
 small.subtitle-2 {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 1.0666666667rem;
   font-weight: 200;
   color: var(--tone-8);
@@ -1959,6 +1979,8 @@ small.subtitle-2.display {
 }
 
 small.subtitle-3 {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 0.9333333333rem;
   font-weight: 200;
   color: var(--tone-8);
@@ -1968,6 +1990,8 @@ small.subtitle-3.display {
 }
 
 small.subtitle-4 {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 0.8666666667rem;
   font-weight: 200;
   color: var(--tone-8);
@@ -1977,6 +2001,8 @@ small.subtitle-4.display {
 }
 
 small.subtitle-5 {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 0.8rem;
   font-weight: 200;
   color: var(--tone-8);
@@ -1986,6 +2012,8 @@ small.subtitle-5.display {
 }
 
 small.subtitle-6 {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 0.7333333333rem;
   font-weight: 200;
   color: var(--tone-8);

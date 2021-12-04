@@ -17,6 +17,9 @@ body {
 
 h1, h2 {
   border-bottom: 1px solid var(--tone-3);
+  &.flat {
+    @include flatHeading;
+  }
 }
 
 h1 {
@@ -31,6 +34,7 @@ $headingSize: 2.1rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
     font-size: $s;
     font-weight: var(--default-font-weight);
     &.display {
+      @include flatHeading;
       font-size: #{$s * 2};
       @include le(phone) {
         font-size: #{$s * 1.2};
@@ -42,6 +46,7 @@ $headingSize: 2.1rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
 @for $i from 1 through 6 {
   $s: list.nth($headingSize, $i);
   small.subtitle-#{$i} {
+    @include flatHeading;
     font-size: #{math.div($s, 3) * 2};
     font-weight: 200;
     color: var(--tone-8);
