@@ -6,4 +6,109 @@ block main
 
   h2 角丸
   p <code>rounded</code>クラスを指定すると、強制的に角を付与できます。
-  .bg-red.rounded(style="width: 64px; height: 64px")
+  .vstack
+    .hstack.f-middle
+      code .rounded
+      .bg-red.rounded(style="width: 64px; height: 64px")
+    .hstack.f-middle
+      code .rounded-t
+      .bg-red.rounded-t(style="width: 64px; height: 64px")
+    .hstack.f-middle
+      code .rounded-b
+      .bg-red.rounded-b(style="width: 64px; height: 64px")
+    .hstack.f-middle
+      code .rounded-l
+      .bg-red.rounded-l(style="width: 64px; height: 64px")
+    .hstack.f-middle
+      code .rounded-r
+      .bg-red.rounded-r(style="width: 64px; height: 64px")
+  h2 角丸除去
+  p <code>sharp</code>クラスを指定すると、角丸を取り除きます。
+  .vstack
+    .hstack.f-middle
+      code .sharp
+      .card.shadow-2.sharp(style="width: 64px; height: 64px")
+    .hstack.f-middle
+      code .sharp-t
+      .card.shadow-2.sharp-t(style="width: 64px; height: 64px")
+    .hstack.f-middle
+      code .sharp-b
+      .card.shadow-2.sharp-b(style="width: 64px; height: 64px")
+    .hstack.f-middle
+      code .sharp-l
+      .card.shadow-2.sharp-l(style="width: 64px; height: 64px")
+    .hstack.f-middle
+      code .sharp-r
+      .card.shadow-2.sharp-r(style="width: 64px; height: 64px")
+  h2 要素選択の制御
+  .vstack
+    .hstack.f-middle
+      code .select-none
+      .select-none この文字は選択できない
+    .hstack.f-middle
+      code .select-all
+      .select-all クリックすると全て選択
+    .hstack.f-middle
+      code .no-pointer-events
+      .no-pointer-events ポインターイベントを拒否
+  h2 要素の変更
+  table.table
+    thead
+      tr
+        th クラス
+        th 説明
+    tbody
+      tr
+        td select-none
+        td 中身を選択禁止にする
+      tr
+        td select-all
+        td クリックで全文を選択する
+      tr
+        td no-pointer-events
+        td 中身のポインターイベントを発生しないようにする
+      tr
+        td block
+        td ブロック要素
+      tr
+        td inline
+        td インライン要素
+      tr
+        td iblock
+        td インラインブロック要素
+      tr
+        td flex
+        td Flex Box要素
+      tr
+        td iflex
+        td インラインFlex Box要素
+      tr
+        td f-left
+        td Flex Boxを左並べにする
+      tr
+        td f-center
+        td Flex Boxを横方向に中央揃えにする
+      tr
+        td f-right
+        td Flex Boxを右並べにする
+      tr
+        td f-hstretch
+        td Flex Boxを横方向に均等にする
+      tr
+        td f-top
+        td Flex Boxを上付きにする
+      tr
+        td f-middle
+        td Flex Boxを縦方向に中央揃えにする
+      tr
+        td f-bottom
+        td Flex Boxを下付きにする
+      tr
+        td f-vstretch
+        td Flex Boxを縦方向に均等にする
+      tr
+        td f-wrap
+        td Flex Boxを折り返すようにする
+      tr
+        td f-wrap-reverse
+        td Flex Boxを逆方向に折り返すようにする

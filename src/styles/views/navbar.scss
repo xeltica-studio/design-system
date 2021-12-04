@@ -13,6 +13,7 @@
     z-index: 9000;
   }
   .navbar-title {
+    @include flatHeading;
     font-size: 2rem;
     margin: 0;
     line-height: 1;

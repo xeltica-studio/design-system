@@ -1,17 +1,21 @@
 .hero {
   font-size: 18px;
   > h1 {
+    @include flatHeading;
     font-size: 4em;
   }
   > h2 {
+    @include flatHeading;
     font-size: 2em;
   }
   @include le(phone) {
     font-size: 16px;
     > h1 {
+      @include flatHeading;
       font-size: 3em;
     }
     > h2 {
+      @include flatHeading;
       font-size: 2em;
     }
   }

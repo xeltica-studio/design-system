@@ -13,9 +13,7 @@ body {
 
   --input-padding: 4px 8px;
 
-  @include le(tablet) {
-    --input-padding: 16px;
-  }
+  --default-font-weight: 300;
 
   @each $name, $value in $colors {
     --#{$name}: #{$value};

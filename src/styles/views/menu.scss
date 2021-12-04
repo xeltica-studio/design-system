@@ -32,6 +32,7 @@
   h1,
   .header,
   .footer {
+    @include flatHeading;
     font-size: 0.7rem;
     color: var(--tone-7);
     margin: 0;

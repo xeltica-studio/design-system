@@ -1,27 +1,35 @@
 @use "sass:list";
 @use "sass:math";
 
+.text-size-huge { font-size: 36px; }
+.text-size-larger { font-size: 24px; }
+.text-size-large { font-size: 20px; }
+.text-size-normal { font-size: 16px; }
+.text-size-small { font-size: 14px; }
+.text-size-smaller { font-size: 12px; }
+.text-size-tiny { font-size: 10px; }
+
 body {
   background: var(--bg);
   color: var(--fg);
+  font-weight: var(--default-font-weight);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
+h1, h2 {
+  border-bottom: 1px solid var(--tone-3);
 }
 
-$headingSize: 2rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
+h1 {
+  border-bottom-width: 2px;
+}
+
+$headingSize: 2.1rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
 
 @for $i from 1 through 6 {
   $s: list.nth($headingSize, $i);
   h#{$i} {
     font-size: $s;
-    font-weight: 200;
+    font-weight: var(--default-font-weight);
     &.display {
       font-size: #{$s * 2};
       @include le(phone) {

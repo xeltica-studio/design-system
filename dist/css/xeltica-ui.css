@@ -41,7 +41,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-family: "Hiragino Sans", "メイリオ", "Meiryo", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -427,6 +427,7 @@ body {
   --clickable-hover-transform: translateY(-2px);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --input-padding: 4px 8px;
+  --default-font-weight: 300;
   --red: #e23731;
   --red-d: #44110f;
   --red-l: #f6c3c1;
@@ -534,11 +535,6 @@ body {
   --code-fg: #8b3a41;
   --code-bg: #ffe4e6;
 }
-@media (max-width: 800px) {
-  body {
-    --input-padding: 16px;
-  }
-}
 body.dark {
   --bg: var(--gray-12);
   --fg: var(--gray-2);
@@ -566,87 +562,123 @@ body.dark {
 }
 
 .fluid {
-  width: 100%;
+  width: 100% !important;
 }
 
 .sharp {
-  border-radius: 0;
+  border-radius: 0 !important;
 }
-
-.select-none {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+.sharp-t {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
 }
-
-.select-all {
-  -webkit-user-select: all;
-     -moz-user-select: all;
-          user-select: all;
+.sharp-b {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
-
-.no-pointer-events {
-  pointer-events: none;
+.sharp-l {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.sharp-r {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 .rounded {
-  border-radius: var(--radius);
+  border-radius: var(--radius) !important;
+}
+.rounded-t {
+  border-top-left-radius: var(--radius) !important;
+  border-top-right-radius: var(--radius) !important;
+}
+.rounded-b {
+  border-bottom-left-radius: var(--radius) !important;
+  border-bottom-right-radius: var(--radius) !important;
+}
+.rounded-l {
+  border-top-left-radius: var(--radius) !important;
+  border-bottom-left-radius: var(--radius) !important;
+}
+.rounded-r {
+  border-top-right-radius: var(--radius) !important;
+  border-bottom-right-radius: var(--radius) !important;
+}
+
+.select-none {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+
+.select-all {
+  -webkit-user-select: all !important;
+     -moz-user-select: all !important;
+          user-select: all !important;
+}
+
+.no-pointer-events {
+  pointer-events: none !important;
 }
 
 .block {
-  display: block;
+  display: block !important;
 }
 
 .inline {
-  display: inline;
+  display: inline !important;
+}
+
+.iblock {
+  display: inline-block !important;
 }
 
 .flex {
-  display: flex;
+  display: flex !important;
 }
 
 .iflex {
-  display: inline-flex;
+  display: inline-flex !important;
 }
 
 .f-left {
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 
 .f-center {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .f-right {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .f-hstretch {
-  justify-content: stretch;
+  justify-content: stretch !important;
 }
 
 .f-top {
-  align-items: flex-start;
+  align-items: flex-start !important;
 }
 
 .f-middle {
-  align-items: center;
+  align-items: center !important;
 }
 
 .f-bottom {
-  align-items: flex-end;
+  align-items: flex-end !important;
 }
 
 .f-vstretch {
-  align-items: stretch;
+  align-items: stretch !important;
 }
 
 .f-wrap {
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
 }
 
 .f-wrap-reverse {
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse !important;
 }
 
 .text-red {
@@ -1788,36 +1820,64 @@ body.dark {
   overflow: hidden;
 }
 
+.text-size-huge {
+  font-size: 36px;
+}
+
+.text-size-larger {
+  font-size: 24px;
+}
+
+.text-size-large {
+  font-size: 20px;
+}
+
+.text-size-normal {
+  font-size: 16px;
+}
+
+.text-size-small {
+  font-size: 14px;
+}
+
+.text-size-smaller {
+  font-size: 12px;
+}
+
+.text-size-tiny {
+  font-size: 10px;
+}
+
 body {
   background: var(--bg);
   color: var(--fg);
+  font-weight: var(--default-font-weight);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
+h1, h2 {
+  border-bottom: 1px solid var(--tone-3);
 }
 
 h1 {
-  font-size: 2rem;
-  font-weight: 200;
+  border-bottom-width: 2px;
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: var(--default-font-weight);
 }
 h1.display {
-  font-size: 4rem;
+  font-size: 4.2rem;
 }
 @media (max-width: 600px) {
   h1.display {
-    font-size: 2.4rem;
+    font-size: 2.52rem;
   }
 }
 
 h2 {
   font-size: 1.6rem;
-  font-weight: 200;
+  font-weight: var(--default-font-weight);
 }
 h2.display {
   font-size: 3.2rem;
@@ -1830,7 +1890,7 @@ h2.display {
 
 h3 {
   font-size: 1.4rem;
-  font-weight: 200;
+  font-weight: var(--default-font-weight);
 }
 h3.display {
   font-size: 2.8rem;
@@ -1843,7 +1903,7 @@ h3.display {
 
 h4 {
   font-size: 1.3rem;
-  font-weight: 200;
+  font-weight: var(--default-font-weight);
 }
 h4.display {
   font-size: 2.6rem;
@@ -1856,7 +1916,7 @@ h4.display {
 
 h5 {
   font-size: 1.2rem;
-  font-weight: 200;
+  font-weight: var(--default-font-weight);
 }
 h5.display {
   font-size: 2.4rem;
@@ -1869,7 +1929,7 @@ h5.display {
 
 h6 {
   font-size: 1.1rem;
-  font-weight: 200;
+  font-weight: var(--default-font-weight);
 }
 h6.display {
   font-size: 2.2rem;
@@ -1881,12 +1941,12 @@ h6.display {
 }
 
 small.subtitle-1 {
-  font-size: 1.3333333333rem;
+  font-size: 1.4rem;
   font-weight: 200;
   color: var(--tone-8);
 }
 small.subtitle-1.display {
-  font-size: 4rem;
+  font-size: 4.2rem;
 }
 
 small.subtitle-2 {
@@ -3300,11 +3360,15 @@ ol.hstack {
   padding: var(--margin);
 }
 .card > .body > h1, .list-form > .item > .body > h1 {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-weight: normal;
   font-size: 1.5rem;
   margin-bottom: 0;
 }
 .card > .body > h2, .list-form > .item > .body > h2 {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-weight: normal;
   font-size: 1rem;
   color: var(--tone-8);
@@ -3338,6 +3402,8 @@ ol.hstack {
 .menu h1,
 .menu .header,
 .menu .footer {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 0.7rem;
   color: var(--tone-7);
   margin: 0;
@@ -3440,6 +3506,8 @@ ol.hstack {
   z-index: 9000;
 }
 .navbar .navbar-title {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 2rem;
   margin: 0;
   line-height: 1;
@@ -3455,9 +3523,13 @@ ol.hstack {
   font-size: 18px;
 }
 .hero > h1 {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 4em;
 }
 .hero > h2 {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
   font-size: 2em;
 }
 @media (max-width: 600px) {
@@ -3465,9 +3537,13 @@ ol.hstack {
     font-size: 16px;
   }
   .hero > h1 {
+    font-weight: var(--default-font-weight);
+    border-bottom: 0;
     font-size: 3em;
   }
   .hero > h2 {
+    font-weight: var(--default-font-weight);
+    border-bottom: 0;
     font-size: 2em;
   }
 }

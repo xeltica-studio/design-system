@@ -1,0 +1,4 @@
+@mixin flatHeading {
+  font-weight: var(--default-font-weight);
+  border-bottom: 0;
+}

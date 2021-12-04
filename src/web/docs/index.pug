@@ -5,11 +5,9 @@ block title
 
 block main
   h1 導入
-  p さあ、始めましょう。XelticaUI は、ほぼすべてのXeltica製ウェブアプリケーションでの使用を前提に開発された、汎用的なCSS UIフレームワークです。
-  p 爽やかかつ力強いウェブサイト・ウェブアプリを開発するために、今すぐお好きな方法でXelticaUIをインストールし、使ってみましょう。
-  h2 CDN
-  p 1行のHTMLタグを追加するだけで、XelticaUIを使い始めることができます。
-  pre: code.select-all COMING SOON
+  p XelticaUI は、Xeltica Design System を実装した、 Web アプリケーション向けの CSS フレームワークです。
+  p 一般的な CSS フレームワークと異なり、汎用性よりも一貫したデザインの実装を最優先としています。
+  p このページでは、XelticaUI ライブラリの導入方法を説明しています。
   h2 npm
   p NPMまたはYarnを用いれば、すぐにXelticaUIをアプリケーションに追加できます。
   p: b Yarn
@@ -42,3 +40,8 @@ block main
           <!-- 必要に応じて、ここにカスタムスクリプトを挿入しましょう -->
         </body>
       </html>
+  h2 Webpack
+  p Webpackなどのバンドルツールを用いることで、Web フロントエンドアプリからもお使いいただけます。
+  pre: code
+    :escape-html
+      import 'xeltica-ui/dist/css/xeltica-ui.min.css';

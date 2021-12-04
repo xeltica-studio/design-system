@@ -1,111 +1,115 @@
 .fluid {
-  width: 100%;
+  width: 100% !important;
 }
 
 .sharp {
-  border-radius: 0;
+  border-radius: 0 !important;
   &-t {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
   }
   &-b {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
   }
   &-l {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
   }
   &-r {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
   }
 }
 
 .rounded {
-  border-radius: var(--radius);
+  border-radius: var(--radius) !important;
   &-t {
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
+    border-top-left-radius: var(--radius) !important;
+    border-top-right-radius: var(--radius) !important;
   }
   &-b {
-    border-bottom-left-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
+    border-bottom-left-radius: var(--radius) !important;
+    border-bottom-right-radius: var(--radius) !important;
   }
   &-l {
-    border-top-left-radius: var(--radius);
-    border-bottom-left-radius: var(--radius);
+    border-top-left-radius: var(--radius) !important;
+    border-bottom-left-radius: var(--radius) !important;
   }
   &-r {
-    border-top-right-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
+    border-top-right-radius: var(--radius) !important;
+    border-bottom-right-radius: var(--radius) !important;
   }
 }
 
 .select-none {
-  user-select: none;
+  user-select: none !important;
 }
 
 .select-all {
-  user-select: all;
+  user-select: all !important;
 }
 
 .no-pointer-events {
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 .block {
-  display: block;
+  display: block !important;
 }
 
 .inline {
-  display: inline;
+  display: inline !important;
+}
+
+.iblock {
+  display: inline-block !important;
 }
 
 .flex {
-  display: flex;
+  display: flex !important;
 }
 
 .iflex {
-  display: inline-flex;
+  display: inline-flex !important;
 }
 
 .f-left {
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 
 .f-center {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .f-right {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .f-hstretch {
-  justify-content: stretch;
+  justify-content: stretch !important;
 }
 
 .f-top {
-  align-items: flex-start;
+  align-items: flex-start !important;
 }
 
 .f-middle {
-  align-items: center;
+  align-items: center !important;
 }
 
 .f-bottom {
-  align-items: flex-end;
+  align-items: flex-end !important;
 }
 
 .f-vstretch {
-  align-items: stretch;
+  align-items: stretch !important;
 }
 
 .f-wrap {
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
 }
 
 .f-wrap-reverse {
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse !important;
 }
