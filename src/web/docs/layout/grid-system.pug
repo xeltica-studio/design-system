@@ -11,12 +11,13 @@ block main
   p <a href="https://getbootstrap.jp/docs/5.0/layout/grid/">Bootstrapのグリッドシステム</a>に近いものを提供します。
   h2 例
   div
-    .row
-      - for (let i = 1; i <= 3 ; i++)
-        .col-4: .card.ma-1.pa-2 #{i}/3
-    .row
-      - for (let i = 1; i <= 4 ; i++)
-        .col-6: .card.ma-1.pa-2 #{i}/4
+    .grid-container
+      .row
+        - for (let i = 1; i <= 3 ; i++)
+          .col-4: .card.pa-2 #{i}/3
+      .row
+        - for (let i = 1; i <= 4 ; i++)
+          .col-6: .card.pa-2 #{i}/4
   pre: code
     :escape-html
       <div class="row">
