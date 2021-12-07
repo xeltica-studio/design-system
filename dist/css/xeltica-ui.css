@@ -1821,31 +1821,31 @@ body.dark {
 }
 
 .text-size-huge {
-  font-size: 36px;
+  font-size: 36px !important;
 }
 
 .text-size-larger {
-  font-size: 24px;
+  font-size: 24px !important;
 }
 
 .text-size-large {
-  font-size: 20px;
+  font-size: 20px !important;
 }
 
 .text-size-normal {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 .text-size-small {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 .text-size-smaller {
-  font-size: 12px;
+  font-size: 12px !important;
 }
 
 .text-size-tiny {
-  font-size: 10px;
+  font-size: 10px !important;
 }
 
 body {

@@ -1,13 +1,13 @@
 @use "sass:list";
 @use "sass:math";
 
-.text-size-huge { font-size: 36px; }
-.text-size-larger { font-size: 24px; }
-.text-size-large { font-size: 20px; }
-.text-size-normal { font-size: 16px; }
-.text-size-small { font-size: 14px; }
-.text-size-smaller { font-size: 12px; }
-.text-size-tiny { font-size: 10px; }
+.text-size-huge { font-size: 36px !important; }
+.text-size-larger { font-size: 24px !important; }
+.text-size-large { font-size: 20px !important; }
+.text-size-normal { font-size: 16px !important; }
+.text-size-small { font-size: 14px !important; }
+.text-size-smaller { font-size: 12px !important; }
+.text-size-tiny { font-size: 10px !important; }
 
 body {
   background: var(--bg);
