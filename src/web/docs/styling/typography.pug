@@ -48,27 +48,11 @@ block main
         th 構文
         th 例
     tbody
-      tr
-        td: code &lt;span class="text-size-huge"&gt;&lt;/span&gt;
-        td: span.text-size-huge 巨大
-      tr
-        td: code &lt;span class="text-size-larger"&gt;&lt;/span&gt;
-        td: span.text-size-larger より大きい
-      tr
-        td: code &lt;span class="text-size-large"&gt;&lt;/span&gt;
-        td: span.text-size-large 大きい
-      tr
-        td: code &lt;span class="text-size-normal"&gt;&lt;/span&gt;
-        td: span.text-size-normal 普通
-      tr
-        td: code &lt;span class="text-size-small"&gt;&lt;/span&gt;
-        td: span.text-size-small 小さい
-      tr
-        td: code &lt;span class="text-size-smaller"&gt;&lt;/span&gt;
-        td: span.text-size-smaller より小さい
-      tr
-        td: code &lt;span class="text-size-tiny"&gt;&lt;/span&gt;
-        td: span.text-size-tiny 極小
+      - const sizeList = [ 400, 350, 300, 250, 200, 150, 100, 75, 50 ];
+      each size in sizeList
+        tr
+          td: code &lt;span class="text-size-#{size}"&gt;&lt;/span&gt;
+          td: span(class=`text-size-${size}`) #{size}%
 
   h2 その他
 

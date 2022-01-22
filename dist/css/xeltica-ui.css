@@ -216,6 +216,11 @@ label {
 
 button {
   border-radius: 0;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
 }
 
 input,
@@ -343,17 +348,6 @@ template {
   display: none !important;
 }
 
-/*
- * XelticaUI Initializer
- */
-button {
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none;
-  border: none;
-  background: none;
-}
-
 @media (max-width: 600px) {
   .ge-phone {
     display: none !important;
@@ -427,7 +421,11 @@ body {
   --clickable-hover-transform: translateY(-2px);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --input-padding: 4px 8px;
-  --default-font-weight: 300;
+  --lift-shadow: #0000002a;
+  --lift-light: #ffffffc0;
+  --lift-light2: #ffffff40;
+  --lift-hover: #00000005;
+  --lift-active: #00000010;
   --red: #e23731;
   --red-d: #44110f;
   --red-l: #f6c3c1;
@@ -481,8 +479,8 @@ body {
   --gray-8: #616161;
   --gray-9: #4f4f4f;
   --gray-10: #3b3b3b;
-  --gray-11: #262626;
-  --gray-12: #141414;
+  --gray-11: #2e2e2e;
+  --gray-12: #1f1f1f;
   --white: white;
   --black-50: rgba(0, 0, 0, 0.5);
   --white-50: rgba(255, 255, 255, 0.5);
@@ -511,7 +509,6 @@ body {
   --warn-d: var(--yellow-d);
   --bg: var(--gray-1);
   --fg: var(--gray-11);
-  --bold: var(--tone-13);
   --link: var(--primary);
   --hover: rgba(0, 0, 0, 0.03);
   --panel: var(--white);
@@ -557,6 +554,11 @@ body.dark {
   --tone-12: var(--gray-1);
   --tone-13: var(--white);
   --tone-50: var(--black-50);
+  --lift-shadow: #00000090;
+  --lift-light: #ffffff10;
+  --lift-light2: #ffffff10;
+  --lift-hover: #ffffff05;
+  --lift-active: #ffffff02;
   --code-fg: #ff5362;
   --code-bg: #573535;
 }
@@ -585,7 +587,7 @@ body.dark {
   border-bottom-right-radius: 0 !important;
 }
 
-.rounded {
+.rounded, .lift {
   border-radius: var(--radius) !important;
 }
 .rounded-t {
@@ -603,6 +605,10 @@ body.dark {
 .rounded-r {
   border-top-right-radius: var(--radius) !important;
   border-bottom-right-radius: var(--radius) !important;
+}
+
+.circle {
+  border-radius: 999px !important;
 }
 
 .select-none {
@@ -1308,13 +1314,6 @@ body.dark {
   background-color: var(--panel);
 }
 
-.fluid {
-  max-width: 100%;
-}
-.fluid > img {
-  max-width: 100%;
-}
-
 .ma-auto {
   margin: auto !important;
 }
@@ -1820,58 +1819,82 @@ body.dark {
   overflow: hidden;
 }
 
-.text-size-huge {
-  font-size: 36px !important;
+.text-400 {
+  font-size: 4rem !important;
 }
 
-.text-size-larger {
-  font-size: 24px !important;
+.text-350 {
+  font-size: 3.5rem !important;
 }
 
-.text-size-large {
-  font-size: 20px !important;
+.text-300 {
+  font-size: 3rem !important;
 }
 
-.text-size-normal {
-  font-size: 16px !important;
+.text-250 {
+  font-size: 2.5rem !important;
 }
 
-.text-size-small {
-  font-size: 14px !important;
+.text-200, .text-size-huge {
+  font-size: 2rem !important;
 }
 
-.text-size-smaller {
-  font-size: 12px !important;
+.text-175 {
+  font-size: 1.75rem !important;
 }
 
-.text-size-tiny {
-  font-size: 10px !important;
+.text-150, .text-size-larger {
+  font-size: 1.5rem !important;
+}
+
+.text-125, .text-size-large {
+  font-size: 1.25rem !important;
+}
+
+.text-100, .text-size-normal {
+  font-size: 1rem !important;
+}
+
+.text-75, .text-size-small, .text-size-smaller {
+  font-size: 0.75rem !important;
+}
+
+.text-50, .text-size-tiny {
+  font-size: 0.5rem !important;
+}
+
+.text-normal {
+  font-weight: normal !important;
+}
+
+.text-bold {
+  font-weight: bold !important;
+}
+
+.text-italic {
+  font-style: italic !important;
+}
+
+.text-oblique {
+  font-style: oblique !important;
 }
 
 body {
   background: var(--bg);
   color: var(--fg);
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
 }
 
-h1, h2 {
+.underline {
   border-bottom: 1px solid var(--tone-3);
-}
-h1.flat, .drawer-container > .drawer > header > h1.close, h2.flat, .drawer-container > .drawer > header > h2.close {
-  font-weight: var(--default-font-weight);
-  border-bottom: 0;
-}
-
-h1 {
-  border-bottom-width: 2px;
 }
 
 h1 {
   font-size: 2.1rem;
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
 }
 h1.display {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 4.2rem;
 }
@@ -1883,10 +1906,10 @@ h1.display {
 
 h2 {
   font-size: 1.6rem;
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
 }
 h2.display {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 3.2rem;
 }
@@ -1898,10 +1921,10 @@ h2.display {
 
 h3 {
   font-size: 1.4rem;
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
 }
 h3.display {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 2.8rem;
 }
@@ -1913,10 +1936,10 @@ h3.display {
 
 h4 {
   font-size: 1.3rem;
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
 }
 h4.display {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 2.6rem;
 }
@@ -1928,10 +1951,10 @@ h4.display {
 
 h5 {
   font-size: 1.2rem;
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
 }
 h5.display {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 2.4rem;
 }
@@ -1943,10 +1966,10 @@ h5.display {
 
 h6 {
   font-size: 1.1rem;
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
 }
 h6.display {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 2.2rem;
 }
@@ -1957,10 +1980,10 @@ h6.display {
 }
 
 small.subtitle-1 {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 1.4rem;
-  font-weight: 200;
+  font-weight: normal;
   color: var(--tone-8);
 }
 small.subtitle-1.display {
@@ -1968,10 +1991,10 @@ small.subtitle-1.display {
 }
 
 small.subtitle-2 {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 1.0666666667rem;
-  font-weight: 200;
+  font-weight: normal;
   color: var(--tone-8);
 }
 small.subtitle-2.display {
@@ -1979,10 +2002,10 @@ small.subtitle-2.display {
 }
 
 small.subtitle-3 {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 0.9333333333rem;
-  font-weight: 200;
+  font-weight: normal;
   color: var(--tone-8);
 }
 small.subtitle-3.display {
@@ -1990,10 +2013,10 @@ small.subtitle-3.display {
 }
 
 small.subtitle-4 {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 0.8666666667rem;
-  font-weight: 200;
+  font-weight: normal;
   color: var(--tone-8);
 }
 small.subtitle-4.display {
@@ -2001,10 +2024,10 @@ small.subtitle-4.display {
 }
 
 small.subtitle-5 {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 0.8rem;
-  font-weight: 200;
+  font-weight: normal;
   color: var(--tone-8);
 }
 small.subtitle-5.display {
@@ -2012,18 +2035,14 @@ small.subtitle-5.display {
 }
 
 small.subtitle-6 {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 0.7333333333rem;
-  font-weight: 200;
+  font-weight: normal;
   color: var(--tone-8);
 }
 small.subtitle-6.display {
   font-size: 2.2rem;
-}
-
-a {
-  color: var(--skyblue);
 }
 
 code {
@@ -2052,17 +2071,6 @@ a {
 
 small {
   font-size: 0.7em;
-}
-
-b,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-  color: var(--bold);
 }
 
 .text-left {
@@ -2564,14 +2572,14 @@ ol.hstack {
   padding: var(--margin);
 }
 .card > .body > h1, .list-form > .item > .body > h1 {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-weight: normal;
   font-size: 1.5rem;
   margin-bottom: 0;
 }
 .card > .body > h2, .list-form > .item > .body > h2 {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-weight: normal;
   font-size: 1rem;
@@ -2606,7 +2614,7 @@ ol.hstack {
 .menu h1,
 .menu .header,
 .menu .footer {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 0.7rem;
   color: var(--tone-7);
@@ -2710,7 +2718,7 @@ ol.hstack {
   z-index: 9000;
 }
 .navbar .navbar-title {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 2rem;
   margin: 0;
@@ -2727,12 +2735,12 @@ ol.hstack {
   font-size: 18px;
 }
 .hero > h1 {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 4em;
 }
 .hero > h2 {
-  font-weight: var(--default-font-weight);
+  font-weight: normal;
   border-bottom: 0;
   font-size: 2em;
 }
@@ -2741,12 +2749,12 @@ ol.hstack {
     font-size: 16px;
   }
   .hero > h1 {
-    font-weight: var(--default-font-weight);
+    font-weight: normal;
     border-bottom: 0;
     font-size: 3em;
   }
   .hero > h2 {
-    font-weight: var(--default-font-weight);
+    font-weight: normal;
     border-bottom: 0;
     font-size: 2em;
   }
@@ -3606,4 +3614,103 @@ label.input-switch input:disabled + .switch + span {
   right: 0;
   width: 0;
   background-color: var(--primary);
+}
+
+.lift {
+  --clickable-active-transform: none;
+  --clickable-hover-transform: none;
+  transition: box-shadow 0.2s ease;
+  background: transparent;
+}
+.lift.up {
+  box-shadow: -2px -2px 4px var(--lift-light), 1px 1px 4px var(--lift-shadow), 1px 1px 4px var(--lift-light2) inset, -1px -1px 2px var(--lift-shadow) inset;
+}
+.lift.down {
+  box-shadow: 2px 2px 4px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light) inset;
+}
+
+.btn.lift, .drawer-container > .drawer > header > .lift.close {
+  box-shadow: -2px -2px 4px var(--lift-light), 1px 1px 4px var(--lift-shadow), 1px 1px 4px var(--lift-light2) inset, -1px -1px 2px var(--lift-shadow) inset;
+  border: none;
+  color: var(--fg);
+}
+.btn.lift::before, .drawer-container > .drawer > header > .lift.close::before {
+  transition: background 0.1s ease;
+}
+.btn.lift:focus::before, .drawer-container > .drawer > header > .lift.close:focus::before {
+  box-shadow: none;
+  background: var(--lift-hover);
+}
+.btn.lift:not(.link):not(:disabled), .drawer-container > .drawer > header > .lift.close:not(.link):not(:disabled) {
+  transition: box-shadow 0.2s ease;
+}
+.btn.lift:not(.link):not(:disabled):hover::before, .drawer-container > .drawer > header > .lift.close:not(.link):not(:disabled):hover::before {
+  background: var(--lift-hover);
+}
+.btn.lift:not(.link):not(:disabled):active, .drawer-container > .drawer > header > .lift.close:not(.link):not(:disabled):active {
+  filter: none;
+  box-shadow: 2px 2px 4px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light) inset;
+}
+.btn.lift:not(.link):not(:disabled):active::before, .drawer-container > .drawer > header > .lift.close:not(.link):not(:disabled):active::before {
+  background: var(--lift-active);
+}
+.btn.lift:disabled, .drawer-container > .drawer > header > .lift.close:disabled {
+  background: transparent;
+  color: var(--dimmed);
+  box-shadow: none;
+}
+.btn.lift.primary, .drawer-container > .drawer > header > .lift.primary.close {
+  background: transparent;
+  color: var(--primary);
+}
+.btn.lift.primary:focus::before, .drawer-container > .drawer > header > .lift.primary.close:focus::before {
+  box-shadow: none;
+}
+.btn.lift.primary:disabled, .drawer-container > .drawer > header > .lift.primary.close:disabled {
+  background: transparent;
+  color: var(--dimmed);
+}
+.btn.lift.success, .drawer-container > .drawer > header > .lift.success.close {
+  background: transparent;
+  color: var(--success);
+}
+.btn.lift.success:focus::before, .drawer-container > .drawer > header > .lift.success.close:focus::before {
+  box-shadow: none;
+}
+.btn.lift.success:disabled, .drawer-container > .drawer > header > .lift.success.close:disabled {
+  background: transparent;
+  color: var(--dimmed);
+}
+.btn.lift.info, .drawer-container > .drawer > header > .lift.info.close {
+  background: transparent;
+  color: var(--info);
+}
+.btn.lift.info:focus::before, .drawer-container > .drawer > header > .lift.info.close:focus::before {
+  box-shadow: none;
+}
+.btn.lift.info:disabled, .drawer-container > .drawer > header > .lift.info.close:disabled {
+  background: transparent;
+  color: var(--dimmed);
+}
+.btn.lift.danger, .drawer-container > .drawer > header > .lift.danger.close {
+  background: transparent;
+  color: var(--danger);
+}
+.btn.lift.danger:focus::before, .drawer-container > .drawer > header > .lift.danger.close:focus::before {
+  box-shadow: none;
+}
+.btn.lift.danger:disabled, .drawer-container > .drawer > header > .lift.danger.close:disabled {
+  background: transparent;
+  color: var(--dimmed);
+}
+.btn.lift.warn, .drawer-container > .drawer > header > .lift.warn.close {
+  background: transparent;
+  color: var(--warn);
+}
+.btn.lift.warn:focus::before, .drawer-container > .drawer > header > .lift.warn.close:focus::before {
+  box-shadow: none;
+}
+.btn.lift.warn:disabled, .drawer-container > .drawer > header > .lift.warn.close:disabled {
+  background: transparent;
+  color: var(--dimmed);
 }

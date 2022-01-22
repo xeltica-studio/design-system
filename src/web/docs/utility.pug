@@ -6,7 +6,7 @@ block main
 
   h2 角丸
   p <code>rounded</code>クラスを指定すると、強制的に角を付与できます。
-  .vstack
+  .vstack.mb-2
     .hstack.f-middle
       code .rounded
       .bg-red.rounded(style="width: 64px; height: 64px")
@@ -24,7 +24,7 @@ block main
       .bg-red.rounded-r(style="width: 64px; height: 64px")
   h2 角丸除去
   p <code>sharp</code>クラスを指定すると、角丸を取り除きます。
-  .vstack
+  .vstack.mb-2
     .hstack.f-middle
       code .sharp
       .card.shadow-2.sharp(style="width: 64px; height: 64px")
@@ -40,17 +40,10 @@ block main
     .hstack.f-middle
       code .sharp-r
       .card.shadow-2.sharp-r(style="width: 64px; height: 64px")
-  h2 要素選択の制御
-  .vstack
-    .hstack.f-middle
-      code .select-none
-      .select-none この文字は選択できない
-    .hstack.f-middle
-      code .select-all
-      .select-all クリックすると全て選択
-    .hstack.f-middle
-      code .no-pointer-events
-      .no-pointer-events ポインターイベントを拒否
+  h2 角丸（フル）
+  p <code>circle</code>クラスを指定すると、<code>rounded</code>クラスより丸い角になります。
+  .card.shadow-2.circle.mb-2(style="width: fit-content")
+    .body: h1 Hello, world!
   h2 要素の変更
   table.table
     thead

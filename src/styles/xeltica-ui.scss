@@ -5,18 +5,15 @@
  */
 
 @import "reboot";
-@import "init";
 @import "libs/breakpoints";
 @import "libs/clickable";
 @import "libs/dark";
 @import "libs/flat-heading";
 
-@import "variables-sass";
-@import "variables-css3";
+@import "variables";
 @import "misc";
 
 @import "styling/color";
-@import "styling/image";
 @import "styling/margin-padding";
 @import "styling/shadow";
 @import "styling/table";
@@ -41,3 +38,5 @@
 @import "components/check-radio";
 @import "components/skeleton";
 @import "components/tab";
+
+@import "lift";

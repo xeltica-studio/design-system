@@ -1,3 +1,59 @@
+$margin-level-unit: 8px;
+$fixed-level-unit: $margin-level-unit;
+$shadow-level-unit: 4px;
+
+$colors: (
+  "red": #e23731,
+  "vermilion": #eb6101,
+  "orange": #f08300,
+  "yellow": #e9be00,
+  "lime": #b8d200,
+  "green": #3eb370,
+  "teal": #20c0a0,
+  "cyan": #43fcf3,
+  "skyblue": #00b7ff,
+  "blue": #2571ff,
+  "indigo": #165e83,
+  "purple": #884898,
+  "magenta": #ff55a1,
+  "pink": #ff5c84,
+);
+
+$tones: (
+  "black": black,
+  "gray-1": darken(white, 6%),
+  "gray-2": darken(white, 13%),
+  "gray-3": darken(white, 22%),
+  "gray-4": darken(white, 30%),
+  "gray-5": darken(white, 38%),
+  "gray-6": darken(white, 46%),
+  "gray-7": darken(white, 54%),
+  "gray-8": darken(white, 62%),
+  "gray-9": darken(white, 69%),
+  "gray-10": darken(white, 77%),
+  "gray-11": darken(white, 82%),
+  "gray-12": darken(white, 88%),
+  "white": white,
+  "black-50": rgba(0, 0, 0, 0.5),
+  "white-50": rgba(255, 255, 255, 0.5),
+  "dark": var(--gray-9),
+  "light": var(--gray-1),
+  "dimmed": var(--gray-5),
+  "success-fg": var(--white),
+  "primary-fg": var(--white),
+  "info-fg": var(--black),
+  "danger-fg": var(--white),
+  "warn-fg": var(--black),
+);
+
+$classes: (
+  "primary": "blue",
+  "success": "green",
+  "info": "skyblue",
+  "danger": "red",
+  "warn": "yellow",
+);
+
 body {
   --margin: 16px;
   --radius: 6px;
@@ -13,7 +69,11 @@ body {
 
   --input-padding: 4px 8px;
 
-  --default-font-weight: 300;
+  --lift-shadow: #0000002a;
+  --lift-light: #ffffffc0;
+  --lift-light2: #ffffff40;
+  --lift-hover: #00000005;
+  --lift-active: #00000010;
 
   @each $name, $value in $colors {
     --#{$name}: #{$value};
@@ -31,7 +91,6 @@ body {
 
   --bg: var(--gray-1);
   --fg: var(--gray-11);
-  --bold: var(--tone-13);
   --link: var(--primary);
   --hover: rgba(0, 0, 0, 0.03);
   --panel: var(--white);
@@ -80,6 +139,12 @@ body {
     --tone-12: var(--gray-1);
     --tone-13: var(--white);
     --tone-50: var(--black-50);
+
+    --lift-shadow: #00000090;
+    --lift-light: #ffffff10;
+    --lift-light2: #ffffff10;
+    --lift-hover: #ffffff05;
+    --lift-active: #ffffff02;
 
     --code-fg: #ff5362;
     --code-bg: #573535;

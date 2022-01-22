@@ -1,16 +1,22 @@
-mixin item(name, href, iconClassName)
+mixin item(name, href, iconClassName, isBeta)
   if href === path
     .item.active
       i.icon.fa-fw(class=iconClassName)
       != name
+      if isBeta
+        sup.text-dimmed Beta
   else if href === null
     .item.disabled
       i.icon.fa-fw(class=iconClassName)
       != name
+      if isBeta
+        sup.text-dimmed Beta
   else
     a.item(href=href)
       i.icon.fa-fw(class=iconClassName)
       != name
+      if isBeta
+        sup.text-dimmed Beta
 
 mixin sidebar
   .xd-sidebar&attributes(attributes)
@@ -27,7 +33,6 @@ mixin sidebar
         +item("ドロップシャドウ", "/docs/styling/shadow.html", "fas fa-circle")
         +item("カラー", "/docs/styling/color.html", "fas fa-paint-roller")
         +item("表組み", "/docs/styling/table.html", "fas fa-table")
-        +item("画像", "/docs/styling/image.html", "fas fa-images")
         +item("ブレークポイント", "/docs/styling/breakpoints.html", "fas fa-arrows-alt-h")
         +item("テーマ", "/docs/styling/theme.html", "fas fa-palette")
       section
@@ -61,3 +66,4 @@ mixin sidebar
       section
         h1 その他
         +item("ユーティリティ", "/docs/utility.html", "fas fa-toolbox")
+        +item("Lift UI", "/docs/lift.html", "fas fa-mountain", true)
