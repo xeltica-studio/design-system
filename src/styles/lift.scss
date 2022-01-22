@@ -67,3 +67,75 @@
     }
   }
 }
+
+:not(label).input-field.lift, label.input-field.lift > input {
+  border: none;
+  @include liftDown();
+  &:disabled {
+    box-shadow: none;
+    background: none;
+  }
+
+  &[type="file"] {
+    @include liftDown();
+    @extend .pa-1;
+
+    &:not(:disabled) {
+      &:active {
+        filter: none;
+      }
+    }
+
+    &:disabled {
+      background: transparent;
+      &::file-selector-button,
+      &::-webkit-file-upload-button {
+        background: transparent;
+        border: none;
+        color: var(--dimmed);
+      }
+    }
+
+    &::file-selector-button,
+    &::-webkit-file-upload-button {
+      padding: var(--input-padding);
+      border: none;
+      border-radius: var(--radius);
+      color: var(--primary);
+      background: transparent;
+      @include liftUp();
+      @extend .mr-1;
+    }
+  }
+
+  &[type="color"] {
+    @extend .pa-1;
+
+    &:not(:disabled) {
+      @include liftUp();
+      &:active {
+        filter: none;
+      }
+      &:active {
+        @include liftDown();
+      }
+    }
+
+    @mixin swatch {
+      height: 1rem;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border-radius: var(--radius);
+      border: none;
+    }
+
+    &::-moz-color-swatch {
+      @include swatch();
+    }
+
+    &::-webkit-color-swatch {
+      @include swatch();
+    }
+  }
+}

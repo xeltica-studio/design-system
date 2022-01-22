@@ -1,6 +1,4 @@
-input.input-field,
-textarea.input-field,
-select.input-field,
+:not(label).input-field,
 label.input-field > input {
   display: block;
   width: 100%;

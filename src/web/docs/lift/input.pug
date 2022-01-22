@@ -1,0 +1,103 @@
+extends ../_layout
+
+block main
+  h1 Lift インプット
+  p inputタグ, textareaタグ等に装飾を施すコンポーネントを提供します。
+  .vstack
+    article#basic
+      h1.mb-1.underline 基本
+      .vstack
+        input.lift.input-field(type="text", placeholder="名前を入力...")
+        input.lift.input-field(type="text", value="無効化", disabled)
+      pre.lift.down.mt-2: code
+        :escape-html
+          <div class="vstack">
+            <input class="lift input-field" type="text" placeholder="名前を入力..." />
+            <input class="lift input-field" type="text" placeholder="名前を入力..." disabled />
+          </div>
+    article#with-label
+      h1.mb-1.underline ラベル付き
+      label.lift.input-field
+        | 名前
+        input(type="text", placeholder="海老瀬　瑠愛")
+      label.lift.input-field
+        | 年齢
+        input(type="number", value="18")
+      label.lift.input-field
+        | 誕生日
+        input(type="date")
+      label.input-field 性別
+      select.lift.input-field
+        option(value="0") 未指定
+        option(value="1") 男性
+        option(value="2") 女性
+        option(value="9") その他
+      label.input-field タイプ
+      select.lift.input-field(multiple)
+        option(value="0") くさ
+        option(value="1") ほのお
+        option(value="2") みず
+        option(value="3") でんき
+    pre.lift.down: code
+      :escape-html
+        <label class="input-field">
+          <input type="text" placeholder="海老瀬　瑠愛" />
+        </label>
+        <label class="input-field">
+          <input type="number" value="18" />
+        </label>
+        <label class="input-field">
+          <input type="date" />
+        </label>
+    article#textarea
+      h1.mb-1 テキストエリア
+      .vstack
+        textarea.lift.input-field
+        textarea.lift.input-field(disabled)= 'ABC\nDEF'
+    pre.lift.down: code
+      :escape-html
+        <div class="vstack">
+          <textarea class="lift input-field"></textarea>
+          <textarea class="lift input-field" disabled></textarea>
+        </div>
+    article#grouping
+      h1.mb-1 グルーピング
+      .vstack
+        .lift.down.flex.f-middle.px-1
+          label https://
+          input.input-field.ghost(type="text", placeholder="google.com")
+        .lift.down.flex.f-middle.px-1
+          input.input-field.ghost.text-right(type="number", value="0")
+          label 円
+        .lift.down.flex.f-middle.pa-1
+          input.input-field.ghost(type="text", placeholder="検索ワードを入力してください…")
+          button.btn.lift.primary: i.fas.fa-search
+    pre.lift.down: code
+      :escape-html
+        <div class="vstack">
+          <div class="lift down flex f-middle px-1">
+            <label>https://</label>
+            <input class="input-field ghost" type="text" placeholder="google.com" />
+          </div>
+          <div class="lift down flex f-middle px-1">
+            <input class="input-field ghost" type="number" value="0" />
+            <label class="input-label">円</label>
+          </div>
+          <div class="lift down flex f-middle pa-1">
+            <input class="input-field ghost" type="text" placeholder="検索ワードを入力してください…" />
+            <button class="btn lift primary"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+    article#other
+      h1.mb-1 その他
+      .vstack
+        input.lift.input-field(type="file")
+        input.lift.input-field(type="file" disabled)
+        input.lift.input-field(type="color")
+        input.lift.input-field(type="color" disabled)
+    pre: code
+      :escape-html
+        <div class="vstack">
+          <input class="lift input-field" type="file" />
+          <input class="lift input-field" type="color" />
+        </div>

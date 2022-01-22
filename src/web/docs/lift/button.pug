@@ -1,0 +1,13 @@
+extends ../_layout
+
+block main
+  h1 Lift ボタン <code>.lift.btn</code>
+  .row.mb-2
+    each className in [null, 'primary', 'success', 'info', 'warn', 'danger']
+      - const label = className ? (className[0].toUpperCase() + className.substring(1)) : 'Normal';
+      .col-4.col-6-sm: button.fluid.btn.lift(class=className)= label
+  h2 非アクティブ
+  .row
+    each className in [null, 'primary', 'success', 'info', 'warn', 'danger']
+      - const label = className ? (className[0].toUpperCase() + className.substring(1)) : 'Normal';
+      .col-4.col-6-sm: button.fluid.btn.lift(class=className, disabled)= label

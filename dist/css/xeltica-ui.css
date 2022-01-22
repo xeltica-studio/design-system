@@ -1442,7 +1442,7 @@ body.dark {
   margin-left: 8px !important;
 }
 
-.mr-1 {
+.mr-1, :not(label).input-field.lift[type=file]::file-selector-button, :not(label).input-field.lift[type=file]::-webkit-file-upload-button, label.input-field.lift > input[type=file]::file-selector-button, label.input-field.lift > input[type=file]::-webkit-file-upload-button {
   margin-right: 8px !important;
 }
 
@@ -1464,7 +1464,7 @@ body.dark {
   margin-bottom: 8px !important;
 }
 
-.pa-1 {
+.pa-1, :not(label).input-field.lift[type=color], label.input-field.lift > input[type=color], :not(label).input-field.lift[type=file], label.input-field.lift > input[type=file] {
   padding: 8px !important;
 }
 
@@ -3153,9 +3153,7 @@ a.btn:disabled,
   cursor: default;
 }
 
-input.input-field,
-textarea.input-field,
-select.input-field,
+:not(label).input-field,
 label.input-field > input {
   display: block;
   width: 100%;
@@ -3169,114 +3167,80 @@ label.input-field > input {
      -moz-appearance: none;
           appearance: none;
 }
-input.input-field.ghost,
-textarea.input-field.ghost,
-select.input-field.ghost,
+:not(label).input-field.ghost,
 label.input-field > input.ghost {
   border: none;
 }
-input.input-field:disabled,
-textarea.input-field:disabled,
-select.input-field:disabled,
+:not(label).input-field:disabled,
 label.input-field > input:disabled {
   color: var(--tone-6);
   background: var(--tone-2);
 }
-input.input-field:focus,
-textarea.input-field:focus,
-select.input-field:focus,
+:not(label).input-field:focus,
 label.input-field > input:focus {
   border-color: var(--primary);
   outline: none;
 }
-input.input-field::-webkit-input-placeholder, textarea.input-field::-webkit-input-placeholder, select.input-field::-webkit-input-placeholder, label.input-field > input::-webkit-input-placeholder {
+:not(label).input-field::-webkit-input-placeholder, label.input-field > input::-webkit-input-placeholder {
   color: var(--dimmed);
   font-style: oblique;
 }
-input.input-field::-moz-placeholder, textarea.input-field::-moz-placeholder, select.input-field::-moz-placeholder, label.input-field > input::-moz-placeholder {
+:not(label).input-field::-moz-placeholder, label.input-field > input::-moz-placeholder {
   color: var(--dimmed);
   font-style: oblique;
 }
-input.input-field::placeholder,
-textarea.input-field::placeholder,
-select.input-field::placeholder,
+:not(label).input-field::placeholder,
 label.input-field > input::placeholder {
   color: var(--dimmed);
   font-style: oblique;
 }
-input.input-field[type=file],
-textarea.input-field[type=file],
-select.input-field[type=file],
+:not(label).input-field[type=file],
 label.input-field > input[type=file] {
   padding: 0;
   border: none;
   border-radius: 0;
 }
-input.input-field[type=file]:not(:disabled),
-textarea.input-field[type=file]:not(:disabled),
-select.input-field[type=file]:not(:disabled),
+:not(label).input-field[type=file]:not(:disabled),
 label.input-field > input[type=file]:not(:disabled) {
   transition: transform 0.2s ease;
   transform-origin: center;
   cursor: pointer;
 }
-input.input-field[type=file]:not(:disabled):hover,
-textarea.input-field[type=file]:not(:disabled):hover,
-select.input-field[type=file]:not(:disabled):hover,
+:not(label).input-field[type=file]:not(:disabled):hover,
 label.input-field > input[type=file]:not(:disabled):hover {
   transform: var(--clickable-hover-transform);
   z-index: 9999;
 }
-input.input-field[type=file]:not(:disabled):active,
-textarea.input-field[type=file]:not(:disabled):active,
-select.input-field[type=file]:not(:disabled):active,
+:not(label).input-field[type=file]:not(:disabled):active,
 label.input-field > input[type=file]:not(:disabled):active {
   transform: var(--clickable-active-transform);
   z-index: 9999;
 }
-input.input-field[type=file]:not(:disabled),
-textarea.input-field[type=file]:not(:disabled),
-select.input-field[type=file]:not(:disabled),
+:not(label).input-field[type=file]:not(:disabled),
 label.input-field > input[type=file]:not(:disabled) {
   cursor: pointer;
 }
-input.input-field[type=file]:not(:disabled)::file-selector-button, input.input-field[type=file]:not(:disabled)::-webkit-file-upload-button,
-textarea.input-field[type=file]:not(:disabled)::file-selector-button,
-textarea.input-field[type=file]:not(:disabled)::-webkit-file-upload-button,
-select.input-field[type=file]:not(:disabled)::file-selector-button,
-select.input-field[type=file]:not(:disabled)::-webkit-file-upload-button,
+:not(label).input-field[type=file]:not(:disabled)::file-selector-button, :not(label).input-field[type=file]:not(:disabled)::-webkit-file-upload-button,
 label.input-field > input[type=file]:not(:disabled)::file-selector-button,
 label.input-field > input[type=file]:not(:disabled)::-webkit-file-upload-button {
   cursor: pointer;
 }
-input.input-field[type=file]:not(:disabled):active,
-textarea.input-field[type=file]:not(:disabled):active,
-select.input-field[type=file]:not(:disabled):active,
+:not(label).input-field[type=file]:not(:disabled):active,
 label.input-field > input[type=file]:not(:disabled):active {
   filter: brightness(0.8);
 }
-input.input-field[type=file]:disabled,
-textarea.input-field[type=file]:disabled,
-select.input-field[type=file]:disabled,
+:not(label).input-field[type=file]:disabled,
 label.input-field > input[type=file]:disabled {
   background: transparent;
 }
-input.input-field[type=file]:disabled::file-selector-button, input.input-field[type=file]:disabled::-webkit-file-upload-button,
-textarea.input-field[type=file]:disabled::file-selector-button,
-textarea.input-field[type=file]:disabled::-webkit-file-upload-button,
-select.input-field[type=file]:disabled::file-selector-button,
-select.input-field[type=file]:disabled::-webkit-file-upload-button,
+:not(label).input-field[type=file]:disabled::file-selector-button, :not(label).input-field[type=file]:disabled::-webkit-file-upload-button,
 label.input-field > input[type=file]:disabled::file-selector-button,
 label.input-field > input[type=file]:disabled::-webkit-file-upload-button {
   background: transparent;
   border: 1px solid var(--tone-4);
   color: var(--tone-4);
 }
-input.input-field[type=file]::file-selector-button, input.input-field[type=file]::-webkit-file-upload-button,
-textarea.input-field[type=file]::file-selector-button,
-textarea.input-field[type=file]::-webkit-file-upload-button,
-select.input-field[type=file]::file-selector-button,
-select.input-field[type=file]::-webkit-file-upload-button,
+:not(label).input-field[type=file]::file-selector-button, :not(label).input-field[type=file]::-webkit-file-upload-button,
 label.input-field > input[type=file]::file-selector-button,
 label.input-field > input[type=file]::-webkit-file-upload-button {
   padding: var(--input-padding);
@@ -3285,51 +3249,37 @@ label.input-field > input[type=file]::-webkit-file-upload-button {
   color: var(--primary-fg);
   background: var(--primary);
 }
-input.input-field[type=color],
-textarea.input-field[type=color],
-select.input-field[type=color],
+:not(label).input-field[type=color],
 label.input-field > input[type=color] {
   padding: 4px;
   width: 48px;
   height: auto;
 }
-input.input-field[type=color]:not(:disabled),
-textarea.input-field[type=color]:not(:disabled),
-select.input-field[type=color]:not(:disabled),
+:not(label).input-field[type=color]:not(:disabled),
 label.input-field > input[type=color]:not(:disabled) {
   transition: transform 0.2s ease;
   transform-origin: center;
   cursor: pointer;
 }
-input.input-field[type=color]:not(:disabled):hover,
-textarea.input-field[type=color]:not(:disabled):hover,
-select.input-field[type=color]:not(:disabled):hover,
+:not(label).input-field[type=color]:not(:disabled):hover,
 label.input-field > input[type=color]:not(:disabled):hover {
   transform: var(--clickable-hover-transform);
   z-index: 9999;
 }
-input.input-field[type=color]:not(:disabled):active,
-textarea.input-field[type=color]:not(:disabled):active,
-select.input-field[type=color]:not(:disabled):active,
+:not(label).input-field[type=color]:not(:disabled):active,
 label.input-field > input[type=color]:not(:disabled):active {
   transform: var(--clickable-active-transform);
   z-index: 9999;
 }
-input.input-field[type=color]:not(:disabled),
-textarea.input-field[type=color]:not(:disabled),
-select.input-field[type=color]:not(:disabled),
+:not(label).input-field[type=color]:not(:disabled),
 label.input-field > input[type=color]:not(:disabled) {
   cursor: pointer;
 }
-input.input-field[type=color]:not(:disabled):active,
-textarea.input-field[type=color]:not(:disabled):active,
-select.input-field[type=color]:not(:disabled):active,
+:not(label).input-field[type=color]:not(:disabled):active,
 label.input-field > input[type=color]:not(:disabled):active {
   filter: brightness(0.8);
 }
-input.input-field[type=color]::-moz-color-swatch,
-textarea.input-field[type=color]::-moz-color-swatch,
-select.input-field[type=color]::-moz-color-swatch,
+:not(label).input-field[type=color]::-moz-color-swatch,
 label.input-field > input[type=color]::-moz-color-swatch {
   height: 1rem;
   margin: 0;
@@ -3338,9 +3288,7 @@ label.input-field > input[type=color]::-moz-color-swatch {
   border-radius: var(--radius);
   border: 1px solid var(--tone-4);
 }
-input.input-field[type=color]::-webkit-color-swatch,
-textarea.input-field[type=color]::-webkit-color-swatch,
-select.input-field[type=color]::-webkit-color-swatch,
+:not(label).input-field[type=color]::-webkit-color-swatch,
 label.input-field > input[type=color]::-webkit-color-swatch {
   height: 1rem;
   margin: 0;
@@ -3713,4 +3661,60 @@ label.input-switch input:disabled + .switch + span {
 .btn.lift.warn:disabled, .drawer-container > .drawer > header > .lift.warn.close:disabled {
   background: transparent;
   color: var(--dimmed);
+}
+
+:not(label).input-field.lift, label.input-field.lift > input {
+  border: none;
+  box-shadow: 2px 2px 4px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light) inset;
+}
+:not(label).input-field.lift:disabled, label.input-field.lift > input:disabled {
+  box-shadow: none;
+  background: none;
+}
+:not(label).input-field.lift[type=file], label.input-field.lift > input[type=file] {
+  box-shadow: 2px 2px 4px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light) inset;
+}
+:not(label).input-field.lift[type=file]:not(:disabled):active, label.input-field.lift > input[type=file]:not(:disabled):active {
+  filter: none;
+}
+:not(label).input-field.lift[type=file]:disabled, label.input-field.lift > input[type=file]:disabled {
+  background: transparent;
+}
+:not(label).input-field.lift[type=file]:disabled::file-selector-button, :not(label).input-field.lift[type=file]:disabled::-webkit-file-upload-button, label.input-field.lift > input[type=file]:disabled::file-selector-button, label.input-field.lift > input[type=file]:disabled::-webkit-file-upload-button {
+  background: transparent;
+  border: none;
+  color: var(--dimmed);
+}
+:not(label).input-field.lift[type=file]::file-selector-button, :not(label).input-field.lift[type=file]::-webkit-file-upload-button, label.input-field.lift > input[type=file]::file-selector-button, label.input-field.lift > input[type=file]::-webkit-file-upload-button {
+  padding: var(--input-padding);
+  border: none;
+  border-radius: var(--radius);
+  color: var(--primary);
+  background: transparent;
+  box-shadow: -2px -2px 4px var(--lift-light), 1px 1px 4px var(--lift-shadow), 1px 1px 4px var(--lift-light2) inset, -1px -1px 2px var(--lift-shadow) inset;
+}
+:not(label).input-field.lift[type=color]:not(:disabled), label.input-field.lift > input[type=color]:not(:disabled) {
+  box-shadow: -2px -2px 4px var(--lift-light), 1px 1px 4px var(--lift-shadow), 1px 1px 4px var(--lift-light2) inset, -1px -1px 2px var(--lift-shadow) inset;
+}
+:not(label).input-field.lift[type=color]:not(:disabled):active, label.input-field.lift > input[type=color]:not(:disabled):active {
+  filter: none;
+}
+:not(label).input-field.lift[type=color]:not(:disabled):active, label.input-field.lift > input[type=color]:not(:disabled):active {
+  box-shadow: 2px 2px 4px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light) inset;
+}
+:not(label).input-field.lift[type=color]::-moz-color-swatch, label.input-field.lift > input[type=color]::-moz-color-swatch {
+  height: 1rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: var(--radius);
+  border: none;
+}
+:not(label).input-field.lift[type=color]::-webkit-color-swatch, label.input-field.lift > input[type=color]::-webkit-color-swatch {
+  height: 1rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: var(--radius);
+  border: none;
 }
