@@ -27,25 +27,48 @@ block main
   .card.my-2.lift.up(style="max-width: 500px")
     .body
       .hstack
-        img.circle.lift.down(src="https://placekitten.com/128/128" style="width: 64px; height: 64px" alt="icon")
-
+        .circle.lift.down(style="width: 64px; height: 64px")
         main(style="flex: 1")
-          h1.text-100.flex
+          h1.text-100.flex.f-center
+            span.text-bold さかな
+            span.text-dimmed.text-normal.ml-1 @TheFish
+            span.text-primary.ml-1: i.fas.fa-check-circle
+            span.text-dimmed.ml-auto: a(href="#") 5時間前
+          p.mt-1 許さない
+      .hstack.f-right
+        button.btn.lift.up
+          i.fas.fa-reply
+        button.btn.lift.up
+          i.fas.fa-retweet
+          span.text-dimmed.ml-1 7
+        button.btn.lift.up
+          i.far.fa-smile
+          i.fas.fa-plus.text-dimmed.ml-1
+        button.btn.lift.up: i.fas.fa-ellipsis-h
+  .card.my-2.lift.up(style="max-width: 500px")
+    .body
+      .text-green
+        i.fas.fa-retweet.mr-1.mb-2
+        | さかなさんがRepostしました
+      .hstack
+        .circle.lift.down(style="width: 64px; height: 64px; background: center/contain url('https://placekitten.com/128/128'); ")
+        main(style="flex: 1")
+          h1.text-100.flex.f-center
             span.text-bold ねこ
             span.text-dimmed.text-normal.ml-1 @cat
             span.text-dimmed.ml-auto: a(href="#") 5時間前
           p.mt-1 ねこに免じて許してくれませんかね…
-          .hstack.lift.down.pa-1
-            button.btn.lift.up
-              i.fas.fa-reply
-              span.text-dimmed.ml-1 2
-            button.btn.lift.up
-              i.fas.fa-retweet
-              span.text-dimmed.ml-1 9+
-            button.btn.lift.up
-              i.far.fa-smile
-              i.fas.fa-plus.text-dimmed.ml-1
-            button.btn.lift.up: i.fas.fa-ellipsis-h
+      .hstack.f-right
+        button.btn.lift.up
+          i.fas.fa-reply
+          span.text-dimmed.ml-1 2
+        button.btn.lift.up
+          i.fas.fa-retweet
+          span.text-dimmed.ml-1 9+
+        button.btn.lift.up
+          i.far.fa-smile
+          i.fas.fa-plus.text-dimmed.ml-1
+        button.btn.lift.up: i.fas.fa-ellipsis-h
   h2 応用
   h3 ボタン
   .row.mb-2
