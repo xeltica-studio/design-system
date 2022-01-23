@@ -70,10 +70,12 @@ body {
   --input-padding: 10px 16px;
 
   --lift-shadow: #0000002a;
-  --lift-light: #ffffffc0;
+  --lift-light: #fffffff0;
   --lift-light2: #ffffff40;
   --lift-hover: #00000005;
   --lift-active: #00000010;
+  --lift-bg: transparent;
+  --lift-fg: var(--tone-8);
 
   @each $name, $value in $colors {
     --#{$name}: #{$value};
@@ -140,7 +142,7 @@ body {
     --tone-13: var(--white);
     --tone-50: var(--black-50);
 
-    --lift-shadow: #00000090;
+    --lift-shadow: #00000060;
     --lift-light: #ffffff10;
     --lift-light2: #ffffff10;
     --lift-hover: #ffffff05;

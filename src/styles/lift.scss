@@ -1,16 +1,23 @@
-@mixin liftUp {
-  box-shadow: -2px -2px 4px var(--lift-light), 1px 1px 4px var(--lift-shadow), 1px 1px 4px var(--lift-light2) inset, -1px -1px 2px var(--lift-shadow) inset;
+@mixin liftUp($insetShadowColor: var(--lift-shadow)) {
+  box-shadow:
+    -2px -2px 4px var(--lift-light),
+    2px 2px 4px var(--lift-shadow),
+    2px 2px 4px var(--lift-light2) inset,
+    -2px -2px 2px $insetShadowColor inset;
 }
 
-@mixin liftDown {
-  box-shadow: 2px 2px 4px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light) inset;
+@mixin liftDown($insetShadowColor: var(--lift-shadow)) {
+  box-shadow:
+    2px 2px 8px var(--lift-shadow) inset,
+    -2px -2px 8px var(--lift-light2) inset;
 }
 
 .lift {
   --clickable-active-transform: none;
   --clickable-hover-transform: none;
-  transition: box-shadow 0.2s ease;
-  background: transparent;
+  transition: box-shadow 0.15s ease;
+  background: var(--lift-bg);
+  color: var(--lift-fg);
   @extend .rounded;
   &.up {
     @include liftUp();
@@ -23,7 +30,7 @@
 .btn.lift {
   @include liftUp();
   border: none;
-  color: var(--fg);
+  color: var(--lift-fg);
   &::before {
     transition: background 0.1s ease;
   }
@@ -48,20 +55,20 @@
   }
 
   &:disabled {
-    background: transparent;
+    background: var(--lift-bg);
     color: var(--dimmed);
     box-shadow: none;
   }
 
   @each $var, $_ in $classes {
     &.#{$var} {
-      background: transparent !important;
+      background: var(--lift-bg) !important;
       color: var(--#{$var});
       &:focus::before {
         box-shadow: none !important;
       }
       &:disabled {
-        background: transparent !important;
+        background: var(--lift-bg) !important;
         color: var(--dimmed);
       }
     }
@@ -87,10 +94,10 @@
     }
 
     &:disabled {
-      background: transparent;
+      background: var(--lift-bg);
       &::file-selector-button,
       &::-webkit-file-upload-button {
-        background: transparent;
+        background: var(--lift-bg);
         border: none;
         color: var(--dimmed);
       }
@@ -102,7 +109,7 @@
       border: none;
       border-radius: var(--radius);
       color: var(--primary);
-      background: transparent;
+      background: var(--lift-bg);
       @include liftUp();
       @extend .mr-1;
     }

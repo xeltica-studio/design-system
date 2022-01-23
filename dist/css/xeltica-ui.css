@@ -423,10 +423,12 @@ body {
   --shadow-color: rgba(0, 0, 0, 0.1);
   --input-padding: 10px 16px;
   --lift-shadow: #0000002a;
-  --lift-light: #ffffffc0;
+  --lift-light: #fffffff0;
   --lift-light2: #ffffff40;
   --lift-hover: #00000005;
   --lift-active: #00000010;
+  --lift-bg: transparent;
+  --lift-fg: var(--tone-8);
   --red: #e23731;
   --red-d: #44110f;
   --red-l: #f6c3c1;
@@ -555,7 +557,7 @@ body.dark {
   --tone-12: var(--gray-1);
   --tone-13: var(--white);
   --tone-50: var(--black-50);
-  --lift-shadow: #00000090;
+  --lift-shadow: #00000060;
   --lift-light: #ffffff10;
   --lift-light2: #ffffff10;
   --lift-hover: #ffffff05;
@@ -3604,20 +3606,21 @@ label.input-switch input:disabled + .switch + span {
 .lift {
   --clickable-active-transform: none;
   --clickable-hover-transform: none;
-  transition: box-shadow 0.2s ease;
-  background: transparent;
+  transition: box-shadow 0.15s ease;
+  background: var(--lift-bg);
+  color: var(--lift-fg);
 }
 .lift.up {
-  box-shadow: -2px -2px 4px var(--lift-light), 1px 1px 4px var(--lift-shadow), 1px 1px 4px var(--lift-light2) inset, -1px -1px 2px var(--lift-shadow) inset;
+  box-shadow: -2px -2px 4px var(--lift-light), 2px 2px 4px var(--lift-shadow), 2px 2px 4px var(--lift-light2) inset, -2px -2px 2px var(--lift-shadow) inset;
 }
 .lift.down {
-  box-shadow: 2px 2px 4px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light) inset;
+  box-shadow: 2px 2px 8px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light2) inset;
 }
 
 .btn.lift, .drawer-container > .drawer > header > .lift.close {
-  box-shadow: -2px -2px 4px var(--lift-light), 1px 1px 4px var(--lift-shadow), 1px 1px 4px var(--lift-light2) inset, -1px -1px 2px var(--lift-shadow) inset;
+  box-shadow: -2px -2px 4px var(--lift-light), 2px 2px 4px var(--lift-shadow), 2px 2px 4px var(--lift-light2) inset, -2px -2px 2px var(--lift-shadow) inset;
   border: none;
-  color: var(--fg);
+  color: var(--lift-fg);
 }
 .btn.lift::before, .drawer-container > .drawer > header > .lift.close::before {
   transition: background 0.1s ease;
@@ -3634,91 +3637,91 @@ label.input-switch input:disabled + .switch + span {
 }
 .btn.lift:not(.link):not(:disabled):active, .drawer-container > .drawer > header > .lift.close:not(.link):not(:disabled):active {
   filter: none;
-  box-shadow: 2px 2px 4px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light) inset;
+  box-shadow: 2px 2px 8px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light2) inset;
 }
 .btn.lift:not(.link):not(:disabled):active::before, .drawer-container > .drawer > header > .lift.close:not(.link):not(:disabled):active::before {
   background: var(--lift-active);
 }
 .btn.lift:disabled, .drawer-container > .drawer > header > .lift.close:disabled {
-  background: transparent;
+  background: var(--lift-bg);
   color: var(--dimmed);
   box-shadow: none;
 }
 .btn.lift.primary, .drawer-container > .drawer > header > .lift.primary.close {
-  background: transparent !important;
+  background: var(--lift-bg) !important;
   color: var(--primary);
 }
 .btn.lift.primary:focus::before, .drawer-container > .drawer > header > .lift.primary.close:focus::before {
   box-shadow: none !important;
 }
 .btn.lift.primary:disabled, .drawer-container > .drawer > header > .lift.primary.close:disabled {
-  background: transparent !important;
+  background: var(--lift-bg) !important;
   color: var(--dimmed);
 }
 .btn.lift.success, .drawer-container > .drawer > header > .lift.success.close {
-  background: transparent !important;
+  background: var(--lift-bg) !important;
   color: var(--success);
 }
 .btn.lift.success:focus::before, .drawer-container > .drawer > header > .lift.success.close:focus::before {
   box-shadow: none !important;
 }
 .btn.lift.success:disabled, .drawer-container > .drawer > header > .lift.success.close:disabled {
-  background: transparent !important;
+  background: var(--lift-bg) !important;
   color: var(--dimmed);
 }
 .btn.lift.info, .drawer-container > .drawer > header > .lift.info.close {
-  background: transparent !important;
+  background: var(--lift-bg) !important;
   color: var(--info);
 }
 .btn.lift.info:focus::before, .drawer-container > .drawer > header > .lift.info.close:focus::before {
   box-shadow: none !important;
 }
 .btn.lift.info:disabled, .drawer-container > .drawer > header > .lift.info.close:disabled {
-  background: transparent !important;
+  background: var(--lift-bg) !important;
   color: var(--dimmed);
 }
 .btn.lift.danger, .drawer-container > .drawer > header > .lift.danger.close {
-  background: transparent !important;
+  background: var(--lift-bg) !important;
   color: var(--danger);
 }
 .btn.lift.danger:focus::before, .drawer-container > .drawer > header > .lift.danger.close:focus::before {
   box-shadow: none !important;
 }
 .btn.lift.danger:disabled, .drawer-container > .drawer > header > .lift.danger.close:disabled {
-  background: transparent !important;
+  background: var(--lift-bg) !important;
   color: var(--dimmed);
 }
 .btn.lift.warn, .drawer-container > .drawer > header > .lift.warn.close {
-  background: transparent !important;
+  background: var(--lift-bg) !important;
   color: var(--warn);
 }
 .btn.lift.warn:focus::before, .drawer-container > .drawer > header > .lift.warn.close:focus::before {
   box-shadow: none !important;
 }
 .btn.lift.warn:disabled, .drawer-container > .drawer > header > .lift.warn.close:disabled {
-  background: transparent !important;
+  background: var(--lift-bg) !important;
   color: var(--dimmed);
 }
 
 :not(label).input-field.lift, label.input-field.lift > input {
   border: none;
-  box-shadow: 2px 2px 4px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light) inset;
+  box-shadow: 2px 2px 8px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light2) inset;
 }
 :not(label).input-field.lift:disabled, label.input-field.lift > input:disabled {
   box-shadow: none;
   background: none;
 }
 :not(label).input-field.lift[type=file], label.input-field.lift > input[type=file] {
-  box-shadow: 2px 2px 4px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light) inset;
+  box-shadow: 2px 2px 8px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light2) inset;
 }
 :not(label).input-field.lift[type=file]:not(:disabled):active, label.input-field.lift > input[type=file]:not(:disabled):active {
   filter: none;
 }
 :not(label).input-field.lift[type=file]:disabled, label.input-field.lift > input[type=file]:disabled {
-  background: transparent;
+  background: var(--lift-bg);
 }
 :not(label).input-field.lift[type=file]:disabled::file-selector-button, :not(label).input-field.lift[type=file]:disabled::-webkit-file-upload-button, label.input-field.lift > input[type=file]:disabled::file-selector-button, label.input-field.lift > input[type=file]:disabled::-webkit-file-upload-button {
-  background: transparent;
+  background: var(--lift-bg);
   border: none;
   color: var(--dimmed);
 }
@@ -3727,17 +3730,17 @@ label.input-switch input:disabled + .switch + span {
   border: none;
   border-radius: var(--radius);
   color: var(--primary);
-  background: transparent;
-  box-shadow: -2px -2px 4px var(--lift-light), 1px 1px 4px var(--lift-shadow), 1px 1px 4px var(--lift-light2) inset, -1px -1px 2px var(--lift-shadow) inset;
+  background: var(--lift-bg);
+  box-shadow: -2px -2px 4px var(--lift-light), 2px 2px 4px var(--lift-shadow), 2px 2px 4px var(--lift-light2) inset, -2px -2px 2px var(--lift-shadow) inset;
 }
 :not(label).input-field.lift[type=color]:not(:disabled), label.input-field.lift > input[type=color]:not(:disabled) {
-  box-shadow: -2px -2px 4px var(--lift-light), 1px 1px 4px var(--lift-shadow), 1px 1px 4px var(--lift-light2) inset, -1px -1px 2px var(--lift-shadow) inset;
+  box-shadow: -2px -2px 4px var(--lift-light), 2px 2px 4px var(--lift-shadow), 2px 2px 4px var(--lift-light2) inset, -2px -2px 2px var(--lift-shadow) inset;
 }
 :not(label).input-field.lift[type=color]:not(:disabled):active, label.input-field.lift > input[type=color]:not(:disabled):active {
   filter: none;
 }
 :not(label).input-field.lift[type=color]:not(:disabled):active, label.input-field.lift > input[type=color]:not(:disabled):active {
-  box-shadow: 2px 2px 4px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light) inset;
+  box-shadow: 2px 2px 8px var(--lift-shadow) inset, -2px -2px 8px var(--lift-light2) inset;
 }
 :not(label).input-field.lift[type=color]::-moz-color-swatch, label.input-field.lift > input[type=color]::-moz-color-swatch {
   height: 1rem;

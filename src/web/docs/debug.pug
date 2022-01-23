@@ -5,28 +5,15 @@ html
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1')
     link(rel='stylesheet' href='/css/xeltica-ui.min.css')
-    title XelticaUI
-    style.
-      .a {
-        display: flex;
-        height: 100vh;
-        width: 100vw;
-      }
-
-      #a {
-        width: 300px;
-      }
-
-      #b {
-        flex: 1;
-        min-width: 0;
-      }
-  body
-    .a
-      .container#a(style="background: var(--tone-1)")
-        h1 HELLO
-      .container#b(style="background: var(--tone-2)")
-        h1 HELLO
-        pre: code
-          :escape-html
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae distinctio asperiores repudiandae amet adipisci nam, in perferendis, esse ab fugit dolore hic magnam eligendi officiis maxime aliquam unde? Aperiam, odio non quisquam expedita nisi repellendus asperiores eligendi cumque fugiat amet dolorem iure a cupiditate, sit iusto minus magnam, mollitia voluptatem modi? Sequi, sed? Recusandae iste aliquam pariatur magnam nostrum facilis maxime velit repellendus accusantium sapiente? Corporis quos itaque aspernatur eligendi omnis. Earum inventore impedit sapiente sint enim veritatis illum facilis explicabo ab quas eum id quos tempore fugit corrupti obcaecati soluta tenetur suscipit vel eius, repudiandae at blanditiis. Veniam, temporibus.
+    link(
+      rel='stylesheet'
+      href='https://use.fontawesome.com/releases/v5.15.3/css/all.css'
+      integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=='
+      crossorigin='anonymous'
+    )
+    title XelticaUI Debug
+  body.dark
+    .navbar.py-5.f-middle
+      .navbar-title.text-150 うんち
+        input.py-0.input-field.ghost(type="search" placeholder="検索…")
+        button.btn.lift.primary.pa-1.px-2: i.fas.fa-search
