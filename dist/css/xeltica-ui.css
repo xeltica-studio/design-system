@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * XelticaUI 1.0.0-alpha.14
+ * XelticaUI 1.0.0-alpha.15
  * (C)2021 Xeltica
  * Licensed under MIT (https://github.com/xeltica/ui/tree/master/LICENSE)
  */
@@ -221,6 +221,7 @@ button {
   -webkit-appearance: none;
   border: none;
   background: none;
+  color: inherit;
 }
 
 input,
@@ -420,7 +421,7 @@ body {
   --clickable-active-transform: translateY(4px);
   --clickable-hover-transform: translateY(-2px);
   --shadow-color: rgba(0, 0, 0, 0.1);
-  --input-padding: 4px 8px;
+  --input-padding: 10px 16px;
   --lift-shadow: #0000002a;
   --lift-light: #ffffffc0;
   --lift-light2: #ffffff40;
@@ -3153,6 +3154,42 @@ a.btn:disabled,
   cursor: default;
 }
 
+body.dark .btn.primary:not(:disabled), body.dark .drawer-container > .drawer > header > .primary.close:not(:disabled) {
+  background: var(--primary-d);
+  color: var(--primary);
+}
+body.dark .btn.primary:not(:disabled):focus::before, body.dark .drawer-container > .drawer > header > .primary.close:not(:disabled):focus::before {
+  box-shadow: 0 0 1rem 0px var(--primary-d);
+}
+body.dark .btn.success:not(:disabled), body.dark .drawer-container > .drawer > header > .success.close:not(:disabled) {
+  background: var(--success-d);
+  color: var(--success);
+}
+body.dark .btn.success:not(:disabled):focus::before, body.dark .drawer-container > .drawer > header > .success.close:not(:disabled):focus::before {
+  box-shadow: 0 0 1rem 0px var(--success-d);
+}
+body.dark .btn.info:not(:disabled), body.dark .drawer-container > .drawer > header > .info.close:not(:disabled) {
+  background: var(--info-d);
+  color: var(--info);
+}
+body.dark .btn.info:not(:disabled):focus::before, body.dark .drawer-container > .drawer > header > .info.close:not(:disabled):focus::before {
+  box-shadow: 0 0 1rem 0px var(--info-d);
+}
+body.dark .btn.warn:not(:disabled), body.dark .drawer-container > .drawer > header > .warn.close:not(:disabled) {
+  background: var(--warn-d);
+  color: var(--warn);
+}
+body.dark .btn.warn:not(:disabled):focus::before, body.dark .drawer-container > .drawer > header > .warn.close:not(:disabled):focus::before {
+  box-shadow: 0 0 1rem 0px var(--warn-d);
+}
+body.dark .btn.danger:not(:disabled), body.dark .drawer-container > .drawer > header > .danger.close:not(:disabled) {
+  background: var(--danger-d);
+  color: var(--danger);
+}
+body.dark .btn.danger:not(:disabled):focus::before, body.dark .drawer-container > .drawer > header > .danger.close:not(:disabled):focus::before {
+  box-shadow: 0 0 1rem 0px var(--danger-d);
+}
+
 :not(label).input-field,
 label.input-field > input {
   display: block;
@@ -3608,58 +3645,58 @@ label.input-switch input:disabled + .switch + span {
   box-shadow: none;
 }
 .btn.lift.primary, .drawer-container > .drawer > header > .lift.primary.close {
-  background: transparent;
+  background: transparent !important;
   color: var(--primary);
 }
 .btn.lift.primary:focus::before, .drawer-container > .drawer > header > .lift.primary.close:focus::before {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 .btn.lift.primary:disabled, .drawer-container > .drawer > header > .lift.primary.close:disabled {
-  background: transparent;
+  background: transparent !important;
   color: var(--dimmed);
 }
 .btn.lift.success, .drawer-container > .drawer > header > .lift.success.close {
-  background: transparent;
+  background: transparent !important;
   color: var(--success);
 }
 .btn.lift.success:focus::before, .drawer-container > .drawer > header > .lift.success.close:focus::before {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 .btn.lift.success:disabled, .drawer-container > .drawer > header > .lift.success.close:disabled {
-  background: transparent;
+  background: transparent !important;
   color: var(--dimmed);
 }
 .btn.lift.info, .drawer-container > .drawer > header > .lift.info.close {
-  background: transparent;
+  background: transparent !important;
   color: var(--info);
 }
 .btn.lift.info:focus::before, .drawer-container > .drawer > header > .lift.info.close:focus::before {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 .btn.lift.info:disabled, .drawer-container > .drawer > header > .lift.info.close:disabled {
-  background: transparent;
+  background: transparent !important;
   color: var(--dimmed);
 }
 .btn.lift.danger, .drawer-container > .drawer > header > .lift.danger.close {
-  background: transparent;
+  background: transparent !important;
   color: var(--danger);
 }
 .btn.lift.danger:focus::before, .drawer-container > .drawer > header > .lift.danger.close:focus::before {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 .btn.lift.danger:disabled, .drawer-container > .drawer > header > .lift.danger.close:disabled {
-  background: transparent;
+  background: transparent !important;
   color: var(--dimmed);
 }
 .btn.lift.warn, .drawer-container > .drawer > header > .lift.warn.close {
-  background: transparent;
+  background: transparent !important;
   color: var(--warn);
 }
 .btn.lift.warn:focus::before, .drawer-container > .drawer > header > .lift.warn.close:focus::before {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 .btn.lift.warn:disabled, .drawer-container > .drawer > header > .lift.warn.close:disabled {
-  background: transparent;
+  background: transparent !important;
   color: var(--dimmed);
 }
 
