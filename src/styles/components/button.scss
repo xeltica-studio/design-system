@@ -97,3 +97,15 @@ a.btn {
     cursor: default;
   }
 }
+
+body.dark .btn {
+  @each $var in primary, success, info, warn, danger {
+    &.#{$var}:not(:disabled) {
+      background: var(--#{$var}-d);
+      color: var(--#{$var});
+      &:focus::before {
+        box-shadow: 0 0 1rem 0px var(--#{$var}-d);
+      }
+    }
+  }
+}

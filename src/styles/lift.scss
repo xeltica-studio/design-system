@@ -55,13 +55,13 @@
 
   @each $var, $_ in $classes {
     &.#{$var} {
-      background: transparent;
+      background: transparent !important;
       color: var(--#{$var});
       &:focus::before {
-        box-shadow: none;
+        box-shadow: none !important;
       }
       &:disabled {
-        background: transparent;
+        background: transparent !important;
         color: var(--dimmed);
       }
     }
