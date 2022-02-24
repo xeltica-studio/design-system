@@ -1,0 +1,27 @@
+extends ../../_layout
+include _sidebar
+
+block body
+  .container
+    .hstack.fill.dense
+      +sidebar.ge-tablet.fw.mr-2
+      .xd-main
+        block main
+  .card.fix-bottom-left-3.le-tablet.shadow-3: .hstack.dense
+    button.btn.flat(tabindex="-1").xd-drawer-button: i.fas.fa-bars
+  .drawer-container#menu-drawer
+    .backdrop
+    .drawer
+      header
+        button.close
+          i.fas.fa-times
+      .body
+        +sidebar
+
+block append script
+  script.
+    const drawerButton = document.querySelector('.xd-drawer-button');
+    console.log(drawerButton);
+    drawerButton.addEventListener('click', () => {
+      document.querySelector('#menu-drawer').open();
+    });

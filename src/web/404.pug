@@ -1,7 +1,13 @@
 extends _layout
 
 block body
-  .container.hero
-    h1 見つかりません
-    p URL入力した場合、パスが本当に正しいかどうか確認してください。そうでなければ、リンク切れか、リンクが間違っている可能性があります。
-    p: a(href="/") トップに戻る
+  .container
+    .card.mx-auto(style="max-width: 1200px")
+      .body.text-center
+        h1.mb-2
+          i.fas.fa-exclamation-triangle
+          |  見つかりません。
+        p パスが間違っているか、リンク切れの可能性があります。
+        p: a.btn.info(href="/")
+          i.fas.fa-arrow-left
+          |  トップに戻る

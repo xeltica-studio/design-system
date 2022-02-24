@@ -7,7 +7,6 @@ block head
       height: 64px;
       padding: 4px;
       font-size: 0.8rem;
-      border: 1px solid rgba(0, 0, 0, 0.1);
       color: transparent;
       overflow: visible;
       position: relative;
@@ -24,8 +23,7 @@ block head
 
 block main
   h1 カラー
-  p 色はウェブサイトに華をもたらします。多すぎるとうるさく感じますが、少なすぎると殺風景でつまらない見た目になるでしょう。
-  p XelticaUI は定義済みの色を56色用意しており、すぐに使用できます。
+  p Xeltica Design System では、#{colors.length * 10 + 20}種類の色を定義しています。
   h2 カラーボックス
   p 定義済みの全ての色を確認できます。ホバーかクリックで、名前を確認できます。
   p.text-dimmed#colorbox-desc
@@ -36,6 +34,8 @@ block main
         each tuple in colors
           - const [name] = tuple;
           .xd-colorbox.select-none.clickable(class=`bg-${name}-${i}`): span= `${name}-${i}`
+        .xd-colorbox.select-none.clickable(class=`bg-gray-${i * 2 - 1}`): span= `gray-${i * 2 - 1}`
+        .xd-colorbox.select-none.clickable(class=`bg-gray-${i * 2}`): span= `gray-${i * 2}`
     .test
 
 block append script

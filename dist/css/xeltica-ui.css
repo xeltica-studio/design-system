@@ -599,9 +599,9 @@ body {
   --white: white;
   --black-50: rgba(0, 0, 0, 0.5);
   --white-50: rgba(255, 255, 255, 0.5);
-  --dark: var(--gray-9);
+  --dark: var(--gray-20);
   --light: var(--gray-1);
-  --dimmed: var(--gray-5);
+  --dimmed: var(--tone-10);
   --success-fg: var(--white);
   --primary-fg: var(--white);
   --info-fg: var(--black);
@@ -4674,7 +4674,7 @@ label.input-switch input:disabled + .switch + span {
 }
 
 body {
-  --skeleton-base: var(--panel);
+  --skeleton-base: var(--tone-4);
   --skeleton-gloss: var(--tone-5);
 }
 

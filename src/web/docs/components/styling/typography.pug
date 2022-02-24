@@ -51,8 +51,8 @@ block main
       - const sizeList = [ 400, 350, 300, 250, 200, 150, 100, 75, 50 ];
       each size in sizeList
         tr
-          td: code &lt;span class="text-size-#{size}"&gt;&lt;/span&gt;
-          td: span(class=`text-size-${size}`) #{size}%
+          td: code &lt;span class="text-#{size}"&gt;&lt;/span&gt;
+          td: span(class=`text-${size}`) #{size}%
 
   h2 その他
 
