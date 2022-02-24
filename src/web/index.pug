@@ -33,21 +33,29 @@ block head
     .xd-belt {
       position: fixed;
     }
+    .icon-xeltica {
+      width: 1em;
+      height: 1em;
+      color: currentColor;
+    }
 
 block body
   .xd-belt.text-danger
     | 不安定かつ、頻繁に仕様が変わります。実用性は保証しません。
   .xd-hero-container
-    .card.acrylic.shadow-5.xd-hero-card
-      .body
-        .container.hero
-          h1.display.text-primary(style="margin: 0") XelticaUI
-          p XelticaUI は、Xeltica Design System を実現するためのコンポーネントとして開発された、CSS フレームワークです。
-            | 主に自分自身が開発する製品のことを想定して作っているため、他の主要な CSS フレームワークに比べてカスタマイズ性や使いやすさに劣るかもしれませんが、他者による使用に制限はございません。
-          p Xeltica製品のほとんどはオープンソースであることから、本ライブラリもオープンソースのCSSフレームワークとして開発しています。
-          p npmやCDN経由で入手して、今すぐ利用しましょう。
-          .hstack.wrap
-            a.btn.primary(href="/docs")
-              i.fas.fa-book.mr-1
-              | ドキュメント
+    .card.shadow-5.xd-hero-card
+      .body(style="width: 100%; height: 100%")
+        .container.mt-5
+          h1.flex.f-middle
+            svg(viewBox="0 0 256 256" width="2em" height="2em"): use(href="/assets/guideline/xeltica.svg#xeltica")
+            span.ml-2 Design System
+          p.mb-4 Xeltica 製品のデザイン哲学をまとめた取り決めおよび、付随するCSS フレームワーク。
+          .menu.large
+            section
+              a.item(href="/docs")
+                i.icon.fas.fa-chevron-right
+                | 基本原則
+              a.item(href="/docs/components")
+                i.icon.fas.fa-chevron-right
+                | コンポーネント
           +footer
