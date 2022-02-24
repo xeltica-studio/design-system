@@ -5,11 +5,11 @@
 <b style="color: red">未完成につき、本番環境で使用しないでください。</b>
 
 ```
-yarn add xeltica/ui
+yarn add xeltica/design-system
 ```
 
 ```
-npm i xeltica/ui
+npm i xeltica/design-system
 ```
 
 ## 特徴
