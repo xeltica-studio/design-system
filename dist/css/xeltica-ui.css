@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * XelticaUI 1.0.0-alpha.15
+ * XelticaUI 1.0.0-beta.1
  * (C)2021 Xeltica
  * Licensed under MIT (https://github.com/xeltica/ui/tree/master/LICENSE)
  */
@@ -3743,7 +3743,7 @@ body {
   --menu-section-text: var(--tone-12);
 }
 body.dark {
-  --menu-active: var(--gray-20);
+  --menu-active: var(--gray-19);
 }
 
 .menu section + section,

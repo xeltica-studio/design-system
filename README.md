@@ -1,6 +1,4 @@
-# XelticaUI
-
-Xeltica Design Systemに則った、CSSライブラリ。
+# Xeltica Design System
 
 ## 導入
 
@@ -23,12 +21,10 @@ npm i xeltica/ui
 - 日本語環境に最適化
 - ユニバーサルデザイン
 - CSS3 カスタムプロパティによる高度なカスタマイズ
-- アイコンフォントは含まれません
-  - お好きなアイコンフォントと組み合わせてください
 
 ## ドキュメント
 
-そのうち
+https://ui.xeltica.work
 
 ## LICENSE
 
