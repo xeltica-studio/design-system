@@ -9,12 +9,17 @@ block head
       font-size: 0.8rem;
       border: 1px solid rgba(0, 0, 0, 0.1);
       color: transparent;
+      overflow: visible;
+      position: relative;
     }
     .xd-colorbox:hover {
-      color: rgba(0, 0, 0, 0.8);
-    }
-    .xd-colorbox.dark:hover {
       color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0 1px 3px var(--black);
+    }
+    .xd-colorbox > span {
+      position: absolute;
+      top: 2px;
+      left: 2px;
     }
 
 block main
@@ -25,25 +30,12 @@ block main
   p 定義済みの全ての色を確認できます。ホバーかクリックで、名前を確認できます。
   p.text-dimmed#colorbox-desc
   .vstack.dense
-    .hstack.dense.wrap
-      each tuple in grayscales
-        - const [name, isDark] = tuple;
-        .xd-colorbox.select-none.clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
 
-    .hstack.dense.wrap
-      each tuple in colors
-        - const [name, isDark] = tuple;
-        .xd-colorbox.select-none.clickable(class=`bg-${name} ${isDark ? 'dark' : ''}`)= name
-
-    .hstack.dense.wrap
-      each tuple in colors
-        - const [name] = tuple;
-        .xd-colorbox.select-none.clickable(class=`bg-${name}-l`)= `${name}-l`
-
-    .hstack.dense.wrap
-      each tuple in colors
-        - const [name] = tuple;
-        .xd-colorbox.select-none.clickable(class=`bg-${name}-d dark`)= `${name}-d`
+    - for (let i = 1; i <= 10; i++)
+      .hstack.dense
+        each tuple in colors
+          - const [name] = tuple;
+          .xd-colorbox.select-none.clickable(class=`bg-${name}-${i}`): span= `${name}-${i}`
     .test
 
 block append script

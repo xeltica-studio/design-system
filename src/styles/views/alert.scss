@@ -1,19 +1,20 @@
 .alert {
+  @extend .flex;
   padding: var(--margin);
   border-radius: var(--radius);
   background: var(--panel);
-  color: var(--tone-8);
+  color: var(--tone-12);
   > .icon {
+    @extend .flex, .f-center, .f-middle;
     margin-right: var(--margin);
   }
 
   @each $key, $_ in $classes {
     &.bg-#{$key} {
-      border-color: var(--#{$key});
-      background: var(--#{$key}-l) !important;
-      color: var(--#{$key}) !important;
+      background: var(--#{$key}-2) !important;
+      color: var(--#{$key}-6) !important;
       @include dark {
-        background: var(--#{$key}-d) !important;
+        background: var(--#{$key}-8) !important;
         color: var(--#{$key}) !important;
       }
     }

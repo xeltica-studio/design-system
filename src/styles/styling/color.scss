@@ -1,21 +1,26 @@
 @each $name, $value in $colors {
+  @for $i from 1 through 10 {
+    .text-#{$name}-#{$i} {
+      color: var(--#{$name}-#{$i}) !important;
+    }
+    .bg-#{$name}-#{$i} {
+      background-color: var(--#{$name}-#{$i}) !important;
+    }
+  }
   .text-#{$name} {
     color: var(--#{$name}) !important;
   }
   .bg-#{$name} {
     background-color: var(--#{$name}) !important;
   }
-  .text-#{$name}-d {
-    color: var(--#{$name}-d) !important;
+}
+
+@for $i from 1 through 20 {
+  .text-gray-#{$i} {
+    color: var(--gray-#{$i}) !important;
   }
-  .bg-#{$name}-d {
-    background-color: var(--#{$name}-d) !important;
-  }
-  .text-#{$name}-l {
-    color: var(--#{$name}-l) !important;
-  }
-  .bg-#{$name}-l {
-    background-color: var(--#{$name}-l) !important;
+  .bg-gray-#{$i} {
+    background-color: var(--gray-#{$i}) !important;
   }
 }
 

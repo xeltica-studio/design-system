@@ -5,8 +5,8 @@ body {
 .vstack {
   display: flex;
   flex-direction: column;
-  &:not(.dense) > * + * {
-    margin-top: var(--stack-margin);
+  &:not(.dense) {
+    gap: var(--stack-margin);
   }
 }
 
@@ -20,8 +20,8 @@ body {
     min-width: 0;
     flex: 1;
   }
-  &:not(.dense) > * + * {
-    margin-left: var(--stack-margin);
+  &:not(.dense) {
+    gap: var(--stack-margin);
   }
 }
 

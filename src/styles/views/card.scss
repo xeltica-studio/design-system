@@ -18,13 +18,13 @@
   > header,
   > footer {
     padding: calc(var(--margin) / 2) var(--margin);
-    // background: var(--tone-1);
+    background: var(--tone-1);
   }
   > header {
-    border-bottom: 1px solid var(--tone-1);
+    border-bottom: 1px solid var(--tone-2);
   }
   > footer {
-    border-top: 1px solid var(--tone-1);
+    border-top: 1px solid var(--tone-2);
   }
   > .body {
     padding: var(--margin);

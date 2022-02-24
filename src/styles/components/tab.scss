@@ -9,28 +9,35 @@
     color: var(--fg);
     padding: calc(var(--margin) / 2) var(--margin);
     transition: background 0.2s ease;
-    @include clickable;
     &.active {
       color: var(--primary);
+      cursor: default;
       &::after {
         content: "";
-        width: 100%;
+        transform: scaleX(1);
       }
     }
-    &:hover {
-      background: var(--hover);
+    &:not(.active) {
+      @include clickable;
+      &:hover {
+        background: var(--hover);
+        &::after {
+          transform: scaleX(0.2);
+        }
+      }
     }
     &::after {
       content: "";
       position: absolute;
-      transition: width 0.2s ease;
+      transition: transform 0.2s ease;
       transform-origin: center center;
       display: block;
       bottom: 0;
       height: 2px;
       left: 0;
       right: 0;
-      width: 0;
+      width: 100%;
+      transform: scaleX(0);
       background-color: var(--primary);
     }
   }

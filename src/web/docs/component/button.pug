@@ -28,24 +28,31 @@ block main
   .vstack
     section
       h2 例
-      .row
-        .col-4.col-6-sm: button.fluid.btn Normal
-        .col-4.col-6-sm: button.fluid.btn.primary Primary
-        .col-4.col-6-sm: button.fluid.btn.success Success
-        .col-4.col-6-sm: button.fluid.btn.info Info
-        .col-4.col-6-sm: button.fluid.btn.warn Warning
-        .col-4.col-6-sm: button.fluid.btn.danger Danger
-        .col-4.col-6-sm: button.fluid.btn.flat Flat
-        .col-4.col-6-sm: button.fluid.btn.link Link
-        .col-4.col-6-sm: button No Style
+      .hstack.wrap.mb-2
+        button.btn Normal
+        button.btn.primary Primary
+        button.btn.success Success
+        button.btn.info Info
+        button.btn.warn Warning
+        button.btn.danger Danger
+        button.btn.flat Flat
+        button.btn.link Link
+        button No Style
+      h3 アウトライン
+      .hstack.wrap.mb-2
+        button.btn.outline.primary Primary
+        button.btn.outline.success Success
+        button.btn.outline.info Info
+        button.btn.outline.warn Warning
+        button.btn.outline.danger Danger
       h3 無効化
-      .row
-        .col-4.col-6-sm: button(disabled).fluid.btn Normal
-        .col-4.col-6-sm: button(disabled).fluid.btn.primary Primary
-        .col-4.col-6-sm: button(disabled).fluid.btn.success Success
-        .col-4.col-6-sm: button(disabled).fluid.btn.info Info
-        .col-4.col-6-sm: button(disabled).fluid.btn.warn Warning
-        .col-4.col-6-sm: button(disabled).fluid.btn.danger Danger
-        .col-4.col-6-sm: button(disabled).fluid.btn.flat Flat
-        .col-4.col-6-sm: button(disabled).fluid.btn.link Link
-        .col-4.col-6-sm: button(disabled) No Style
+      .hstack.wrap.mb-2
+        button.btn(disabled) Normal
+        button.btn.primary(disabled) Primary
+        button.btn.success(disabled) Success
+        button.btn.info(disabled) Info
+        button.btn.warn(disabled) Warning
+        button.btn.danger(disabled) Danger
+        button.btn.flat(disabled) Flat
+        button.btn.link(disabled) Link
+        button(disabled) No Style

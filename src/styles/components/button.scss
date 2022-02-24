@@ -3,10 +3,10 @@ a.btn {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
-  border: 1px solid var(--primary);
+  border: 1px solid var(--fg);
   background: transparent;
   text-decoration: none;
-  color: var(--primary);
+  color: var(--fg);
   cursor: pointer;
   outline: none;
   font-size: 1rem;
@@ -27,7 +27,7 @@ a.btn {
   }
 
   &:focus::before {
-    box-shadow: 0 0 1rem 0px var(--primary);
+    box-shadow: 0 0 1rem 0px var(--fg);
   }
 
   &:active {
@@ -37,8 +37,13 @@ a.btn {
   @each $var in primary, success, info, warn, danger {
     &.#{$var} {
       background: var(--#{$var});
-      color: var(--#{$var}-fg);
-      border: none;
+      color: var(--#{$var}-1);
+      border: 1px solid transparent;
+      &.outline {
+        background: transparent;
+        color: var(--#{$var});
+        border: 1px solid var(--#{$var});
+      }
       &:focus::before {
         box-shadow: 0 0 1rem 0px var(--#{$var});
       }
@@ -55,9 +60,6 @@ a.btn {
     background: transparent;
     color: var(--tone-4);
     border: none;
-  }
-  &.link:disabled {
-    text-decoration: underline;
   }
 
   &.flat {
@@ -100,11 +102,12 @@ a.btn {
 
 body.dark .btn {
   @each $var in primary, success, info, warn, danger {
-    &.#{$var}:not(:disabled) {
-      background: var(--#{$var}-d);
-      color: var(--#{$var});
+    &.#{$var}:not(:disabled):not(.outline) {
+      background: var(--#{$var}-8);
+      color: var(--#{$var}-2);
+      border: 1px solid var(--#{$var}-5);
       &:focus::before {
-        box-shadow: 0 0 1rem 0px var(--#{$var}-d);
+        box-shadow: 0 0 1rem 0px var(--#{$var});
       }
     }
   }

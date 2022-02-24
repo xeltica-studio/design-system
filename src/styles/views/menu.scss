@@ -1,25 +1,21 @@
+
+body {
+  --menu-hover: var(--hover);
+  --menu-active: var(--gray-4);
+  --menu-section-text: var(--tone-12);
+  &.dark {
+    --menu-active: var(--gray-20);
+  }
+}
+
 @mixin large-menu {
-  border-color: var(--tone-2);
-  border-left: none;
-  border-right: none;
   padding: 8px 16px;
-  border-radius: 0;
-  border-bottom-color: transparent;
   &.active {
-    background-color: var(--hover);
+    background-color: var(--menu-active);
   }
 
   &:not(.active):not(.disabled):hover {
-    background-color: var(--hover);
-    border-left-color: transparent;
-    border-right-color: transparent;
-    &:not(:last-child) {
-      border-bottom-color: transparent;
-    }
-  }
-
-  &:last-child {
-    border-bottom-color: var(--tone-2);
+    background-color: var(--menu-hover);
   }
 }
 
@@ -34,7 +30,7 @@
   .footer {
     @include flatHeading;
     font-size: 0.7rem;
-    color: var(--tone-7);
+    color: var(--menu-section-text);
     margin: 0;
   }
 
@@ -64,13 +60,15 @@
       font-size: 1rem;
     }
 
-    &:not(.active):not(.disabled):hover {
-      border-color: var(--hover);
-      background-color: var(--hover);
+    &:not(.active):not(.disabled) {
+      @include clickable;
+      &:hover {
+        background-color: var(--menu-hover);
+      }
     }
 
     &.active {
-      background-color: var(--tone-2);
+      background-color: var(--menu-active);
       cursor: default;
     }
 
