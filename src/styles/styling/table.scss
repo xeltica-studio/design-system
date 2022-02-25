@@ -1,11 +1,12 @@
 body {
-  --table-header: var(--tone-3);
-  --table-header-border: var(--tone-5);
-  --table-header-border-thickness: 2px;
-  --table-body: var(--panel);
-  --table-body-border: var(--tone-5);
-  --table-body-border-thickness: 1px;
+  --table-header: var(--tone-2);
   --table-color: var(--fg);
+  --table-body: var(--panel);
+  --table-border: var(--tone-5);
+  --table-header-border: var(--tone-3);
+  --table-body-border: var(--tone-3);
+  --table-header-border-thickness: 2px;
+  --table-body-border-thickness: 1px;
   &.dark {
     --table-color: var(--tone-15);
   }
@@ -13,6 +14,7 @@ body {
 
 .table {
   border-radius: var(--radius);
+  border: 1px solid var(--table-border);
   border-collapse: separate;
   overflow: hidden;
   border-spacing: 0;
