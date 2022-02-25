@@ -1,7 +1,7 @@
 mixin header(transparent)
   .navbar.hstack.shadow-2(class=(transparent ? '' : 'bg-panel'))
     h1.mr-1.navbar-title: a.flex.f-middle(href="/")
-      svg.mr-1(viewBox="0 0 256 256" width="2em" height="2em"): use(href="/assets/guideline/xeltica.svg#xeltica")
+      svg.mr-1.text-primary(viewBox="0 0 256 256" width="2em" height="2em"): use(href="/assets/guideline/xeltica.svg#xeltica")
       span.text-100 Design System
     ul.hstack.dense
       li: a.btn.flat(href="/docs")
