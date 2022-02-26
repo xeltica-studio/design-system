@@ -1,12 +1,16 @@
-@mixin level($pos, $p1, $p2) {
+@mixin level($pos, $p1, $p2: "") {
   @for $i from 0 through 5 {
     &-#{$i} {
       position: $pos !important;
       #{$p1}: #{$i * $fixed-level-unit} !important;
-      #{$p2}: #{$i * $fixed-level-unit} !important;
+      @if $p2 != "" {
+        #{$p2}: #{$i * $fixed-level-unit} !important;
+      }
     }
   }
 }
+
+.relative { position: relative }
 
 .fix {
   &-top {
@@ -43,5 +47,15 @@
     &-right {
       @include level(absolute, bottom, right);
     }
+  }
+}
+
+
+.sticky {
+  &-top {
+    @include level(sticky, top);
+  }
+  &-bottom {
+    @include level(sticky, bottom);
   }
 }

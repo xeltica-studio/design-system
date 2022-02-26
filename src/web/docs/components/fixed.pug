@@ -4,6 +4,9 @@ block main
   h1 固定レイアウト
   p 固定レイアウトを使うと、コンテンツを画面の上に固定して表示できます。
 
+  h2 .relative
+  p relative は、CSS <code>position: relative</code>を適用するクラスです。
+
   h2 fix
   p fix は、CSS <code>position: fixed</code>を適用するクラスです。
   p <code>.fix-{vertical}-{horizontal}-{level}</code> という記法になっており、<br/>
@@ -16,6 +19,12 @@ block main
   p <code>.fix-{vertical}-{horizontal}-{level}</code> という記法になっており、<br/>
     | <code>{vertical}</code>は<code>top</code>または<code>bottom</code>、
     | <code>{horizontal}</code>は<code>left</code>または<code>right</code>、
+    | <code>{level}</code>は0から5までの数値を指定できます。
+
+  h2 sticky
+  p sticky は、CSS <code>position: sticky</code>を適用するクラスです。
+  p <code>.fix-{vertical}-{level}</code> という記法になっており、<br/>
+    | <code>{vertical}</code>は<code>top</code>または<code>bottom</code>、
     | <code>{level}</code>は0から5までの数値を指定できます。
 
   h2 例 (abs)
