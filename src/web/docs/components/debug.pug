@@ -5,15 +5,22 @@ html
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1')
     link(rel='stylesheet' href='/css/xeltica-ui.min.css')
-    link(
-      rel='stylesheet'
-      href='https://use.fontawesome.com/releases/v5.15.3/css/all.css'
-      integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=='
-      crossorigin='anonymous'
-    )
+    link(rel="stylesheet", href="https://koruri.chillout.chat/koruri.css")
+    script(src='https://kit.fontawesome.com/c7ab6eba70.js' crossorigin='anonymous')
+    style.
+      body {
+        font-family: Koruri;
+      }
     title XelticaUI Debug
-  body.dark
-    .navbar.py-5.f-middle
-      .navbar-title.text-150 うんち
-        input.py-0.input-field.ghost(type="search" placeholder="検索…")
-        button.btn.lift.primary.pa-1.px-2: i.fas.fa-search
+  body
+    .container
+      .menu.large(style="width: 200px")
+        .item
+          i.icon.fas.fa-cat.fa-fw
+          | ﾈｺﾁｬﾝ
+        .item
+          i.icon.fas.fa-dog.fa-fw
+          | いぬ
+        .item
+          i.icon.fas.fa-shrimp.fa-fw
+          | 海老

@@ -4,8 +4,11 @@ include _sidebar
 block body
   .container
     .hstack.fill.dense
-      +sidebar.ge-tablet.fw.mr-2
+      +sidebar.ge-tablet.fw.mr-4
       .xd-main
+        .alert.bg-warn
+          i.icon.fas.fa-exclamation-triangle
+          span 執筆中のため、情報が古い・足りない場合があります。ご容赦ください。
         block main
   .card.fix-bottom-left-3.le-tablet.shadow-3: .hstack.dense
     button.btn.flat(tabindex="-1").xd-drawer-button: i.fas.fa-bars

@@ -2562,7 +2562,7 @@ body.dark {
   margin-left: 8px !important;
 }
 
-.mr-1 {
+.mr-1, .menu .item > .icon {
   margin-right: 8px !important;
 }
 
@@ -2622,7 +2622,7 @@ body.dark {
   margin-left: 16px !important;
 }
 
-.mr-2, .list-form > .item > .icon {
+.mr-2, .list-form > .item > .icon, .alert > .icon {
   margin-right: 16px !important;
 }
 
@@ -3786,7 +3786,6 @@ body.dark {
   color: inherit;
 }
 .menu .item > .icon {
-  margin-right: 0.5rem;
   color: var(--primary);
   font-size: 1rem;
 }
@@ -3950,9 +3949,6 @@ body.dark {
   border-radius: var(--radius);
   background: var(--panel);
   color: var(--tone-12);
-}
-.alert > .icon {
-  margin-right: var(--margin);
 }
 .alert.bg-primary {
   background: var(--primary-2) !important;

@@ -5,8 +5,7 @@
   background: var(--panel);
   color: var(--tone-12);
   > .icon {
-    @extend .flex, .f-center, .f-middle;
-    margin-right: var(--margin);
+    @extend .flex, .f-center, .f-middle, .mr-2;
   }
 
   @each $key, $_ in $classes {
