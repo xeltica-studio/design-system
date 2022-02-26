@@ -3,10 +3,14 @@ mixin header(transparent)
     h1.mr-1.navbar-title: a.flex.f-middle(href="/")
       svg.mr-1.text-primary(viewBox="0 0 256 256" width="2em" height="2em"): use(href="/assets/guideline/xeltica.svg#xeltica")
       span.text-100 Design System
-    ul.hstack.dense
+    ul.hstack.dense.ml-auto
       li: a.btn.flat(href="/docs")
         i.fas.fa-book
         span.ml-1.ge-tablet ガイドライン
       li: a.btn.flat(href="/docs/components")
         i.fas.fa-code
         span.ml-1.ge-tablet ライブラリ
+      li: a.btn.flat(href="https://github.com/Xeltica/design-system" rel="noopener noreferrer" target="_blank")
+        i.fab.fa-github
+        span.mx-1.ge-tablet GitHub
+        i.fas.fa-arrow-up-right-from-square.text-75.text-dimmed
