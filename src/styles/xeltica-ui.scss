@@ -4,11 +4,11 @@
  * Licensed under MIT (https://github.com/xeltica/ui/tree/master/LICENSE)
  */
 
-@import "reboot";
+@import "normalize";
+@import "init";
 @import "libs/breakpoints";
 @import "libs/clickable";
 @import "libs/dark";
-@import "libs/flat-heading";
 
 @import "variables";
 @import "misc";

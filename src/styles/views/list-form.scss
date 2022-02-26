@@ -20,11 +20,13 @@
       > h1, .header {
         font-size: 1rem;
         color: inherit;
+        margin: 0;
       }
-      > .desc {
+      > p, > .desc {
         font-size: 1rem;
         color: inherit;
         opacity: 0.6;
+        margin: 0;
       }
     }
     > .icon {

@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+pre, pre > code {
+  overflow: auto;
+}

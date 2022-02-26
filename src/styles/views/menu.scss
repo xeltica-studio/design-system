@@ -28,7 +28,6 @@ body {
   h1,
   .header,
   .footer {
-    @include flatHeading;
     font-size: 0.7rem;
     color: var(--menu-section-text);
     margin: 0;

@@ -36,7 +36,6 @@ $headingSize: 2.1rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
     font-size: $s;
     font-weight: normal;
     &.display {
-      @include flatHeading;
       font-size: #{$s * 2};
       @include le(phone) {
         font-size: #{$s * 1.2};
@@ -48,8 +47,7 @@ $headingSize: 2.1rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
 @for $i from 1 through 6 {
   $s: list.nth($headingSize, $i);
   small.subtitle-#{$i} {
-    @include flatHeading;
-    font-size: #{math.div($s, 3) * 2};
+        font-size: #{math.div($s, 3) * 2};
     font-weight: normal;
     color: var(--tone-8);
     &.display {

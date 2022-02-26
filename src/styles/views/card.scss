@@ -29,13 +29,11 @@
   > .body {
     padding: var(--margin);
     > h1 {
-      @include flatHeading;
       font-weight: normal;
       font-size: 1.5rem;
       margin-bottom: 0;
     }
     > h2 {
-      @include flatHeading;
       font-weight: normal;
       font-size: 1rem;
       color: var(--tone-8);
