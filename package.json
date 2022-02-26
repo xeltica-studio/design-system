@@ -1,6 +1,6 @@
 {
   "name": "xeltica-ui",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Xeltica Design System",
   "main": "dist/xeltica-ui.js",
   "style": "dist/css/xeltica-ui.min.css",
