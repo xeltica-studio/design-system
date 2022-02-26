@@ -17,3 +17,10 @@ button {
 pre, pre > code {
   overflow: auto;
 }
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
