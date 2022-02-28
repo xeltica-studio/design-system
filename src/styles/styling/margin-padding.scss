@@ -29,22 +29,13 @@
 }
 
 @for $v from 0 through 5 {
-  $size: $v * $margin-level-unit;
-  .ma-#{$v} {
-    margin: $size !important;
-  }
-  .ml-#{$v} {
-    margin-left: $size !important;
-  }
-  .mr-#{$v} {
-    margin-right: $size !important;
-  }
-  .mt-#{$v} {
-    margin-top: $size !important;
-  }
-  .mb-#{$v} {
-    margin-bottom: $size !important;
-  }
+  $size: calc(#{$v} * var(--slim-margin));
+
+  .ma-#{$v} { margin: $size !important; }
+  .ml-#{$v} { margin-left: $size !important; }
+  .mr-#{$v} { margin-right: $size !important; }
+  .mt-#{$v} { margin-top: $size !important; }
+  .mb-#{$v} { margin-bottom: $size !important; }
   .mx-#{$v} {
     margin-left: $size !important;
     margin-right: $size !important;
@@ -54,21 +45,11 @@
     margin-bottom: $size !important;
   }
 
-  .pa-#{$v} {
-    padding: $size !important;
-  }
-  .pl-#{$v} {
-    padding-left: $size !important;
-  }
-  .pr-#{$v} {
-    padding-right: $size !important;
-  }
-  .pt-#{$v} {
-    padding-top: $size !important;
-  }
-  .pb-#{$v} {
-    padding-bottom: $size !important;
-  }
+  .pa-#{$v} { padding: $size !important; }
+  .pl-#{$v} { padding-left: $size !important; }
+  .pr-#{$v} { padding-right: $size !important; }
+  .pt-#{$v} { padding-top: $size !important; }
+  .pb-#{$v} { padding-bottom: $size !important; }
   .px-#{$v} {
     padding-left: $size !important;
     padding-right: $size !important;

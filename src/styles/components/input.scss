@@ -1,3 +1,7 @@
+body {
+  --input-padding: 10px 16px;
+}
+
 :not(label).input-field,
 label.input-field > input {
   display: block;

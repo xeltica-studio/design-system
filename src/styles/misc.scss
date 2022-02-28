@@ -43,7 +43,7 @@
 }
 
 .circle {
-  border-radius: 999px !important;
+  border-radius: var(--circle-radius) !important;
 }
 
 .select-none {

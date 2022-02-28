@@ -7,7 +7,7 @@
     background: transparent;
     border: none;
     color: var(--fg);
-    padding: calc(var(--margin) / 2) var(--margin);
+    padding: var(--slim-margin) var(--margin);
     transition: background 0.2s ease;
     &.active {
       color: var(--primary);

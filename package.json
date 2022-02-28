@@ -15,7 +15,7 @@
     "watch:ts": "tsc -w",
     "build": "run-p build:*",
     "watch": "run-p watch:*",
-    "launch-server": "http-server ./dist -p 4000 -c-1",
+    "launch-server": "http-server ./dist -p 4001 -c-1",
     "dev": "run-p watch launch-server"
   },
   "devDependencies": {

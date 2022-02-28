@@ -25,11 +25,20 @@ body {
 }
 
 .underline {
-  border-bottom: 1px solid var(--tone-6);
-  padding-bottom: 4px;
+  border-bottom: 1px solid var(--tone-9);
 }
 
-$headingSize: 2.1rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+$headingSize: 2.5rem, 1.8rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
 
 @for $i from 1 through 6 {
   $s: list.nth($headingSize, $i);
@@ -48,7 +57,7 @@ $headingSize: 2.1rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
 @for $i from 1 through 6 {
   $s: list.nth($headingSize, $i);
   small.subtitle-#{$i} {
-        font-size: #{math.div($s, 3) * 2};
+    font-size: #{math.div($s, 3) * 2};
     font-weight: normal;
     color: var(--tone-8);
     &.display {
@@ -59,8 +68,8 @@ $headingSize: 2.1rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;
 
 code {
   font-size: 0.85rem;
-  padding: 2px;
-  border-radius: 4px;
+  padding: 4px 8px;
+  border-radius: var(--radius);
   background-color: var(--code-bg);
   color: var(--code-fg);
 }
@@ -88,5 +97,20 @@ small {
 @each $var in left, center, right {
   .text-#{$var} {
     text-align: $var;
+  }
+}
+
+section, article {
+  p {
+    @extend .mt-2, .mb-4;
+  }
+  > h2 {
+    @extend .mt-5, .mb-2, .underline;
+  }
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    @extend .my-2;
   }
 }

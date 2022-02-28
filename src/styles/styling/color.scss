@@ -1,3 +1,107 @@
+$black: #000000;
+$white: #ffffff;
+
+$colors: (
+  "red": #e23731,
+  "vermilion": #eb6101,
+  "orange": #f08300,
+  "yellow": #e9be00,
+  "lime": #b8d200,
+  "green": #3eb370,
+  "teal": #20c0a0,
+  "cyan": #43fcf3,
+  "skyblue": #00b7ff,
+  "blue": #2571ff,
+  "indigo": #165e83,
+  "purple": #884898,
+  "magenta": #ff55a1,
+  "pink": #ff5c84,
+);
+
+$tones: (
+  "black": black,
+  "white": white,
+  "black-50": rgba(0, 0, 0, 0.5),
+  "white-50": rgba(255, 255, 255, 0.5),
+  "dark": var(--gray-20),
+  "light": var(--gray-1),
+  "dimmed": var(--tone-10),
+  "success-fg": var(--white),
+  "primary-fg": var(--white),
+  "info-fg": var(--black),
+  "danger-fg": var(--white),
+  "warn-fg": var(--black),
+);
+
+$classes: (
+  "primary": "green",
+  "success": "blue",
+  "info": "skyblue",
+  "danger": "red",
+  "warn": "yellow",
+);
+
+body {
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  @each $name, $value in $colors {
+    --#{$name}-1: #{mix($white, $value, 80%)};
+    --#{$name}-2: #{mix($white, $value, 60%)};
+    --#{$name}-3: #{mix($white, $value, 40%)};
+    --#{$name}-4: #{mix($white, $value, 20%)};
+    --#{$name}-5: #{$value};
+    --#{$name}-6: #{mix($black, $value, 20%)};
+    --#{$name}-7: #{mix($black, $value, 40%)};
+    --#{$name}-8: #{mix($black, $value, 60%)};
+    --#{$name}-9: #{mix($black, $value, 70%)};
+    --#{$name}-10: #{mix($black, $value, 80%)};
+    --#{$name}: var(--#{$name}-5);
+  }
+  @for $i from 1 through 20 {
+    --gray-#{$i}: #{darken($white, $i * 4.5%)};
+  }
+  @each $name, $value in $tones {
+    --#{$name}: #{$value};
+  }
+  @each $name, $value in $classes {
+    --#{$name}: var(--#{$value}-5);
+    @for $i from 1 through 10 {
+      --#{$name}-#{$i}: var(--#{$value}-#{$i});
+    }
+  }
+
+  @for $i from 1 through 20 {
+    --tone-#{$i}: var(--gray-#{$i});
+  }
+
+  --bg: var(--gray-2);
+  --fg: var(--gray-16);
+  --link: var(--primary);
+  --hover: rgba(0, 0, 0, 0.03);
+  --panel: var(--white);
+  --panel-hover: var(--gray-1);
+  --panel-active: var(--gray-2);
+
+  --code-fg: var(--red-7);
+  --code-bg: var(--red-1);
+
+  &.dark {
+    @for $i from 1 through 20 {
+      --tone-#{$i}: var(--gray-#{21 - $i});
+    }
+
+    --bg: var(--gray-20);
+    --fg: var(--gray-5);
+    --hover: rgba(255, 255, 255, 0.06);
+    --panel: var(--gray-19);
+    --panel-hover: var(--gray-10);
+    --panel-active: var(--gray-20);
+
+    --code-fg: var(--red-4);
+    --code-bg: var(--red-8);
+  }
+}
+
 @each $name, $value in $colors {
   @for $i from 1 through 10 {
     .text-#{$name}-#{$i} {
@@ -54,3 +158,4 @@
 }
 
 .bg-panel { background-color: var(--panel); }
+.bg-bg { background-color: var(--bg); }

@@ -1,12 +1,11 @@
-body {
-  --stack-margin: var(--margin);
-}
-
 .vstack {
   display: flex;
   flex-direction: column;
   &:not(.dense) {
-    gap: var(--stack-margin);
+    gap: var(--margin);
+  }
+  &.slim {
+    gap: var(--slim-margin);
   }
 }
 
@@ -21,7 +20,10 @@ body {
     flex: 1;
   }
   &:not(.dense) {
-    gap: var(--stack-margin);
+    gap: var(--margin);
+  }
+  &.slim {
+    gap: var(--slim-margin);
   }
 }
 

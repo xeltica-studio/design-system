@@ -1,3 +1,8 @@
+body {
+  --clickable-active-transform: translateY(2px);
+  --clickable-hover-transform: translateY(-1px);
+}
+
 @mixin clickable($isText: false) {
   &:not(:disabled) {
     transition: transform 0.1s ease-out;
