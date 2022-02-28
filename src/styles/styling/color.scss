@@ -42,7 +42,7 @@ $classes: (
 );
 
 body {
-  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.2);
 
   @each $name, $value in $colors {
     --#{$name}-1: #{mix($white, $value, 80%)};

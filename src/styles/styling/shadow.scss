@@ -1,12 +1,13 @@
 body {
-  --shadow-level-unit: 4px;
+  --shadow-level-unit: 3px;
 }
 
 @for $i from 1 through 8 {
   .shadow-#{$i} {
-    box-shadow: 0 2px calc(#{$i} * var(--shadow-level-unit)) var(--shadow-color);
-    &-t {
-      text-shadow: 0 2px calc(#{$i} * var(--shadow-level-unit)) var(--shadow-color);
-    }
+    box-shadow: 0 3px calc(#{$i} * var(--shadow-level-unit)) var(--shadow-color);
   }
+}
+
+.shadow-t {
+  text-shadow: 0 1px calc(0.5 * var(--shadow-level-unit)) var(--shadow-color);
 }

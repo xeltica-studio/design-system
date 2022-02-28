@@ -1,14 +1,20 @@
 extends _layout
 
 block main
-  h1 スケルトン <code>.skeleton</code>
-  p APIを呼び出している途中であることを示すときに使用できます。
-  .skeleton(style="width: 100%; height: 64px")
-  p 幅や高さを指定することで、実際のコンポーネントと見た目を合わせて使います。
-  .vstack
-    .skeleton(style="width: 100%; height: 16px")
-    .hstack
-      .skeleton(style="width: 64px; height: 64px")
-      .skeleton(style="width: 64px; height: 64px")
-      .skeleton(style="width: 64px; height: 64px")
-      .skeleton(style="width: 64px; height: 64px")
+  :markdown-it(html=true)
+    # スケルトン `.skeleton`
+    APIを呼び出している途中であることを示すときに使用できます。
+
+    <div class="skeleton" style="width: 100%; height: 64px"></div>
+
+    幅や高さを指定することで、実際のコンポーネントと見た目を合わせて使います。
+
+    <div class="vstack">
+      <div class="skeleton" style="width: 100%; height: 16px"></div>
+      <div class="hstack">
+        <div class="skeleton" style="width: 64px; height: 64px"></div>
+        <div class="skeleton" style="width: 64px; height: 64px"></div>
+        <div class="skeleton" style="width: 64px; height: 64px"></div>
+        <div class="skeleton" style="width: 64px; height: 64px"></div>
+      </div>
+    </div>
