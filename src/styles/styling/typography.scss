@@ -25,7 +25,8 @@ body {
 }
 
 .underline {
-  border-bottom: 1px solid var(--tone-3);
+  border-bottom: 1px solid var(--tone-6);
+  padding-bottom: 4px;
 }
 
 $headingSize: 2.1rem, 1.6rem, 1.4rem, 1.3rem, 1.2rem, 1.1rem;

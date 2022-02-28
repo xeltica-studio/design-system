@@ -13,7 +13,7 @@ body {
 }
 
 .table {
-  border-radius: var(--radius);
+  border-radius: varc(--radius);
   border: 1px solid var(--table-border);
   border-collapse: separate;
   overflow: hidden;
@@ -21,6 +21,7 @@ body {
   margin-bottom: 1rem;
   background: var(--table-body);
   color: var(--table-color);
+  text-align: left;
   tr {
     &:hover {
       background: var(--hover);

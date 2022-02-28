@@ -2948,7 +2948,7 @@ body.dark {
 }
 
 .table {
-  border-radius: var(--radius);
+  border-radius: varc(--radius);
   border: 1px solid var(--table-border);
   border-collapse: separate;
   overflow: hidden;
@@ -2956,6 +2956,7 @@ body.dark {
   margin-bottom: 1rem;
   background: var(--table-body);
   color: var(--table-color);
+  text-align: left;
 }
 .table tr:hover {
   background: var(--hover);
@@ -3040,7 +3041,8 @@ body {
 }
 
 .underline {
-  border-bottom: 1px solid var(--tone-3);
+  border-bottom: 1px solid var(--tone-6);
+  padding-bottom: 4px;
 }
 
 h1 {
