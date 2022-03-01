@@ -1,16 +1,5 @@
 extends _layout
 
-block head
-  style.
-    table h1,
-    table h2,
-    table h3,
-    table h4,
-    table h5,
-    table h6 {
-      margin: 0;
-    }
-
 block main
   h1 タイポグラフィ
   h2 見出し
@@ -68,3 +57,37 @@ block main
       tr
         td: code &lt;code&gt;Hello, XelticaUI!&lt;/code&gt;
         td: code Hello, XelticaUI!
+
+  h2 リスト
+
+  ul
+    li Lorem, ipsum dolor.
+    li Lorem, ipsum dolor.
+    li Lorem, ipsum dolor.
+    li Lorem, ipsum dolor.
+    li Lorem, ipsum dolor.
+
+  ol
+    li Lorem, ipsum dolor.
+    li Lorem, ipsum dolor.
+    li Lorem, ipsum dolor.
+    li Lorem, ipsum dolor.
+    li Lorem, ipsum dolor.
+
+  h2 引用
+
+  blockquote あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+  blockquote: blockquote: blockquote: blockquote: blockquote: blockquote: blockquote: blockquote TEST
+
+  h2 kbdタグ
+
+  p
+    kbd F1
+    | を押下するとヘルプを表示します。
+
+  p
+    kbd
+      kbd Ctrl
+      | +
+      kbd V
+    | を押下すると、クリップボードから貼り付けます。

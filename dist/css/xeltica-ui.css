@@ -3236,9 +3236,27 @@ section > p, article > p {
   margin: var(--margin) 0;
 }
 
-ul {
+ul, ol {
   -webkit-padding-start: 1.5em;
           padding-inline-start: 1.5em;
+}
+
+blockquote {
+  margin: 0;
+  margin-bottom: var(--slim-margin);
+  color: var(--dimmed);
+  border-left: 2px solid var(--dimmed);
+  padding: var(--slim-margin) 0;
+  padding-left: var(--margin);
+}
+
+kbd {
+  display: inline-block;
+  background: var(--panel);
+  border-radius: var(--radius);
+  border: 1px solid var(--tone-4);
+  border-bottom-width: 4px;
+  padding: 4px 8px;
 }
 
 .container {
