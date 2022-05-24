@@ -2,13 +2,14 @@
   display: flex;
   flex-direction: column;
   > .item {
-    @extend .card, .shadow-1;
+    @extend .card;
     min-height: 80px;
     display: flex;
     padding: var(--margin);
     transition: all 0.05s ease;
     align-items: center;
     text-align: left;
+    cursor: default;
 
     + .item {
       @extend .mt-1;
@@ -42,11 +43,12 @@
   > a.item, button.item {
     color: inherit;
     text-decoration: none;
-    @include clickable;
     &:not(:disabled) {
+      @include clickable;
+      @extend .shadow-1;
+      cursor: pointer;
       &:hover, &:focus {
         background: var(--panel-hover);
-        @extend .shadow-3;
       }
       &:active {
         background: var(--panel-active);

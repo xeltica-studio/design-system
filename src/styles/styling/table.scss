@@ -3,12 +3,14 @@ body {
   --table-color: var(--fg);
   --table-body: var(--panel);
   --table-border: var(--tone-5);
+  --table-hover: var(--tone-3);
   --table-header-border: var(--tone-3);
   --table-body-border: var(--tone-3);
   --table-header-border-thickness: 2px;
   --table-body-border-thickness: 1px;
   &.dark {
     --table-color: var(--tone-15);
+  --table-header: var(--tone-5);
   }
 }
 
@@ -24,7 +26,7 @@ body {
   text-align: left;
   tr {
     &:hover {
-      background: var(--panel-hover);
+      background: var(--table-hover);
     }
   }
   th {

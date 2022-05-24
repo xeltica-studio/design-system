@@ -26,6 +26,10 @@ a.btn {
     @include clickable;
   }
 
+  &:not(.link):not(.flat):not(:disabled) {
+    @extend .shadow-1;
+  }
+
   &:focus::before {
     box-shadow: 0 0 1rem 0px var(--fg);
   }

@@ -32,7 +32,7 @@ $zIndex: 500;
       align-items: center;
       padding: 0 var(--margin);
       > .close {
-        @extend .btn, .flat;
+        @include clickable;
         position: relative;
         width: 48px;
         height: 48px;
