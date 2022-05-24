@@ -9,6 +9,7 @@ label.input-check {
 
     + span {
       display: block;
+      flex: 1;
       padding-left: 28px;
       position: relative;
       &::before {
@@ -76,7 +77,6 @@ label.input-check {
       &::after {
         width: 20px;
       }
-      // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.4 10.4'%3E%3Cdefs/%3E%3Cpath fill='%23FFF' d='M12.7 0l.7.7L10.1 4l-6 6-.4.4L.4 7.1 0 6.7.7 6l3 3 2.6-2.6 6-6 .4-.4z'/%3E%3C/svg%3E");
     }
   }
   > input[type="radio"] {
@@ -106,35 +106,46 @@ label.input-check {
 label.input-switch {
   display: flex;
   align-items: center;
+  $switch-width: 48px;
+  $switch-height: 24px;
+  $switch-knob-size: $switch-height - 6px;
   input {
     display: none;
-    &:not(:disabled) + .switch,
-    &:not(:disabled) + .switch + span {
+    &:not(:disabled) + .switch {
       cursor: pointer;
+      + span {
+        cursor: pointer;
+        flex: 1;
+      }
     }
     + .switch {
-      width: 48px;
-      height: 20px;
+      width: $switch-width;
+      height: $switch-height;
       position: relative;
       // bar
       &::before {
         content: "";
+        @extend .circle;
+        transition: box-shadow 0.2s ease, border 0.2s ease;
         position: absolute;
+        top: 0;
         left: 0;
         right: 0;
-        height: 10px;
-        top: 5px;
+        width: 100%;
+        height: 100%;
         background: var(--tone-3);
+        border: 1px solid var(--tone-5);
         border-radius: 5px;
       }
       // knob
       &::after {
         content: "";
-        transition: left 0.1s cubic-bezier(0.44, 0.01, 0.39, 1.59), background 0.2s ease, box-shadow 0.2s ease;
+        transition: left 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), background 0.2s ease;
         position: absolute;
-        left: 2px;
-        width: 20px;
-        height: 20px;
+        top: 4px;
+        left: 4px;
+        width: $switch-knob-size;
+        height: $switch-knob-size;
         background: var(--tone-7);
         border-radius: 100%;
       }
@@ -142,21 +153,22 @@ label.input-switch {
         padding-left: 8px;
       }
     }
-    &:focus-within + .switch::after,
-    &:hover + .switch::after {
-      box-shadow: 0 0 16px var(--primary);
+    &:not(:disabled):focus-within + .switch::after,
+    &:not(:disabled):hover + .switch::before {
+      border: 1px solid var(--primary);
+      box-shadow: 0 0 8px var(--primary);
     }
     &:checked + .switch {
       // bar
       &::before {
         content: "";
-        background: var(--primary);
-        opacity: 0.3;
+        background: var(--primary-2);
+        border: 1px solid var(--primary-3);
       }
       // knob
       &::after {
         content: "";
-        left: 26px;
+        left: #{$switch-width - $switch-knob-size - 2px};
         background: var(--primary);
       }
     }

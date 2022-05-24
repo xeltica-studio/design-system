@@ -2,7 +2,7 @@ extends _layout
 
 block main
   h1 チェックボックス
-  .card: .body
+  .card: .body.vstack.slim
     label.input-check
       input(type="checkbox")
       span 未チェック
@@ -27,7 +27,7 @@ block main
         <span>無効</span>
       </label>
   h1 ラジオボタン
-  .card: .body
+  .card: .body.vstack.slim
     label.input-check
       input(type="radio" name="radio" checked)
       span 項目1
@@ -52,7 +52,7 @@ block main
         <span>項目3</span>
       </label>
   h1 スイッチ
-  .card: .body
+  .card: .body.vstack.slim
     label.input-switch
       input(type="checkbox")
       .switch
