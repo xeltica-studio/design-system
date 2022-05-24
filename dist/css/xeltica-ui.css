@@ -1,5 +1,5 @@
 /*!
- * Xeltica Design System 1.0.0-beta.7
+ * Xeltica Design System 1.0.0-beta.8
  * (C)2021-2022 Xeltica
  * Licensed under MIT (https://github.com/xeltica/design-system/tree/master/LICENSE)
  */
@@ -2890,7 +2890,8 @@ body {
   --shadow-level-unit: 3px;
 }
 
-.shadow-1, .list-form > .item {
+.shadow-1, button.btn:not(.link):not(.flat):not(:disabled),
+a.btn:not(.link):not(.flat):not(:disabled), .list-form > a.item:not(:disabled), .list-form button.item:not(:disabled) {
   box-shadow: 0 3px calc(1 * var(--shadow-level-unit)) var(--shadow-color);
 }
 
@@ -2898,7 +2899,7 @@ body {
   box-shadow: 0 3px calc(2 * var(--shadow-level-unit)) var(--shadow-color);
 }
 
-.shadow-3, .list-form > a.item:not(:disabled):hover, .list-form > a.item:not(:disabled):focus, .list-form button.item:not(:disabled):hover, .list-form button.item:not(:disabled):focus {
+.shadow-3 {
   box-shadow: 0 3px calc(3 * var(--shadow-level-unit)) var(--shadow-color);
 }
 
@@ -2931,6 +2932,7 @@ body {
   --table-color: var(--fg);
   --table-body: var(--panel);
   --table-border: var(--tone-5);
+  --table-hover: var(--tone-3);
   --table-header-border: var(--tone-3);
   --table-body-border: var(--tone-3);
   --table-header-border-thickness: 2px;
@@ -2938,6 +2940,7 @@ body {
 }
 body.dark {
   --table-color: var(--tone-15);
+  --table-header: var(--tone-5);
 }
 
 .table {
@@ -2952,7 +2955,7 @@ body.dark {
   text-align: left;
 }
 .table tr:hover {
-  background: var(--panel-hover);
+  background: var(--table-hover);
 }
 .table th {
   background: var(--table-header);
@@ -4022,6 +4025,19 @@ body.dark {
   height: 48px;
   margin-left: calc(-1 * var(--margin));
 }
+.drawer-container > .drawer > header > .close:not(:disabled) {
+  transition: transform 0.1s ease-out;
+  transform-origin: center;
+  cursor: pointer;
+}
+.drawer-container > .drawer > header > .close:not(:disabled):hover {
+  transform: var(--clickable-hover-transform);
+  z-index: 9999;
+}
+.drawer-container > .drawer > header > .close:not(:disabled):active {
+  transform: var(--clickable-active-transform);
+  z-index: 9999;
+}
 .drawer-container > .drawer > header h1 {
   font-size: 1rem;
   margin: 0;
@@ -4098,6 +4114,7 @@ body.dark {
   transition: all 0.05s ease;
   align-items: center;
   text-align: left;
+  cursor: default;
 }
 .list-form > .item > .body {
   padding: 0;
@@ -4124,15 +4141,18 @@ body.dark {
   text-decoration: none;
 }
 .list-form > a.item:not(:disabled), .list-form button.item:not(:disabled) {
+  cursor: pointer;
+}
+.list-form > a.item:not(:disabled):not(:disabled), .list-form button.item:not(:disabled):not(:disabled) {
   transition: transform 0.1s ease-out;
   transform-origin: center;
   cursor: pointer;
 }
-.list-form > a.item:not(:disabled):hover, .list-form button.item:not(:disabled):hover {
+.list-form > a.item:not(:disabled):not(:disabled):hover, .list-form button.item:not(:disabled):not(:disabled):hover {
   transform: var(--clickable-hover-transform);
   z-index: 9999;
 }
-.list-form > a.item:not(:disabled):active, .list-form button.item:not(:disabled):active {
+.list-form > a.item:not(:disabled):not(:disabled):active, .list-form button.item:not(:disabled):not(:disabled):active {
   transform: var(--clickable-active-transform);
   z-index: 9999;
 }
@@ -4155,9 +4175,8 @@ body.dark {
   transform: translateX(-25%) rotate(45deg);
 }
 
-button.btn, .drawer-container > .drawer > header > button.close,
-a.btn,
-.drawer-container > .drawer > header > a.close {
+button.btn,
+a.btn {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
@@ -4170,228 +4189,191 @@ a.btn,
   font-size: 1rem;
   position: relative;
 }
-button.btn::before, .drawer-container > .drawer > header > button.close::before,
-a.btn::before,
-.drawer-container > .drawer > header > a.close::before {
+button.btn::before,
+a.btn::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: var(--radius);
   transition: box-shadow 0.2s ease;
 }
-button.btn:not(.link):not(:disabled), .drawer-container > .drawer > header > button.close:not(.link):not(:disabled),
-a.btn:not(.link):not(:disabled),
-.drawer-container > .drawer > header > a.close:not(.link):not(:disabled) {
+button.btn:not(.link):not(:disabled),
+a.btn:not(.link):not(:disabled) {
   transition: transform 0.1s ease-out;
   transform-origin: center;
   cursor: pointer;
 }
-button.btn:not(.link):not(:disabled):hover, .drawer-container > .drawer > header > button.close:not(.link):not(:disabled):hover,
-a.btn:not(.link):not(:disabled):hover,
-.drawer-container > .drawer > header > a.close:not(.link):not(:disabled):hover {
+button.btn:not(.link):not(:disabled):hover,
+a.btn:not(.link):not(:disabled):hover {
   transform: var(--clickable-hover-transform);
   z-index: 9999;
 }
-button.btn:not(.link):not(:disabled):active, .drawer-container > .drawer > header > button.close:not(.link):not(:disabled):active,
-a.btn:not(.link):not(:disabled):active,
-.drawer-container > .drawer > header > a.close:not(.link):not(:disabled):active {
+button.btn:not(.link):not(:disabled):active,
+a.btn:not(.link):not(:disabled):active {
   transform: var(--clickable-active-transform);
   z-index: 9999;
 }
-button.btn:focus::before, .drawer-container > .drawer > header > button.close:focus::before,
-a.btn:focus::before,
-.drawer-container > .drawer > header > a.close:focus::before {
+button.btn:focus::before,
+a.btn:focus::before {
   box-shadow: 0 0 1rem 0px var(--fg);
 }
-button.btn:active, .drawer-container > .drawer > header > button.close:active,
-a.btn:active,
-.drawer-container > .drawer > header > a.close:active {
+button.btn:active,
+a.btn:active {
   filter: brightness(0.8);
 }
-button.btn.primary, .drawer-container > .drawer > header > button.primary.close,
-a.btn.primary,
-.drawer-container > .drawer > header > a.primary.close {
+button.btn.primary,
+a.btn.primary {
   background: var(--primary);
   color: var(--primary-1);
   border: 1px solid transparent;
 }
-button.btn.primary.outline, .drawer-container > .drawer > header > button.primary.outline.close,
-a.btn.primary.outline,
-.drawer-container > .drawer > header > a.primary.outline.close {
+button.btn.primary.outline,
+a.btn.primary.outline {
   background: transparent;
   color: var(--primary);
   border: 1px solid var(--primary);
 }
-button.btn.primary:focus::before, .drawer-container > .drawer > header > button.primary.close:focus::before,
-a.btn.primary:focus::before,
-.drawer-container > .drawer > header > a.primary.close:focus::before {
+button.btn.primary:focus::before,
+a.btn.primary:focus::before {
   box-shadow: 0 0 1rem 0px var(--primary);
 }
-button.btn.primary:disabled, .drawer-container > .drawer > header > button.primary.close:disabled,
-a.btn.primary:disabled,
-.drawer-container > .drawer > header > a.primary.close:disabled {
+button.btn.primary:disabled,
+a.btn.primary:disabled {
   background: var(--tone-4);
   border-color: var(--tone-4);
   color: var(--tone-0);
 }
-button.btn.success, .drawer-container > .drawer > header > button.success.close,
-a.btn.success,
-.drawer-container > .drawer > header > a.success.close {
+button.btn.success,
+a.btn.success {
   background: var(--success);
   color: var(--success-1);
   border: 1px solid transparent;
 }
-button.btn.success.outline, .drawer-container > .drawer > header > button.success.outline.close,
-a.btn.success.outline,
-.drawer-container > .drawer > header > a.success.outline.close {
+button.btn.success.outline,
+a.btn.success.outline {
   background: transparent;
   color: var(--success);
   border: 1px solid var(--success);
 }
-button.btn.success:focus::before, .drawer-container > .drawer > header > button.success.close:focus::before,
-a.btn.success:focus::before,
-.drawer-container > .drawer > header > a.success.close:focus::before {
+button.btn.success:focus::before,
+a.btn.success:focus::before {
   box-shadow: 0 0 1rem 0px var(--success);
 }
-button.btn.success:disabled, .drawer-container > .drawer > header > button.success.close:disabled,
-a.btn.success:disabled,
-.drawer-container > .drawer > header > a.success.close:disabled {
+button.btn.success:disabled,
+a.btn.success:disabled {
   background: var(--tone-4);
   border-color: var(--tone-4);
   color: var(--tone-0);
 }
-button.btn.info, .drawer-container > .drawer > header > button.info.close,
-a.btn.info,
-.drawer-container > .drawer > header > a.info.close {
+button.btn.info,
+a.btn.info {
   background: var(--info);
   color: var(--info-1);
   border: 1px solid transparent;
 }
-button.btn.info.outline, .drawer-container > .drawer > header > button.info.outline.close,
-a.btn.info.outline,
-.drawer-container > .drawer > header > a.info.outline.close {
+button.btn.info.outline,
+a.btn.info.outline {
   background: transparent;
   color: var(--info);
   border: 1px solid var(--info);
 }
-button.btn.info:focus::before, .drawer-container > .drawer > header > button.info.close:focus::before,
-a.btn.info:focus::before,
-.drawer-container > .drawer > header > a.info.close:focus::before {
+button.btn.info:focus::before,
+a.btn.info:focus::before {
   box-shadow: 0 0 1rem 0px var(--info);
 }
-button.btn.info:disabled, .drawer-container > .drawer > header > button.info.close:disabled,
-a.btn.info:disabled,
-.drawer-container > .drawer > header > a.info.close:disabled {
+button.btn.info:disabled,
+a.btn.info:disabled {
   background: var(--tone-4);
   border-color: var(--tone-4);
   color: var(--tone-0);
 }
-button.btn.warn, .drawer-container > .drawer > header > button.warn.close,
-a.btn.warn,
-.drawer-container > .drawer > header > a.warn.close {
+button.btn.warn,
+a.btn.warn {
   background: var(--warn);
   color: var(--warn-1);
   border: 1px solid transparent;
 }
-button.btn.warn.outline, .drawer-container > .drawer > header > button.warn.outline.close,
-a.btn.warn.outline,
-.drawer-container > .drawer > header > a.warn.outline.close {
+button.btn.warn.outline,
+a.btn.warn.outline {
   background: transparent;
   color: var(--warn);
   border: 1px solid var(--warn);
 }
-button.btn.warn:focus::before, .drawer-container > .drawer > header > button.warn.close:focus::before,
-a.btn.warn:focus::before,
-.drawer-container > .drawer > header > a.warn.close:focus::before {
+button.btn.warn:focus::before,
+a.btn.warn:focus::before {
   box-shadow: 0 0 1rem 0px var(--warn);
 }
-button.btn.warn:disabled, .drawer-container > .drawer > header > button.warn.close:disabled,
-a.btn.warn:disabled,
-.drawer-container > .drawer > header > a.warn.close:disabled {
+button.btn.warn:disabled,
+a.btn.warn:disabled {
   background: var(--tone-4);
   border-color: var(--tone-4);
   color: var(--tone-0);
 }
-button.btn.danger, .drawer-container > .drawer > header > button.danger.close,
-a.btn.danger,
-.drawer-container > .drawer > header > a.danger.close {
+button.btn.danger,
+a.btn.danger {
   background: var(--danger);
   color: var(--danger-1);
   border: 1px solid transparent;
 }
-button.btn.danger.outline, .drawer-container > .drawer > header > button.danger.outline.close,
-a.btn.danger.outline,
-.drawer-container > .drawer > header > a.danger.outline.close {
+button.btn.danger.outline,
+a.btn.danger.outline {
   background: transparent;
   color: var(--danger);
   border: 1px solid var(--danger);
 }
-button.btn.danger:focus::before, .drawer-container > .drawer > header > button.danger.close:focus::before,
-a.btn.danger:focus::before,
-.drawer-container > .drawer > header > a.danger.close:focus::before {
+button.btn.danger:focus::before,
+a.btn.danger:focus::before {
   box-shadow: 0 0 1rem 0px var(--danger);
 }
-button.btn.danger:disabled, .drawer-container > .drawer > header > button.danger.close:disabled,
-a.btn.danger:disabled,
-.drawer-container > .drawer > header > a.danger.close:disabled {
+button.btn.danger:disabled,
+a.btn.danger:disabled {
   background: var(--tone-4);
   border-color: var(--tone-4);
   color: var(--tone-0);
 }
-button.btn.flat:disabled, .drawer-container > .drawer > header > button.close:disabled, button.btn.link:disabled,
+button.btn.flat:disabled, button.btn.link:disabled,
 a.btn.flat:disabled,
-.drawer-container > .drawer > header > a.close:disabled,
 a.btn.link:disabled {
   background: transparent;
   color: var(--tone-4);
   border: none;
 }
-button.btn.flat, .drawer-container > .drawer > header > button.close,
-a.btn.flat,
-.drawer-container > .drawer > header > a.close {
+button.btn.flat,
+a.btn.flat {
   border: none;
   background: none;
   color: var(--fg);
 }
-button.btn.flat:not(:disabled):focus::before, .drawer-container > .drawer > header > button.close:not(:disabled):focus::before,
-a.btn.flat:not(:disabled):focus::before,
-.drawer-container > .drawer > header > a.close:not(:disabled):focus::before {
+button.btn.flat:not(:disabled):focus::before,
+a.btn.flat:not(:disabled):focus::before {
   box-shadow: none;
 }
-button.btn.flat:not(:disabled):focus, .drawer-container > .drawer > header > button.close:not(:disabled):focus, button.btn.flat:not(:disabled):hover, .drawer-container > .drawer > header > button.close:not(:disabled):hover,
+button.btn.flat:not(:disabled):focus, button.btn.flat:not(:disabled):hover,
 a.btn.flat:not(:disabled):focus,
-.drawer-container > .drawer > header > a.close:not(:disabled):focus,
-a.btn.flat:not(:disabled):hover,
-.drawer-container > .drawer > header > a.close:not(:disabled):hover {
+a.btn.flat:not(:disabled):hover {
   background: var(--hover);
 }
-button.btn.link, .drawer-container > .drawer > header > button.link.close,
-a.btn.link,
-.drawer-container > .drawer > header > a.link.close {
+button.btn.link,
+a.btn.link {
   border: none;
   background: none;
   color: var(--link);
 }
-button.btn.link:not(:disabled):focus::before, .drawer-container > .drawer > header > button.link.close:not(:disabled):focus::before,
-a.btn.link:not(:disabled):focus::before,
-.drawer-container > .drawer > header > a.link.close:not(:disabled):focus::before {
+button.btn.link:not(:disabled):focus::before,
+a.btn.link:not(:disabled):focus::before {
   box-shadow: none;
 }
-button.btn.link:not(:disabled):focus, .drawer-container > .drawer > header > button.link.close:not(:disabled):focus, button.btn.link:not(:disabled):hover, .drawer-container > .drawer > header > button.link.close:not(:disabled):hover,
+button.btn.link:not(:disabled):focus, button.btn.link:not(:disabled):hover,
 a.btn.link:not(:disabled):focus,
-.drawer-container > .drawer > header > a.link.close:not(:disabled):focus,
-a.btn.link:not(:disabled):hover,
-.drawer-container > .drawer > header > a.link.close:not(:disabled):hover {
+a.btn.link:not(:disabled):hover {
   text-decoration: underline;
 }
-button.btn.link:not(:disabled):active, .drawer-container > .drawer > header > button.link.close:not(:disabled):active,
-a.btn.link:not(:disabled):active,
-.drawer-container > .drawer > header > a.link.close:not(:disabled):active {
+button.btn.link:not(:disabled):active,
+a.btn.link:not(:disabled):active {
   filter: brightness(0.8);
 }
-button.btn:disabled, .drawer-container > .drawer > header > button.close:disabled,
-a.btn:disabled,
-.drawer-container > .drawer > header > a.close:disabled {
+button.btn:disabled,
+a.btn:disabled {
   background: transparent;
   border-color: var(--tone-4);
   color: var(--tone-4);
@@ -4399,44 +4381,44 @@ a.btn:disabled,
   cursor: default;
 }
 
-body.dark .btn.primary:not(:disabled):not(.outline), body.dark .drawer-container > .drawer > header > .primary.close:not(:disabled):not(.outline) {
+body.dark .btn.primary:not(:disabled):not(.outline) {
   background: var(--primary-8);
   color: var(--primary-2);
   border: 1px solid var(--primary-5);
 }
-body.dark .btn.primary:not(:disabled):not(.outline):focus::before, body.dark .drawer-container > .drawer > header > .primary.close:not(:disabled):not(.outline):focus::before {
+body.dark .btn.primary:not(:disabled):not(.outline):focus::before {
   box-shadow: 0 0 1rem 0px var(--primary);
 }
-body.dark .btn.success:not(:disabled):not(.outline), body.dark .drawer-container > .drawer > header > .success.close:not(:disabled):not(.outline) {
+body.dark .btn.success:not(:disabled):not(.outline) {
   background: var(--success-8);
   color: var(--success-2);
   border: 1px solid var(--success-5);
 }
-body.dark .btn.success:not(:disabled):not(.outline):focus::before, body.dark .drawer-container > .drawer > header > .success.close:not(:disabled):not(.outline):focus::before {
+body.dark .btn.success:not(:disabled):not(.outline):focus::before {
   box-shadow: 0 0 1rem 0px var(--success);
 }
-body.dark .btn.info:not(:disabled):not(.outline), body.dark .drawer-container > .drawer > header > .info.close:not(:disabled):not(.outline) {
+body.dark .btn.info:not(:disabled):not(.outline) {
   background: var(--info-8);
   color: var(--info-2);
   border: 1px solid var(--info-5);
 }
-body.dark .btn.info:not(:disabled):not(.outline):focus::before, body.dark .drawer-container > .drawer > header > .info.close:not(:disabled):not(.outline):focus::before {
+body.dark .btn.info:not(:disabled):not(.outline):focus::before {
   box-shadow: 0 0 1rem 0px var(--info);
 }
-body.dark .btn.warn:not(:disabled):not(.outline), body.dark .drawer-container > .drawer > header > .warn.close:not(:disabled):not(.outline) {
+body.dark .btn.warn:not(:disabled):not(.outline) {
   background: var(--warn-8);
   color: var(--warn-2);
   border: 1px solid var(--warn-5);
 }
-body.dark .btn.warn:not(:disabled):not(.outline):focus::before, body.dark .drawer-container > .drawer > header > .warn.close:not(:disabled):not(.outline):focus::before {
+body.dark .btn.warn:not(:disabled):not(.outline):focus::before {
   box-shadow: 0 0 1rem 0px var(--warn);
 }
-body.dark .btn.danger:not(:disabled):not(.outline), body.dark .drawer-container > .drawer > header > .danger.close:not(:disabled):not(.outline) {
+body.dark .btn.danger:not(:disabled):not(.outline) {
   background: var(--danger-8);
   color: var(--danger-2);
   border: 1px solid var(--danger-5);
 }
-body.dark .btn.danger:not(:disabled):not(.outline):focus::before, body.dark .drawer-container > .drawer > header > .danger.close:not(:disabled):not(.outline):focus::before {
+body.dark .btn.danger:not(:disabled):not(.outline):focus::before {
   box-shadow: 0 0 1rem 0px var(--danger);
 }
 
